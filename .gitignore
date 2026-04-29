@@ -1,0 +1,23 @@
+# Imágenes (las que ya están alojadas externamente)
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.svg
+*.ico
+
+# Carpeta de imágenes (si tienes una carpeta específica)
+/images/
+/img/
+/assets/images/
+/static/images/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias (si las tienes)
+node_modules/
+.vscode/
+.idea/
