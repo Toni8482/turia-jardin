@@ -1,48 +1,48 @@
-console.log("Hola mundo");
+import { initPreloader } from './modules/preloader.js';
+import { initProgressBar } from './modules/progressBar.js';
+import { initTypewriter } from './modules/typewriter.js';
+import { initReveal } from './modules/reveal.js';
+import { initCounters } from './modules/counters.js';
+import { initLightbox } from './modules/lightbox.js';
+import { initHeaderShrink } from './modules/headerShrink.js';
+import { initMobileMenu } from './modules/mobileMenu.js';
+import { initModal } from './modules/modal.js';
+import { initCTAs } from './modules/ctas.js';
+import { initTheme } from './modules/theme.js';
+import { initMagneticButtons } from './modules/magneticButtons.js';
+import { initGsapAnimations } from './modules/gsapAnimations.js';
+import { initParallaxHero } from './modules/parallaxHero.js';
+import { initBeforeAfterSplit } from './modules/beforeAfterSplit.js';
+import { initSwipers } from './modules/swipers.js';
+import { initScrollTop } from './modules/scrollTop.js';
+import { initContactForm } from './modules/contactForm.js';
 
-document.addEventListener("DOMContentLoaded", function () {
-  const track = document.querySelector(".carrusel");
-  const slides = document.querySelectorAll(".carrusel img");
+// Registrar ScrollTrigger si no está ya registrado (a veces es necesario)
+gsap.registerPlugin(ScrollTrigger);
 
-  let index = 0;
+// Inicializar todos los módulos después de que el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
+  initProgressBar();
+  initTypewriter();
+  initReveal();
+  initCounters();
+  initLightbox();
+  initHeaderShrink();
+  initMobileMenu();
+  initModal();
+  initCTAs();
+  initTheme();
+  initMagneticButtons();
+  initGsapAnimations();
+  initParallaxHero();
+  initBeforeAfterSplit();
+  initSwipers();
+  initScrollTop();
+  initContactForm();
+});
 
-  setInterval(() => {
-    index++;
-    track.style.transition = "transform 1.8s ease-in-out";
-    track.style.transform = `translateX(-${index * 100}%)`;
-
-    if (index === slides.length - 1) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        track.style.transform = "translateX(0)";
-        index = 0;
-      }, 2800);
-    }
-  }, 10000);
-
-  const caja_i = document.querySelectorAll(".main-galery-i");
-
-  caja_i.forEach((element) => {
-    window.addEventListener("scroll", () => {
-      const posicion = element.getBoundingClientRect().top;
-      const alturaPantalla = window.innerHeight;
-
-      if (posicion < alturaPantalla - 100) {
-        element.classList.add("activa");
-      }
-    });
-  });
-
-  const caja_d = document.querySelectorAll(".main-galery-d");
-
-  caja_d.forEach((element) => {
-    window.addEventListener("scroll", () => {
-      const posicion = element.getBoundingClientRect().top;
-      const alturaPantalla = window.innerHeight;
-
-      if (posicion < alturaPantalla - 100) {
-        element.classList.add("activa");
-      }
-    });
-  });
+// Refrescar ScrollTrigger cuando todo el contenido esté cargado (imágenes, etc.)
+window.addEventListener('load', () => {
+  ScrollTrigger.refresh();
 });
