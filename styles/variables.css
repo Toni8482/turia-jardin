@@ -1,0 +1,79 @@
+/* =========================
+   🎨 VARIABLES GLOBALES (MODO OSCURO POR DEFECTO)
+   =========================
+   :root = variables disponibles en toda la web
+   Aquí defines el "tema oscuro" principal
+*/
+:root {
+
+  /* 🖼️ Fondos principales */
+  --bg-primary: #0c0f0a;     /* fondo general de la web */
+  --bg-secondary: #1a2016;   /* secciones alternas */
+  --bg-card: rgba(28, 33, 23, 0.8); /* tarjetas con transparencia */
+
+  /* ✍️ Colores de texto */
+  --text-primary: #ecead8;   /* texto principal (claro) */
+  --text-secondary: #b9c29e; /* texto secundario más suave */
+
+  /* 🌿 Color principal (verde branding) */
+  --accent: #7d9662;         /* color principal */
+  --accent-hover: #9bbf72;   /* cuando pasas el ratón */
+  --accent-light: #b1cc74;   /* versión más clara (detalles, highlights) */
+
+  /* 🧱 Bordes y separaciones */
+  --border-color: rgba(157, 184, 94, 0.3);
+
+  /* ✨ Títulos con degradado */
+  --gradient-title: linear-gradient(135deg, #e7f0c3, #b1cc74);
+
+  /* 🌑 Sombras (profundidad visual) */
+  --shadow-sm: 0 6px 14px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 10px 20px -10px rgba(0, 0, 0, 0.3);
+
+  /* ⏱️ Animaciones globales */
+  --transition: all 0.25s ease;
+
+  /* 🧭 Fondo del header */
+  --header-bg: rgba(12, 15, 10, 0.85);
+
+  --submenu-hover-bg:  rgb(12, 15, 10);
+}
+
+
+/* =========================
+   🌞 MODO CLARO (LIGHT MODE)
+   =========================
+   Cuando el body tiene class="light",
+   se sobrescriben las variables de arriba
+*/
+body.light {
+
+  /* 🖼️ Fondos más claros */
+  --bg-primary: #fefef5;
+  --bg-secondary: #e8ecd9;
+  --bg-card: rgba(245, 248, 235, 0.95);
+
+  /* ✍️ Textos oscuros para legibilidad */
+  --text-primary: #1c2a14;
+  --text-secondary: #3a4e2c;
+
+  /* 🌿 colores adaptados al tema claro */
+  --accent: #6b8c48;
+  --accent-hover: #8aae5e;
+  --accent-light: #a4c06a;
+
+  /* 🧱 bordes más visibles en claro */
+  --border-color: #bccf8a;
+
+  /* ✨ degradado más oscuro para contraste */
+  --gradient-title: linear-gradient(130deg, #4a6b2c, #2a4216);
+
+  /* 🌑 sombras más suaves */
+  --shadow-sm: 0 6px 14px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+
+  /* 🧭 header más claro */
+  --header-bg: rgba(245, 242, 225, 0.85);
+
+   --submenu-hover-bg:   rgb(245, 242, 225);
+}

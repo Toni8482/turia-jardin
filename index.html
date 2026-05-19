@@ -11,7 +11,7 @@
   <meta name="author" content="Turia Jardín">
   <title>Turia Jardín | Expertos en poda de palmeras y jardinería en Valencia</title>
 
-  <link rel="preload" as="image" href="./assets/images/fotos/20250626_143239.jpg">
+  <link rel="preload" as="image" href="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg">
 
   <!-- ===== FUENTES DESCARGABLES (WOFF2) ===== -->
   <!-- Si quieres alojar los archivos localmente, descarga las fuentes desde Google Fonts y ajusta las rutas -->
@@ -65,13 +65,49 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="./styles/variables.css">
+  <link rel="stylesheet" type="text/css" href="./styles/base.css">
+  <link rel="stylesheet" type="text/css" href="./styles/layout.css">
+  <link rel="stylesheet" type="text/css" href="./styles/sections.css">
+  <link rel="stylesheet" type="text/css" href="./styles/components.css">
+  <link rel="stylesheet" type="text/css" href="./styles/responsive.css">
+
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
 <body>
+     <header class="header" id="header">
+    <div class="logo">Turia Jardín</div>
+    <button class="menu-icon" id="menuIcon" aria-label="Menú">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Inicio</a></li>
+
+      <li class="has-submenu"><a href="#">Servicios</a>
+
+
+        <ul class="submenu">
+          <li><a href="./servicios/podaPalmeras.html">Poda de palmeras</a></li>
+          <li><a href="./servicios/podaArboles.html">Poda de árboles</a></li>
+          <li><a href="./servicios/tratamientosFitosanitarios.html">Tratamientos fitosanitarios</a></li>
+          <li><a href="./servicios/endoterapia.html">Endoterapia</a></li>
+          <li><a href="./servicios/adecuacionAreasVerdes.html">Adecuación áreas verdes</a></li>
+        </ul>
+      </li>
+
+      <li><a href="./noticias.html">Noticias</a></li>
+      <li><a href="./proyectos.html">Proyectos</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+   
+    </ul>
+    <div class="div-light">
+  <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+    🌞
+  </button>
+</div> 
+</header>
   <div class="preloader" id="preloader">
     <div class="preloader-spinner"></div>
   </div>
@@ -80,15 +116,30 @@
   <header class="header" id="header">
     <div class="logo">Turia Jardín</div>
     <button class="menu-icon" id="menuIcon" aria-label="Menú">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="#hero">Inicio</a>
-      <a href="./servicios.html">Servicios</a>
-      <a href="#testimonials">Clientes</a>
-      <a href="./galeria.html">Galería</a>
-      <a href="./contacto.html">Contacto</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" aria-pressed="false">🌞</button>
-    </div>
-  </header>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Inicio</a></li>
+
+      <li class="has-submenu"><a href="#">Servicios</a>
+
+
+        <ul class="submenu">
+          <li><a href="./servicios/podaPalmeras.html">Poda de palmeras</a></li>
+          <li><a href="./servicios/podaArboles.html">Poda de árboles</a></li>
+          <li><a href="./servicios/tratamientosFitosanitarios.html">Tratamientos fitosanitarios</a></li>
+          <li><a href="./servicios/endoterapia.html">Endoterapia</a></li>
+          <li><a href="./servicios/adecuacionAreasVerdes.html">Adecuación áreas verdes</a></li>
+        </ul>
+      </li>
+
+      <li><a href="./noticias.html">Noticias</a></li>
+      <li><a href="./proyectos.html">Proyectos</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+   
+    </ul>
+    <div class="div-light">
+    <button class="theme-toggle" id="themeToggleDesktop">🌞</button>
+  </div>
+</header>
 
   <main>
     <section class="section hero" id="hero">
@@ -96,12 +147,13 @@
       <div class="hero-content" id="heroContent">
         <div class="hero-subtitle reveal-fade">Especialistas en poda de palmeras · Valencia</div>
         <div class="dynamic-title reveal-fade">
-          <h1 id="typewriter"></h1>
+          <h1 id="typewriter" style="background: linear-gradient(135deg, #e7f0c3, #b1cc74); background-clip: text;">
+          </h1>
         </div>
         <p class="reveal-fade" style="font-size:1rem; max-width:500px; margin:0.5rem auto 0;">Más de 12 años cuidando el
           patrimonio verde de Valencia. Poda, endoterapia y adecuación de áreas verdes.</p>
         <div class="reveal-fade">
-          <button class="btn btn-outline magnetic" id="mainCta">Conoce servicios</button>
+          <button class="btn btn-outline magnetic" id="mainCta" style="color: #ecead8;">Conoce servicios</button>
           <button class="btn magnetic" id="presupuestoBtn">Presupuesto</button>
         </div>
       </div>
@@ -111,9 +163,21 @@
       <h2 class="reveal-fade" style="font-size:2rem; font-family:'Cormorant Garamond', serif;">Expertos en el cuidado de
         palmeras y jardines</h2>
       <div style="height:3px; width:60px; background:var(--accent); margin:1rem auto;"></div>
-      <p class="reveal-fade" style="max-width:700px; text-align:center; font-size:1rem;">En Turia Jardín combinamos
-        técnicas tradicionales y tratamientos biológicos. Nuestra especialidad es la poda de palmeras, abarcamos todas
-        las necesidades de tu área verde.</p>
+      <p class="reveal-fade" style="max-width:700px; text-align:center; font-size:1rem;  line-height: 1.7; ">En Turia
+        Jardín combinamos
+        técnicas tradicionales con tratamientos biológicos innovadores, adaptándonos a las necesidades específicas de
+        cada espacio verde. Nuestra especialidad es la poda de palmeras, asegurando que cada árbol reciba los cuidados
+        adecuados para mantener su salud, forma y longevidad.
+      </p>
+      <p class="reveal-fade" style="max-width:700px; text-align:center; font-size:1rem; line-height: 1.7;">
+        Además, ofrecemos una atención integral para jardines, desde el mantenimiento de céspedes, arbustos y plantas
+        ornamentales, hasta la rehabilitación de áreas verdes deterioradas. Cada intervención se realiza con
+        profesionalidad, utilizando técnicas respetuosas con el medio ambiente y productos seguros, garantizando
+        resultados estéticos y sostenibles.
+      </p>
+      <p class="reveal-fade" style="max-width:700px; text-align:center; font-size:1rem; line-height: 1.7;">
+        Con años de experiencia en Valencia y alrededores, en Turia Jardín nos comprometemos a cuidar y embellecer tus
+        espacios verdes, creando entornos saludables y agradables para ti y tu familia.</p>
     </section>
 
     <section class="section" id="servicesBrief">
@@ -148,22 +212,42 @@
 
     <section class="section" id="servicesDetail">
       <div class="detail-module reveal-fade">
-        <div class="detail-img"><img src="https://i.postimg.cc/nLgZJk9P/20251119-104608.jpg"
-            alt="Poda de palmeras" loading="lazy"></div>
+        <div class="detail-img"><img src="https://i.postimg.cc/nLgZJk9P/20251119-104608.jpg" alt="Poda de palmeras"
+            loading="lazy"></div>
         <div class="detail-text">
           <h3>🌴 Poda de palmeras</h3>
-          <p>Podas anuales y limpieza de palmeras datileras, canarias, washingtonias. Eliminamos hojas secas y racimos
-            con equipos de altura.</p><button class="btn magnetic detail-btn" data-service="Poda de palmeras">Solicitar
+          <p> Realizamos poda y mantenimiento integral de palmeras adaptándonos a cada especie, como palmeras datileras,
+            canarias y washingtonias. Llevamos a cabo podas anuales y trabajos de limpieza para eliminar hojas secas,
+            dañadas o colgantes, así como la retirada de racimos y restos orgánicos que puedan suponer un riesgo o
+            afectar a la estética. </p>
+          <p> Nuestros servicios no solo mejoran la imagen de la palmera, sino que también contribuyen a su salud y
+            previenen posibles plagas o enfermedades. Trabajamos con equipos de altura, utilizando técnicas de trepa y
+            maquinaria especializada para garantizar intervenciones seguras, eficientes y respetuosas con el entorno.
+          </p>
+          <p> Nos adaptamos a todo tipo de espacios, desde jardines particulares hasta comunidades y zonas públicas,
+            ofreciendo un servicio profesional, limpio y con resultados duraderos. </p>
+          <button class="btn magnetic detail-btn" data-service="Poda de palmeras">Solicitar
             presupuesto</button>
         </div>
       </div>
       <div class="detail-module reveal-fade">
-        <div class="detail-img"><img src="https://i.postimg.cc/7hNpfMhW/20251104-155417.jpg"
-            alt="Poda de árboles" loading="lazy"></div>
+        <div class="detail-img"><img src="https://i.postimg.cc/7hNpfMhW/20251104-155417.jpg" alt="Poda de árboles"
+            loading="lazy"></div>
         <div class="detail-text">
           <h3>🌳 Poda de árboles</h3>
-          <p>Poda de formación, limpieza, reducción de copa y frutales. Trabajamos con trepa y plataformas elevadoras.
-          </p><button class="btn magnetic detail-btn" data-service="Poda de árboles">Saber más</button>
+          <p> Realizamos todo tipo de trabajos de poda adaptados a las necesidades de cada árbol y entorno. Ofrecemos
+            poda de formación para guiar el crecimiento desde sus primeras etapas,
+            poda de limpieza para eliminar ramas secas, enfermas o dañadas, y poda de reducción de copa para controlar
+            el tamaño y mejorar la seguridad sin comprometer la salud del árbol.
+            También llevamos a cabo la poda especializada de árboles frutales, favoreciendo una mejor producción y
+            calidad del fruto. </p>
+          <p> Trabajamos con técnicas profesionales de trepa y utilizamos plataformas elevadoras cuando es necesario,
+            lo que nos permite acceder de forma segura a cualquier altura y situación. Nuestro equipo prioriza siempre
+            la salud del árbol,
+            la seguridad del entorno y un acabado estético equilibrado. Nos adaptamos tanto a espacios privados como
+            públicos,
+            garantizando un servicio eficiente, limpio y respetuoso con el medio ambiente. </p>
+          <button class="btn magnetic detail-btn" data-service="Poda de árboles">Saber más</button>
         </div>
       </div>
       <div class="detail-module reveal-fade">
@@ -171,16 +255,35 @@
             alt="Tratamientos fitosanitarios" loading="lazy"></div>
         <div class="detail-text">
           <h3>🐛 Tratamientos fitosanitarios</h3>
-          <p>Diagnóstico y tratamiento de plagas: cochinilla, pulgón, picudo rojo y hongos. Productos respetuosos.</p>
+          <p> Ofrecemos un servicio completo de diagnóstico y tratamiento de plagas y enfermedades que afectan a
+            árboles, palmeras y plantas ornamentales. Identificamos de forma precisa problemas como cochinilla, pulgón,
+            picudo rojo y diversas afecciones por hongos, aplicando soluciones eficaces y adaptadas a cada caso. </p>
+          <p> Utilizamos productos fitosanitarios respetuosos con el medio ambiente y, siempre que es posible,
+            priorizamos métodos sostenibles que minimizan el impacto en personas, mascotas y fauna beneficiosa. Nuestros
+            tratamientos están orientados tanto a la eliminación de la plaga como a la prevención de futuras
+            infestaciones. </p>
+          <p> Trabajamos con técnicas y equipos profesionales para garantizar una aplicación segura y efectiva,
+            adaptándonos a jardines privados, comunidades y espacios públicos. Nuestro objetivo es recuperar la salud de
+            las plantas y mantener su buen estado a largo plazo. </p>
           <button class="btn magnetic detail-btn" data-service="Tratamientos fitosanitarios">Consultar plaga</button>
         </div>
       </div>
       <div class="detail-module reveal-fade">
-        <div class="detail-img"><img src="https://i.postimg.cc/ydHQcgM4/20251118-142205.jpg"
-            alt="Endoterapia" loading="lazy"></div>
+        <div class="detail-img"><img src="https://i.postimg.cc/ydHQcgM4/20251118-142205.jpg" alt="Endoterapia"
+            loading="lazy"></div>
         <div class="detail-text">
           <h3>💉 Endoterapia</h3>
-          <p>Inyección directa al sistema vascular. Ideal para combatir el picudo rojo sin contaminar el entorno.</p>
+
+          <p> La endoterapia vegetal es un tratamiento avanzado que consiste en la inyección directa de productos
+            fitosanitarios en el sistema vascular del árbol o palmera. Este método permite actuar de forma precisa desde
+            el interior de la planta, garantizando una mayor eficacia en el control de plagas y enfermedades. </p>
+          <p> Es especialmente eficaz en la lucha contra el picudo rojo en palmeras, ya que el tratamiento se distribuye
+            internamente sin afectar al entorno. Al no requerir pulverización externa, se evita la dispersión de
+            productos químicos en el aire, reduciendo riesgos para personas, mascotas y fauna auxiliar. </p>
+          <p> Se trata de una técnica segura, limpia y respetuosa con el medio ambiente, ideal para aplicar en zonas
+            urbanas, jardines privados, comunidades y espacios públicos. Nuestro equipo utiliza sistemas profesionales
+            que aseguran una correcta dosificación y resultados duraderos, favoreciendo la recuperación y protección de
+            la planta. </p>
           <button class="btn magnetic detail-btn" data-service="Endoterapia">Conocer más</button>
         </div>
       </div>
@@ -189,8 +292,17 @@
             alt="Adecuación áreas verdes" loading="lazy"></div>
         <div class="detail-text">
           <h3>🏞️ Adecuación áreas verdes</h3>
-          <p>Acondicionamos parques, rotondas, jardines comunitarios. Limpieza, nivelación, siembra y diseño sostenible.
-          </p><button class="btn magnetic detail-btn" data-service="Adecuación de áreas verdes">Pedir estudio</button>
+          <p> Realizamos trabajos integrales de adecuación y mejora de áreas verdes, adaptándonos a las características
+            y necesidades de cada espacio. Intervenimos en parques, rotondas, jardines comunitarios y zonas ajardinadas
+            privadas, transformándolos en entornos funcionales, estéticos y sostenibles. </p>
+          <p> Nuestros servicios incluyen limpieza y desbroce del terreno, retirada de residuos vegetales, nivelación
+            del suelo, preparación del sustrato y siembra de césped o plantación de especies ornamentales. También
+            diseñamos espacios verdes teniendo en cuenta criterios de sostenibilidad, eficiencia hídrica y fácil
+            mantenimiento. </p>
+          <p> Trabajamos con maquinaria y técnicas profesionales para garantizar resultados duraderos y de calidad,
+            cuidando cada detalle desde la planificación hasta la ejecución. Nuestro objetivo es crear espacios verdes
+            agradables, seguros y en armonía con el entorno. </p><button class="btn magnetic detail-btn"
+            data-service="Adecuación de áreas verdes">Pedir estudio</button>
         </div>
       </div>
     </section>
@@ -276,8 +388,8 @@
     <section class="section" id="gallery">
       <h2 class="reveal-fade" style="font-family:'Cormorant Garamond', serif;">Proyectos reales</h2>
       <div class="gallery-grid">
-        <div class="gallery-item"><img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg"
-            alt="Poda monumental" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Poda monumental"
+            loading="lazy"></div>
         <div class="gallery-item"><img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg"
             alt="Adecuación jardín" loading="lazy"></div>
         <div class="gallery-item"><img src="https://i.postimg.cc/y6ShsYty/IMG-20231004-120037.jpg"
@@ -290,40 +402,120 @@
     <section class="section faq-section" id="faq">
       <h2 class="reveal-fade" style="font-family:'Cormorant Garamond', serif;">Preguntas frecuentes</h2>
       <div style="height: 3px; width: 60px; background: var(--accent); margin: 1rem auto 2rem;"></div>
+
       <div class="faq-grid" itemscope itemtype="https://schema.org/FAQPage">
+
+        <!-- PREGUNTA 1 -->
         <div class="faq-item reveal-fade" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <button class="faq-question" itemprop="name">¿Cada cuánto hay que podar una palmera? <span
-              class="faq-icon">+</span></button>
+          <button class="faq-question" itemprop="name">
+            <!-- Icono palmera -->
+            <svg class="faq-icon-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" width="24" height="24"
+              style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <g>
+                <g>
+                  <path fill="currentColor"
+                    d="M378.896,128c-4.958,0-9.917,0.177-14.917,0.521l20.042-10.979c3.417-1.875,5.542-5.458,5.542-9.354v-8.25L402,103.906 c2.771,0.885,5.771,0.594,8.333-0.771l74.75-40.417c4.583-2.49,6.708-7.948,5-12.885c-1.667-4.76-13.521-28.5-84.75-28.5 C358.042,21.333,290.25,67.5,256,120.448C221.75,67.5,153.958,21.333,106.667,21.333c-71.229,0-83.083,23.74-84.75,28.5 c-1.708,4.938,0.417,10.396,5,12.885l74.75,40.417c2.563,1.365,5.542,1.656,8.333,0.771l12.438-3.969v8.25 c0,3.896,2.125,7.479,5.542,9.354l20.042,10.979c-5-0.344-9.958-0.521-14.917-0.521C55.979,128,0,168.375,0,224 c0,3.135,1.375,6.115,3.771,8.135c2.396,2.031,5.604,2.885,8.646,2.385l73.146-12.188c3.313-0.552,6.167-2.615,7.708-5.583 l6.438-12.354l3.896,7.479c2.146,4.083,6.646,6.313,11.208,5.583l82.797-13.799c-34.497,100.534-6.737,270.478-5.464,278.102 c0.854,5.135,5.313,8.906,10.521,8.906h106.667c3.813,0,7.333-2.031,9.229-5.323c1.917-3.302,1.917-7.365,0.021-10.667 c-0.918-1.57-87.635-155.056-45.665-277.93l124.27,20.711c4.479,0.708,9.083-1.5,11.208-5.583l3.896-7.479l6.438,12.354 c1.542,2.969,4.396,5.031,7.708,5.583l73.146,12.188c0.583,0.094,1.167,0.146,1.75,0.146c2.5,0,4.958-0.885,6.896-2.531 c2.396-2.021,3.771-5,3.771-8.135C512,168.375,456.021,128,378.896,128z" />
+                </g>
+              </g>
+            </svg>
+            ¿Cada cuánto hay que podar una palmera? <span class="faq-icon">+</span>
+          </button>
           <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">Lo recomendable es realizar una poda anual, preferiblemente en primavera o principios
-              de verano. Eliminamos hojas secas y racimos de frutos, respetando siempre la salud de la palmera.</div>
+            <div itemprop="text">
+              <p>Lo recomendable es realizar una poda anual, preferiblemente en primavera o principios de verano.
+                Durante la poda, se eliminan hojas secas, racimos de frutos y cualquier brote enfermo o dañado,
+                asegurando que la palmera mantenga una forma saludable y equilibrada.</p>
+              <p><img src="https://i.postimg.cc/1XzKrpJz/20260213-113728.jpg" alt="Poda de palmera"
+                  class="faq-answer-img"></p>
+              <p>También revisamos el tronco y la base del árbol para detectar plagas o daños, aplicando tratamientos
+                preventivos si es necesario. Una poda adecuada mejora la estética, seguridad y longevidad de la palmera.
+              </p>
+            </div>
           </div>
         </div>
+
+        <!-- PREGUNTA 2 -->
         <div class="faq-item reveal-fade" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <button class="faq-question" itemprop="name">¿Qué es la endoterapia y para qué sirve? <span
-              class="faq-icon">+</span></button>
+          <button class="faq-question" itemprop="name">
+            <!-- Icono jeringa para endoterapia -->
+            <svg id="Capa_1" class="faq-icon-img" enable-background="new 0 0 512.113 512.113"
+              viewBox="0 0 512.113 512.113" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <g>
+                <path fill="currentColor"
+                  d="m268.162 159.099-21.214 21.213 42.427 42.427-21.213 21.213-42.427-42.427-21.213 21.214 42.426 42.426-21.213 21.213-42.426-42.426-21.213 21.213 42.426 42.426-21.213 21.214-42.427-42.427-26.397 26.398 1.82 61.819-116.305 116.305 21.213 21.213 116.305-116.304 61.82 1.819 153.676-153.676z" />
+                <path fill="currentColor"
+                  d="m289.375 53.033-21.213 21.213 42.426 42.427-21.213 21.213 84.853 84.853 21.213-21.214 42.426 42.427 21.213-21.213z" />
+                <path fill="currentColor"
+                  d="m427.261 148.492 42.426-42.426 21.213 21.213 21.213-21.213-106.066-106.066-21.213 21.213 21.213 21.213-42.426 42.427z" />
+              </g>
+            </svg>
+            ¿Qué es la endoterapia y para qué sirve? <span class="faq-icon">+</span>
+          </button>
           <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">La endoterapia es un tratamiento que inyecta el producto fitosanitario directamente en
-              el sistema vascular de la palmera. Es muy eficaz contra el picudo rojo y otras plagas, sin contaminar el
-              entorno.</div>
+            <div itemprop="text">
+              <p>La endoterapia es un tratamiento que inyecta productos fitosanitarios directamente en el sistema
+                vascular de la palmera, combatiendo eficazmente plagas como el picudo rojo.</p>
+              <p><img src="https://i.postimg.cc/bJ5Z4kp6/IMG-20221124-155244.jpg" alt="Endoterapia en palmera"
+                  class="faq-answer-img"></p>
+              <p>Este método es seguro y respetuoso con el medio ambiente, minimizando la exposición a químicos y
+                fortaleciendo la resistencia natural de la palmera.</p>
+            </div>
           </div>
         </div>
+
+        <!-- PREGUNTA 3 -->
         <div class="faq-item reveal-fade" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <button class="faq-question" itemprop="name">¿Trabajáis en toda la provincia de Valencia? <span
-              class="faq-icon">+</span></button>
+          <button class="faq-question" itemprop="name">
+            <!-- Icono ubicación -->
+            <svg class="faq-icon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor"
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z" />
+            </svg>
+            ¿Trabajáis en toda la provincia de Valencia? <span class="faq-icon">+</span>
+          </button>
           <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">Sí, cubrimos Valencia ciudad y alrededores: Moncada, Godella, Burjassot, Paterna,
-              Torrent, y más. Consulta sin compromiso.</div>
+            <div itemprop="text">
+              <p>Sí, ofrecemos nuestros servicios en toda la provincia de Valencia, incluyendo la ciudad y municipios
+                cercanos como Moncada, Godella, Burjassot, Paterna y Torrent.</p>
+              <p><img src="https://i.postimg.cc/bJ5Z4kp6/IMG-20221124-155244.jpg" alt="Mapa de Valencia"
+                  class="faq-answer-img"></p>
+              <p>Nos desplazamos con rapidez y profesionalidad, adaptándonos a proyectos tanto privados como
+                comunitarios.</p>
+            </div>
           </div>
         </div>
+
+        <!-- PREGUNTA 4 -->
         <div class="faq-item reveal-fade" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <button class="faq-question" itemprop="name">¿Ofrecéis presupuestos gratuitos? <span
-              class="faq-icon">+</span></button>
+          <button class="faq-question" itemprop="name">
+            <!-- Icono dinero -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon-img" width="24" height="24"
+              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px"
+              viewBox="0 0 512.081 512.081" style="enable-background:new 0 0 512.081 512.081;" xml:space="preserve">
+              <g>
+                <polygon points="333.48,102.191 232.497,8.457 232.497,102.191 " />
+                <path fill="currentColor"
+                  d="M342.591,160.398v-28.207H202.497V0H15.104v436.169h224.655V160.398H342.591z M80.098,136.948h94.283v30H80.098V136.948z M204.383,346.96H80.098v-30h124.285V346.96z M204.383,286.956H80.098v-30h124.285V286.956z M204.383,226.952H80.098v-30h124.285 V226.952z" />
+                <path fill="currentColor"
+                  d="M269.759,512.081h227.219V282.292H269.759V512.081z M456.337,473.833h-30v-91.888h30V473.833z M424.107,326.744h34.46v30 h-34.46V326.744z M366.674,326.744h34.46v30h-34.46V326.744z M366.674,384.178h34.46v30h-34.46V384.178z M366.674,441.611h34.46v30 h-34.46V441.611z M309.24,326.744h34.46v30h-34.46V326.744z M309.24,384.178h34.46v30h-34.46V384.178z M309.24,441.611h34.46v30 h-34.46V441.611z" />
+                <rect x="269.759" y="190.398" width="227.219" height="61.894" />
+              </g>
+            </svg>
+            ¿Ofrecéis presupuestos gratuitos? <span class="faq-icon">+</span>
+          </button>
           <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">Sí, realizamos una visita técnica y te entregamos un presupuesto detallado sin ningún
-              compromiso.</div>
+            <div itemprop="text">
+              <p>Sí, realizamos presupuestos gratuitos y personalizados. Incluimos una visita técnica para evaluar
+                necesidades específicas y posibles problemas.</p>
+              <p><img src="https://i.postimg.cc/bJ5Z4kp6/IMG-20221124-155244.jpg" alt="Presupuesto gratuito"
+                  class="faq-answer-img"></p>
+              <p>Después entregamos un presupuesto detallado, explicando cada procedimiento y producto que se aplicará,
+                asegurando transparencia y confianza con nuestros clientes.</p>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
     <section class="section" id="contact">
@@ -335,12 +527,13 @@
     </section>
 
     <section class="section">
-      <div
-        style="background: radial-gradient(circle at 30% 20%, #2c3822, #0a0f07); border-radius: 2rem; padding: 2rem 1.5rem; text-align: center; max-width: 800px; margin: 0 auto;">
-        <h2 style="font-size:1.6rem; font-family:'Cormorant Garamond', serif;">¿Tienes palmeras que necesitan cuidados?
+      <div style="background: radial-gradient(circle at 30% 20%, #2c3822, #0a0f07);
+         border-radius: 2rem; padding: 2rem 1.5rem; text-align: center; max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size:1.6rem; font-family:'Cormorant Garamond', serif; color: #ecead8;">¿Tienes palmeras que
+          necesitan cuidados?
         </h2>
-        <p style="margin:1rem 0;">Somos especialistas en poda y endoterapia. Solicita una visita técnica.</p><button
-          class="btn" id="finalContactBtn">🌿 Contactar con el equipo</button>
+        <p style="margin:1rem 0;color: #ecead8;">Somos especialistas en poda y endoterapia. Solicita una visita técnica.
+        </p><button class="btn" id="finalContactBtn">🌿 Contactar con el equipo</button>
       </div>
     </section>
 
@@ -349,17 +542,16 @@
       <div style="height: 3px; width: 60px; background: var(--accent); margin: 1rem auto 2rem;"></div>
       <div class="swiper clients-swiper reveal-fade">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="https://placehold.co/200x100/e8ecd9/1c2a14?text=Comunidad+Los+Álamos"
+          <div class="swiper-slide"><img src="https://i.postimg.cc/XqHBMGX0/Stihl-Logo-White-On-Orange-svg.png"
               alt="Comunidad"></div>
-          <div class="swiper-slide"><img src="https://placehold.co/200x100/e8ecd9/1c2a14?text=Hotel+Las+Palmeras"
-              alt="Hotel"></div>
-          <div class="swiper-slide"><img src="https://placehold.co/200x100/e8ecd9/1c2a14?text=Ayto.+Valencia"
-              alt="Ayuntamiento"></div>
-          <div class="swiper-slide"><img src="https://placehold.co/200x100/e8ecd9/1c2a14?text=Jardín+Botánico"
+          <div class="swiper-slide"><img src="https://i.postimg.cc/jdBCzr77/logopersonalgarden.jpg" alt="Hotel"></div>
+          <div class="swiper-slide"><img src="https://i.postimg.cc/SQvKhpDj/Solivent2.png" alt="Ayuntamiento"></div>
+          <div class="swiper-slide"><img src="https://i.postimg.cc/fkQnR5V0/cropped-logo-BOTANIC-CULLERA-ok-300x183.png"
               alt="Botánico"></div>
-          <div class="swiper-slide"><img src="https://placehold.co/200x100/e8ecd9/1c2a14?text=Urbanización+Paraíso"
+          <div class="swiper-slide"><img
+              src="https://i.postimg.cc/vZQ87Hmn/242400244-526029161778109-136306023798583575-n-png-stp-dst-png-s200x200-nc-cat-104-ccb-1-7-nc-sid.png"
               alt="Urbanización"></div>
-          <div class="swiper-slide"><img src="https://placehold.co/200x100/e8ecd9/1c2a14?text=Club+Campo"
+          <div class="swiper-slide"><img src="https://i.postimg.cc/Sxj3bwT1/logo-blanco-VIVEROSMARCH-245x98.png"
               alt="Club Campo"></div>
         </div>
         <div class="swiper-pagination clients-pagination"></div>
@@ -373,8 +565,13 @@
     <p>© 2026 Turia Jardín · Especialistas en poda de palmeras · Valencia · +34 600 987 654</p>
   </footer>
 
-  <div class="whatsapp-float"><a href="https://wa.me/34600987654" target="_blank" rel="noopener"><img
-        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a></div>
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/34600987654" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" width="50"
+        height="50">
+    </a>
+  </div>
   <div class="scroll-top" id="scrollTop" aria-label="Volver arriba">↑</div>
   <div id="serviceModal" class="modal">
     <div class="modal-content"><span class="modal-close" id="modalClose">&times;</span>
@@ -386,9 +583,9 @@
   <div id="lightbox" class="lightbox"><span class="lightbox-close">&times;</span><img id="lightboxImg" src="" alt="">
   </div>
 
- 
-<!-- Nuestro main.js como módulo -->
-<script type="module" src="./js/main.js"></script>
+
+  <!-- Nuestro main.js como módulo -->
+  <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

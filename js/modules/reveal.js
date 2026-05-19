@@ -13,7 +13,7 @@ export function initReveal() {
   // También activar elementos ya visibles al cargar
   window.addEventListener('load', () => {
     document.querySelectorAll('.reveal-fade').forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+      if (el.getBoundingClientRect().top < window.innerHeight - 70) {
         el.classList.add('revealed');
       }
     });

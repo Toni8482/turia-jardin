@@ -16,6 +16,7 @@ import { initBeforeAfterSplit } from './modules/beforeAfterSplit.js';
 import { initSwipers } from './modules/swipers.js';
 import { initScrollTop } from './modules/scrollTop.js';
 import { initContactForm } from './modules/contactForm.js';
+import { initFaq } from './modules/faq.js';
 
 // Registrar ScrollTrigger si no está ya registrado (a veces es necesario)
 gsap.registerPlugin(ScrollTrigger);
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSwipers();
   initScrollTop();
   initContactForm();
+  initFaq();
 });
 
 // Refrescar ScrollTrigger cuando todo el contenido esté cargado (imágenes, etc.)

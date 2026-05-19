@@ -1,0 +1,69 @@
+* {
+  margin: 0; /* elimina márgenes por defecto del navegador */
+  padding: 0; /* elimina paddings por defecto */
+  box-sizing: border-box; /* hace que padding y border no aumenten el tamaño del elemento */
+}
+
+/* ESTILOS GLOBALES DEL SITIO */
+body {
+  font-family: "Source Sans Pro", sans-serif; /* tipografía principal */
+  background-color: var(--bg-primary); /* color de fondo general */
+  color: var(--text-primary); /* color del texto principal */
+  overflow-x: hidden; /* evita scroll horizontal accidental */
+  transition: background-color 0.3s ease, color 0.3s ease; /* animación suave al cambiar tema */
+  scroll-behavior: smooth; /* scroll suave al navegar por anclas */
+}
+
+
+
+/* PRELOADER (pantalla de carga inicial) */
+.preloader {
+  position: fixed; /* lo fija en toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary); /* mismo fondo que la web */
+  display: flex; /* centra contenido */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* lo pone por encima de todo */
+  transition: opacity 0.5s ease, visibility 0.5s; /* animación al desaparecer */
+}
+
+/* cuando el preloader se oculta */
+.preloader.hidden {
+  opacity: 0; /* lo hace transparente */
+  visibility: hidden; /* lo elimina visualmente */
+}
+
+/* spinner de carga */
+.preloader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--border-color); /* borde exterior */
+  border-top-color: var(--accent-light); /* parte coloreada para efecto giro */
+  border-radius: 50%; /* lo convierte en círculo */
+  animation: spin 1s infinite linear; /* animación de giro constante */
+}
+
+/* animación del spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg); /* rota completamente */
+  }
+}
+
+/* PERSONALIZACIÓN DEL SCROLL (solo Chrome/Edge/Safari) */
+::-webkit-scrollbar {
+  width: 5px; /* grosor de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary); /* fondo de la barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent); /* color del indicador de scroll */
+  border-radius: 10px; /* bordes redondeados */
+}
