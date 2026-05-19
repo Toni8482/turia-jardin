@@ -1,0 +1,460 @@
+/* =========================
+   🌄 HERO (SECCIÓN PRINCIPAL)
+   =========================
+   Centra el contenido vertical y horizontalmente
+   ocupando toda la pantalla (100vh)
+*/
+.hero {
+  min-height: 100vh; /* ocupa toda la pantalla */
+  display: flex; /* activa flexbox */
+  align-items: center; /* centra verticalmente */
+  justify-content: center; /* centra horizontalmente */
+}
+
+/* =========================
+   🖼️ DETALLE: IMÁGENES
+   =========================
+   Contenedor de imagen con recorte y estilo visual
+*/
+.detail-img {
+  height: 300px; /* altura fija del bloque */
+  border-radius: 1.5rem; /* bordes redondeados */
+  overflow: hidden; /* recorta la imagen si sobresale */
+  box-shadow: var(--shadow-md);
+}
+
+/* Imagen dentro del contenedor */
+.detail-img img {
+  width: 100%; /* ocupa todo el ancho */
+  height: 100%; /* ocupa todo el alto */
+  object-fit: cover; /* recorta sin deformar */
+  transition: transform 0.3s; /* animación suave */
+}
+
+/* Efecto hover zoom ligero */
+.detail-img img:hover {
+  transform: scale(1.02);
+}
+
+/* =========================
+   🧱 BLOQUE DETALLE (IMAGEN + TEXTO)
+   =========================
+   Layout principal tipo grid
+   2 columnas: imagen + texto
+*/
+.detail-module {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* texto más grande que imagen */
+  align-items: center;
+  gap: 2rem;
+
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+
+  border-radius: 2rem;
+  background: rgba(20, 24, 16, 0.7);
+}
+
+/* Modo claro */
+body.light .detail-module {
+  background: rgba(230, 235, 210, 0.9);
+}
+
+/* =========================
+   🔁 EFECTO ZIGZAG (alternar lados)
+   =========================
+   Cambia el orden visual en los pares
+*/
+.detail-module:nth-child(even) {
+  grid-template-columns: 2fr 1fr; /* invierte proporciones */
+}
+
+/* mueve la imagen al otro lado */
+.detail-module:nth-child(even) .detail-img {
+  order: 2;
+}
+
+/* mueve el texto al otro lado */
+.detail-module:nth-child(even) .detail-text {
+  order: 1;
+}
+
+/* =========================
+   📝 TEXTO DETALLE
+   ========================= */
+.detail-text {
+  margin: 0 auto;
+}
+.detail-text h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+
+  background: var(--gradient-title);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  font-weight: 700;
+}
+.detail-text p {
+  text-align: left;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* =========================
+   ⭐ TESTIMONIOS
+   =========================
+   Grid responsive automático
+*/
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+/* tarjeta individual */
+.testimonial-card {
+  background: var(--bg-card);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+
+  backdrop-filter: blur(4px);
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* nombre dentro del testimonio */
+.testimonial-card h4 {
+  font-family: "Cormorant Garamond", serif;
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   🔢 CONTADORES
+   ========================= */
+.counter-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.counter-item {
+  text-align: center;
+  padding: 1.2rem;
+
+  background: var(--bg-card);
+  border-radius: 1.5rem;
+
+  min-width: 130px;
+}
+
+.counter-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--accent-light);
+}
+
+/* =========================
+   ❓ FAQ (ACORDEÓN)
+   ========================= */
+.faq-section {
+  background: var(--bg-secondary);
+}
+
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* caja de cada pregunta */
+.faq-item {
+  background: var(--bg-card);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+/* botón de pregunta */
+.faq-question {
+  width: 100%;
+  text-align: left;
+
+  padding: 1.2rem;
+  background: none;
+  border: none;
+
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--text-primary);
+}
+
+/* hover suave */
+.faq-question:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* icono + */
+.faq-icon {
+  font-size: 1.4rem;
+  transition: transform 0.3s;
+}
+
+/* cuando está abierto */
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* respuesta escondida */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.2rem;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+
+  transition: max-height 0.5s ease;
+}
+
+/* respuesta visible */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 0 1.2rem 1.2rem;
+}
+.faq-answer p {
+  text-align: justify;
+  line-height: 1.7;
+  hyphens: auto;
+  margin-bottom: 1rem;
+}
+
+
+.faq-icon-img {
+  color: var(--text-primary);
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Imágenes dentro de respuestas */
+.faq-answer-img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  display: block;
+  margin: 1rem auto;
+}
+/* =========================
+   🏢 CLIENTES (LOGOS)
+   ========================= */
+.clients-section {
+  background: var(--bg-secondary);
+}
+
+.clients-swiper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+/* logos */
+.clients-swiper .swiper-slide img {
+  max-width: 140px;
+  max-height: 60px;
+
+  object-fit: contain;
+
+  filter: brightness(0.8) grayscale(0.2);
+  transition: all 0.3s;
+}
+
+/* hover logos */
+.clients-swiper .swiper-slide img:hover {
+  filter: brightness(1) grayscale(0);
+  transform: scale(1.05);
+}
+
+/* =========================
+   🖼️ GALERÍA
+   ========================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
+.gallery-item {
+  border-radius: 1rem;
+  overflow: hidden;
+
+  aspect-ratio: 1/1;
+  cursor: pointer;
+
+  max-height: 220px;
+}
+
+/* imagen galería */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.4s;
+}
+
+/* CONTENEDOR GENERAL #############################################################3*/
+#beforeafter .swiper {
+  padding-bottom: 60px; /* espacio para los puntos */
+}
+
+/* SLIDE */
+#beforeafter .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+/* TARJETA */
+.ba-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+/* IMÁGENES */
+.ba-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.ba-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ETIQUETAS ANTES / DESPUÉS */
+.ba-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+/* TEXTO DESCRIPCIÓN */
+.ba-desc {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 90%;
+  position: relative;
+  z-index: 5;
+}
+
+/* PAGINACIÓN (PUNTOS) */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--accent);
+}
+
+/* FLECHAS */
+
+.swiper {
+  --swiper-navigation-color: var(--accent);
+}
+#beforeafter .swiper-pagination-bullet {
+  background: #ddd !important;
+}
+
+#beforeafter .swiper-pagination-bullet-active {
+  background: var(--accent) !important;
+}
+
+#clients .clients-pagination .swiper-pagination-bullet {
+  background-color: #ddd !important; /* color de puntos normales */
+
+  margin: 0 6px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Punto activo */
+#clients .clients-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent) !important; /* color del punto activo */
+  transform: scale(1.3); /* efecto pequeño para destacar */
+}
+
+#clients .swiper {
+  padding-bottom: 50px; /* espacio extra seguro */
+  position: relative; /* asegura que los bullets se posicionen respecto al swiper */
+}
+
+#clients .clients-pagination {
+  bottom: 10px; /* un poco de separación */
+  text-align: center;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background: transparent;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 28px;
+}
+
+/* HOVER (solo desktop) */
+@media (hover: hover) {
+  .ba-image img {
+    transition: transform 0.4s ease;
+  }
+
+  .ba-image:hover img {
+    transform: scale(1.05);
+  }
+}
+
+
+#mainCta {
+  color: #ecead8 !important;
+}

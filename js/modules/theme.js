@@ -1,19 +1,24 @@
 export function initTheme() {
-  const themeToggle = document.getElementById('themeToggle');
-  if (!themeToggle) return;
+  const desktopBtn = document.getElementById('themeToggleDesktop');
+  const mobileBtn = document.getElementById('themeToggleMobile');
 
-  if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light');
-    themeToggle.textContent = '🌙';
-  } else {
-    themeToggle.textContent = '🌞';
-  }
+  const buttons = [desktopBtn, mobileBtn].filter(Boolean);
 
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    const isLight = document.body.classList.contains('light');
+  const applyTheme = (isLight) => {
+    document.body.classList.toggle('light', isLight);
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    themeToggle.setAttribute('aria-pressed', isLight);
-    themeToggle.textContent = isLight ? '🌙' : '🌞';
+    buttons.forEach(btn => {
+      btn.setAttribute('aria-pressed', isLight);
+      btn.textContent = isLight ? '🌙' : '🌞';
+    });
+  };
+
+  const isLight = localStorage.getItem('theme') === 'light';
+  applyTheme(isLight);
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyTheme(!document.body.classList.contains('light'));
+    });
   });
 }

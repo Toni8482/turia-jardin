@@ -1,0 +1,256 @@
+/* TABLET */
+@media (max-width: 1024px) {
+  /* =========================
+     🧱 CONTENEDORES GENERALES
+     ========================= */
+
+  /* Reduce márgenes laterales grandes de desktop */
+  .section {
+    padding: 5rem 1.5rem;
+  }
+
+  /* Evita que todo se estire demasiado */
+  .card-grid,
+  .testimonials-grid,
+  .gallery-grid {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  /* =========================
+     🧱 DETAIL MODULE (TU ZIGZAG)
+     ========================= */
+
+  /* Mantienes 2 columnas pero más equilibradas */
+  .detail-module {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  /* Imágenes un poco más pequeñas */
+  .detail-img {
+    height: 240px;
+  }
+
+  /* =========================
+     🔢 CONTADORES
+     ========================= */
+
+  .counter-container {
+    gap: 1rem;
+  }
+
+  .counter-item {
+    min-width: 110px;
+    padding: 1rem;
+  }
+
+  /* =========================
+     🖼️ GALERÍA
+     ========================= */
+
+  .gallery-item {
+    max-height: 180px;
+  }
+
+  /* =========================
+     🧾 TEXTO
+     ========================= */
+
+  .detail-text h3 {
+    font-size: 1.6rem;
+  }
+
+  /* =========================
+     🏢 CLIENTES (LOGOS)
+     ========================= */
+
+  .clients-swiper .swiper-slide img {
+    max-width: 110px;
+  }
+}
+
+/* MÓVIL GRANDE */
+@media (max-width: 768px) {
+  .ba-card {
+    grid-template-columns: 1fr;
+  }
+
+  .ba-image img {
+    height: 220px;
+  }
+
+  #beforeafter .swiper {
+    padding-bottom: 70px; /* más espacio en móvil */
+  }
+
+  .ba-desc {
+    font-size: 0.95rem;
+  }
+  .detail-module {
+    grid-template-columns: 1fr; /* todo en columna */
+  }
+  .detail-module:nth-child(even) {
+    grid-template-columns: 1fr; /* invierte proporciones */
+  }
+
+  .detail-module:nth-child(even) .detail-img {
+    order: 1;
+  }
+
+  /* mueve el texto al otro lado */
+  .detail-module:nth-child(even) .detail-text {
+    order: 2;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--header-bg);
+    max-height: 0;         /* cerrado */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 1000;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    max-height: 1000px;    /* abierto */
+  }
+
+  /* Submenu móvil */
+  .submenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    border-radius: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .has-submenu.open .submenu {
+    max-height: 500px;
+  }
+
+  /* Botón tema dentro del menú */
+  .theme-item-menu-icon {
+    display: block;
+  }
+
+  .div-light {
+    display: none; /* oculto en móvil */
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-module {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .detail-text {
+    text-align: center;
+  }
+  .hero-content {
+    padding: 1.5rem;
+  }
+
+  .dynamic-title {
+    font-size: 2.5rem;
+  }
+
+  .counter-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* =========================
+   📱 RESPONSIVE (MÓVILES MUY PEQUEÑOS)
+   =========================
+   Este bloque solo se aplica cuando la pantalla
+   tiene 480px o menos (móviles pequeños).
+*/
+@media (max-width: 480px) {
+  /* =========================
+     HERO (CABECERA PRINCIPAL)
+     ========================= */
+
+  /* Reducimos el padding del contenido del hero
+     para que no ocupe tanto espacio en pantallas pequeñas */
+  .hero-content {
+    padding: 1rem;
+  }
+
+  /* Subtítulo del hero más pequeño */
+  .hero-subtitle {
+    font-size: 0.7rem;
+  }
+
+  /* Título principal adaptado a móvil */
+  .dynamic-title {
+    font-size: 1.8rem;
+  }
+
+  /* =========================
+     BOTONES
+     ========================= */
+
+  /* Botón más compacto en móvil */
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* =========================
+     SECCIONES DE DETALLE
+     ========================= */
+
+  /* Títulos de las secciones más pequeños
+     para que no rompan el diseño */
+  .detail-text h3 {
+    font-size: 1.3rem;
+  }
+
+  /* =========================
+     GALERÍA / IMÁGENES
+     ========================= */
+
+  /* Altura de imágenes reducida para que no ocupen tanto espacio */
+  .ba-image img {
+    height: 140px;
+  }
+
+  /* Imágenes de la galería más compactas */
+  .gallery-item {
+    max-height: 130px;
+  }
+
+  /* =========================
+     CONTADORES (NÚMEROS)
+     ========================= */
+
+  /* Números más pequeños para evitar desbordes */
+  .counter-number {
+    font-size: 1.5rem;
+  }
+
+  /* =========================
+     LOGOS CLIENTES / SWIPER
+     ========================= */
+
+  /* Logos más pequeños en móviles */
+  .clients-swiper .swiper-slide img {
+    max-width: 80px;
+  }
+}

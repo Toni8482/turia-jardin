@@ -1,0 +1,427 @@
+/* =========================
+   🔘 BOTÓN PRINCIPAL (COMPONENTE GLOBAL)
+   ========================= */
+
+/* Botón base reutilizable en toda la web */
+.btn {
+  margin-top: 1.8rem; /* separa el botón del contenido superior */
+  padding: 0.85rem 1.5rem; /* tamaño interno (alto/ancho del botón) */
+  border: none; /* quitamos borde por defecto del navegador */
+  border-radius: 60px; /* lo hace completamente redondo tipo “pill” */
+  background: var(--accent); /* color principal del tema */
+  color: #0e130b; /* texto oscuro para contraste */
+  font-weight: 700; /* texto en negrita */
+  cursor: pointer; /* mano al pasar el ratón */
+  transition: var(--transition); /* animaciones suaves globales */
+  box-shadow: var(--shadow-sm); /* sombra ligera para profundidad */
+  font-family: "Source Sans Pro", sans-serif; /* tipografía principal */
+}
+
+/* efecto visual cuando pasas el ratón */
+.btn:hover {
+  background: var(--accent-hover); /* cambia a color más claro */
+  transform: translateY(-3px); /* levanta el botón ligeramente */
+}
+
+
+/* =========================
+   🔘 BOTÓN SECUNDARIO (OUTLINE)
+   ========================= */
+
+/* estilo alternativo sin fondo */
+.btn-outline {
+  background: transparent; /* sin fondo */
+  border: 1.5px solid var(--accent-light); /* borde visible */
+  color: var(--text-primary); /* texto normal */
+}
+
+/* hover del botón outline */
+.btn-outline:hover {
+  background: var(--accent); /* se rellena al pasar el ratón */
+  color: #0e130b; /* cambia el color del texto */
+}
+
+/* ajuste específico para modo claro */
+body.light .btn-outline {
+  color: #0e130b !important; /* fuerza color oscuro */
+  border-color: var(--accent-light); /* mantiene borde verde claro */
+}
+
+
+/* =========================
+   📦 GRID DE TARJETAS DE SERVICIOS
+   ========================= */
+
+/*
+  Crea una cuadrícula automática:
+  - se adapta al ancho de pantalla
+  - cada card tiene mínimo 210px
+*/
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 2rem; /* separación entre tarjetas */
+  max-width: 1280px; /* ancho máximo del contenedor */
+  width: 100%;
+  margin: 2rem auto; /* centra horizontalmente */
+}
+
+
+/* =========================
+   🧱 TARJETA DE SERVICIO
+   ========================= */
+
+.service-card {
+  background: var(--bg-card); /* fondo semitransparente */
+  backdrop-filter: blur(8px); /* efecto cristal */
+  border-radius: 1.5rem; /* bordes redondeados */
+  padding: 1.5rem 1rem; /* espacio interno */
+  text-align: center; /* centra texto */
+  border: 1px solid var(--border-color); /* borde suave */
+  transition: transform 0.25s ease; /* animación suave */
+  box-shadow: var(--shadow-md); /* sombra más marcada */
+  position: relative; /* necesario para pseudo-elementos */
+}
+
+/* efecto al pasar el ratón */
+.service-card:hover {
+  transform: translateY(-6px); /* levanta la tarjeta */
+}
+
+
+/* =========================
+   ⭐ TARJETA DESTACADA
+   ========================= */
+
+/* tarjeta especial (ej: “más importante”) */
+.service-card.highlight {
+  border: 2px solid var(--accent-light); /* borde más fuerte */
+  background: rgba(109, 125, 75, 0.2); /* fondo más visible */
+}
+
+/* etiqueta superior “Especialidad” */
+.service-card.highlight::before {
+  content: "⭐ Especialidad"; /* texto automático */
+  position: absolute;
+  top: -12px; /* la saca un poco hacia arriba */
+  right: 16px;
+  background: gold;
+  color: #2c2c2c;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.2rem 0.8rem;
+  border-radius: 40px;
+}
+
+
+/* título dentro de la tarjeta */
+.service-card h3 {
+  font-family: "Cormorant Garamond", serif; /* estilo elegante */
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+
+/* =========================
+   🖼️ LIGHTBOX (IMÁGENES AMPLIADAS)
+   ========================= */
+
+/* fondo oscuro a pantalla completa */
+.lightbox {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* cuando se activa */
+.lightbox.active {
+  display: flex;
+}
+
+/* imagen ampliada */
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* mantiene proporción */
+  border-radius: 1rem;
+}
+
+/* botón de cerrar */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* =========================
+   📝 FORMULARIO DE CONTACTO
+   ========================= */
+
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  margin: 2rem auto; /* centra el formulario */
+  display: flex;
+  flex-direction: column; /* uno debajo de otro */
+  gap: 1rem; /* separación entre inputs */
+}
+
+/* inputs y textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+
+/* =========================
+   🔝 BOTÓN SCROLL ARRIBA
+   ========================= */
+
+.scroll-top {
+  position: fixed; /* siempre visible en pantalla */
+  bottom: 80px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: var(--accent);
+  border-radius: 50%; /* círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  opacity: 0; /* oculto por defecto */
+  visibility: hidden;
+  transition: all 0.3s;
+
+  z-index: 1050;
+  box-shadow: var(--shadow-sm);
+}
+
+/* cuando JS lo activa */
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================
+   📌 FOOTER
+   ========================= */
+
+/* texto del footer y enlaces */
+.footer p,
+.footer-social a {
+  color: #ecead8 !important;
+  transition: color 0.2s;
+}
+
+/* hover en redes sociales */
+.footer-social a:hover {
+  color: var(--accent-light) !important;
+}
+
+/* en modo claro se mantiene igual */
+body.light .footer p,
+body.light .footer-social a {
+  color: #ecead8 !important;
+}
+
+
+/* =========================
+   📞 BOTÓN WHATSAPP FLOTANTE
+   ========================= */
+
+/* CONTENEDOR FLOTANTE */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  background: #ffffff00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.whatsapp-float svg,
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+
+/* =========================
+   ✨ ANIMACIÓN SCROLL (REVEAL)
+   ========================= */
+
+/* estado inicial (oculto) */
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(28px); /* empieza abajo */
+  transition: opacity 0.4s ease, transform 0.5s ease;
+ 
+}
+
+/* cuando aparece en pantalla */
+.reveal-fade.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   📊 BARRA DE PROGRESO SCROLL
+   ========================= */
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%; /* JS la va aumentando */
+  height: 3px;
+  background: var(--accent-light);
+  z-index: 1150;
+}
+
+
+/* =========================
+   🪟 MODAL (VENTANA EMERGENTE)
+   ========================= */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0; /* top/right/bottom/left = 0 */
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* modal visible */
+.modal.active {
+  display: flex;
+}
+
+/* caja del contenido */
+.modal-content {
+  background: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  max-width: 500px;
+  width: 90%;
+  border: 1px solid var(--accent-light);
+}
+
+/* botón cerrar */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+/* =========================
+   🖼️ BEFORE / AFTER (RESULTADOS)
+   ========================= */
+
+.beforeafter-swiper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+}
+
+/* card comparativa */
+.ba-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  background: var(--bg-card);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+/* contenedor de imagen */
+.ba-image {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* imagen */
+.ba-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* etiquetas antes/después */
+.ba-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 3px 10px;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  color: white;
+  z-index: 1;
+}
+
+/* rojo = antes */
+.ba-label.antes {
+  background: #b33a3a;
+}
+
+/* verde = después */
+.ba-label.despues {
+  background: #2a7a2a;
+}
+
+/* texto descriptivo */
+.ba-desc {
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+/* por defecto (escritorio) */
+.theme-item-menu-icon {
+  display: none;
+}
