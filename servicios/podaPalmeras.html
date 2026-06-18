@@ -1,94 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>En construcción - Turia Jardín</title>
-    <link rel="stylesheet" type="text/css" href="../styles/variables.css">
+  <title>Poda de palmeras - Turia Jardín</title>
+
+  <link rel="stylesheet" type="text/css" href="../styles/variables.css">
   <link rel="stylesheet" type="text/css" href="../styles/base.css">
   <link rel="stylesheet" type="text/css" href="../styles/layout.css">
   <link rel="stylesheet" type="text/css" href="../styles/sections.css">
   <link rel="stylesheet" type="text/css" href="../styles/components.css">
   <link rel="stylesheet" type="text/css" href="../styles/responsive.css">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0c0f0a;
-      color: #ecead8;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-    .container {
-      text-align: center;
-      max-width: 700px;
-      background: rgba(28, 33, 23, 0.75);
-      backdrop-filter: blur(8px);
-      border-radius: 2rem;
-      padding: 2.5rem;
-      border: 1px solid rgba(157, 184, 94, 0.4);
-      box-shadow: 0 20px 35px -12px black;
-    }
-    .icon {
-      width: 180px;
-      margin: 0 auto 1.5rem;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #e7f0c3, #b1cc74);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.5;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 1.5rem;
-      background: #7d9662;
-      color: #0e130b;
-      text-decoration: none;
-      padding: 0.8rem 1.8rem;
-      border-radius: 60px;
-      font-weight: 600;
-      transition: 0.2s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .btn:hover {
-      background: #9bbf72;
-      transform: translateY(-3px);
-    }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #9aa883;
-    }
-    @media (max-width: 550px) {
-      .container { padding: 1.5rem; }
-      .icon { width: 130px; }
-      h1 { font-size: 1.6rem; }
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="../styles/servicios/sections.css">
+
 </head>
+
 <body>
-           <header class="header" id="header">
+
+  <header class="header" id="header">
     <div class="logo">Turia Jardín</div>
     <button class="menu-icon" id="menuIcon" aria-label="Menú">☰</button>
+
     <ul class="nav-links" id="navLinks">
       <li><a href="../">Inicio</a></li>
 
       <li class="has-submenu"><a href="#">Servicios</a>
-
-
         <ul class="submenu">
           <li><a href="podaPalmeras.html">Poda de palmeras</a></li>
           <li><a href="podaArboles.html">Poda de árboles</a></li>
@@ -101,55 +38,239 @@
       <li><a href="../noticias.html">Noticias</a></li>
       <li><a href="../proyectos.html">Proyectos</a></li>
       <li><a href="../contacto.html">Contacto</a></li>
-   
     </ul>
+
     <div class="div-light">
-  <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-    🌞
-  </button>
-</div> 
-</header>
-<div class="container">
-  <!-- SVG DIBUJO: Palmera obrera con casco y pala -->
-  <div class="icon">
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Fondo redondo suave -->
-      <circle cx="100" cy="100" r="95" fill="#1e2a1a" stroke="#a4c06a" stroke-width="2" stroke-dasharray="4 4"/>
-      <!-- Palmera (tronco) -->
-      <path d="M95 140 L92 60 L108 60 L105 140 Z" fill="#8B5A2B" stroke="#5C3A1A" stroke-width="1.5"/>
-      <!-- Hojas de palmera -->
-      <path d="M100 55 Q70 35 45 50 Q70 48 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q130 30 155 45 Q130 44 100 55Z" fill="#4c8c2f" stroke="#2c5a1a"/>
-      <path d="M100 55 Q85 20 100 10 Q115 20 100 55Z" fill="#2f6a1f" stroke="#1e4a12"/>
-      <path d="M100 55 Q115 25 130 35 Q115 40 100 55Z" fill="#5a9e3a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q70 25 55 40 Q70 46 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <!-- Frutos (dátiles) -->
-      <circle cx="98" cy="62" r="3" fill="#F4A300"/>
-      <circle cx="105" cy="64" r="2.5" fill="#F4A300"/>
-      <!-- Casco de obra encima del tronco (personificado) -->
-      <path d="M88 45 Q90 38 100 37 Q110 38 112 45 L115 47 L85 47 L88 45Z" fill="#FFD966" stroke="#b97f10" stroke-width="1.2"/>
-      <rect x="82" y="46" width="36" height="4" rx="2" fill="#FFD966" stroke="#b97f10" stroke-width="0.8"/>
-      <!-- Ojos divertidos -->
-      <circle cx="94" cy="70" r="2.2" fill="white"/>
-      <circle cx="106" cy="70" r="2.2" fill="white"/>
-      <circle cx="94.8" cy="70" r="1" fill="#1a1a1a"/>
-      <circle cx="106.8" cy="70" r="1" fill="#1a1a1a"/>
-      <!-- Sonrisa -->
-      <path d="M95 76 Q100 82 105 76" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- Pala apoyada en la palmera -->
-      <line x1="125" y1="120" x2="140" y2="155" stroke="#a0a0a0" stroke-width="3" stroke-linecap="round"/>
-      <path d="M133 145 L140 155 L148 148 L140 138 Z" fill="#C0C0C0" stroke="#888" stroke-width="1"/>
-      <!-- Letrero "En obras" pequeño -->
-      <rect x="68" y="115" width="64" height="18" rx="4" fill="#B33A3A" stroke="#fff" stroke-width="1"/>
-      <text x="100" y="128" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">EN OBRAS</text>
-    </svg>
-  </div>
-  <h1>Estamos construyendo esta sección</h1>
-  <p>🌿 Muy pronto podrás disfrutar de todos nuestros servicios detallados.<br>
-  Mientras tanto, puedes consultarnos directamente o volver a la página principal.</p>
-  <a href="index.html" class="btn">← Volver al inicio</a>
-  <a href="https://wa.me/34600987654" target="_blank" class="btn" style="background:#25D366; margin-left:0.8rem;">📱 Contactar por WhatsApp</a>
-  <footer> Turia Jardín · Especialistas en poda de palmeras · Valencia</footer>
-</div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        🌞
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-services">
+      <div class="titulo">
+        <h1>Poda de palmeras</h1>
+      </div>
+
+      <div class="subtitulo">
+        <div class="subtitulo-text">
+          <h2>Especialistas en poda de palmeras en Valencia</h2>
+
+          <p>
+            Realizamos trabajos profesionales de poda y mantenimiento de palmeras para particulares,
+            comunidades de vecinos, empresas y administraciones.
+          </p>
+
+          <p>
+            Eliminamos hojas secas, retiramos frutos cuando es necesario y mantenemos las palmeras en óptimas condiciones.
+          </p>
+          <button class="btn">Contacta ahora</button>
+        </div>
+
+        <div class="subtitulo-img">
+          <img src="https://i.postimg.cc/y6ShsYty/IMG-20231004-120037.jpg" alt="Poda de palmera profesional" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- DESCRIPCIÓN -->
+    <section class="descripcion">
+
+      <h2>Servicio profesional de poda de palmeras</h2>
+
+      <p>
+        En Turia Jardín somos especialistas en la poda y mantenimiento de palmeras.
+      </p>
+
+      <h2>¿Por qué es importante podar una palmera?</h2>
+
+      <p>
+        La poda adecuada permite eliminar hojas secas o deterioradas.
+      </p>
+
+      <div class="trabajamos">
+
+        <div>
+          <h2>¿Cómo trabajamos?</h2>
+
+          <ul>
+            <li>Inspección previa del ejemplar.</li>
+            <li>Valoración de riesgos y accesibilidad.</li>
+            <li>Eliminación de hojas secas o dañadas.</li>
+            <li>Retirada de frutos cuando sea necesario.</li>
+            <li>Limpieza completa de la zona.</li>
+          </ul>
+        </div>
+
+        <div>
+          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Trabajo de poda de palmeras">
+        </div>
+
+      </div>
+
+      <!-- CARDS DE VENTAJAS (renombradas a .ventajas-card) -->
+      <div class="ventajas">
+        <div class="ventaja-card">
+          <h3>Seguridad</h3>
+          <p>Trabajamos con equipos adecuados y medidas de seguridad.</p>
+        </div>
+
+        <div class="ventaja-card">
+          <h3>Experiencia</h3>
+          <p>Más de 10 años de experiencia en poda de palmeras.</p>
+        </div>
+
+        <div class="ventaja-card">
+          <h3>Limpieza</h3>
+          <p>Retiramos todos los restos y dejamos la zona impecable.</p>
+        </div>
+
+        <div class="ventaja-card">
+          <h3>Presupuesto</h3>
+          <p>Presupuesto sin compromiso y asesoramiento profesional.</p>
+        </div>
+      </div>
+
+      <!-- PROCESO EN PASOS (nuevo, para no repetir cards) -->
+      <h2>Nuestro proceso de trabajo</h2>
+      <div class="proceso-pasos">
+        <div class="paso">1. Visita</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">2. Presupuesto</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">3. Planificación</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">4. Ejecución</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">5. Limpieza</div>
+      </div>
+
+    </section>
+
+    <!-- PROCESO FOTOS -->
+    <section class="proceso-fotos">
+
+      <h2>Así realizamos nuestros trabajos</h2>
+
+      <div class="proceso-grid">
+
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Inspección de palmera">
+          <h3>Inspección</h3>
+          <p>Analizamos el estado de la palmera y planificamos la intervención.</p>
+        </article>
+
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Poda de palmera en altura">
+          <h3>Poda</h3>
+          <p>Realizamos la poda con técnicas profesionales y seguras.</p>
+        </article>
+
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Retirada de restos">
+          <h3>Retirada</h3>
+          <p>Eliminamos hojas secas y restos de la poda.</p>
+        </article>
+
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Resultado final">
+          <h3>Final</h3>
+          <p>Palmera sana, estética y segura.</p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- STACK SLIDERS (totalmente funcionales) -->
+    <div class="trabajos">
+
+      <h1>Algunos de nuestros trabajos</h1>
+
+      <!-- SLIDER 1 -->
+      <section class="stack-slider">
+        <h2>Poda de palmeras en comunidad</h2>
+
+        <button class="nav prev" aria-label="Anterior">‹</button>
+
+        <div class="stack">
+          <article class="stack-card active">
+            <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Trabajo de poda 1">
+            <div class="info">
+              <p>Limpieza y mantenimiento en altura.</p>
+            </div>
+          </article>
+
+          <article class="stack-card">
+            <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Trabajo de poda 2">
+            <div class="info">
+              <p>Retirada de hojas secas.</p>
+            </div>
+          </article>
+
+          <article class="stack-card">
+            <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Trabajo de poda 3">
+            <div class="info">
+              <p>Intervención completa.</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="nav next" aria-label="Siguiente">›</button>
+      </section>
+
+     
+<a href="../proyectos.html" class="btn">Ver todos nuestros proyectos</a>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Solicita tu presupuesto</h2>
+      <p>Sin compromiso. Estudio personalizado para tu proyecto.</p>
+      <a href="../contacto.html" class="btn">Contactar ahora</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Turia Jardín</p>
+  </footer>
+
+  <!-- JS CORREGIDO (stack-slider funcional) -->
+  <script>
+    document.querySelectorAll('.stack-slider').forEach(slider => {
+      const cards = slider.querySelectorAll('.stack-card');
+      const nextBtn = slider.querySelector('.next');
+      const prevBtn = slider.querySelector('.prev');
+
+      if (!cards.length || !nextBtn || !prevBtn) return;
+
+      let index = 0;
+
+      function show(i) {
+        cards.forEach((card, idx) => {
+          card.classList.remove('active');
+          if (idx === i) card.classList.add('active');
+        });
+      }
+
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % cards.length;
+        show(index);
+      });
+
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + cards.length) % cards.length;
+        show(index);
+      });
+
+      show(index);
+    });
+  </script>
+
 </body>
 </html>
