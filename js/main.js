@@ -17,34 +17,82 @@ import { initSwipers } from './modules/swipers.js';
 import { initScrollTop } from './modules/scrollTop.js';
 import { initContactForm } from './modules/contactForm.js';
 import { initFaq } from './modules/faq.js';
+import { loadComponent } from './modules/loadComponents.js';
+import { safeInit } from './modules/safeInit.js';
 
-// Registrar ScrollTrigger si no está ya registrado (a veces es necesario)
-gsap.registerPlugin(ScrollTrigger);
+// Registrar ScrollTrigger si existe
+if (
+  typeof gsap !== 'undefined' &&
+  typeof ScrollTrigger !== 'undefined'
+) {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
-// Inicializar todos los módulos después de que el DOM esté listo
-document.addEventListener('DOMContentLoaded', () => {
-  initPreloader();
-  initProgressBar();
-  initTypewriter();
-  initReveal();
-  initCounters();
-  initLightbox();
-  initHeaderShrink();
-  initMobileMenu();
-  initModal();
-  initCTAs();
-  initTheme();
-  initMagneticButtons();
-  initGsapAnimations();
-  initParallaxHero();
-  initBeforeAfterSplit();
-  initSwipers();
-  initScrollTop();
-  initContactForm();
-  initFaq();
-});
+async function initApp() {
+  try {
+    // Cargar componentes comunes
+    const base = document.body.dataset.base || '.';
 
-// Refrescar ScrollTrigger cuando todo el contenido esté cargado (imágenes, etc.)
+    await loadComponent(
+      '#header-container',
+      `${base}/components/header.html`
+    );
+
+    await loadComponent(
+      '#footer-container',
+      `${base}/components/footer.html`
+    );
+
+     await loadComponent(
+      '#btn-whatsapp',
+      `${base}/components/btnWhatsApp.html`
+    );
+     await loadComponent(
+      '#btn-scroll-top',
+      `${base}/components/btnScrollTop.html`
+    );
+
+      await loadComponent(
+      '#cta-container',
+      `${base}/components/cta.html`
+    );
+
+   safeInit(initPreloader, 'preloader');
+safeInit(initProgressBar, 'progressBar');
+safeInit(initTypewriter, 'typewriter');
+safeInit(initReveal, 'reveal');
+safeInit(initCounters, 'counters');
+safeInit(initLightbox, 'lightbox');
+
+safeInit(initHeaderShrink, 'headerShrink');
+safeInit(initMobileMenu, 'mobileMenu');
+safeInit(initTheme, 'theme');
+
+safeInit(initModal, 'modal');
+safeInit(initCTAs, 'ctas');
+safeInit(initMagneticButtons, 'magneticButtons');
+
+safeInit(initGsapAnimations, 'gsapAnimations');
+safeInit(initParallaxHero, 'parallaxHero');
+
+safeInit(initBeforeAfterSplit, 'beforeAfterSplit');
+safeInit(initSwipers, 'swipers');
+
+safeInit(initScrollTop, 'scrollTop');
+
+safeInit(initContactForm, 'contactForm');
+safeInit(initFaq, 'faq');
+
+  } catch (error) {
+    console.error('Error inicializando la aplicación:', error);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initApp);
+
+// Refrescar ScrollTrigger cuando todo esté cargado
 window.addEventListener('load', () => {
-  ScrollTrigger.refresh();
+  if (typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.refresh();
+  }
 });

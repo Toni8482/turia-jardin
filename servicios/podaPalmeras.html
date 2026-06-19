@@ -16,36 +16,9 @@
 
 </head>
 
-<body>
+<body data-base="..">
 
-  <header class="header" id="header">
-    <div class="logo">Turia Jardín</div>
-    <button class="menu-icon" id="menuIcon" aria-label="Menú">☰</button>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="../">Inicio</a></li>
-
-      <li class="has-submenu"><a href="#">Servicios</a>
-        <ul class="submenu">
-          <li><a href="podaPalmeras.html">Poda de palmeras</a></li>
-          <li><a href="podaArboles.html">Poda de árboles</a></li>
-          <li><a href="tratamientosFitosanitarios.html">Tratamientos fitosanitarios</a></li>
-          <li><a href="endoterapia.html">Endoterapia</a></li>
-          <li><a href="adecuacionAreasVerdes.html">Adecuación áreas verdes</a></li>
-        </ul>
-      </li>
-
-      <li><a href="../noticias.html">Noticias</a></li>
-      <li><a href="../proyectos.html">Proyectos</a></li>
-      <li><a href="../contacto.html">Contacto</a></li>
-    </ul>
-
-    <div class="div-light">
-      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-        🌞
-      </button>
-    </div>
-  </header>
+  <div id="header-container"></div>
 
   <main>
 
@@ -227,18 +200,14 @@
     </div>
 
     <!-- CTA -->
-    <section class="cta">
-      <h2>Solicita tu presupuesto</h2>
-      <p>Sin compromiso. Estudio personalizado para tu proyecto.</p>
-      <a href="../contacto.html" class="btn">Contactar ahora</a>
-    </section>
+ <div id="cta-container"></div>
 
   </main>
-
+ <div id="btn-whatsapp"></div>
+ <div id="btn-scroll-top"></div>
+ 
   <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 Turia Jardín</p>
-  </footer>
+  <div id="footer-container"></div>
 
   <!-- JS CORREGIDO (stack-slider funcional) -->
   <script>
@@ -271,6 +240,7 @@
       show(index);
     });
   </script>
-
+ <!-- Nuestro main.js como módulo -->
+  <script type="module" src="./../js/main.js"></script>
 </body>
 </html>
