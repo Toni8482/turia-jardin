@@ -11,104 +11,11 @@
   <link rel="stylesheet" type="text/css" href="../styles/components.css">
   <link rel="stylesheet" type="text/css" href="../styles/responsive.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0c0f0a;
-      color: #ecead8;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-    .container {
-      text-align: center;
-      max-width: 700px;
-      background: rgba(28, 33, 23, 0.75);
-      backdrop-filter: blur(8px);
-      border-radius: 2rem;
-      padding: 2.5rem;
-      border: 1px solid rgba(157, 184, 94, 0.4);
-      box-shadow: 0 20px 35px -12px black;
-    }
-    .icon {
-      width: 180px;
-      margin: 0 auto 1.5rem;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #e7f0c3, #b1cc74);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.5;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 1.5rem;
-      background: #7d9662;
-      color: #0e130b;
-      text-decoration: none;
-      padding: 0.8rem 1.8rem;
-      border-radius: 60px;
-      font-weight: 600;
-      transition: 0.2s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .btn:hover {
-      background: #9bbf72;
-      transform: translateY(-3px);
-    }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #9aa883;
-    }
-    @media (max-width: 550px) {
-      .container { padding: 1.5rem; }
-      .icon { width: 130px; }
-      h1 { font-size: 1.6rem; }
-    }
+   
   </style>
 </head>
-<body>
-      <header class="header" id="header">
-    <div class="logo">Turia Jardín</div>
-    <button class="menu-icon" id="menuIcon" aria-label="Menú">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="../">Inicio</a></li>
-
-      <li class="has-submenu"><a href="#">Servicios</a>
-
-
-        <ul class="submenu">
-          <li><a href="podaPalmeras.html">Poda de palmeras</a></li>
-          <li><a href="podaArboles.html">Poda de árboles</a></li>
-          <li><a href="tratamientosFitosanitarios.html">Tratamientos fitosanitarios</a></li>
-          <li><a href="endoterapia.html">Endoterapia</a></li>
-          <li><a href="adecuacionAreasVerdes.html">Adecuación áreas verdes</a></li>
-        </ul>
-      </li>
-
-      <li><a href="../noticias.html">Noticias</a></li>
-      <li><a href="../proyectos.html">Proyectos</a></li>
-      <li><a href="../contacto.html">Contacto</a></li>
-   
-    </ul>
-    <div class="div-light">
-  <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-    🌞
-  </button>
-</div> 
-</header>
+<body data-base="..">
+      <div id="header-container"></div>
 <div class="container">
   <!-- SVG DIBUJO: Palmera obrera con casco y pala -->
   <div class="icon">
@@ -149,7 +56,13 @@
   Mientras tanto, puedes consultarnos directamente o volver a la página principal.</p>
   <a href="index.html" class="btn">← Volver al inicio</a>
   <a href="https://wa.me/34600987654" target="_blank" class="btn" style="background:#25D366; margin-left:0.8rem;">📱 Contactar por WhatsApp</a>
-  <footer> Turia Jardín · Especialistas en poda de palmeras · Valencia</footer>
+ <div id="btn-whatsapp"></div>
+ <div id="btn-scroll-top"></div>
+ 
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
 </div>
+  <!-- Nuestro main.js como módulo -->
+  <script type="module" src="./../js/main.js"></script>
 </body>
 </html>
