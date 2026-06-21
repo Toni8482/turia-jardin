@@ -1,68 +1,240 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>En construcción - Turia Jardín</title>
-    <link rel="stylesheet" type="text/css" href="../styles/variables.css">
-  <link rel="stylesheet" type="text/css" href="../styles/base.css">
-  <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-  <link rel="stylesheet" type="text/css" href="../styles/sections.css">
-  <link rel="stylesheet" type="text/css" href="../styles/components.css">
-  <link rel="stylesheet" type="text/css" href="../styles/responsive.css">
-  <style>
-   
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tratamientos fitosanitarios - Turia Jardín</title>
+
+  <link rel="stylesheet" type="text/css" href="../styles/variables.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/base.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/layout.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/sections.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/components.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/responsive.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/servicios/sections.css" />
 </head>
+
 <body data-base="..">
-    <div id="header-container"></div>
-<div class="container">
-  <!-- SVG DIBUJO: Palmera obrera con casco y pala -->
-  <div class="icon">
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Fondo redondo suave -->
-      <circle cx="100" cy="100" r="95" fill="#1e2a1a" stroke="#a4c06a" stroke-width="2" stroke-dasharray="4 4"/>
-      <!-- Palmera (tronco) -->
-      <path d="M95 140 L92 60 L108 60 L105 140 Z" fill="#8B5A2B" stroke="#5C3A1A" stroke-width="1.5"/>
-      <!-- Hojas de palmera -->
-      <path d="M100 55 Q70 35 45 50 Q70 48 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q130 30 155 45 Q130 44 100 55Z" fill="#4c8c2f" stroke="#2c5a1a"/>
-      <path d="M100 55 Q85 20 100 10 Q115 20 100 55Z" fill="#2f6a1f" stroke="#1e4a12"/>
-      <path d="M100 55 Q115 25 130 35 Q115 40 100 55Z" fill="#5a9e3a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q70 25 55 40 Q70 46 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <!-- Frutos (dátiles) -->
-      <circle cx="98" cy="62" r="3" fill="#F4A300"/>
-      <circle cx="105" cy="64" r="2.5" fill="#F4A300"/>
-      <!-- Casco de obra encima del tronco (personificado) -->
-      <path d="M88 45 Q90 38 100 37 Q110 38 112 45 L115 47 L85 47 L88 45Z" fill="#FFD966" stroke="#b97f10" stroke-width="1.2"/>
-      <rect x="82" y="46" width="36" height="4" rx="2" fill="#FFD966" stroke="#b97f10" stroke-width="0.8"/>
-      <!-- Ojos divertidos -->
-      <circle cx="94" cy="70" r="2.2" fill="white"/>
-      <circle cx="106" cy="70" r="2.2" fill="white"/>
-      <circle cx="94.8" cy="70" r="1" fill="#1a1a1a"/>
-      <circle cx="106.8" cy="70" r="1" fill="#1a1a1a"/>
-      <!-- Sonrisa -->
-      <path d="M95 76 Q100 82 105 76" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- Pala apoyada en la palmera -->
-      <line x1="125" y1="120" x2="140" y2="155" stroke="#a0a0a0" stroke-width="3" stroke-linecap="round"/>
-      <path d="M133 145 L140 155 L148 148 L140 138 Z" fill="#C0C0C0" stroke="#888" stroke-width="1"/>
-      <!-- Letrero "En obras" pequeño -->
-      <rect x="68" y="115" width="64" height="18" rx="4" fill="#B33A3A" stroke="#fff" stroke-width="1"/>
-      <text x="100" y="128" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">EN OBRAS</text>
-    </svg>
-  </div>
-  <h1>Estamos construyendo esta sección</h1>
-  <p>🌿 Muy pronto podrás disfrutar de todos nuestros servicios detallados.<br>
-  Mientras tanto, puedes consultarnos directamente o volver a la página principal.</p>
-  <a href="index.html" class="btn">← Volver al inicio</a>
-  <a href="https://wa.me/34600987654" target="_blank" class="btn" style="background:#25D366; margin-left:0.8rem;">📱 Contactar por WhatsApp</a>
- <div id="btn-whatsapp"></div>
- <div id="btn-scroll-top"></div>
- 
+
+  <div id="header-container"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-services">
+      <div class="titulo">
+        <!--<h1>Tratamientos fitosanitarios</h1> -->
+      </div>
+
+      <div class="subtitulo">
+        <div class="subtitulo-img">
+          <img src="./../assets/imagenes/tratamiento_fito.jfif" loading="lazy" alt="Tratamientos fitosanitarios" />
+        </div>
+        <div class="subtitulo-text">
+          <h2>Especialistas en tratamientos fitosanitarios en Valencia</h2>
+          <p>
+            Protegemos la salud de tus plantas y árboles con tratamientos profesionales,
+            eficaces y respetuosos con el medio ambiente.
+          </p>
+          <button class="btn">Contacta ahora</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESCRIPCIÓN -->
+    <section class="descripcion">
+      <h2>Servicio profesional de tratamientos fitosanitarios</h2>
+      <p>
+        En Turia Jardín somos especialistas en el diagnóstico y tratamiento de plagas y enfermedades
+        que afectan a plantas, árboles y palmeras.
+      </p>
+
+      <div class="trabajamos">
+        <div class="trabajamos-text">
+          <h2>¿Por qué son importantes los tratamientos fitosanitarios?</h2>
+          <p>
+            Los tratamientos fitosanitarios son esenciales para mantener la salud de nuestras plantas
+            y árboles. Las plagas y enfermedades pueden debilitar e incluso llegar a matar a los
+            ejemplares si no se tratan a tiempo. Un diagnóstico precoz y una aplicación adecuada de
+            productos fitosanitarios permiten controlar eficazmente estos problemas y preservar el
+            valor ornamental, ambiental y económico de nuestras zonas verdes.
+          </p>
+          <p>
+            En Turia Jardín conocemos a fondo las plagas y enfermedades más comunes en Valencia,
+            como el <strong>picudo rojo</strong>, la <strong>cochinilla</strong>, la
+            <strong>oruga procesionaria</strong>, los <strong>pulgones</strong>, la
+            <strong>araña roja</strong>, el <strong>hongo de la yesca</strong> o el
+            <strong>oidio</strong>. Aplicamos tratamientos específicos para cada caso,
+            utilizando productos de última generación y aplicando las técnicas más avanzadas
+            para garantizar la máxima eficacia.
+          </p>
+          <p>
+            Además, en Turia Jardín apostamos por la lucha integrada y el uso responsable de
+            productos fitosanitarios, priorizando siempre aquellos que minimizan el impacto
+            ambiental y protegen la salud de las personas y los animales. Realizamos aplicaciones
+            terrestres y, cuando es necesario, tratamientos endoterápicos para llegar directamente
+            al sistema vascular de la planta.
+          </p>
+
+          <h2>¿Cómo trabajamos?</h2>
+          <ul>
+            <li>Inspección y diagnóstico preciso de la plaga o enfermedad.</li>
+            <li>Selección del producto y método de aplicación más adecuado.</li>
+            <li>Aplicación profesional con equipos de última generación.</li>
+            <li>Seguimiento y control de la evolución del tratamiento.</li>
+            <li>Asesoramiento sobre medidas preventivas.</li>
+          </ul>
+        </div>
+
+        <div class="trabajamos-img">
+          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Aplicación de tratamiento fitosanitario" />
+        </div>
+      </div>
+
+      <!-- CARDS DE VENTAJAS -->
+      <div class="ventajas">
+        <div class="service-card">
+          <h3>Diagnóstico preciso</h3>
+          <p>Identificamos la plaga o enfermedad para aplicar el tratamiento adecuado.</p>
+        </div>
+        <div class="service-card">
+          <h3>Productos eficaces</h3>
+          <p>Utilizamos fitosanitarios de última generación y alta eficacia.</p>
+        </div>
+        <div class="service-card">
+          <h3>Respeto ambiental</h3>
+          <p>Apostamos por la lucha integrada y productos respetuosos.</p>
+        </div>
+        <div class="service-card">
+          <h3>Seguimiento</h3>
+          <p>Controlamos la evolución y garantizamos los resultados.</p>
+        </div>
+      </div>
+
+      <!-- PROCESO EN PASOS -->
+      <h2>Nuestro proceso de trabajo</h2>
+      <div class="proceso-pasos">
+        <div class="paso">1. Inspección</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">2. Diagnóstico</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">3. Tratamiento</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">4. Seguimiento</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">5. Prevención</div>
+      </div>
+    </section>
+
+    <!-- PROCESO FOTOS -->
+    <section class="proceso-fotos">
+      <h2>Así aplicamos nuestros tratamientos</h2>
+
+      <div class="proceso-grid">
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Inspección fitosanitaria" />
+          <h3>Inspección</h3>
+          <p>Examinamos la planta para detectar plagas o enfermedades.</p>
+        </article>
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Preparación del producto" />
+          <h3>Preparación</h3>
+          <p>Seleccionamos y preparamos el producto adecuado para cada caso.</p>
+        </article>
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Aplicación del tratamiento" />
+          <h3>Aplicación</h3>
+          <p>Realizamos la aplicación con equipos profesionales y seguros.</p>
+        </article>
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Seguimiento del tratamiento" />
+          <h3>Seguimiento</h3>
+          <p>Monitorizamos la evolución y aseguramos la eficacia del tratamiento.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK SLIDERS -->
+    <div class="trabajos">
+      <h1>Algunos de nuestros trabajos</h1>
+
+      <!-- SLIDER 1 -->
+      <section class="stack-slider">
+        <button class="nav prev" aria-label="Anterior">‹</button>
+
+        <div class="stack">
+          <article class="stack-card active">
+            <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Tratamiento fitosanitario 1" />
+            <div class="info">
+              <p>Aplicación de insecticida en palmera con picudo rojo.</p>
+            </div>
+          </article>
+          <article class="stack-card">
+            <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Tratamiento fitosanitario 2" />
+            <div class="info">
+              <p>Tratamiento preventivo en árboles frutales.</p>
+            </div>
+          </article>
+          <article class="stack-card">
+            <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Tratamiento fitosanitario 3" />
+            <div class="info">
+              <p>Control de plagas en zonas ajardinadas.</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="nav next" aria-label="Siguiente">›</button>
+      </section>
+
+      <a href="../proyectos.html" class="btn">Ver todos nuestros proyectos</a>
+    </div>
+
+    <!-- CTA -->
+    <div id="cta-container"></div>
+
+  </main>
+
+  <div id="btn-whatsapp"></div>
+  <div id="btn-scroll-top"></div>
+
   <!-- FOOTER -->
   <div id="footer-container"></div>
-</div>
-  <!-- Nuestro main.js como módulo -->
+
+  <!-- JS DEL SLIDER -->
+  <script>
+    document.querySelectorAll('.stack-slider').forEach(slider => {
+      const cards = slider.querySelectorAll('.stack-card');
+      const nextBtn = slider.querySelector('.next');
+      const prevBtn = slider.querySelector('.prev');
+
+      if (!cards.length || !nextBtn || !prevBtn) return;
+
+      let index = 0;
+
+      function show(i) {
+        cards.forEach((card, idx) => {
+          card.classList.remove('active');
+          if (idx === i) card.classList.add('active');
+        });
+      }
+
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % cards.length;
+        show(index);
+      });
+
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + cards.length) % cards.length;
+        show(index);
+      });
+
+      show(index);
+    });
+  </script>
+
+  <!-- main.js como módulo -->
   <script type="module" src="./../js/main.js"></script>
 </body>
+
 </html>
