@@ -1,68 +1,233 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>En construcción - Turia Jardín</title>
-   <link rel="stylesheet" type="text/css" href="../styles/variables.css">
-  <link rel="stylesheet" type="text/css" href="../styles/base.css">
-  <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-  <link rel="stylesheet" type="text/css" href="../styles/sections.css">
-  <link rel="stylesheet" type="text/css" href="../styles/components.css">
-  <link rel="stylesheet" type="text/css" href="../styles/responsive.css">
-  <style>
-   
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adecuación de áreas verdes - Turia Jardín</title>
+
+  <link rel="stylesheet" type="text/css" href="../styles/variables.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/base.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/layout.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/sections.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/components.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/responsive.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/servicios/sections.css" />
 </head>
+
 <body data-base="..">
-      <div id="header-container"></div>
-<div class="container">
-  <!-- SVG DIBUJO: Palmera obrera con casco y pala -->
-  <div class="icon">
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Fondo redondo suave -->
-      <circle cx="100" cy="100" r="95" fill="#1e2a1a" stroke="#a4c06a" stroke-width="2" stroke-dasharray="4 4"/>
-      <!-- Palmera (tronco) -->
-      <path d="M95 140 L92 60 L108 60 L105 140 Z" fill="#8B5A2B" stroke="#5C3A1A" stroke-width="1.5"/>
-      <!-- Hojas de palmera -->
-      <path d="M100 55 Q70 35 45 50 Q70 48 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q130 30 155 45 Q130 44 100 55Z" fill="#4c8c2f" stroke="#2c5a1a"/>
-      <path d="M100 55 Q85 20 100 10 Q115 20 100 55Z" fill="#2f6a1f" stroke="#1e4a12"/>
-      <path d="M100 55 Q115 25 130 35 Q115 40 100 55Z" fill="#5a9e3a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q70 25 55 40 Q70 46 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <!-- Frutos (dátiles) -->
-      <circle cx="98" cy="62" r="3" fill="#F4A300"/>
-      <circle cx="105" cy="64" r="2.5" fill="#F4A300"/>
-      <!-- Casco de obra encima del tronco (personificado) -->
-      <path d="M88 45 Q90 38 100 37 Q110 38 112 45 L115 47 L85 47 L88 45Z" fill="#FFD966" stroke="#b97f10" stroke-width="1.2"/>
-      <rect x="82" y="46" width="36" height="4" rx="2" fill="#FFD966" stroke="#b97f10" stroke-width="0.8"/>
-      <!-- Ojos divertidos -->
-      <circle cx="94" cy="70" r="2.2" fill="white"/>
-      <circle cx="106" cy="70" r="2.2" fill="white"/>
-      <circle cx="94.8" cy="70" r="1" fill="#1a1a1a"/>
-      <circle cx="106.8" cy="70" r="1" fill="#1a1a1a"/>
-      <!-- Sonrisa -->
-      <path d="M95 76 Q100 82 105 76" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- Pala apoyada en la palmera -->
-      <line x1="125" y1="120" x2="140" y2="155" stroke="#a0a0a0" stroke-width="3" stroke-linecap="round"/>
-      <path d="M133 145 L140 155 L148 148 L140 138 Z" fill="#C0C0C0" stroke="#888" stroke-width="1"/>
-      <!-- Letrero "En obras" pequeño -->
-      <rect x="68" y="115" width="64" height="18" rx="4" fill="#B33A3A" stroke="#fff" stroke-width="1"/>
-      <text x="100" y="128" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">EN OBRAS</text>
-    </svg>
-  </div>
-  <h1>Estamos construyendo esta sección</h1>
-  <p>🌿 Muy pronto podrás disfrutar de todos nuestros servicios detallados.<br>
-  Mientras tanto, puedes consultarnos directamente o volver a la página principal.</p>
-  <a href="index.html" class="btn">← Volver al inicio</a>
-  <a href="https://wa.me/34600987654" target="_blank" class="btn" style="background:#25D366; margin-left:0.8rem;">📱 Contactar por WhatsApp</a>
- <div id="btn-whatsapp"></div>
- <div id="btn-scroll-top"></div>
- 
+
+  <div id="header-container"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-services">
+      <div class="titulo">
+        <!--<h1>Adecuación de áreas verdes</h1> -->
+      </div>
+
+      <div class="subtitulo">
+        <div class="subtitulo-img">
+          <img src="./../assets/imagenes/areaverde.jpg" loading="lazy" alt="Área verde adecuada" />
+        </div>
+        <div class="subtitulo-text">
+          <h2>Transformamos tus espacios verdes en Valencia</h2>
+          <p>
+            Creamos y renovamos jardines, zonas comunes y áreas ajardinadas para particulares,
+            comunidades de vecinos, empresas y administraciones.
+          </p>
+          <button class="btn">Contacta ahora</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESCRIPCIÓN -->
+    <section class="descripcion">
+      <h2>Servicio profesional de adecuación de áreas verdes</h2>
+      <p>
+        En Turia Jardín diseñamos y acondicionamos espacios verdes funcionales, sostenibles y llenos de vida.
+      </p>
+
+      <div class="trabajamos">
+        <div class="trabajamos-text">
+          <h2>¿Por qué es importante adecuar un área verde?</h2>
+          <p>
+            Un espacio verde bien planificado no solo mejora la estética del entorno, sino que también
+            aporta bienestar, calidad ambiental y valor a la propiedad. La adecuación integral incluye
+            desde el diseño del terreno hasta la selección de especies vegetales autóctonas, pasando por
+            la implantación de sistemas de riego eficientes y la creación de zonas de estancia.
+          </p>
+          <p>
+            En Turia Jardín conocemos las particularidades del clima y el suelo de Valencia, por lo que
+            proponemos soluciones a medida que garantizan el éxito a largo plazo. Trabajamos con especies
+            resistentes, de bajo mantenimiento y adaptadas a cada tipo de uso, ya sea un jardín privado,
+            una zona comunitaria o un espacio público.
+          </p>
+          <p>
+            Además, una adecuación profesional aumenta la biodiversidad, favorece la absorción de CO₂,
+            reduce el efecto isla de calor y crea entornos más saludables para las personas y la fauna
+            local. Apostamos por el diseño sostenible y la eficiencia hídrica en cada proyecto.
+          </p>
+
+          <h2>¿Cómo trabajamos?</h2>
+          <ul>
+            <li>Estudio previo del terreno y sus características.</li>
+            <li>Diseño de zonas verdes y elección de especies.</li>
+            <li>Preparación del suelo y plantación.</li>
+            <li>Instalación de riego y sistemas de drenaje.</li>
+            <li>Colocación de elementos decorativos y mobiliario.</li>
+          </ul>
+        </div>
+
+        <div class="trabajamos-img">
+          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Trabajo de adecuación de área verde" />
+        </div>
+      </div>
+
+      <!-- CARDS DE VENTAJAS -->
+      <div class="ventajas">
+        <div class="service-card">
+          <h3>Diseño a medida</h3>
+          <p>Proyectos personalizados adaptados a tus necesidades y estilo.</p>
+        </div>
+        <div class="service-card">
+          <h3>Sostenibilidad</h3>
+          <p>Especies autóctonas y sistemas de riego eficientes.</p>
+        </div>
+        <div class="service-card">
+          <h3>Ejecución profesional</h3>
+          <p>Equipo especializado con más de 10 años de experiencia.</p>
+        </div>
+        <div class="service-card">
+          <h3>Mantenimiento</h3>
+          <p>Asesoramos y ofrecemos servicio de mantenimiento posterior.</p>
+        </div>
+      </div>
+
+      <!-- PROCESO EN PASOS -->
+      <h2>Nuestro proceso de trabajo</h2>
+      <div class="proceso-pasos">
+        <div class="paso">1. Visita</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">2. Diseño</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">3. Presupuesto</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">4. Ejecución</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">5. Entrega</div>
+      </div>
+    </section>
+
+    <!-- PROCESO FOTOS -->
+    <section class="proceso-fotos">
+      <h2>Así desarrollamos nuestros proyectos</h2>
+
+      <div class="proceso-grid">
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Estudio del terreno" />
+          <h3>Estudio</h3>
+          <p>Analizamos el terreno, la luz y las condiciones del suelo.</p>
+        </article>
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Diseño y plantación" />
+          <h3>Diseño</h3>
+          <p>Creamos el proyecto con especies seleccionadas y zonas funcionales.</p>
+        </article>
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Instalación de riego" />
+          <h3>Instalación</h3>
+          <p>Montamos sistemas de riego y elementos estructurales.</p>
+        </article>
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Resultado final" />
+          <h3>Final</h3>
+          <p>Entrega del área verde completamente terminada y lista para disfrutar.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK SLIDERS -->
+    <div class="trabajos">
+      <h1>Algunos de nuestros proyectos</h1>
+
+      <!-- SLIDER 1 -->
+      <section class="stack-slider">
+        <button class="nav prev" aria-label="Anterior">‹</button>
+
+        <div class="stack">
+          <article class="stack-card active">
+            <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Proyecto de área verde 1" />
+            <div class="info">
+              <p>Renovación de zona comunitaria con especies autóctonas.</p>
+            </div>
+          </article>
+          <article class="stack-card">
+            <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Proyecto de área verde 2" />
+            <div class="info">
+              <p>Diseño de jardín sostenible y sistema de riego eficiente.</p>
+            </div>
+          </article>
+          <article class="stack-card">
+            <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Proyecto de área verde 3" />
+            <div class="info">
+              <p>Creación de espacio verde funcional y estético.</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="nav next" aria-label="Siguiente">›</button>
+      </section>
+
+      <a href="../proyectos.html" class="btn">Ver todos nuestros proyectos</a>
+    </div>
+
+    <!-- CTA -->
+    <div id="cta-container"></div>
+
+  </main>
+
+  <div id="btn-whatsapp"></div>
+  <div id="btn-scroll-top"></div>
+
   <!-- FOOTER -->
   <div id="footer-container"></div>
-</div>
-  <!-- Nuestro main.js como módulo -->
+
+  <!-- JS DEL SLIDER -->
+  <script>
+    document.querySelectorAll('.stack-slider').forEach(slider => {
+      const cards = slider.querySelectorAll('.stack-card');
+      const nextBtn = slider.querySelector('.next');
+      const prevBtn = slider.querySelector('.prev');
+
+      if (!cards.length || !nextBtn || !prevBtn) return;
+
+      let index = 0;
+
+      function show(i) {
+        cards.forEach((card, idx) => {
+          card.classList.remove('active');
+          if (idx === i) card.classList.add('active');
+        });
+      }
+
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % cards.length;
+        show(index);
+      });
+
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + cards.length) % cards.length;
+        show(index);
+      });
+
+      show(index);
+    });
+  </script>
+
+  <!-- main.js como módulo -->
   <script type="module" src="./../js/main.js"></script>
 </body>
+
 </html>
