@@ -1,68 +1,237 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>En construcción - Turia Jardín</title>
-    <link rel="stylesheet" type="text/css" href="../styles/variables.css">
-  <link rel="stylesheet" type="text/css" href="../styles/base.css">
-  <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-  <link rel="stylesheet" type="text/css" href="../styles/sections.css">
-  <link rel="stylesheet" type="text/css" href="../styles/components.css">
-  <link rel="stylesheet" type="text/css" href="../styles/responsive.css">
-  <style>
-  
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poda de árboles - Turia Jardín</title>
+
+  <link rel="stylesheet" type="text/css" href="../styles/variables.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/base.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/layout.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/sections.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/components.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/responsive.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/servicios/sections.css" />
 </head>
+
 <body data-base="..">
-    <div id="header-container"></div>
-<div class="container">
-  <!-- SVG DIBUJO: Palmera obrera con casco y pala -->
-  <div class="icon">
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Fondo redondo suave -->
-      <circle cx="100" cy="100" r="95" fill="#1e2a1a" stroke="#a4c06a" stroke-width="2" stroke-dasharray="4 4"/>
-      <!-- Palmera (tronco) -->
-      <path d="M95 140 L92 60 L108 60 L105 140 Z" fill="#8B5A2B" stroke="#5C3A1A" stroke-width="1.5"/>
-      <!-- Hojas de palmera -->
-      <path d="M100 55 Q70 35 45 50 Q70 48 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q130 30 155 45 Q130 44 100 55Z" fill="#4c8c2f" stroke="#2c5a1a"/>
-      <path d="M100 55 Q85 20 100 10 Q115 20 100 55Z" fill="#2f6a1f" stroke="#1e4a12"/>
-      <path d="M100 55 Q115 25 130 35 Q115 40 100 55Z" fill="#5a9e3a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q70 25 55 40 Q70 46 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <!-- Frutos (dátiles) -->
-      <circle cx="98" cy="62" r="3" fill="#F4A300"/>
-      <circle cx="105" cy="64" r="2.5" fill="#F4A300"/>
-      <!-- Casco de obra encima del tronco (personificado) -->
-      <path d="M88 45 Q90 38 100 37 Q110 38 112 45 L115 47 L85 47 L88 45Z" fill="#FFD966" stroke="#b97f10" stroke-width="1.2"/>
-      <rect x="82" y="46" width="36" height="4" rx="2" fill="#FFD966" stroke="#b97f10" stroke-width="0.8"/>
-      <!-- Ojos divertidos -->
-      <circle cx="94" cy="70" r="2.2" fill="white"/>
-      <circle cx="106" cy="70" r="2.2" fill="white"/>
-      <circle cx="94.8" cy="70" r="1" fill="#1a1a1a"/>
-      <circle cx="106.8" cy="70" r="1" fill="#1a1a1a"/>
-      <!-- Sonrisa -->
-      <path d="M95 76 Q100 82 105 76" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- Pala apoyada en la palmera -->
-      <line x1="125" y1="120" x2="140" y2="155" stroke="#a0a0a0" stroke-width="3" stroke-linecap="round"/>
-      <path d="M133 145 L140 155 L148 148 L140 138 Z" fill="#C0C0C0" stroke="#888" stroke-width="1"/>
-      <!-- Letrero "En obras" pequeño -->
-      <rect x="68" y="115" width="64" height="18" rx="4" fill="#B33A3A" stroke="#fff" stroke-width="1"/>
-      <text x="100" y="128" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">EN OBRAS</text>
-    </svg>
-  </div>
-  <h1>Estamos construyendo esta sección</h1>
-  <p>🌿 Muy pronto podrás disfrutar de todos nuestros servicios detallados.<br>
-  Mientras tanto, puedes consultarnos directamente o volver a la página principal.</p>
-  <a href="index.html" class="btn">← Volver al inicio</a>
-  <a href="https://wa.me/34600987654" target="_blank" class="btn" style="background:#25D366; margin-left:0.8rem;">📱 Contactar por WhatsApp</a>
- <div id="btn-whatsapp"></div>
- <div id="btn-scroll-top"></div>
- 
+
+  <div id="header-container"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-services">
+      <div class="titulo">
+        <!--<h1>Poda de árboles</h1> -->
+      </div>
+
+      <div class="subtitulo">
+        <div class="subtitulo-img">
+          <img src="./../assets/imagenes/poda_arboles.jpg" loading="lazy" alt="Poda de árboles" />
+        </div>
+        <div class="subtitulo-text">
+          <h2>Especialistas en poda de árboles en Valencia</h2>
+          <p>
+            Realizamos trabajos profesionales de poda y mantenimiento de árboles para particulares,
+            comunidades de vecinos, empresas y administraciones.
+          </p>
+          <button class="btn">Contacta ahora</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESCRIPCIÓN -->
+    <section class="descripcion">
+      <h2>Servicio profesional de poda de árboles</h2>
+      <p>
+        En Turia Jardín somos especialistas en la poda y mantenimiento de todo tipo de árboles.
+      </p>
+
+      <div class="trabajamos">
+        <div class="trabajamos-text">
+          <h2>¿Por qué es importante podar un árbol?</h2>
+          <p>
+            La poda adecuada es fundamental para la salud, la estética y la seguridad de los árboles.
+            Un mantenimiento regular permite eliminar ramas secas, enfermas o mal orientadas que, además
+            de restar belleza al ejemplar, pueden convertirse en un peligro al desprenderse. También
+            favorece el crecimiento saludable, mejora la estructura del árbol y previene la aparición
+            de plagas y enfermedades que suelen alojarse en la madera muerta o dañada.
+          </p>
+          <p>
+            En Turia Jardín conocemos a fondo las especies arbóreas más comunes en Valencia
+            (como el <strong>naranjo</strong>, el <strong>olmo</strong>, la <strong>morera</strong>,
+            el <strong>pino</strong> o el <strong>ficus</strong>) y aplicamos técnicas de poda
+            respetuosas con el crecimiento natural de cada variedad. Nuestro objetivo es que tus
+            árboles luzcan espléndidos durante todo el año, sin riesgos para las personas ni para
+            las propias plantas.
+          </p>
+          <p>
+            Además, una poda profesional realizada en el momento adecuado ayuda a que el árbol
+            concentre sus nutrientes en las partes sanas, lo que se traduce en un desarrollo más
+            vigoroso, una mayor floración y una resistencia superior frente a condiciones climáticas
+            adversas, como el viento o las tormentas.
+          </p>
+
+          <h2>¿Cómo trabajamos?</h2>
+          <ul>
+            <li>Inspección previa del ejemplar y valoración de riesgos.</li>
+            <li>Eliminación de ramas secas, dañadas o enfermas.</li>
+            <li>Poda de formación, mantenimiento o reducción de copa.</li>
+            <li>Eliminación de chupones y ramas que cruzan.</li>
+            <li>Limpieza completa de la zona y retirada de restos.</li>
+          </ul>
+        </div>
+
+        <div class="trabajamos-img">
+          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Trabajo de poda de árboles" />
+        </div>
+      </div>
+
+      <!-- CARDS DE VENTAJAS -->
+      <div class="ventajas">
+        <div class="service-card">
+          <h3>Seguridad</h3>
+          <p>Trabajamos con equipos adecuados y medidas de seguridad.</p>
+        </div>
+        <div class="service-card">
+          <h3>Experiencia</h3>
+          <p>Más de 10 años de experiencia en poda de árboles.</p>
+        </div>
+        <div class="service-card">
+          <h3>Limpieza</h3>
+          <p>Retiramos todos los restos y dejamos la zona impecable.</p>
+        </div>
+        <div class="service-card">
+          <h3>Presupuesto</h3>
+          <p>Presupuesto sin compromiso y asesoramiento profesional.</p>
+        </div>
+      </div>
+
+      <!-- PROCESO EN PASOS -->
+      <h2>Nuestro proceso de trabajo</h2>
+      <div class="proceso-pasos">
+        <div class="paso">1. Visita</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">2. Presupuesto</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">3. Planificación</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">4. Ejecución</div>
+        <div class="paso-flecha">→</div>
+        <div class="paso">5. Limpieza</div>
+      </div>
+    </section>
+
+    <!-- PROCESO FOTOS -->
+    <section class="proceso-fotos">
+      <h2>Así realizamos nuestros trabajos</h2>
+
+      <div class="proceso-grid">
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Inspección del árbol" />
+          <h3>Inspección</h3>
+          <p>Analizamos el estado del árbol y planificamos la intervención.</p>
+        </article>
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Poda de árbol en altura" />
+          <h3>Poda</h3>
+          <p>Realizamos la poda con técnicas profesionales y seguras.</p>
+        </article>
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Retirada de restos" />
+          <h3>Retirada</h3>
+          <p>Eliminamos ramas y restos de la poda.</p>
+        </article>
+        <article class="proceso-card">
+          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Resultado final" />
+          <h3>Final</h3>
+          <p>Árbol sano, estético y seguro.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK SLIDERS -->
+    <div class="trabajos">
+      <h1>Algunos de nuestros trabajos</h1>
+
+      <!-- SLIDER 1 -->
+      <section class="stack-slider">
+        <button class="nav prev" aria-label="Anterior">‹</button>
+
+        <div class="stack">
+          <article class="stack-card active">
+            <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Trabajo de poda de árbol 1" />
+            <div class="info">
+              <p>Poda de mantenimiento en ejemplar adulto.</p>
+            </div>
+          </article>
+          <article class="stack-card">
+            <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Trabajo de poda de árbol 2" />
+            <div class="info">
+              <p>Reducción de copa y eliminación de ramas secas.</p>
+            </div>
+          </article>
+          <article class="stack-card">
+            <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Trabajo de poda de árbol 3" />
+            <div class="info">
+              <p>Intervención completa en ejemplar de gran porte.</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="nav next" aria-label="Siguiente">›</button>
+      </section>
+
+      <a href="../proyectos.html" class="btn">Ver todos nuestros proyectos</a>
+    </div>
+
+    <!-- CTA -->
+    <div id="cta-container"></div>
+
+  </main>
+
+  <div id="btn-whatsapp"></div>
+  <div id="btn-scroll-top"></div>
+
   <!-- FOOTER -->
   <div id="footer-container"></div>
-</div>
-  <!-- Nuestro main.js como módulo -->
+
+  <!-- JS DEL SLIDER -->
+  <script>
+    document.querySelectorAll('.stack-slider').forEach(slider => {
+      const cards = slider.querySelectorAll('.stack-card');
+      const nextBtn = slider.querySelector('.next');
+      const prevBtn = slider.querySelector('.prev');
+
+      if (!cards.length || !nextBtn || !prevBtn) return;
+
+      let index = 0;
+
+      function show(i) {
+        cards.forEach((card, idx) => {
+          card.classList.remove('active');
+          if (idx === i) card.classList.add('active');
+        });
+      }
+
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % cards.length;
+        show(index);
+      });
+
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + cards.length) % cards.length;
+        show(index);
+      });
+
+      show(index);
+    });
+  </script>
+
+  <!-- main.js como módulo -->
   <script type="module" src="./../js/main.js"></script>
 </body>
+
 </html>
