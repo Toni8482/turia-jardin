@@ -1,133 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>En construcción - Turia Jardín</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description"
+    content="Especialistas en poda de palmeras, poda de árboles, tratamientos fitosanitarios, endoterapia y adecuación de áreas verdes en Valencia. Profesionales con años de experiencia.">
+  <meta name="keywords"
+    content="poda de palmeras Valencia, poda de árboles, tratamientos fitosanitarios, endoterapia, adecuación de áreas verdes, jardinería Valencia">
+  <meta name="author" content="Turia Jardín">
+  <title>Turia Jardín | Expertos en poda de palmeras y jardinería en Valencia</title>
+
+  <link rel="preload" as="image" href="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg">
+
+  <!-- ===== FUENTES DESCARGABLES (WOFF2) ===== -->
+  <!-- Si quieres alojar los archivos localmente, descarga las fuentes desde Google Fonts y ajusta las rutas -->
+  <style>
+    /* Opción 1: Fuentes desde CDN (recomendada para simplicidad, los navegadores las cachean) */
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+    /* Opción 2: Si prefieres alojarlas localmente (descomenta y comenta la línea de @import)
+    @font-face {
+      font-family: 'Cormorant Garamond';
+      src: url('./assets/fonts/CormorantGaramond-Medium.woff2') format('woff2'),
+           url('./assets/fonts/CormorantGaramond-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Cormorant Garamond';
+      src: url('./assets/fonts/CormorantGaramond-Bold.woff2') format('woff2'),
+           url('./assets/fonts/CormorantGaramond-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      src: url('./assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),
+           url('./assets/fonts/SourceSansPro-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      src: url('./assets/fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
+           url('./assets/fonts/SourceSansPro-SemiBold.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      src: url('./assets/fonts/SourceSansPro-Bold.woff2') format('woff2'),
+           url('./assets/fonts/SourceSansPro-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    */
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./styles/variables.css">
   <link rel="stylesheet" type="text/css" href="./styles/base.css">
   <link rel="stylesheet" type="text/css" href="./styles/layout.css">
   <link rel="stylesheet" type="text/css" href="./styles/sections.css">
   <link rel="stylesheet" type="text/css" href="./styles/components.css">
   <link rel="stylesheet" type="text/css" href="./styles/responsive.css">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0c0f0a;
-      color: #ecead8;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-    .container {
-      text-align: center;
-      max-width: 700px;
-      background: rgba(28, 33, 23, 0.75);
-      backdrop-filter: blur(8px);
-      border-radius: 2rem;
-      padding: 2.5rem;
-      border: 1px solid rgba(157, 184, 94, 0.4);
-      box-shadow: 0 20px 35px -12px black;
-    }
-    .icon {
-      width: 180px;
-      margin: 0 auto 1.5rem;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #e7f0c3, #b1cc74);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.5;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 1.5rem;
-      background: #7d9662;
-      color: #0e130b;
-      text-decoration: none;
-      padding: 0.8rem 1.8rem;
-      border-radius: 60px;
-      font-weight: 600;
-      transition: 0.2s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .btn:hover {
-      background: #9bbf72;
-      transform: translateY(-3px);
-    }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #9aa883;
-    }
-    @media (max-width: 550px) {
-      .container { padding: 1.5rem; }
-      .icon { width: 130px; }
-      h1 { font-size: 1.6rem; }
-    }
-  </style>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
-<body data-base="..">
-    <div id="header-container"></div>
-<div class="container">
-  <!-- SVG DIBUJO: Palmera obrera con casco y pala -->
-  <div class="icon">
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Fondo redondo suave -->
-      <circle cx="100" cy="100" r="95" fill="#1e2a1a" stroke="#a4c06a" stroke-width="2" stroke-dasharray="4 4"/>
-      <!-- Palmera (tronco) -->
-      <path d="M95 140 L92 60 L108 60 L105 140 Z" fill="#8B5A2B" stroke="#5C3A1A" stroke-width="1.5"/>
-      <!-- Hojas de palmera -->
-      <path d="M100 55 Q70 35 45 50 Q70 48 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q130 30 155 45 Q130 44 100 55Z" fill="#4c8c2f" stroke="#2c5a1a"/>
-      <path d="M100 55 Q85 20 100 10 Q115 20 100 55Z" fill="#2f6a1f" stroke="#1e4a12"/>
-      <path d="M100 55 Q115 25 130 35 Q115 40 100 55Z" fill="#5a9e3a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q70 25 55 40 Q70 46 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <!-- Frutos (dátiles) -->
-      <circle cx="98" cy="62" r="3" fill="#F4A300"/>
-      <circle cx="105" cy="64" r="2.5" fill="#F4A300"/>
-      <!-- Casco de obra encima del tronco (personificado) -->
-      <path d="M88 45 Q90 38 100 37 Q110 38 112 45 L115 47 L85 47 L88 45Z" fill="#FFD966" stroke="#b97f10" stroke-width="1.2"/>
-      <rect x="82" y="46" width="36" height="4" rx="2" fill="#FFD966" stroke="#b97f10" stroke-width="0.8"/>
-      <!-- Ojos divertidos -->
-      <circle cx="94" cy="70" r="2.2" fill="white"/>
-      <circle cx="106" cy="70" r="2.2" fill="white"/>
-      <circle cx="94.8" cy="70" r="1" fill="#1a1a1a"/>
-      <circle cx="106.8" cy="70" r="1" fill="#1a1a1a"/>
-      <!-- Sonrisa -->
-      <path d="M95 76 Q100 82 105 76" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- Pala apoyada en la palmera -->
-      <line x1="125" y1="120" x2="140" y2="155" stroke="#a0a0a0" stroke-width="3" stroke-linecap="round"/>
-      <path d="M133 145 L140 155 L148 148 L140 138 Z" fill="#C0C0C0" stroke="#888" stroke-width="1"/>
-      <!-- Letrero "En obras" pequeño -->
-      <rect x="68" y="115" width="64" height="18" rx="4" fill="#B33A3A" stroke="#fff" stroke-width="1"/>
-      <text x="100" y="128" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">EN OBRAS</text>
-    </svg>
-  </div>
-  <h1>Estamos construyendo esta sección</h1>
-  <p>🌿 Muy pronto podrás disfrutar de todos nuestros servicios detallados.<br>
-  Mientras tanto, puedes consultarnos directamente o volver a la página principal.</p>
-  <a href="index.html" class="btn">← Volver al inicio</a>
-  <a href="https://wa.me/34600987654" target="_blank" class="btn" style="background:#25D366; margin-left:0.8rem;">📱 Contactar por WhatsApp</a>
- <div id="btn-whatsapp"></div>
- <div id="btn-scroll-top"></div>
+
+<body data-base=".">
+     <div id="header-container"></div>
+  <main>
+   
+
+   
+ <section class="section" id="contact">
+      <h2 class="reveal-fade" style="font-family:'Cormorant Garamond', serif;">Solicita presupuesto sin compromiso</h2>
+      <form class="contact-form reveal-fade" id="contactForm"><input type="text" placeholder="Nombre completo"
+          required><input type="email" placeholder="Correo electrónico" required><input type="tel"
+          placeholder="Teléfono"><textarea rows="3" placeholder="Cuéntanos qué servicio necesitas..."></textarea><button
+          type="submit" class="btn">Enviar mensaje</button></form>
+    </section>
+  
+
  
-  <!-- FOOTER -->
-  <div id="footer-container"></div>
-</div>
+
+   
+  </main>
+
+ 
+<div id="footer-container"></div>
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <div id="btn-whatsapp"></div>
+
+  <div id="btn-scroll-top"></div>
+ 
+  <div id="serviceModal" class="modal">
+    <div class="modal-content"><span class="modal-close" id="modalClose">&times;</span>
+      <h3 id="modalTitle">Más información</h3>
+      <p id="modalBody">¿Te interesa este servicio? Escríbenos por WhatsApp.</p><button class="btn"
+        id="modalWhatsappBtn">Contactar por WhatsApp</button>
+    </div>
+  </div>
+  <div id="lightbox" class="lightbox"><span class="lightbox-close">&times;</span><img id="lightboxImg" src="" alt="">
+  </div>
+
+
   <!-- Nuestro main.js como módulo -->
   <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>

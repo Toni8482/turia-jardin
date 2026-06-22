@@ -72,7 +72,7 @@ safeInit(initModal, 'modal');
 safeInit(initCTAs, 'ctas');
 safeInit(initMagneticButtons, 'magneticButtons');
 
-safeInit(initGsapAnimations, 'gsapAnimations');
+//safeInit(initGsapAnimations, 'gsapAnimations');
 safeInit(initParallaxHero, 'parallaxHero');
 
 safeInit(initBeforeAfterSplit, 'beforeAfterSplit');
@@ -91,6 +91,8 @@ safeInit(initFaq, 'faq');
 document.addEventListener('DOMContentLoaded', initApp);
 
 // Refrescar ScrollTrigger cuando todo esté cargado
+
+/** */
 window.addEventListener('load', () => {
   if (typeof ScrollTrigger !== 'undefined') {
     ScrollTrigger.refresh();
