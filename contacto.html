@@ -71,7 +71,11 @@
   <link rel="stylesheet" type="text/css" href="./styles/sections.css">
   <link rel="stylesheet" type="text/css" href="./styles/components.css">
   <link rel="stylesheet" type="text/css" href="./styles/responsive.css">
-
+  <link rel="stylesheet" type="text/css" href="./styles/pages/contacto.css">
+ <link rel="stylesheet" type="text/css" href="./styles/components/header.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/footer.css">
+     <link rel="stylesheet" type="text/css" href="./styles/components/btnWhatsApp.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/btnScroll.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -82,16 +86,83 @@
      <div id="header-container"></div>
   <main>
    
+<!-- ============================================================
+     SECCIÓN: CONTACTO - VERSIÓN PREMIUM (SIN SELECT)
+     ============================================================ -->
+<section class="section contact-section" id="contact">
+    
+    <!-- ===== HEADER ===== -->
+    <div class="contact-header reveal-fade">
+        <span class="section-badge">📬 Contáctanos</span>
+        
+        <h2>Solicita <span>presupuesto sin compromiso</span></h2>
+        
+        <div class="contact-divider">
+            <span class="line"></span>
+            <span class="icon">🌿</span>
+            <span class="line"></span>
+        </div>
+        
+        <p>Rellena el formulario y te responderemos en menos de 24 horas.</p>
+    </div>
 
-   
- <section class="section" id="contact">
-      <h2 class="reveal-fade" style="font-family:'Cormorant Garamond', serif;">Solicita presupuesto sin compromiso</h2>
-      <form class="contact-form reveal-fade" id="contactForm"><input type="text" placeholder="Nombre completo"
-          required><input type="email" placeholder="Correo electrónico" required><input type="tel"
-          placeholder="Teléfono"><textarea rows="3" placeholder="Cuéntanos qué servicio necesitas..."></textarea><button
-          type="submit" class="btn">Enviar mensaje</button></form>
-    </section>
-  
+    <!-- ===== WRAPPER ===== -->
+    <div class="contact-wrapper">
+        
+        <!-- ===== COLUMNA IZQUIERDA: INFO ===== -->
+        <div class="contact-info reveal-fade">
+            <h3 class="info-title">📞 ¿Prefieres llamarnos?</h3>
+            <p class="info-subtitle">Estamos disponibles para resolver tus dudas y ofrecerte un presupuesto personalizado.</p>
+            
+            <div class="contact-method">
+                <span class="method-icon">📞</span>
+                <div class="method-info">
+                    <span class="label">Teléfono</span>
+                    <a href="tel:+34600987654" class="value">+34 600 987 654</a>
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <span class="method-icon">✉️</span>
+                <div class="method-info">
+                    <span class="label">Email</span>
+                    <a href="mailto:info@turiajardin.com" class="value">info@turiajardin.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-method">
+                <span class="method-icon">📍</span>
+                <div class="method-info">
+                    <span class="label">Dirección</span>
+                    <span class="value">Valencia, España</span>
+                </div>
+            </div>
+            
+            <div class="contact-hours">
+                <span class="hours-icon">🕐</span>
+                <span>Lun - Vie: <strong>8:00 - 19:00</strong></span>
+            </div>
+        </div>
+        
+        <!-- ===== COLUMNA DERECHA: FORMULARIO ===== -->
+        <form class="contact-form reveal-fade" id="contactForm">
+            <div class="form-row">
+                <input type="text" placeholder="Nombre completo" required />
+                <input type="email" placeholder="Correo electrónico" required />
+            </div>
+            <div class="form-row">
+                <input type="tel" placeholder="Teléfono" />
+                <input type="text" placeholder="Asunto (ej: Poda de palmeras)" />
+            </div>
+            <textarea rows="4" placeholder="Cuéntanos tu proyecto..."></textarea>
+            <button type="submit" class="btn">
+                ✉️ Enviar mensaje
+            </button>
+            <p class="form-note">✅ Te responderemos en <strong>menos de 24 horas</strong></p>
+        </form>
+        
+    </div>
+</section>
 
  
 

@@ -1,0 +1,165 @@
+
+/* ============================================================
+   SERVICIOS - CARDS CON IMAGEN Y SEPARADOR DECORATIVO
+   ============================================================ */
+
+.services-section {
+    padding: 4rem 0;
+    background: var(--bg-secondary)
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+/* ============================================================
+   CARDS CON BORDE DE GRADIENTE
+   ============================================================ */
+
+.service-card {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    overflow: visible; /* Importante para el borde */
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+}
+/* Sombra premium al hover */
+.service-card:hover {
+    transform: translateY(-12px) scale(1.01);
+    box-shadow: 
+        0 30px 80px rgba(26, 61, 46, 0.12),
+        0 10px 30px rgba(26, 61, 46, 0.08);
+}
+
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+/* Borde de gradiente animado (efecto premium) */
+.service-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 18px;
+    padding: 2px;
+    background: linear-gradient(135deg, 
+        transparent 0%, 
+        var(--accent) 30%, 
+        var(--accent) 70%, 
+        transparent 100%
+    );
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease, background-position 0.5s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+    animation: gradientBorder 3s ease infinite;
+}
+
+@keyframes gradientBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+/* Cards destacadas - borde más visible */
+.service-card.highlight::before {
+    opacity: 0.5;
+}
+
+.service-card.highlight:hover::before {
+    opacity: 1;
+}
+
+
+
+/* ============================================================
+   CUERPO DE LA CARD
+   ============================================================ */
+
+.service-body {
+    padding: 1.5rem 1.5rem 1.75rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    color: #1a3d2e;
+    margin-bottom: 0.6rem;
+}
+
+.service-body p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.service-body .btn {
+    align-self: flex-start;
+    font-size: 0.85rem;
+    padding: 0.55rem 1.75rem;
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.service-body .btn:hover {
+    background: var(--accent);
+    color: white;
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(26, 61, 46, 0.25);
+}
+
+
+/* ============================================================
+   IMAGEN DE LA CARD
+   ============================================================ */
+.service-image {
+    position: relative;
+    width: 100%;
+    padding: 10px;                 /* 👈 grosor del marco */
+  
+    border-radius: 16px;
+    overflow: hidden;              /* 👈 recorte del zoom */
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 12px;           /* un poco menor que el marco */
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+

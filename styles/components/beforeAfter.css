@@ -1,0 +1,694 @@
+
+/* ============================================================
+   BEFORE/AFTER SLIDER MEJORADO
+   ============================================================ */
+
+.beforeafter-wrapper {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  width: 100%;
+}
+
+
+
+.ba-slider {
+    background: #1a1a1a;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+   
+}
+
+.ba-slider:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ===== ETIQUETAS DENTRO DEL SLIDER ===== */
+.ba-slider-tags {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.ba-tag {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ba-tag.antes {
+    background: rgba(255, 107, 107, 0.85);
+}
+
+.ba-tag.despues {
+    background: rgba(81, 207, 102, 0.85);
+}
+
+
+
+
+.ba-slider-handle span {
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.ba-slider-handle:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* ===== ETIQUETAS INFERIORES ===== */
+.ba-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1.2rem;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+}
+
+.ba-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+}
+
+.ba-label.antes {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+}
+
+.ba-label.despues {
+    background: rgba(81, 207, 102, 0.2);
+    color: #51cf66;
+}
+
+/* ===== DESCRIPCIÓN ===== */
+.ba-desc {
+    text-align: center;
+    padding: 1rem 1.2rem;
+    margin: 0;
+    font-weight: 500;
+    color: #2d4a3a;
+    background: white;
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.ba-desc strong {
+    color: #1a3d2e;
+}
+
+/* ============================================================
+   SWIPER CONTROLES PERSONALIZADOS
+   ============================================================ */
+
+.beforeafter-swiper {
+    padding: 0 2.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Flechas */
+.beforeafter-swiper .swiper-button-prev,
+.beforeafter-swiper .swiper-button-next {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(26, 61, 46, 0.06);
+}
+
+.beforeafter-swiper .swiper-button-prev:hover,
+.beforeafter-swiper .swiper-button-next:hover {
+    background: var(--accent);
+    box-shadow: 0 8px 30px rgba(26, 61, 46, 0.2);
+}
+
+.beforeafter-swiper .swiper-button-prev:hover::after,
+.beforeafter-swiper .swiper-button-next:hover::after {
+    color: white;
+}
+
+.beforeafter-swiper .swiper-button-prev::after,
+.beforeafter-swiper .swiper-button-next::after {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a3d2e;
+    transition: color 0.3s ease;
+}
+
+/* Paginación (dots) */
+.beforeafter-swiper .swiper-pagination {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.beforeafter-swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #d1d9d4;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.beforeafter-swiper .swiper-pagination-bullet-active {
+    background: var(--accent);
+    width: 28px;
+    border-radius: 5px;
+}
+
+
+
+/* ============================================================
+   BEFORE/AFTER SLIDER - CON MOVIMIENTO SINCRONIZADO
+   ============================================================ */
+
+.ba-slider-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 66%;
+    overflow: hidden;
+    background: #1a1a1a;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* ===== IMAGEN "DESPUÉS" (fondo) ===== */
+.ba-image-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== CONTENEDOR DE LA IMAGEN "ANTES" (se mueve) ===== */
+.ba-image-before-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* ← Se actualiza con JS */
+    height: 100%;
+    overflow: hidden;
+    will-change: width; /* Optimización */
+}
+
+/* ===== IMAGEN "ANTES" (se mueve inversamente) ===== */
+.ba-image-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* ← CAMBIADO: antes era 200% */
+    height: 100%;
+    object-fit: cover;
+    object-position: left center; /* ← Importante: anclada a la izquierda */
+    will-change: transform; /* Optimización */
+}
+
+/* ===== CONTROL DESLIZANTE ===== */
+.ba-slider-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+    touch-action: none;
+}
+
+.ba-slider-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    pointer-events: none;
+ 
+    will-change: left;
+}
+
+.ba-slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    background: white;
+    border-radius: 50%;
+    z-index: 6;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    font-size: 1.2rem;
+    color: #1a3d2e;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4), 0 0 0 4px rgba(255, 255, 255, 0.2);
+    will-change: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* ============================================================
+   SWIPE INDICATOR
+   ============================================================ */
+
+.swipe-indicator {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(26, 61, 46, 0.06);
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swipe-arrow {
+    font-size: 1.2rem;
+    animation: swipeBounce 2s ease-in-out infinite;
+}
+
+@keyframes swipeBounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+}
+
+.swipe-text {
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.swipe-dots {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.swipe-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ddd;
+    transition: all 0.3s ease;
+}
+
+.swipe-dot.active {
+    background: var(--accent);
+    width: 16px;
+    border-radius: 4px;
+}
+
+/* ============================================================
+   HEADER DE CASOS DE ÉXITO - ESTILO PREMIUM
+   ============================================================ */
+
+.success-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    padding: 0 1rem;
+    position: relative;
+    margin-top: 3.5rem;
+}
+
+/* ===== BADGE ===== */
+.success-badge-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.success-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(26, 61, 46, 0.08), rgba(26, 61, 46, 0.03));
+    padding: 0.3rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 600;
+    border: 1px solid rgba(26, 61, 46, 0.08);
+    transition: all 0.3s ease;
+}
+
+.success-badge:hover {
+    background: linear-gradient(135deg, rgba(26, 61, 46, 0.12), rgba(26, 61, 46, 0.05));
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(26, 61, 46, 0.06);
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+.success-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    color: #1a3d2e;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.success-header h2 span {
+    color: var(--accent);
+    position: relative;
+}
+
+/* Efecto de subrayado ondulado en "reales" */
+.success-header h2 span::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6'%3E%3Cpath d='M0,3 Q25,0 50,3 T100,3' stroke='%23b1cc74' stroke-width='2.5' fill='none' opacity='0.4'/%3E%3C/svg%3E") repeat-x;
+    background-size: 100px 6px;
+}
+
+/* ===== SEPARADOR DECORATIVO ===== */
+.success-header .success-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.5rem auto 1.2rem;
+    max-width: 200px;
+}
+
+.success-header .success-divider .line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent));
+    opacity: 0.3;
+    border-radius: 2px;
+}
+
+.success-header .success-divider .line:last-child {
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.success-header .success-divider .icon {
+    font-size: 1.2rem;
+    opacity: 0.5;
+    animation: pulse-leaf 3s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== DESCRIPCIÓN ===== */
+.success-header p {
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto 1rem;
+    font-size: 1.05rem;
+    color: #666;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.success-header p strong {
+    color: #1a3d2e;
+    font-weight: 600;
+}
+
+/* ============================================================
+   SWIPE INDICATOR
+   ============================================================ */
+
+
+
+
+.swipe-indicator {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(26, 61, 46, 0.06);
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+}
+
+.swipe-indicator:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(26, 61, 46, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.swipe-arrow {
+    font-size: 1.2rem;
+    animation: swipeBounce 2s ease-in-out infinite;
+}
+
+@keyframes swipeBounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+}
+
+.swipe-text {
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.swipe-dots {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.swipe-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ddd;
+    transition: all 0.3s ease;
+}
+
+.swipe-dot.active {
+    background: var(--accent);
+    width: 18px;
+    border-radius: 4px;
+}
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes pulse-leaf {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .success-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .success-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .success-header h2 span::after {
+        height: 3px;
+        background-size: 70px 4px;
+    }
+
+    .success-header .success-divider {
+        max-width: 150px;
+        gap: 0.8rem;
+    }
+
+    .success-header .success-divider .icon {
+        font-size: 1rem;
+    }
+
+    .success-header p {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+
+    .success-badge {
+        font-size: 0.6rem;
+        padding: 0.2rem 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .swipe-indicator {
+        display: flex;
+        padding: 0.4rem 1rem;
+        max-width: 240px;
+        gap: 0.8rem;
+    }
+
+    .swipe-text {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+
+    .swipe-arrow {
+        font-size: 1rem;
+    }
+
+    .swipe-dot {
+        width: 5px;
+        height: 5px;
+    }
+
+    .swipe-dot.active {
+        width: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-header {
+        margin-bottom: 2rem;
+    }
+
+    .success-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .success-header h2 span::after {
+        height: 3px;
+        background-size: 50px 3px;
+    }
+
+    .success-header .success-divider {
+        max-width: 120px;
+        gap: 0.5rem;
+        margin: 0.3rem auto 0.8rem;
+    }
+
+    .success-header .success-divider .icon {
+        font-size: 0.9rem;
+    }
+
+    .success-header p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    }
+
+    .success-badge {
+        font-size: 0.55rem;
+        padding: 0.15rem 1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .swipe-indicator {
+        display: flex;
+        padding: 0.3rem 0.8rem;
+        max-width: 200px;
+        gap: 0.5rem;
+        border-radius: 30px;
+    }
+
+    .swipe-text {
+        font-size: 0.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .swipe-arrow {
+        font-size: 0.9rem;
+    }
+
+    .swipe-dot {
+        width: 4px;
+        height: 4px;
+    }
+
+    .swipe-dot.active {
+        width: 12px;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+    .success-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .success-header .success-divider {
+        max-width: 80px;
+        gap: 0.3rem;
+    }
+
+    .success-header .success-divider .icon {
+        font-size: 0.7rem;
+    }
+
+    .swipe-indicator {
+        max-width: 170px;
+        padding: 0.2rem 0.6rem;
+        gap: 0.3rem;
+    }
+
+    .swipe-text {
+        font-size: 0.45rem;
+    }
+
+    .swipe-arrow {
+        font-size: 0.7rem;
+    }
+}
+
+
+
+.success-section{
+  padding-bottom: 4.5rem;
+  background-color: var(--bg-secondary);
+   background-image: var(--bg-texture);
+}

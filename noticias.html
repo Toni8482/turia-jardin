@@ -13,54 +13,8 @@
 
   <link rel="preload" as="image" href="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg">
 
-  <!-- ===== FUENTES DESCARGABLES (WOFF2) ===== -->
-  <!-- Si quieres alojar los archivos localmente, descarga las fuentes desde Google Fonts y ajusta las rutas -->
   <style>
-    /* Opción 1: Fuentes desde CDN (recomendada para simplicidad, los navegadores las cachean) */
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
-
-    /* Opción 2: Si prefieres alojarlas localmente (descomenta y comenta la línea de @import)
-    @font-face {
-      font-family: 'Cormorant Garamond';
-      src: url('./assets/fonts/CormorantGaramond-Medium.woff2') format('woff2'),
-           url('./assets/fonts/CormorantGaramond-Medium.woff') format('woff');
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Cormorant Garamond';
-      src: url('./assets/fonts/CormorantGaramond-Bold.woff2') format('woff2'),
-           url('./assets/fonts/CormorantGaramond-Bold.woff') format('woff');
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Source Sans Pro';
-      src: url('./assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),
-           url('./assets/fonts/SourceSansPro-Regular.woff') format('woff');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Source Sans Pro';
-      src: url('./assets/fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
-           url('./assets/fonts/SourceSansPro-SemiBold.woff') format('woff');
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Source Sans Pro';
-      src: url('./assets/fonts/SourceSansPro-Bold.woff2') format('woff2'),
-           url('./assets/fonts/SourceSansPro-Bold.woff') format('woff');
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-    */
   </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -71,8 +25,11 @@
   <link rel="stylesheet" type="text/css" href="./styles/sections.css">
   <link rel="stylesheet" type="text/css" href="./styles/components.css">
   <link rel="stylesheet" type="text/css" href="./styles/responsive.css">
-  <link rel="stylesheet" type="text/css" href="./styles/servicios/noticias.css">
-
+  <link rel="stylesheet" type="text/css" href="./styles/pages/noticias.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/header.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/footer.css">
+     <link rel="stylesheet" type="text/css" href="./styles/components/btnWhatsApp.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/btnScroll.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -81,68 +38,97 @@
 
 <body data-base=".">
   <div id="header-container"></div>
+  
   <main>
 
+    <!-- ============================================================
+         SECCIÓN: NOTICIAS / BLOG
+         ============================================================ -->
     <section class="noticias">
 
+      <!-- ===== HEADER OPCIONAL ===== -->
+      <div class="noticias-header">
+        <span class="section-badge">📰 Blog</span>
+        <h2>Noticias y <span>consejos</span></h2>
+        <p>Artículos de interés sobre jardinería, poda y cuidado de tus espacios verdes.</p>
+      </div>
 
- 
-      <div class="card-noticia">
-        <img src="./assets/imagenes/tratamiento_fito.jfif"/>
+      <!-- ===== NOTICIA 1 ===== -->
+      <article class="card-noticia">
+        <div class="card-image">
+          <img src="./assets/imagenes/tratamiento_fito.jfif" alt="Poda de palmeras en Valencia" loading="lazy" />
+          <span class="card-badge">Poda</span>
+        </div>
+        <div class="card-content">
           <h3>Poda de palmeras en Valencia</h3>
-        <p>Las palmeras de la ciudad requieren podas periódicas para eliminar hojas secas y prevenir riesgos.
-           Te contamos cuándo y cómo hacerlo.</p>
-        <a href="./noticias/podaPalmerasValencia.html">Leer articulo</a>
-      </div>
-      <div class="card-noticia">
-        <img src="./assets/imagenes/tratamiento_fito.jfif"/>
-        <h3>Tratamientos fitosanitarios</h3>
-        <p>Protegemos tus árboles contra plagas y hongos con productos ecológicos.
-           Descubre las últimas técnicas en endoterapia.</p>
-        <a href="./noticias/tratamientosFitosanitarios.html">Leer articulo</a>
-      </div>
-     
-      <div class="card-noticia">
-        <img src="./assets/imagenes/tratamiento_fito.jfif"/>
-        <h3>Diseño de jardines sostenibles</h3>
-        <p>Transformamos espacios exteriores con plantas autóctonas y sistemas de riego eficientes.
-           Ideas para tu terraza o jardín.</p>
-        <a href="./noticias/diseñoJardinesSostenibles.html">Leer articulo</a>
-      </div>
-    
-      <div class="card-noticia">
-        <img src="./assets/imagenes/tratamiento_fito.jfif"/>
-         <h3>Endoterapia: innovación</h3>
-        <p>Inyectamos nutrientes y protectores directamente al sistema vascular del árbol.
-           Máxima eficacia con mínimo impacto ambiental.</p>
-        <a href="./noticias/endoterapiaInnovacion.html">Leer articulo</a>
-      </div>
-      <div class="card-noticia">
-        <img src="./assets/imagenes/tratamiento_fito.jfif"/>
-         <h3>Poda de frutales en otoño</h3>
-        <p>Prepara tus árboles frutales para la próxima cosecha.
-           Consejos prácticos para podar naranjos, limoneros y más.</p>
-        <a href="./noticias/podaFrutalesOtoño.html">Leer articulo</a>
-      </div>
-      
-     
+          <p>Las palmeras de la ciudad requieren podas periódicas para eliminar hojas secas y prevenir riesgos. Te contamos cuándo y cómo hacerlo.</p>
+          <a href="./noticias/podaPalmerasValencia.html" class="btn-articulo">Leer artículo</a>
+        </div>
+      </article>
+
+      <!-- ===== NOTICIA 2 ===== -->
+      <article class="card-noticia">
+        <div class="card-image">
+          <img src="./assets/imagenes/tratamiento_fito.jfif" alt="Tratamientos fitosanitarios" loading="lazy" />
+          <span class="card-badge">Tratamientos</span>
+        </div>
+        <div class="card-content">
+          <h3>Tratamientos fitosanitarios</h3>
+          <p>Protegemos tus árboles contra plagas y hongos con productos ecológicos. Descubre las últimas técnicas en endoterapia.</p>
+          <a href="./noticias/tratamientosFitosanitarios.html" class="btn-articulo">Leer artículo</a>
+        </div>
+      </article>
+
+      <!-- ===== NOTICIA 3 ===== -->
+      <article class="card-noticia">
+        <div class="card-image">
+          <img src="./assets/imagenes/tratamiento_fito.jfif" alt="Diseño de jardines sostenibles" loading="lazy" />
+          <span class="card-badge">Diseño</span>
+        </div>
+        <div class="card-content">
+          <h3>Diseño de jardines sostenibles</h3>
+          <p>Transformamos espacios exteriores con plantas autóctonas y sistemas de riego eficientes. Ideas para tu terraza o jardín.</p>
+          <a href="./noticias/disenoJardinesSostenibles.html" class="btn-articulo">Leer artículo</a>
+        </div>
+      </article>
+
+      <!-- ===== NOTICIA 4 ===== -->
+      <article class="card-noticia">
+        <div class="card-image">
+          <img src="./assets/imagenes/tratamiento_fito.jfif" alt="Endoterapia innovación" loading="lazy" />
+          <span class="card-badge">Innovación</span>
+        </div>
+        <div class="card-content">
+          <h3>Endoterapia: innovación</h3>
+          <p>Inyectamos nutrientes y protectores directamente al sistema vascular del árbol. Máxima eficacia con mínimo impacto ambiental.</p>
+          <a href="./noticias/endoterapiaInnovacion.html" class="btn-articulo">Leer artículo</a>
+        </div>
+      </article>
+
+      <!-- ===== NOTICIA 5 ===== -->
+      <article class="card-noticia">
+        <div class="card-image">
+          <img src="./assets/imagenes/tratamiento_fito.jfif" alt="Poda de frutales en otoño" loading="lazy" />
+          <span class="card-badge">Frutales</span>
+        </div>
+        <div class="card-content">
+          <h3>Poda de frutales en otoño</h3>
+          <p>Prepara tus árboles frutales para la próxima cosecha. Consejos prácticos para podar naranjos, limoneros y más.</p>
+          <a href="./noticias/podaFrutalesOtono.html" class="btn-articulo">Leer artículo</a>
+        </div>
+      </article>
+
     </section>
-
-
-
-
-
 
   </main>
 
-
   <div id="footer-container"></div>
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  
+  <!-- BOTONES FLOTANTES -->
   <div id="btn-whatsapp"></div>
-
   <div id="btn-scroll-top"></div>
 
-  <!-- Nuestro main.js como módulo -->
+  <!-- main.js como módulo -->
   <script type="module" src="./js/main.js"></script>
 </body>
 

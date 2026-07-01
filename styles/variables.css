@@ -7,9 +7,9 @@
 :root {
 
   /* 🖼️ Fondos principales */
-  --bg-primary: #0c0f0a;     /* fondo general de la web */
+  --bg-primary: #141910;     /* fondo general de la web */
   --bg-secondary: #1a2016;   /* secciones alternas */
-  --bg-card: rgba(28, 33, 23, 0.8); /* tarjetas con transparencia */
+  --bg-card: rgba(28, 33, 23, 0.9); /* tarjetas con transparencia */
 
 
   --bg-hero-primary:#b9c29e;
@@ -50,11 +50,27 @@
    se sobrescriben las variables de arriba
 */
 body.light {
-
-  /* 🖼️ Fondos más claros */
+ /* ===== COLORES DE FONDO ===== */
   --bg-primary: #fefef5;
   --bg-secondary: #e8ecd9;
-  --bg-card: rgba(245, 248, 235, 0.95);
+  --bg-tertiary: #dce4c4;
+  --bg-white: #ffffff;
+  --bg-dark: #1a3d2e;
+  --bg-dark-soft: #2d5a44;
+  
+  /* ===== GRADIENTES ===== */
+  --bg-gradient-light: linear-gradient(180deg, #fefef5 0%, #e8ecd9 100%);
+  --bg-gradient-warm: linear-gradient(180deg, #fefef5 0%, #f5f3e8 100%);
+  --bg-gradient-dark: linear-gradient(180deg, #1a3d2e 0%, #2d5a44 100%);
+  
+  /* ===== TEXTURA SUTIL ===== */
+  --bg-texture: 
+    radial-gradient(ellipse at 20% 0%, rgba(26, 61, 46, 0.02) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 0%, rgba(26, 61, 46, 0.02) 0%, transparent 60%);
+  /* 🖼️ Fondos más claros 
+  --bg-primary: #fefef5;
+  --bg-secondary: #e8ecd9;*/
+  --bg-card: rgba(245, 248, 235, 0.8);
 
   --bg-hero-primary: #e8ecd9;
 

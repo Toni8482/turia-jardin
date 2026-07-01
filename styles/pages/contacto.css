@@ -1,0 +1,496 @@
+/* ============================================================
+   SECCIÓN: CONTACTO - ESTILO PREMIUM
+   ============================================================ */
+
+.contact-section {
+    padding: 7rem 0;
+    background: var(--bg-secondary);
+    position: relative;
+}
+
+/* Línea decorativa superior */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--accent) 20%, 
+        var(--accent) 80%, 
+        transparent 100%
+    );
+    opacity: 0.15;
+}
+
+/* ============================================================
+   HEADER DE CONTACTO
+   ============================================================ */
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
+.contact-header .section-badge {
+    display: inline-block;
+    background: rgba(26, 61, 46, 0.08);
+    padding: 0.3rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 600;
+    border: 1px solid rgba(26, 61, 46, 0.08);
+    margin-bottom: 0.75rem;
+}
+
+.contact-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    color: #1a3d2e;
+    margin-bottom: 0.3rem;
+}
+
+.contact-header h2 span {
+    color: var(--accent);
+    position: relative;
+}
+
+.contact-header h2 span::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6'%3E%3Cpath d='M0,3 Q25,0 50,3 T100,3' stroke='%23b1cc74' stroke-width='2.5' fill='none' opacity='0.4'/%3E%3C/svg%3E") repeat-x;
+    background-size: 100px 6px;
+}
+
+.contact-header .contact-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.5rem auto 1rem;
+    max-width: 200px;
+}
+
+.contact-header .contact-divider .line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent));
+    opacity: 0.3;
+    border-radius: 2px;
+}
+
+.contact-header .contact-divider .line:last-child {
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.contact-header .contact-divider .icon {
+    font-size: 1.2rem;
+    opacity: 0.5;
+    animation: pulse-leaf 3s ease-in-out infinite;
+}
+
+.contact-header p {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   CONTACTO WRAPPER (GRID)
+   ============================================================ */
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    align-items: start;
+}
+
+/* ============================================================
+   COLUMNA IZQUIERDA - INFO DE CONTACTO
+   ============================================================ */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-info .info-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: #1a3d2e;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info .info-subtitle {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(26, 61, 46, 0.06);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transform: translateX(4px);
+}
+
+.contact-method .method-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(26, 61, 46, 0.06);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover .method-icon {
+    background: var(--accent);
+    color: white;
+}
+
+.contact-method .method-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-method .method-info .label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+    font-weight: 600;
+}
+
+.contact-method .method-info .value {
+    font-size: 0.95rem;
+    color: #1a3d2e;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-method .method-info .value:hover {
+    color: var(--accent);
+}
+
+/* Horario */
+.contact-hours {
+    padding: 1rem 1.2rem;
+    background: rgba(26, 61, 46, 0.04);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.contact-hours .hours-icon {
+    font-size: 1.2rem;
+}
+
+/* ============================================================
+   COLUMNA DERECHA - FORMULARIO
+   ============================================================ */
+
+.contact-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(26, 61, 46, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e0e2df;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #fafbfa;
+    transition: all 0.3s ease;
+    color: #1a3d2e;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(26, 61, 46, 0.06);
+    background: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn {
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contact-form .btn:hover {
+    background: #2d6a4f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 61, 46, 0.2);
+}
+
+.contact-form .btn:active {
+    transform: scale(0.98);
+}
+
+.contact-form .form-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0;
+}
+
+.contact-form .form-note strong {
+    color: #1a3d2e;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 2rem;
+    }
+
+    .contact-header h2 {
+        font-size: 2.4rem;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 3rem 0;
+    }
+
+    .contact-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-info {
+        order: 2;
+    }
+
+    .contact-form {
+        order: 1;
+        padding: 1.5rem;
+    }
+
+    .contact-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .contact-method {
+        padding: 0.8rem 1rem;
+    }
+
+    .contact-method .method-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+
+    .contact-method .method-info .value {
+        font-size: 0.85rem;
+    }
+
+    .contact-header p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 2.5rem 0;
+    }
+
+    .contact-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-header h2 span::after {
+        height: 3px;
+        background-size: 50px 3px;
+    }
+
+    .contact-header .contact-divider {
+        max-width: 120px;
+        gap: 0.5rem;
+    }
+
+    .contact-header .contact-divider .icon {
+        font-size: 0.9rem;
+    }
+
+    .contact-header .section-badge {
+        font-size: 0.55rem;
+        padding: 0.15rem 1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .contact-header p {
+        font-size: 0.85rem;
+    }
+
+    .contact-form {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+
+    .contact-form .btn {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .contact-form .form-note {
+        font-size: 0.7rem;
+    }
+
+    .contact-method {
+        padding: 0.6rem 0.8rem;
+        border-radius: 10px;
+    }
+
+    .contact-method .method-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+    }
+
+    .contact-method .method-info .label {
+        font-size: 0.6rem;
+    }
+
+    .contact-method .method-info .value {
+        font-size: 0.8rem;
+    }
+
+    .contact-hours {
+        padding: 0.8rem 1rem;
+        font-size: 0.8rem;
+        border-radius: 10px;
+    }
+
+    .contact-info .info-title {
+        font-size: 1.2rem;
+    }
+
+    .contact-info .info-subtitle {
+        font-size: 0.85rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+    .contact-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-header .contact-divider {
+        max-width: 80px;
+        gap: 0.3rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 0.8rem;
+        padding: 0.6rem 0.7rem;
+    }
+
+    .contact-method .method-info .value {
+        font-size: 0.75rem;
+    }
+}

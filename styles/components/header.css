@@ -1,0 +1,177 @@
+
+/* barra superior fija siempre visible */
+.header {
+  position: fixed; /* se queda pegado arriba al hacer scroll */
+  top: 0;
+  width: 100%; /* ocupa todo el ancho */
+  
+  display: flex; /* layout flexible */
+  justify-content: space-between; /* logo izquierda, menú derecha */
+  align-items: center; /* centra verticalmente */
+
+  padding: 1rem 3rem; /* espacio interno */
+  
+  backdrop-filter: blur(14px); /* efecto cristal */
+  background: var(--header-bg); /* color semitransparente */
+
+  border-bottom: 1px solid var(--border-color); /* línea inferior sutil */
+
+  z-index: 1100; /* se pone por encima de todo */
+
+  transition: padding 0.3s ease; /* animación cuando cambia tamaño */
+}
+
+/* estado cuando haces scroll (JS añade esta clase) */
+.header.scrolled {
+  padding: 0.6rem 3rem; /* header más pequeño al bajar */
+}
+
+
+/* =========================
+   🪪 LOGO
+   ========================= */
+
+.logo {
+  font-family: "Cormorant Garamond", serif; /* estilo elegante */
+  font-size: 1.7rem;
+  font-weight: 700;
+
+  /* texto con degradado */
+  background: var(--gradient-title);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* necesario para que se vea el gradiente */
+}
+
+
+/* =========================
+   🔗 MENÚ DE NAVEGACIÓN
+   ========================= */
+
+.nav-links {
+  display: flex; /* enlaces en fila */
+  gap: 2rem; /* separación entre links */
+  align-items: center;
+}
+
+/* enlaces individuales */
+.nav-links a {
+  text-decoration: none; /* quita subrayado */
+  color: var(--text-primary);
+  font-weight: 600;
+
+  transition: color 0.2s; /* hover suave */
+
+  position: relative; /* necesario para la línea animada */
+  font-family: "Source Sans Pro", sans-serif;
+}
+.nav-links li {
+ 
+  list-style:none;
+
+ position: relative;
+}
+
+.submenu {
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: var(--header-bg);
+  min-width: 190px;
+  padding: 9px 0;
+  list-style: none;
+
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+   opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0s linear 0.3s;
+}
+
+
+
+
+
+
+.submenu li a {
+  display: block;
+  width: 100%;
+
+  padding: 12px 18px;
+
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: small;
+}
+/* Mostrar submenu */
+.has-submenu:hover .submenu {
+  
+  
+opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+
+  transition-delay: 0s;
+
+
+}
+.submenu li a:hover {
+  background: var(--submenu-hover-bg)!important;
+}
+
+/* línea animada debajo del enlace */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+
+  width: 0; /* empieza invisible */
+  height: 2px;
+
+  background: var(--accent-light);
+
+  transition: width 0.3s ease; /* animación de expansión */
+}
+
+/* al pasar el ratón aparece la línea */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+   🌙 BOTÓN TEMA (LIGHT/DARK)
+   ========================= */
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  color: var(--text-primary);
+}
+
+
+/* =========================
+   🍔 MENÚ MÓVIL (ICONO HAMBURGUESA)
+   ========================= */
+
+.menu-icon {
+  display: none; /* oculto en desktop */
+  font-size: 1.8rem;
+  cursor: pointer;
+
+  background: none;
+  border: none;
+  color: var(--text-primary);
+}

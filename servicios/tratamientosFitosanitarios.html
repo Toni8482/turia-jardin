@@ -13,6 +13,12 @@
   <link rel="stylesheet" type="text/css" href="../styles/components.css" />
   <link rel="stylesheet" type="text/css" href="../styles/responsive.css" />
   <link rel="stylesheet" type="text/css" href="../styles/servicios/sections.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/sections.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/header.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/footer.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/btnWhatsApp.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/btnScroll.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/btn.css">
 </head>
 
 <body data-base="..">
@@ -22,14 +28,20 @@
   <main>
 
     <!-- HERO -->
-    <section class="hero-services">
+    <section class="hero-services-aav" style="background-image: url(./../assets/imagenes/tratamiento_fito.jfif);">
       <div class="titulo">
         <!--<h1>Tratamientos fitosanitarios</h1> -->
       </div>
 
       <div class="subtitulo">
         <div class="subtitulo-img">
-          <img src="./../assets/imagenes/tratamiento_fito.jfif" loading="lazy" alt="Tratamientos fitosanitarios" />
+
+            <!--
+          
+           <img src="./../assets/imagenes/tratamiento_fito.jfif" loading="lazy" alt="Tratamientos fitosanitarios" />
+          -->
+        
+       
         </div>
         <div class="subtitulo-text">
           <h2>Especialistas en tratamientos fitosanitarios en Valencia</h2>
@@ -44,11 +56,22 @@
 
     <!-- DESCRIPCIÓN -->
     <section class="descripcion">
-      <h2>Servicio profesional de tratamientos fitosanitarios</h2>
-      <p>
-        En Turia Jardín somos especialistas en el diagnóstico y tratamiento de plagas y enfermedades
-        que afectan a plantas, árboles y palmeras.
-      </p>
+      <!-- ===== HEADER ===== -->
+      <div class="section-header reveal-fade">
+        <div class="section-header-decoration">
+          <span class="decoration-line"></span>
+          <span class="decoration-icon">🌿</span>
+          <span class="decoration-line"></span>
+        </div>
+        <h2>Servicio profesional de <span style="color:var(--accent);">tratamientos fitosanitarios</span></h2>
+        <div class="section-header-subtitle">
+          <span class="subtitle-line"></span>
+          <p> En Turia Jardín somos especialistas en el diagnóstico y tratamiento de plagas y enfermedades
+            que afectan a plantas, árboles y palmeras.</p>
+          <span class="subtitle-line"></span>
+        </div>
+      </div>
+
 
       <div class="trabajamos">
         <div class="trabajamos-text">
@@ -88,78 +111,103 @@
         </div>
 
         <div class="trabajamos-img">
-          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Aplicación de tratamiento fitosanitario" />
+          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg"
+            alt="Aplicación de tratamiento fitosanitario" />
         </div>
       </div>
 
-      <!-- CARDS DE VENTAJAS -->
-      <div class="ventajas">
-        <div class="service-card">
+
+
+
+      <!-- ===== VENTAJAS ===== -->
+      <div class="ventajas-grid">
+        <div class="ventaja-card reveal-fade">
+          <div class="ventaja-icon">🎨</div>
           <h3>Diagnóstico preciso</h3>
           <p>Identificamos la plaga o enfermedad para aplicar el tratamiento adecuado.</p>
         </div>
-        <div class="service-card">
+        <div class="ventaja-card reveal-fade">
+          <div class="ventaja-icon">🌱</div>
           <h3>Productos eficaces</h3>
           <p>Utilizamos fitosanitarios de última generación y alta eficacia.</p>
         </div>
-        <div class="service-card">
+        <div class="ventaja-card reveal-fade">
+          <div class="ventaja-icon">👷</div>
           <h3>Respeto ambiental</h3>
           <p>Apostamos por la lucha integrada y productos respetuosos.</p>
         </div>
-        <div class="service-card">
+        <div class="ventaja-card reveal-fade">
+          <div class="ventaja-icon">🔄</div>
           <h3>Seguimiento</h3>
           <p>Controlamos la evolución y garantizamos los resultados.</p>
         </div>
-      </div>
-
-      <!-- PROCESO EN PASOS -->
-      <h2>Nuestro proceso de trabajo</h2>
-      <div class="proceso-pasos">
-        <div class="paso">1. Inspección</div>
-        <div class="paso-flecha">→</div>
-        <div class="paso">2. Diagnóstico</div>
-        <div class="paso-flecha">→</div>
-        <div class="paso">3. Tratamiento</div>
-        <div class="paso-flecha">→</div>
-        <div class="paso">4. Seguimiento</div>
-        <div class="paso-flecha">→</div>
-        <div class="paso">5. Prevención</div>
       </div>
     </section>
 
     <!-- PROCESO FOTOS -->
     <section class="proceso-fotos">
-      <h2>Así aplicamos nuestros tratamientos</h2>
+      <div class="section-header-decoration">
+        <span class="decoration-line"></span>
+        <span class="decoration-icon">📋</span>
+        <span class="decoration-line"></span>
+      </div>
+      <h2>Así aplicamos nuestros<span style="color:var(--accent);"> tratamientos</span> </h2>
+      <div class="section-header-subtitle">
+        <span class="subtitle-line"></span>
+        <p>De la idea a la realidad, paso a paso</p>
+        <span class="subtitle-line"></span>
+      </div>
+      </div>
 
       <div class="proceso-grid">
         <article class="proceso-card">
-          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Inspección fitosanitaria" />
+          <div class="proceso-card-image">
+            <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Preparación del producto"
+              loading="lazy" />
+            <span class="proceso-step">01</span>
+          </div>
+
           <h3>Inspección</h3>
           <p>Examinamos la planta para detectar plagas o enfermedades.</p>
         </article>
         <article class="proceso-card">
-          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Preparación del producto" />
+          <div class="proceso-card-image">
+            <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Preparación del producto"
+              loading="lazy" />
+            <span class="proceso-step">01</span>
+          </div>
+
           <h3>Preparación</h3>
           <p>Seleccionamos y preparamos el producto adecuado para cada caso.</p>
         </article>
         <article class="proceso-card">
-          <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Aplicación del tratamiento" />
+          <div class="proceso-card-image">
+            <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Preparación del producto"
+              loading="lazy" />
+            <span class="proceso-step">01</span>
+          </div>
+
           <h3>Aplicación</h3>
           <p>Realizamos la aplicación con equipos profesionales y seguros.</p>
         </article>
         <article class="proceso-card">
-          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Seguimiento del tratamiento" />
+          <div class="proceso-card-image">
+            <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Preparación del producto"
+              loading="lazy" />
+            <span class="proceso-step">01</span>
+          </div>
+
           <h3>Seguimiento</h3>
           <p>Monitorizamos la evolución y aseguramos la eficacia del tratamiento.</p>
         </article>
       </div>
     </section>
 
-    <!-- STACK SLIDERS -->
+    <!-- STACK SLIDERS 
     <div class="trabajos">
       <h1>Algunos de nuestros trabajos</h1>
-
-      <!-- SLIDER 1 -->
+-->
+    <!-- SLIDER 1
       <section class="stack-slider">
         <button class="nav prev" aria-label="Anterior">‹</button>
 
@@ -189,9 +237,71 @@
 
       <a href="../proyectos.html" class="btn">Ver todos nuestros proyectos</a>
     </div>
-
+ -->
     <!-- CTA -->
-    <div id="cta-container"></div>
+    <!-- ============================================================
+     CTA PERSONALIZADO - ADECUACIÓN DE ÁREAS VERDES
+     ============================================================ -->
+    <section class="section-cta">
+      <div style="
+        background: radial-gradient(circle at 30% 20%, #2c3822, #0a0f07);
+        border-radius: 2rem; 
+        padding: 3rem 2rem; 
+        text-align: center; 
+        max-width: 800px; 
+        margin: 0 auto;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    ">
+        <h2 style="
+            font-size: 1.8rem; 
+            font-family: 'Cormorant Garamond', serif; 
+            color: #ecead8;
+            margin-bottom: 0.5rem;
+        ">
+          ¿Quieres transformar tu <span style="color: #b1cc74;">espacio verde</span>?
+        </h2>
+        <p style="
+            margin: 0.5rem 0 1.5rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 1.05rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        ">
+          Creamos jardines funcionales y sostenibles. Solicita una visita técnica sin compromiso.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="tel:+34600987654" class="btn" style="
+                background: #b1cc74;
+                color: #1a3d2e;
+                padding: 0.8rem 2rem;
+                border-radius: 50px;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-block;
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+            ">
+            📞 Llamar ahora
+          </a>
+          <a href="#contacto" class="btn" style="
+                background: transparent;
+                color: #ecead8;
+                padding: 0.8rem 2rem;
+                border-radius: 50px;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-block;
+                transition: all 0.3s ease;
+                border: 2px solid rgba(255,255,255,0.2);
+                cursor: pointer;
+            ">
+            ✉️ Solicitar presupuesto
+          </a>
+        </div>
+      </div>
+    </section>
 
   </main>
 

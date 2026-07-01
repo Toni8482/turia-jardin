@@ -1,5 +1,5 @@
 export function initTypewriter() {
-  const phrases = ["Poda de palmeras", "Endoterapia avanzada", "Cuidado profesional", "Turia Jardín"];
+  const phrases = ["Poda de Palmeras","Poda de Arbolado", "Endoterapia Vegetal", "Cuidado Profesional"];
   let phraseIdx = 0, charIdx = 0, isDeleting = false;
   const typeEl = document.getElementById("typewriter");
   if (!typeEl) return;

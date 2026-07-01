@@ -1,0 +1,335 @@
+
+/* ============================================================
+   SECCIÓN DE CLIENTES - ESTILO PREMIUM
+   ============================================================ */
+/* ===== CLIENTES (Fondo blanco puro) ===== */
+
+
+
+
+.clients-section {
+  
+    background: 
+       var(--bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Línea decorativa superior */
+.clients-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background:  var(--bg-secondary);
+    opacity: 0.15;
+}
+
+/* ============================================================
+   HEADER DE CLIENTES
+   ============================================================ */
+
+.clients-header {
+    text-align: center;
+    margin-bottom: 9rem;
+   
+}
+
+.clients-header .section-badge {
+    display: inline-block;
+    background: rgba(26, 61, 46, 0.08);
+   
+    border-radius: 50px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 600;
+    border: 1px solid rgba(26, 61, 46, 0.08);
+    margin-bottom: 0.75rem;
+}
+
+.clients-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    color: #1a3d2e;
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.clients-header h2 span {
+    color: var(--accent);
+    position: relative;
+}
+
+.clients-header h2 span::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6'%3E%3Cpath d='M0,3 Q25,0 50,3 T100,3' stroke='%23b1cc74' stroke-width='2.5' fill='none' opacity='0.4'/%3E%3C/svg%3E") repeat-x;
+    background-size: 100px 6px;
+}
+
+.clients-header .clients-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.5rem auto 1.2rem;
+    max-width: 200px;
+}
+
+.clients-header .clients-divider .line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent));
+    opacity: 0.3;
+    border-radius: 2px;
+}
+
+.clients-header .clients-divider .line:last-child {
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.clients-header .clients-divider .icon {
+    font-size: 1.2rem;
+    opacity: 0.5;
+    animation: pulse-leaf 3s ease-in-out infinite;
+}
+
+.clients-header p {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   SWIPER DE CLIENTES
+   ============================================================ */
+
+.clients-swiper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0 3rem;
+    position: relative;
+}
+
+/* ============================================================
+   SLIDES DE LOGOS
+   ============================================================ */
+
+.clients-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background:transparent;
+   
+   
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 120px;
+    min-height: 100px;
+}
+
+.clients-swiper .swiper-slide:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border-color: rgba(26, 61, 46, 0.08);
+}
+
+/* ===== LOGOS ===== */
+.clients-swiper .swiper-slide img {
+    max-width: 140px;
+    max-height: 60px;
+    object-fit: contain;
+   
+ 
+  
+    width: auto;
+    height: auto;
+}
+
+.clients-swiper .swiper-slide:hover img {
+    filter: grayscale(0) brightness(1);
+   
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   PAGINACIÓN DE CLIENTES
+   ============================================================ */
+
+.clients-swiper .clients-pagination {
+    bottom: 0 !important;
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.clients-swiper .clients-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #d1d9d4;
+    opacity: 1;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.clients-swiper .clients-pagination .swiper-pagination-bullet-active {
+    background: var(--accent);
+    width: 28px;
+    border-radius: 5px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .clients-section {
+        padding: 3rem 0;
+    }
+
+    .clients-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .clients-header h2 span::after {
+        height: 3px;
+        background-size: 70px 4px;
+    }
+
+    .clients-header .clients-divider {
+        max-width: 150px;
+        gap: 0.8rem;
+    }
+
+    .clients-header .clients-divider .icon {
+        font-size: 1rem;
+    }
+
+    .clients-header p {
+        font-size: 0.9rem;
+    }
+
+    .clients-swiper .swiper-slide {
+        height: 100px;
+        min-height: 80px;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .clients-swiper .swiper-slide img {
+        max-width: 100px;
+        max-height: 45px;
+    }
+
+    .clients-swiper .clients-pagination .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+
+    .clients-swiper .clients-pagination .swiper-pagination-bullet-active {
+        width: 20px;
+    }
+
+    .clients-header .section-badge {
+        font-size: 0.6rem;
+        padding: 0.2rem 1.2rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clients-section {
+        padding: 2.5rem 0;
+    }
+
+    .clients-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .clients-header h2 span::after {
+        height: 3px;
+        background-size: 50px 3px;
+    }
+
+    .clients-header .clients-divider {
+        max-width: 120px;
+        gap: 0.5rem;
+        margin: 0.3rem auto 0.8rem;
+    }
+
+    .clients-header .clients-divider .icon {
+        font-size: 0.9rem;
+    }
+
+    .clients-header p {
+        font-size: 0.85rem;
+    }
+
+    .clients-header .section-badge {
+        font-size: 0.55rem;
+        padding: 0.15rem 1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .clients-swiper {
+        padding: 0.5rem 0 2.5rem;
+    }
+
+    .clients-swiper .swiper-slide {
+        height: 80px;
+        min-height: 70px;
+        padding: 0.8rem;
+        border-radius: 10px;
+    }
+
+    .clients-swiper .swiper-slide img {
+        max-width: 80px;
+        max-height: 35px;
+    }
+
+    .clients-swiper .clients-pagination .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        margin: 0 4px;
+    }
+
+    .clients-swiper .clients-pagination .swiper-pagination-bullet-active {
+        width: 16px;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+    .clients-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .clients-header .clients-divider {
+        max-width: 80px;
+        gap: 0.3rem;
+    }
+
+    .clients-swiper .swiper-slide {
+        height: 70px;
+        min-height: 60px;
+        padding: 0.5rem;
+    }
+
+    .clients-swiper .swiper-slide img {
+        max-width: 65px;
+        max-height: 30px;
+    }
+}
+

@@ -1,0 +1,23 @@
+
+/* =========================
+   📝 FORMULARIO DE CONTACTO
+   ========================= */
+
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  margin: 2rem auto; /* centra el formulario */
+  display: flex;
+  flex-direction: column; /* uno debajo de otro */
+  gap: 1rem; /* separación entre inputs */
+}
+
+/* inputs y textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}

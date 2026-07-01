@@ -12,6 +12,7 @@ body {
   overflow-x: hidden; /* evita scroll horizontal accidental */
   transition: background-color 0.3s ease, color 0.3s ease; /* animación suave al cambiar tema */
   scroll-behavior: smooth; /* scroll suave al navegar por anclas */
+
 }
 
 

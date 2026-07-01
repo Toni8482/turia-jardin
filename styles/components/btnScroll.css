@@ -1,0 +1,32 @@
+
+/* =========================
+   🔝 BOTÓN SCROLL ARRIBA
+   ========================= */
+
+.scroll-top {
+  position: fixed; /* siempre visible en pantalla */
+  bottom: 80px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: var(--accent);
+  border-radius: 50%; /* círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  opacity: 0; /* oculto por defecto */
+  visibility: hidden;
+  transition: all 0.3s;
+
+  z-index: 1050;
+  box-shadow: var(--shadow-sm);
+}
+
+/* cuando JS lo activa */
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+

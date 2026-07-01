@@ -1,0 +1,46 @@
+
+/* Botón base reutilizable en toda la web */
+.btn {
+  margin-top: 1.8rem; /* separa el botón del contenido superior */
+  padding: 0.85rem 1.5rem; /* tamaño interno (alto/ancho del botón) */
+  border: none; /* quitamos borde por defecto del navegador */
+  border-radius: 60px; /* lo hace completamente redondo tipo “pill” */
+  background: var(--accent); /* color principal del tema */
+  color: #0e130b; /* texto oscuro para contraste */
+  font-weight: 700; /* texto en negrita */
+  cursor: pointer; /* mano al pasar el ratón */
+  transition: var(--transition); /* animaciones suaves globales */
+  box-shadow: var(--shadow-sm); /* sombra ligera para profundidad */
+  font-family: "Source Sans Pro", sans-serif; /* tipografía principal */
+}
+
+/* efecto visual cuando pasas el ratón */
+.btn:hover {
+  background: var(--accent-hover); /* cambia a color más claro */
+  transform: translateY(-3px); /* levanta el botón ligeramente */
+}
+
+
+/* =========================
+   🔘 BOTÓN SECUNDARIO (OUTLINE)
+   ========================= */
+
+/* estilo alternativo sin fondo */
+.btn-outline {
+  background: transparent; /* sin fondo */
+  border: 1.5px solid var(--accent-light); /* borde visible */
+  color: var(--text-primary); /* texto normal */
+}
+
+/* hover del botón outline */
+.btn-outline:hover {
+  background: var(--accent); /* se rellena al pasar el ratón */
+  color: #0e130b; /* cambia el color del texto */
+}
+
+/* ajuste específico para modo claro */
+body.light .btn-outline {
+  color: #0e130b !important; /* fuerza color oscuro */
+  border-color: var(--accent-light); /* mantiene borde verde claro */
+}
+

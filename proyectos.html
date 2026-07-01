@@ -13,54 +13,8 @@
 
   <link rel="preload" as="image" href="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg">
 
-  <!-- ===== FUENTES DESCARGABLES (WOFF2) ===== -->
-  <!-- Si quieres alojar los archivos localmente, descarga las fuentes desde Google Fonts y ajusta las rutas -->
   <style>
-    /* Opción 1: Fuentes desde CDN (recomendada para simplicidad, los navegadores las cachean) */
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
-
-    /* Opción 2: Si prefieres alojarlas localmente (descomenta y comenta la línea de @import)
-    @font-face {
-      font-family: 'Cormorant Garamond';
-      src: url('./assets/fonts/CormorantGaramond-Medium.woff2') format('woff2'),
-           url('./assets/fonts/CormorantGaramond-Medium.woff') format('woff');
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Cormorant Garamond';
-      src: url('./assets/fonts/CormorantGaramond-Bold.woff2') format('woff2'),
-           url('./assets/fonts/CormorantGaramond-Bold.woff') format('woff');
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Source Sans Pro';
-      src: url('./assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),
-           url('./assets/fonts/SourceSansPro-Regular.woff') format('woff');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Source Sans Pro';
-      src: url('./assets/fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
-           url('./assets/fonts/SourceSansPro-SemiBold.woff') format('woff');
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Source Sans Pro';
-      src: url('./assets/fonts/SourceSansPro-Bold.woff2') format('woff2'),
-           url('./assets/fonts/SourceSansPro-Bold.woff') format('woff');
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-    */
   </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -71,9 +25,12 @@
   <link rel="stylesheet" type="text/css" href="./styles/sections.css">
   <link rel="stylesheet" type="text/css" href="./styles/components.css">
   <link rel="stylesheet" type="text/css" href="./styles/responsive.css">
-  <link rel="stylesheet" type="text/css" href="./styles/servicios/proyectos.css">
-
-
+  <link rel="stylesheet" type="text/css" href="./styles/pages/proyectos.css">
+ <link rel="stylesheet" type="text/css" href="./styles/components/header.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/footer.css">
+     <link rel="stylesheet" type="text/css" href="./styles/components/btnWhatsApp.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/btnScroll.css">
+    
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -81,324 +38,297 @@
 
 <body data-base=".">
   <div id="header-container"></div>
+  
   <main>
+
+    <!-- ============================================================
+         SECCIÓN: PROYECTOS
+         ============================================================ -->
     <section class="proyectos">
-       <h2>Poda palmera en Valencia</h2>
-      <div class="cards-proyectos">
 
-       
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-
+      <!-- ===== HEADER ===== -->
+      <div class="proyectos-header">
+        <span class="section-badge">🏆 Proyectos</span>
+        <h2>Nuestros <span>trabajos</span></h2>
+        <p>Proyectos reales realizados en Valencia y alrededores.</p>
       </div>
-<hr>
- <h2>Poda arboles en Albal</h2>
-       <div class="cards-proyectos">
 
-       
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
+      <!-- ============================================================
+           GRUPO 1: Poda de palmeras
+           ============================================================ -->
+      <div class="proyecto-grupo">
+        <div class="grupo-header">
+          <h3>🌴 Poda de palmeras</h3>
+          <span class="grupo-line"></span>
+          <span class="grupo-badge">6 proyectos</span>
         </div>
 
+        <div class="cards-proyectos">
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de palmera en Valencia" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de palmera datilera</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de palmera canaria" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de palmera canaria</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de palmera washingtonia" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de washingtonia</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de palmera en urbanización" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en urbanización</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de palmera en jardín privado" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en jardín privado</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de palmera en parque" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+        </div>
       </div>
-  <h2>Endoterapia en chalet</h2>
-       <div class="cards-proyectos">
 
-      
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-
+      <!-- ===== SEPARADOR ===== -->
+      <div class="proyectos-separator">
+        <span class="separator-icon">✦</span>
       </div>
- <h2>Adecuacion de area verde en Bayer</h2>
-       <div class="cards-proyectos">
 
-       
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
-        </div>
-        <div class="card-proyecto">
-          <img src="./assets/imagenes/endoterapia.jpg" />
-
-
+      <!-- ============================================================
+           GRUPO 2: Poda de árboles
+           ============================================================ -->
+      <div class="proyecto-grupo">
+        <div class="grupo-header">
+          <h3>🌳 Poda de árboles</h3>
+          <span class="grupo-line"></span>
+          <span class="grupo-badge">6 proyectos</span>
         </div>
 
+        <div class="cards-proyectos">
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Albal" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Albal</h4>
+              <p class="overlay-location">📍 Albal</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Valencia" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Valencia</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Albal" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Albal</h4>
+              <p class="overlay-location">📍 Albal</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Valencia" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Valencia</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Albal" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Albal</h4>
+              <p class="overlay-location">📍 Albal</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Valencia" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Valencia</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SEPARADOR ===== -->
+      <div class="proyectos-separator">
+        <span class="separator-icon">✦</span>
+      </div>
+
+      <!-- ============================================================
+           GRUPO 3: Endoterapia
+           ============================================================ -->
+      <div class="proyecto-grupo">
+        <div class="grupo-header">
+          <h3>💉 Endoterapia</h3>
+          <span class="grupo-line"></span>
+          <span class="grupo-badge">6 proyectos</span>
+        </div>
+
+        <div class="cards-proyectos">
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en chalet" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en chalet</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en palmera" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en palmera</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en chalet" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en chalet</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en palmera" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en palmera</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en chalet" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en chalet</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en palmera" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en palmera</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SEPARADOR ===== -->
+      <div class="proyectos-separator">
+        <span class="separator-icon">✦</span>
+      </div>
+
+      <!-- ============================================================
+           GRUPO 4: Adecuación de áreas verdes
+           ============================================================ -->
+      <div class="proyecto-grupo">
+        <div class="grupo-header">
+          <h3>🏞️ Adecuación de áreas verdes</h3>
+          <span class="grupo-line"></span>
+          <span class="grupo-badge">6 proyectos</span>
+        </div>
+
+        <div class="cards-proyectos">
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en Bayer" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación en Bayer</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en área verde" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación de área verde</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en Bayer" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación en Bayer</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en área verde" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación de área verde</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en Bayer" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación en Bayer</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en área verde" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación de área verde</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+        </div>
       </div>
 
     </section>
 
-
-
-
-
-    <div id="cta-container"></div>
-
+   
 
   </main>
 
-
   <div id="footer-container"></div>
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  
+  <!-- BOTONES FLOTANTES -->
   <div id="btn-whatsapp"></div>
-
   <div id="btn-scroll-top"></div>
 
-  <div id="serviceModal" class="modal">
-    <div class="modal-content"><span class="modal-close" id="modalClose">&times;</span>
-      <h3 id="modalTitle">Más información</h3>
-      <p id="modalBody">¿Te interesa este servicio? Escríbenos por WhatsApp.</p><button class="btn"
-        id="modalWhatsappBtn">Contactar por WhatsApp</button>
-    </div>
-  </div>
-  <div id="lightbox" class="lightbox"><span class="lightbox-close">&times;</span><img id="lightboxImg" src="" alt="">
-  </div>
-
-
-  <!-- Nuestro main.js como módulo -->
+  <!-- main.js como módulo -->
   <script type="module" src="./js/main.js"></script>
 </body>
 

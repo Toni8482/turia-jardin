@@ -1,184 +1,3 @@
-/* =========================
-   🧭 HEADER FIJO (NAVEGACIÓN SUPERIOR)
-   ========================= */
-
-/* barra superior fija siempre visible */
-.header {
-  position: fixed; /* se queda pegado arriba al hacer scroll */
-  top: 0;
-  width: 100%; /* ocupa todo el ancho */
-  
-  display: flex; /* layout flexible */
-  justify-content: space-between; /* logo izquierda, menú derecha */
-  align-items: center; /* centra verticalmente */
-
-  padding: 1rem 3rem; /* espacio interno */
-  
-  backdrop-filter: blur(14px); /* efecto cristal */
-  background: var(--header-bg); /* color semitransparente */
-
-  border-bottom: 1px solid var(--border-color); /* línea inferior sutil */
-
-  z-index: 1100; /* se pone por encima de todo */
-
-  transition: padding 0.3s ease; /* animación cuando cambia tamaño */
-}
-
-/* estado cuando haces scroll (JS añade esta clase) */
-.header.scrolled {
-  padding: 0.6rem 3rem; /* header más pequeño al bajar */
-}
-
-
-/* =========================
-   🪪 LOGO
-   ========================= */
-
-.logo {
-  font-family: "Cormorant Garamond", serif; /* estilo elegante */
-  font-size: 1.7rem;
-  font-weight: 700;
-
-  /* texto con degradado */
-  background: var(--gradient-title);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent; /* necesario para que se vea el gradiente */
-}
-
-
-/* =========================
-   🔗 MENÚ DE NAVEGACIÓN
-   ========================= */
-
-.nav-links {
-  display: flex; /* enlaces en fila */
-  gap: 2rem; /* separación entre links */
-  align-items: center;
-}
-
-/* enlaces individuales */
-.nav-links a {
-  text-decoration: none; /* quita subrayado */
-  color: var(--text-primary);
-  font-weight: 600;
-
-  transition: color 0.2s; /* hover suave */
-
-  position: relative; /* necesario para la línea animada */
-  font-family: "Source Sans Pro", sans-serif;
-}
-.nav-links li {
- 
-  list-style:none;
-
- position: relative;
-}
-
-.submenu {
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-  background: var(--header-bg);
-  min-width: 190px;
-  padding: 9px 0;
-  list-style: none;
-
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-
-   opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease,
-    visibility 0s linear 0.3s;
-}
-
-
-
-
-
-
-.submenu li a {
-  display: block;
-  width: 100%;
-
-  padding: 12px 18px;
-
-  text-decoration: none;
-  color: var(--text-primary);
-  font-size: small;
-}
-/* Mostrar submenu */
-.has-submenu:hover .submenu {
-  
-  
-opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-
-  transition-delay: 0s;
-
-
-}
-.submenu li a:hover {
-  background: var(--submenu-hover-bg)!important;
-}
-
-/* línea animada debajo del enlace */
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-
-  width: 0; /* empieza invisible */
-  height: 2px;
-
-  background: var(--accent-light);
-
-  transition: width 0.3s ease; /* animación de expansión */
-}
-
-/* al pasar el ratón aparece la línea */
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-
-/* =========================
-   🌙 BOTÓN TEMA (LIGHT/DARK)
-   ========================= */
-
-.theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  cursor: pointer;
-
-  color: var(--text-primary);
-}
-
-
-/* =========================
-   🍔 MENÚ MÓVIL (ICONO HAMBURGUESA)
-   ========================= */
-
-.menu-icon {
-  display: none; /* oculto en desktop */
-  font-size: 1.8rem;
-  cursor: pointer;
-
-  background: none;
-  border: none;
-  color: var(--text-primary);
-}
-
 
 /* =========================
    📄 SECCIONES GENERALES
@@ -187,147 +6,44 @@ opacity: 1;
 /* estructura base de cada bloque de página */
 .section {
   min-height: 100vh; /* ocupa pantalla completa */
-  
+ 
   display: flex;
   flex-direction: column;
   justify-content: center; /* centra vertical */
   align-items: center; /* centra horizontal */
 
-  padding: 6rem 2rem; /* espacio interno */
   position: relative;
-}
-
-
-/* =========================
-   🌄 HERO (PRIMERA PANTALLA)
-   ========================= */
-
-.hero {
-  position: relative;
-  overflow: hidden;
-
-  /* fondo oscuro degradado */
-  background: linear-gradient(
-    125deg,
-    rgba(8, 14, 6, 0.85),
-    rgba(0, 0, 0, 0.9)
-  );
-
-  
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* imagen de fondo del hero */
-.hero-bg {
-  position: absolute;
-  top: -10%;
-  left: 0;
-
   width: 100%;
-  height: 120%;
-
-  object-fit: cover; /* cubre todo sin deformarse */
-  object-position: center 15%; /* enfoca parte importante */
-
-  z-index: 0; /* queda detrás del contenido */
-
-  will-change: transform; /* optimización animaciones */
-  pointer-events: none; /* no bloquea clicks */
 }
 
 
-/* caja del contenido del hero */
-.hero-content {
-  position: relative;
-  z-index: 2; /* encima de la imagen */
 
-  background: rgba(0, 0, 0, 0.45); /* fondo semitransparente */
-  backdrop-filter: blur(4px); /* efecto vidrio */
-
-  padding: 2rem 2.5rem;
-  border-radius: 2rem;
-
-  max-width: 850px;
-  margin: 0 auto;
-
-  text-align: center;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+/* estado inicial (oculto) */
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(28px); /* empieza abajo */
+  transition: opacity 0.4s ease, transform 0.5s ease;
+ 
 }
 
-
-/* subtítulo pequeño del hero */
-.hero-subtitle {
-  font-size: 1.1rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-
-/* título principal dinámico */
-.dynamic-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 7vw, 4.8rem); /* responsive automático */
-  font-weight: 700;
-  margin: 1rem 0;
-  min-height: 4rem;
+/* cuando aparece en pantalla */
+.reveal-fade.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
 /* =========================
-   🎨 FIJAR COLORES DEL HERO
+   📊 BARRA DE PROGRESO SCROLL
    ========================= */
 
-/* texto del hero SIEMPRE claro */
-.hero-subtitle,
-.hero-content p {
-  color: #ecead8 !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%; /* JS la va aumentando */
+  height: 3px;
+  background: var(--accent-light);
+  z-index: 1150;
 }
 
-
-/* efecto máquina de escribir */
-#typewriter {
-  background: var(--gradient-title);
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  color: transparent !important;
-
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-
-  display: inline-block;
-  font-size: inherit;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-}
-
-
-/* mantener colores en modo claro */
-body.light .hero-subtitle,
-body.light .hero-content p {
-  color: #ecead8 !important;
-}
-
-body.light #typewriter {
-  color: transparent !important;
-}
-
-
-/* =========================
-   🦶 FOOTER
-   ========================= */
-
-.footer {
-  background: #060804; /* negro muy oscuro */
-  text-align: center;
-
-  padding: 1.5rem;
-  border-top: 1px solid #2b3420; /* separación visual */
-}
