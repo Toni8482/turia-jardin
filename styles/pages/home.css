@@ -1,4 +1,3 @@
-
 /* =========================
    🌄 HERO (PRIMERA PANTALLA)
    ========================= */
@@ -6,113 +5,723 @@
 @font-face {
     font-family: MyCustomFontName;
     src: url("../fonts/CaviarDreams.ttf");
-
 }
 
-
 .hero {
-  min-height: 100vh; /* ocupa toda la pantalla */
-  display: flex; /* activa flexbox */
-  align-items: center; /* centra verticalmente */
-  justify-content: center; /* centra horizontalmente */
-   font-family: MyCustomFontName;
-  
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: MyCustomFontName;
 }
 
 /* imagen de fondo del hero */
 .hero-bg {
-  position: absolute;
-  top: -10%;
-  left: 0;
-
-  width: 100%;
-  height: 120%;
-
-  object-fit: cover; /* cubre todo sin deformarse */
-  object-position: center 15%; /* enfoca parte importante */
-
-  z-index: -1; /* queda detrás del contenido */
-
-  will-change: transform; /* optimización animaciones */
-  pointer-events: none; /* no bloquea clicks */
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    object-position: center 15%;
+    z-index: -1;
+    will-change: transform;
+    pointer-events: none;
 }
-
 
 /* caja del contenido del hero */
 .hero-content {
-  position: relative;
-  z-index: 2; /* encima de la imagen */
- 
-  background: rgba(0, 0, 0, 0.45); /* fondo semitransparente */
-  backdrop-filter: blur(4px); /* efecto vidrio */
-
- padding: 30px;
-  border-radius: 2rem;
-
- 
-  margin: 0 auto;
-
-  text-align: center;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    padding: 30px;
+    border-radius: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
-
 
 /* subtítulo pequeño del hero */
 .hero-subtitle {
-  font-size: 1.1rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
 }
-
 
 /* título principal dinámico */
 .dynamic-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 7vw, 4.8rem); /* responsive automático */
-  font-weight: 700;
-  margin: 1rem 0;
-  min-height: 4rem;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2rem, 7vw, 4.8rem);
+    font-weight: 700;
+    margin: 1rem 0;
+    min-height: 4rem;
 }
-
 
 /* =========================
    🎨 FIJAR COLORES DEL HERO
    ========================= */
 
-/* texto del hero SIEMPRE claro */
 .hero-subtitle,
 .hero-content p {
-  color: #ecead8 !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    color: #ecead8 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .wave-divider {
-  z-index: 2;
-  width: 100%;
-  bottom: 0;
-  position: absolute;
+    z-index: 2;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
 }
 
 .wave-divider svg {
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 120px; /* Altura de la onda */
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
 }
-
-
 
 /* mantener colores en modo claro */
 body.light .hero-subtitle,
 body.light .hero-content p {
-  color: #ecead8 !important;
+    color: #ecead8 !important;
 }
 
 body.light #typewriter {
-  color: transparent !important;
+    color: transparent !important;
 }
+
+/* ======================================================
+   CONTENEDOR GENERAL
+====================================================== */
+.reviews-section {
+    display: flex;
+    align-items: flex-start; 
+    width: 100%;
+    margin-top: 4rem;
+    gap: 3rem;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+@media (max-width: 900px) {
+    .reviews-section {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 0 1rem;
+    }
+}
+
+/* ======================================================
+   RESUMEN GOOGLE
+====================================================== */
+#reviews-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 280px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    #reviews-summary {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #1e1e1e, #2d2d2d);
+}
+
+.rating:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 900px) {
+    .rating {
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+.rating-stars {
+    color: #fbbc04;
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+}
+
+.rating h2 {
+    margin: 0.5rem 0;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #e8eaed;
+    letter-spacing: -1px;
+}
+
+.rating-count {
+    margin: 0;
+    color: #9aa0a6;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.rating-count strong {
+    color: #e8eaed;
+    font-weight: 600;
+}
+
+/* ======================================================
+   BOTÓN GOOGLE GRANDE
+====================================================== */
+.google-button {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.google-button img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.google-button:hover img {
+    transform: scale(1.1);
+}
+
+.google-button:hover {
+    opacity: 0.8;
+}
+
+/* ======================================================
+   SWIPER
+====================================================== */
+.reviews-swiper {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    padding: 0.5rem 0.25rem;
+}
+
+.reviews-swiper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+/* ======================================================
+   TARJETAS
+====================================================== */
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.75rem;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    min-height: 280px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(26, 115, 232, 0.15);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+}
+
+/* ======================================================
+   ESTRELLAS
+====================================================== */
+.stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.star {
+    color: #fbbc04;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.star.empty {
+    color: #ddd;
+}
+
+.testimonial-card:hover .star {
+    animation: starPop 0.3s ease forwards;
+}
+
+.testimonial-card:hover .star:nth-child(2) {
+    animation-delay: 0.05s;
+}
+.testimonial-card:hover .star:nth-child(3) {
+    animation-delay: 0.1s;
+}
+.testimonial-card:hover .star:nth-child(4) {
+    animation-delay: 0.15s;
+}
+.testimonial-card:hover .star:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+@keyframes starPop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ======================================================
+   CONTENEDOR DE TEXTO CON LEER MÁS
+====================================================== */
+.testimonial-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.testimonial-text-content {
+    display: -webkit-box;
+   
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: none;
+    max-height: 100px; 
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Cuando está expandido, mostrar todo */
+.testimonial-card.expanded .testimonial-text-content {
+   
+    max-height: none;
+    overflow: visible;
+}
+
+.testimonial-text {
+    margin: 0;
+    color: #3c4043;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* ======================================================
+   BOTÓN LEER MÁS
+====================================================== */
+.read-more-btn {
+    display: none;
+    background: none !important;
+    border: none !important;
+    color: #1a73e8 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    padding: 0.5rem 0 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    z-index: 10 !important;
+    background-color: transparent !important;
+    width: auto !important;
+    font-family: inherit !important;
+    margin-top: 0.25rem !important;
+    text-decoration: none !important;
+    align-self: flex-start !important;
+}
+
+.read-more-btn:hover {
+    color: #1557b0 !important;
+    transform: translateX(4px) !important;
+}
+
+.read-more-btn:focus-visible {
+    outline: 2px solid #1a73e8 !important;
+    outline-offset: 2px !important;
+    border-radius: 4px !important;
+}
+
+.read-more-btn[aria-expanded="true"]::after {
+    content: ' ↑' !important;
+}
+
+.read-more-btn[aria-expanded="false"]::after {
+    content: ' ↓' !important;
+}
+
+/* ======================================================
+   FOOTER DE LA TARJETA
+====================================================== */
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #f0f0f0;
+    transition: border-color 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-avatar {
+    border-color: #1a73e8;
+}
+
+.testimonial-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+}
+
+.testimonial-author h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.testimonial-date {
+    margin-top: 2px;
+    color: #9aa0a6;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+/* Logo de Google en el footer */
+.logo-google-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-left: auto;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    flex-shrink: 0;
+}
+
+.logo-google-img:hover {
+    opacity: 1;
+}
+
+/* ======================================================
+   FLECHAS DE NAVEGACIÓN
+====================================================== */
+.reviews-prev,
+.reviews-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e8eaed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    font-size: 1.2rem;
+    color: #3c4043;
+    user-select: none;
+}
+
+.reviews-prev::before {
+    content: "‹";
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: 300;
+}
+
+.reviews-next::before {
+    content: "›";
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: 300;
+}
+
+.reviews-prev {
+    left: -18px;
+}
+
+.reviews-next {
+    right: -18px;
+}
+
+.reviews-prev:hover,
+.reviews-next:hover {
+    background: #1a73e8;
+    color: #ffffff;
+    border-color: #1a73e8;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 4px 20px rgba(26, 115, 232, 0.3);
+}
+
+.reviews-prev:active,
+.reviews-next:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.reviews-prev.swiper-button-disabled,
+.reviews-next.swiper-button-disabled {
+    opacity: 0;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ======================================================
+   ANIMACIONES DE APARICIÓN
+====================================================== */
+.testimonial-card {
+    opacity: 0;
+    animation: cardAppear 0.6s ease forwards;
+}
+
+.testimonial-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+.testimonial-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.testimonial-card:nth-child(3) {
+    animation-delay: 0.15s;
+}
+.testimonial-card:nth-child(4) {
+    animation-delay: 0.2s;
+}
+.testimonial-card:nth-child(5) {
+    animation-delay: 0.25s;
+}
+.testimonial-card:nth-child(6) {
+    animation-delay: 0.3s;
+}
+.testimonial-card:nth-child(7) {
+    animation-delay: 0.35s;
+}
+.testimonial-card:nth-child(8) {
+    animation-delay: 0.4s;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+@media (max-width: 1024px) {
+    .reviews-prev {
+        left: -12px;
+    }
+
+    .reviews-next {
+        right: -12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .reviews-prev,
+    .reviews-next {
+        display: none;
+    }
+
+    .testimonial-card {
+        min-height: 240px;
+        padding: 1.5rem;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .read-more-btn {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .rating h2 {
+        font-size: 3.5rem;
+    }
+
+    .rating-stars {
+        font-size: 1.2rem;
+    }
+
+    .testimonial-card {
+        min-height: 200px;
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .testimonial-footer {
+        gap: 10px;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .testimonial-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .google-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .logo-google-img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* ======================================================
+   DARK MODE
+====================================================== */
+@media (prefers-color-scheme: dark) {
+    .testimonial-card {
+        background: #1e1e1e;
+        border-color: #2d2d2d;
+    }
+
+    .testimonial-text {
+        color: #e8eaed;
+    }
+
+    .read-more-btn {
+        background: transparent;
+        color: #8ab4f8;
+    }
+
+    .read-more-btn:hover {
+        color: #aecbfa;
+    }
+
+    .testimonial-author h4 {
+        color: #e8eaed;
+    }
+
+    .testimonial-avatar {
+        border-color: #2d2d2d;
+    }
+
+    .reviews-prev,
+    .reviews-next {
+        background: #1e1e1e;
+        border-color: #2d2d2d;
+        color: #e8eaed;
+    }
+
+    .reviews-prev:hover,
+    .reviews-next:hover {
+        background: #8ab4f8;
+        color: #1a1a1a;
+        border-color: #8ab4f8;
+    }
+
+    .star.empty {
+        color: #444;
+    }
+}
+
+/* ======================================================
+   UTILIDADES
+====================================================== */
+#reviews-summary:empty {
+    display: none;
+}
+
+.reviews-section {
+    scroll-margin-top: 2rem;
+}
+
+.testimonial-card:focus-visible {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+}
+
+
+
 
 
 

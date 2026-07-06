@@ -81,13 +81,13 @@
     <link rel="stylesheet" type="text/css" href="./styles/components/counter.css">
     <link rel="stylesheet" type="text/css" href="./styles/components/dividerLine.css">
     <link rel="stylesheet" type="text/css" href="./styles/components/faq.css">
-    
+
     <link rel="stylesheet" type="text/css" href="./styles/components/serviceCard.css">
     <link rel="stylesheet" type="text/css" href="./styles/components/testimonials.css">
     <link rel="stylesheet" type="text/css" href="./styles/components/gallery.css">
     <link rel="stylesheet" type="text/css" href="./styles/components/btnWhatsApp.css">
     <link rel="stylesheet" type="text/css" href="./styles/components/btnScroll.css">
-<link rel="stylesheet" type="text/css" href="./styles/components/modal.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/modal.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -174,7 +174,8 @@
                 <div class="about-text">
                     <span class="about-badge">🌿 Sobre nosotros</span>
                     <h2 style="font-family:'Cormorant Garamond', serif; font-size:2.5rem;">Expertos en el cuidado de
-                        <span style="color:var(--accent);">árboles, palmeras y jardines</span></h2>
+                        <span style="color:var(--accent);">árboles, palmeras y jardines</span>
+                    </h2>
 
                     <div class="about-features">
                         <div class="about-feature">
@@ -885,113 +886,20 @@
 
                 <p>Valoraciones de clientes reales que confían en nuestro trabajo.</p>
             </div>
+            <!-- Contenedor principal -->
+            <div class="reviews-section">
 
-            <!-- ===== GRID ===== -->
-            <div class="testimonials-grid">
+                <!-- Resumen -->
+                <div id="reviews-summary"></div>
 
-                <!-- Testimonio 1 -->
-                <div class="testimonial-card reveal-fade">
-                    <div class="quote-icon">"</div>
-                    <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">
-                        La poda de las palmeras de mi urbanización quedó impecable. Muy profesionales y puntuales.
-                    </p>
-                    <div class="testimonial-footer">
-                        <div class="testimonial-avatar">A</div>
-                        <div class="testimonial-author">
-                            <h4>Administrador de fincas</h4>
-                            <p class="author-role">Valencia</p>
-                        </div>
-                    </div>
-                    <div class="google-badge">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                            <path
-                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                            <path
-                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                            <path
-                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                        </svg>
-                        Google Reviews
-                    </div>
-                </div>
+                <!-- Carrusel -->
+                <div class="swiper reviews-swiper">
 
-                <!-- Testimonio 2 -->
-                <div class="testimonial-card reveal-fade">
-                    <div class="quote-icon">"</div>
-                    <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">
-                        Aplicaron endoterapia a mis palmeras datileras y solucionaron el picudo. Increíble resultado.
-                    </p>
-                    <div class="testimonial-footer">
-                        <div class="testimonial-avatar">V</div>
-                        <div class="testimonial-author">
-                            <h4>Vicente M.</h4>
-                            <p class="author-role">Godella</p>
-                        </div>
-                    </div>
-                    <div class="google-badge">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                            <path
-                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                            <path
-                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                            <path
-                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                        </svg>
-                        Google Reviews
-                    </div>
-                </div>
+                    <div class="swiper-wrapper" id="testimonials-grid"></div>
 
-                <!-- Testimonio 3 -->
-                <div class="testimonial-card reveal-fade">
-                    <div class="quote-icon">"</div>
-                    <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">
-                        Realizaron la adecuación de todo el jardín comunitario. Quedó espectacular, muy recomendables.
-                    </p>
-                    <div class="testimonial-footer">
-                        <div class="testimonial-avatar">C</div>
-                        <div class="testimonial-author">
-                            <h4>Comunidad de vecinos</h4>
-                            <p class="author-role">Moncada</p>
-                        </div>
-                    </div>
-                    <div class="google-badge">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                            <path
-                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                            <path
-                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                            <path
-                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                        </svg>
-                        Google Reviews
-                    </div>
+                    <div class="reviews-prev"></div>
+                    <div class="reviews-next"></div>
+
                 </div>
 
             </div>

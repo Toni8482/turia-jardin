@@ -80,10 +80,6 @@ body {
    color: aliceblue;
 }
 
-.subtitulo-text h2{
-
-
-}
 
 .subtitulo-text p{
  
@@ -1376,7 +1372,7 @@ background-color:var(--bg-primary);
         transparent 100%
     );
     background-size: 300% 300%;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0;

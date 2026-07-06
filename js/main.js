@@ -22,6 +22,7 @@ import { initFaq } from './modules/faq.js';
 import { loadComponent } from './modules/loadComponents.js';
 import { safeInit } from './modules/safeInit.js';
 import { initTextRotator } from './modules/textRotator.js';
+import { initReviewsGoogle } from './modules/reviewsGoogle..js';
 
 // Registrar ScrollTrigger si existe
 if (
@@ -64,6 +65,7 @@ async function initApp() {
 safeInit(initProgressBar, 'progressBar');
 safeInit(initTextRotator, 'textRotator');
 //safeInit(initTypewriter, 'typewriter');
+safeInit(initReviewsGoogle, 'reviewsGoogle');
 safeInit(initReveal, 'reveal');
 safeInit(initCounters, 'counters');
 safeInit(initLightbox, 'lightbox');
@@ -88,6 +90,7 @@ safeInit(initScrollTop, 'scrollTop');
 
 safeInit(initContactForm, 'contactForm');
 safeInit(initFaq, 'faq');
+
 
   } catch (error) {
     console.error('Error inicializando la aplicación:', error);
