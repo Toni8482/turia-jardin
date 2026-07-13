@@ -30,3 +30,40 @@
   visibility: visible;
 }
 
+/* Hover */
+.scroll-top:hover {
+    background: linear-gradient(
+        180deg,
+        #88aa67 0%,
+        #739457 100%
+    );
+
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.22),
+        0 6px 12px rgba(0, 0, 0, 0.14);
+}
+
+/* Click */
+.scroll-top:active {
+    transform: scale(0.95);
+}
+
+
+/* Icono */
+.scroll-top i,
+.scroll-top svg {
+    color: #fff;
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+
+    transition: transform .25s ease;
+}
+
+/* Pequeña animación del icono */
+.scroll-top:hover i,
+.scroll-top:hover svg {
+    transform: translateY(-2px);
+}

@@ -1,0 +1,72 @@
+
+
+.features-line {
+  
+    margin: 0 auto;
+    padding: 0rem 6rem 3rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    color: #cfe3c6;
+    background-color: var(--bg-soft);
+}
+
+/* cada bloque */
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+/* icono minimal */
+.feature .icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #9bd27d;
+}
+
+.feature .icon svg {
+    width: 34px;
+    height: 34px;
+}
+
+/* texto */
+.feature h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.feature p {
+    margin: 0;
+    font-size: 0.8rem;
+    color:var(--text-secondary);
+}
+/* separador fino vertical */
+.divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .features-line {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .divider {
+        display: none;
+    }
+}

@@ -1,7 +1,7 @@
 
 /* Botón base reutilizable en toda la web */
 .btn {
-  margin-top: 1.8rem; /* separa el botón del contenido superior */
+  margin-top: 0.5rem; /* separa el botón del contenido superior */
   padding: 0.85rem 1.5rem; /* tamaño interno (alto/ancho del botón) */
   border: none; /* quitamos borde por defecto del navegador */
   border-radius: 60px; /* lo hace completamente redondo tipo “pill” */

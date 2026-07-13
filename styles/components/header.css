@@ -9,7 +9,7 @@
   justify-content: space-between; /* logo izquierda, menú derecha */
   align-items: center; /* centra verticalmente */
 
-  padding: 1rem 3rem; /* espacio interno */
+  padding: 1rem 1rem; /* espacio interno */
   
   backdrop-filter: blur(14px); /* efecto cristal */
   background: var(--header-bg); /* color semitransparente */
@@ -41,6 +41,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent; /* necesario para que se vea el gradiente */
+  padding-left: 2rem;
 }
 
 
@@ -50,14 +51,14 @@
 
 .nav-links {
   display: flex; /* enlaces en fila */
-  gap: 2rem; /* separación entre links */
+  gap: 4rem; /* separación entre links */
   align-items: center;
 }
 
 /* enlaces individuales */
 .nav-links a {
   text-decoration: none; /* quita subrayado */
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-weight: 600;
 
   transition: color 0.2s; /* hover suave */
@@ -108,7 +109,7 @@
   padding: 12px 18px;
 
   text-decoration: none;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-size: small;
 }
 /* Mostrar submenu */
@@ -174,4 +175,52 @@ opacity: 1;
   background: none;
   border: none;
   color: var(--text-primary);
+}
+
+
+/* ============================================================
+   ACCIONES DEL HEADER (Teléfono + Tema)
+   ============================================================ */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-shrink: 0;
+}
+
+/* 📞 Teléfono */
+.header-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    background: var(--bg-secondary);
+}
+
+.header-phone:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(125, 150, 98, 0.3);
+}
+
+.header-phone .phone-icon {
+    flex-shrink: 0;
+}
+
+
+.theme-toggle svg{
+    width:22px;
+    height:22px;
+    display:block;
+
 }

@@ -1,39 +1,6 @@
 
-/* =========================
-   🦶 FOOTER
-   ========================= */
-
-.footer {
-  background: #060804; /* negro muy oscuro */
-  text-align: center;
-
-  padding: 1.5rem;
-  border-top: 1px solid #2b3420; /* separación visual */
-}
 
 
-.footer-container{
-  display: flex;
-  width: 100%;
-}
-
-/* ============================================================
-   1. FOOTER PRINCIPAL
-   ============================================================ */
-.footer {
-    background: #1a2e3f;        /* Azul profundo */
-    color: #e8edf2;
-    padding: 2.5rem 1.5rem 1.5rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* Contenedor interno que centra y limita el ancho */
-.footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 /* ============================================================
    2. FILA DE COLUMNAS (Logo, Servicios, Contacto)
@@ -61,9 +28,9 @@
 .footer-column--logo {
     font-size: 1.6rem;
     font-weight: 600;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -0.5px;
-    background: rgba(255, 255, 255, 0.06);
+   
     padding: 0.2rem 0.8rem 0.2rem 0;
     border-radius: 40px;
     display: inline-block;
@@ -73,8 +40,8 @@
 /* ----- Columna: Servicios ----- */
 .footer-column--servicios {
     font-size: 1.05rem;
-    color: #e8edf2;
-    background: rgba(255, 255, 255, 0.04);
+    color:var(--text-secondary);
+   
     padding: 0.2rem 0.6rem;
     border-radius: 30px;
     display: inline-block;
@@ -84,13 +51,24 @@
 /* ----- Columna: Contacto ----- */
 .footer-column--contacto {
     font-size: 1.05rem;
-    color: #e8edf2;
-    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-secondary);
+   
     padding: 0.2rem 0.6rem;
     border-radius: 30px;
     display: inline-block;
     flex: 0 1 auto;
 }
+
+.footer-column--siguenos {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+   
+    padding: 0.2rem 0.6rem;
+    border-radius: 30px;
+    display: inline-block;
+    flex: 0 1 auto;
+}
+
 
 /* ============================================================
    3. REDES SOCIALES
@@ -194,8 +172,8 @@
    ============================================================ */
 
 .footer {
-    background: #11241c;
-    color: rgba(255, 255, 255, 0.8);
+    background:var(--bg-quaternary);
+    color: var(--text-secondary);
     padding: 3rem 0 1.5rem;
     position: relative;
     overflow: hidden;
@@ -224,9 +202,9 @@
    ============================================================ */
 
 .footer-inner {
-    max-width: 1200px;
+  
     margin: 0 auto;
-    padding: 0 1.5rem;
+   
     position: relative;
     z-index: 1;
 }
@@ -237,11 +215,13 @@
 
 .footer-columns {
     display: grid;
-    grid-template-columns: 2fr 1.5fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 5rem;
-    padding-bottom: 2.5rem;
+  
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+   
 }
 
 /* ============================================================
@@ -259,7 +239,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 2rem;
     font-weight: 700;
-    color: #ffffff;
+    color:var(--text-secondary);
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -270,7 +250,7 @@
 .footer-column--logo .logo-text span {
     font-size: 0.75rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.4);
+    color:var(--text-secondary);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-family: 'Source Sans Pro', sans-serif;
@@ -278,7 +258,7 @@
 
 .footer-column--logo .logo-subtitle {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.5);
+    color:var(--text-secondary);
     font-weight: 300;
     letter-spacing: 0.5px;
     max-width: 280px;
@@ -293,7 +273,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
     font-weight: 600;
-    color: #ffffff;
+    color: var(--text-secondary);
     margin-bottom: 1.2rem;
     position: relative;
     padding-bottom: 0.6rem;
@@ -324,7 +304,7 @@
 }
 
 .footer-column ul li a {
-    color: rgba(255, 255, 255, 0.6);
+    color:var(--text-secondary);
     text-decoration: none;
     font-size: 0.9rem;
     transition: all 0.3s ease;
@@ -335,7 +315,7 @@
 
 .footer-column ul li a::before {
     content: '›';
-    color: #b1cc74;
+    color:var(--text-secondary);
     opacity: 0;
     transform: translateX(-4px);
     transition: all 0.3s ease;
@@ -370,7 +350,7 @@
     gap: 0.8rem;
     margin: 0;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-secondary);;
     line-height: 1.5;
 }
 
@@ -383,48 +363,52 @@
 }
 
 .footer-column--contacto .contact-link {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-column--contacto .contact-link:hover {
-    color: #b1cc74;
+    color: var(--text-primary);
 }
 
 /* ============================================================
    REDES SOCIALES
    ============================================================ */
-
 .footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    margin-bottom: 1.5rem;
+    display:flex;
+    gap:1rem;
+    align-items:center;
 }
 
 .footer-social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.06);
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    background:rgba(132,160,96,.08);
+    border:1px solid rgba(132,160,96,.25);
+    border-radius:50%;
+    
+    transition:.3s ease;
 }
 
+.footer-social svg {
+    width:20px;
+    height:20px;
+    fill:#8fa96d;
+}
+
+
 .footer-social a:hover {
-    background: #b1cc74;
-    color: #1a3d2e;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(177, 204, 116, 0.25);
+    background:#8fa96d;
+    transform:translateY(-3px);
+}
+
+.footer-social a:hover svg {
+    fill:#101810;
 }
 
 /* ============================================================
@@ -434,9 +418,9 @@
 .footer-copyright {
     text-align: center;
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.3);
+    color:var(--text-secondary);
     letter-spacing: 0.5px;
-    padding: 0.5rem 0;
+   
 }
 
 .footer-copyright span {

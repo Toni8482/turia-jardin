@@ -5,13 +5,13 @@
 
 /* estructura base de cada bloque de página */
 .section {
-  min-height: 100vh; /* ocupa pantalla completa */
+  /* min-height: 100vh; ocupa pantalla completa */
  
   display: flex;
   flex-direction: column;
   justify-content: center; /* centra vertical */
-  align-items: center; /* centra horizontal */
-
+  /*  align-items: center;centra horizontal */
+ padding: 3.5rem 6rem 5rem;
   position: relative;
   width: 100%;
 }

@@ -1,6 +1,7 @@
 
 .about-section {
     background-color: var(--bg-primary);
+    
 }
 
 .about-grid {
@@ -46,22 +47,26 @@
 
 .about-feature h4 {
     font-size: 1rem;
-    color: #1a3d2e;
+    color: var(--text-sub);
     margin-bottom: 0.2rem;
 }
 
 .about-feature p {
     font-size: 0.9rem;
-    color: #666;
+    color:var(--text-p);
     line-height: 1.5;
     margin: 0;
 }
-
 .about-image {
     position: relative;
-    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    border-radius: 18px;
+
+    border: 1px solid rgba(170, 195, 135, .18);
+
+    background: #101710;
+
+   
 }
 
 .about-image img {

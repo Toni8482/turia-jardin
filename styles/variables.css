@@ -7,16 +7,48 @@
 :root {
 
   /* 🖼️ Fondos principales */
-  --bg-primary: #141910;     /* fondo general de la web */
-  --bg-secondary: #1a2016;   /* secciones alternas */
-  --bg-card: rgba(28, 33, 23, 0.9); /* tarjetas con transparencia */
+ 
+   /* Fondos de cards - Modo oscuro */
+    --card-bg: #182117;
+    --card-bg-hover: #222a1c;
+    --card-border: rgba(125, 150, 98, 0.15);
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    
+    /* Cards alternativas (más claras) */
+    --card-bg-light: #222a1c;
+    --card-bg-highlight: #262e20;
 
+
+   --bg-primary: #141910;      /* Fondo base */
+    --bg-secondary: #1a2016;    /* Secciones alternas (un poco más claro) */
+    --bg-tertiary: #1f261a;     /* Secciones destacadas */
+    --bg-quaternary: #252c1e;   /* Contacto, footer */
+    --bg-soft: #171d12;         /* Cambio muy sutil */
 
   --bg-hero-primary:#b9c29e;
 
-  /* ✍️ Colores de texto */
-  --text-primary: #ecead8;   /* texto principal (claro) */
-  --text-secondary: #b9c29e; /* texto secundario más suave */
+
+ /* Gradientes de secciones - Modo oscuro */
+    --bg-gradient-primary: linear-gradient(180deg, #141910 0%, #171d12 100%);
+    --bg-gradient-secondary: linear-gradient(180deg, #1a2016 0%, #1e2418 100%);
+    --bg-gradient-tertiary: linear-gradient(180deg, #1f261a 0%, #232a1e 100%);
+    --bg-gradient-quaternary: linear-gradient(180deg, #252c1e 0%, #2a3224 100%);
+    --bg-gradient-soft: linear-gradient(180deg, #171d12 0%, #1a2016 100%);
+
+
+
+ /* 🌿 Texto */
+--text-primary:   #E7E3D7;   /* títulos principales */
+--text-secondary: #C9CDC2;   /* párrafos */
+--text-muted:     #97A18B;   /* texto secundario */
+--text-accent:    #B8CF86;   /* verde para destacar */
+
+
+
+
+
+
+
 
   /* 🌿 Color principal (verde branding) */
   --accent: #7d9662;         /* color principal */
@@ -50,10 +82,23 @@
    se sobrescriben las variables de arriba
 */
 body.light {
+
+     --bg-primary: #fefef5;      /* Fondo base */
+    --bg-secondary: #f5f3e8;    /* Secciones alternas */
+    --bg-tertiary: #eef0e3;     /* Secciones destacadas */
+    --bg-quaternary: #e8ecd9;   /* Contacto, footer */
+    --bg-soft: #fafaf0;         /* Cambio muy sutil (casi imperceptible) */
+
+
+
+
+     --bg-gradient-primary: linear-gradient(180deg, #fefef5 0%, #fafaf0 100%);
+    --bg-gradient-secondary: linear-gradient(180deg, #f5f3e8 0%, #f0eee3 100%);
+    --bg-gradient-tertiary: linear-gradient(180deg, #eef0e3 0%, #e8ecd9 100%);
+    --bg-gradient-quaternary: linear-gradient(180deg, #e8ecd9 0%, #e2e6d3 100%);
+    --bg-gradient-soft: linear-gradient(180deg, #fafaf0 0%, #f5f3e8 100%);
  /* ===== COLORES DE FONDO ===== */
-  --bg-primary: #fefef5;
-  --bg-secondary: #e8ecd9;
-  --bg-tertiary: #dce4c4;
+
   --bg-white: #ffffff;
   --bg-dark: #1a3d2e;
   --bg-dark-soft: #2d5a44;
@@ -70,13 +115,19 @@ body.light {
   /* 🖼️ Fondos más claros 
   --bg-primary: #fefef5;
   --bg-secondary: #e8ecd9;*/
-  --bg-card: rgba(245, 248, 235, 0.8);
+    --card-bg: #ffffff;
+    --card-bg-hover: #fafaf0;
+    --card-border: rgba(107, 140, 72, 0.12);
+    --card-shadow: rgba(0, 0, 0, 0.06);
+    
+    --card-bg-light: #fafaf0;
+    --card-bg-highlight: #f5f7ea;
 
   --bg-hero-primary: #e8ecd9;
 
   /* ✍️ Textos oscuros para legibilidad */
   --text-primary: #1c2a14;
-  --text-secondary: #3a4e2c;
+  --text-secondary: #1c2416;
 
   /* 🌿 colores adaptados al tema claro */
   --accent: #6b8c48;

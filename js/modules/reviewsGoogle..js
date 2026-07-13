@@ -12,7 +12,7 @@ export async function initReviewsGoogle() {
 
        
     // ✅ Filtrar reseñas con 3 o más estrellas
-    const filteredReviews = filterReviewsByRating(sortedReviews, 3);
+    const filteredReviews = filterReviewsByRating(sortedReviews, 4);
     
     createReviewCards(filteredReviews);
     initSwiperReviews();
@@ -44,9 +44,6 @@ function createSummary(data) {
                 ★★★★★
             </div>
             <h2>${data.rating.toFixed(1).replace(".", ",")}</h2>
-            <p class="rating-count">
-                Basado en <strong>${data.userRatingCount}</strong> reseñas
-            </p>
             <a
                 class="google-button"
                 href="https://www.google.com/maps/place/?q=place_id:ChIJz58WbjdPYA0R9eucw9qZ8HU"
@@ -55,6 +52,11 @@ function createSummary(data) {
                 <img src="./assets/imagenes/logo_google.png" alt="Google logo" />
                
             </a>
+
+            <p class="rating-count">
+                <strong>${data.userRatingCount}</strong> reseñas verificadas
+            </p>
+           
         </div>
     `;
 }

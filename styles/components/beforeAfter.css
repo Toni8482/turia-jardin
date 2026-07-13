@@ -1,13 +1,4 @@
 
-/* ============================================================
-   BEFORE/AFTER SLIDER MEJORADO
-   ============================================================ */
-
-.beforeafter-wrapper {
-  display: flex;
-  justify-content: center; /* centra horizontal */
-  width: 100%;
-}
 
 
 
@@ -15,7 +6,7 @@
     background: #1a1a1a;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+   
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: 1px solid rgba(255, 255, 255, 0.05);
     width: 100%;
@@ -24,7 +15,7 @@
 
 .ba-slider:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.18);
+   
 }
 
 
@@ -103,63 +94,136 @@
     color: #51cf66;
 }
 
-/* ===== DESCRIPCIÓN ===== */
+/* ✅ Descripción con estilo */
 .ba-desc {
     text-align: center;
-    padding: 1rem 1.2rem;
+    padding: 1.2rem 1.5rem;
     margin: 0;
     font-weight: 500;
-    color: #2d4a3a;
-    background: white;
+    color: var(--text-primary);
+    background: var(--card-bg);
     font-size: 0.95rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    border-top: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .ba-desc strong {
-    color: #1a3d2e;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* ✅ Icono decorativo en la descripción */
+.ba-desc::before {
+    content: '✦';
+    color: var(--accent);
+    opacity: 0.3;
+    font-size: 0.8rem;
+}
+
+.ba-desc::after {
+    content: '✦';
+    color: var(--accent);
+    opacity: 0.3;
+    font-size: 0.8rem;
+}
+
+/* ✅ Badge de categoría */
+.ba-desc .ba-category {
+    display: inline-block;
+    background: var(--bg-secondary);
+    padding: 0.15rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* ============================================================
    SWIPER CONTROLES PERSONALIZADOS
    ============================================================ */
 
-.beforeafter-swiper {
-    padding: 0 2.5rem;
-    max-width: 700px;
+
+
+/* ===== WRAPPER (IMPORTANTE PARA POSICIONAR FLECHAS) ===== */
+.beforeafter-wrapper {
+    position: relative;
+ 
     margin: 0 auto;
 }
 
-/* Flechas */
-.beforeafter-swiper .swiper-button-prev,
-.beforeafter-swiper .swiper-button-next {
-    width: 48px;
-    height: 48px;
-    background: white;
+/* ===== SWIPER ===== */
+.beforeafter-swiper {
+    overflow: hidden; /* clave: evita que se vea el siguiente slide */
+    border-radius: 18px;
+      width: clamp(320px, 65vw, 1100px);
+     margin: 0 auto;
+}
+
+/* ===== FLECHAS BASE ===== */
+.beforeafter-wrapper .swiper-button-prev,
+.beforeafter-wrapper .swiper-button-next {
+    width: 52px;
+    height: 52px;
+    background: rgba(26, 61, 46, 0.85);
+    backdrop-filter: blur(8px);
     border-radius: 50%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+   
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+
     transition: all 0.3s ease;
-    border: 1px solid rgba(26, 61, 46, 0.06);
+    border: 1px solid rgba(26, 61, 46, 0.1);
 }
 
-.beforeafter-swiper .swiper-button-prev:hover,
-.beforeafter-swiper .swiper-button-next:hover {
+/* ===== POSICIÓN FUERA ===== */
+.beforeafter-wrapper .swiper-button-prev {
+    left: -60px;
+}
+
+.beforeafter-wrapper .swiper-button-next {
+    right: -60px;
+}
+
+/* ===== ICONOS SWIPER (QUITAR DEFAULT HORRIBLE) ===== */
+.beforeafter-wrapper .swiper-button-prev::after,
+.beforeafter-wrapper .swiper-button-next::after {
+    font-size: 16px;
+    font-weight: 900;
+    color: #f2f5f1;
+}
+
+/* ===== HOVER PREMIUM ===== */
+.beforeafter-wrapper .swiper-button-prev:hover,
+.beforeafter-wrapper .swiper-button-next:hover {
     background: var(--accent);
-    box-shadow: 0 8px 30px rgba(26, 61, 46, 0.2);
+    transform: translateY(-50%) scale(1.08);
+ 
 }
 
-.beforeafter-swiper .swiper-button-prev:hover::after,
-.beforeafter-swiper .swiper-button-next:hover::after {
-    color: white;
+.beforeafter-wrapper .swiper-button-prev:hover::after,
+.beforeafter-wrapper .swiper-button-next:hover::after {
+    color: #fff;
 }
 
-.beforeafter-swiper .swiper-button-prev::after,
-.beforeafter-swiper .swiper-button-next::after {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #1a3d2e;
-    transition: color 0.3s ease;
+/* ===== OCULTAR CUANDO NO SE PUEDE ===== */
+.beforeafter-wrapper .swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;
 }
-
 /* Paginación (dots) */
 .beforeafter-swiper .swiper-pagination {
     position: relative;
@@ -185,13 +249,15 @@
 /* ============================================================
    BEFORE/AFTER SLIDER - CON MOVIMIENTO SINCRONIZADO
    ============================================================ */
-
 .ba-slider-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 66%;
+
+    aspect-ratio: 16 / 8;
+
     overflow: hidden;
     background: #1a1a1a;
+
     -webkit-user-select: none;
     user-select: none;
     -webkit-touch-callout: none;
@@ -264,7 +330,7 @@
     transform: translate(-50%, -50%);
     width: 56px;
     height: 56px;
-    background: white;
+    background:var(--card-bg);;
     border-radius: 50%;
     z-index: 6;
     pointer-events: none;
@@ -346,7 +412,7 @@
     margin-bottom: 3.5rem;
     padding: 0 1rem;
     position: relative;
-    margin-top: 3.5rem;
+  
 }
 
 /* ===== BADGE ===== */
@@ -380,7 +446,7 @@
 .success-header h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.8rem;
-    color: #1a3d2e;
+    color:  var(--text-primary);
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
     position: relative;
@@ -441,14 +507,14 @@
     text-align: center;
     margin: 0 auto 1rem;
     font-size: 1.05rem;
-    color: #666;
+    color: var(--text-sub);
     line-height: 1.7;
     font-weight: 400;
     letter-spacing: 0.2px;
 }
 
 .success-header p strong {
-    color: #1a3d2e;
+    color:var(--accent);
     font-weight: 600;
 }
 
@@ -689,6 +755,6 @@
 
 .success-section{
   padding-bottom: 4.5rem;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-soft);
    background-image: var(--bg-texture);
 }
