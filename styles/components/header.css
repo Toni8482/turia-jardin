@@ -43,8 +43,11 @@
   color: transparent; /* necesario para que se vea el gradiente */
   padding-left: 2rem;
 }
-
-
+.logo img{
+    width:180px;
+    height:auto;
+    display:block;
+}
 /* =========================
    🔗 MENÚ DE NAVEGACIÓN
    ========================= */

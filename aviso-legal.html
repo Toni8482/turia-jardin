@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aviso Legal de Turia Jardín - Condiciones de uso, propiedad intelectual y responsabilidades">
+    <title>Aviso Legal | Turia Jardín</title>
+    
+    <link rel="preload" as="image" href="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg">
+    
+    <style>
+        /* ===== RESET Y BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #2d2d2d;
+            line-height: 1.7;
+            padding: 0;
+        }
+
+        /* ===== HEADER LEGAL ===== */
+        .legal-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d6b3a 100%);
+            color: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-header::after {
+            content: '🌿';
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+            font-size: 200px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+
+        .legal-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .legal-header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .legal-header .breadcrumb {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .legal-header .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .legal-header .breadcrumb a:hover {
+            color: white;
+        }
+
+        .legal-header .breadcrumb .separator {
+            margin: 0 8px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ===== CONTENIDO ===== */
+        .legal-container {
+            max-width: 900px;
+            margin: -30px auto 60px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .legal-content {
+            background: white;
+            padding: 50px 60px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .legal-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #1a472a;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e8f0e8;
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-size: 1.2rem;
+            color: #2d6b3a;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .legal-content p {
+            margin-bottom: 18px;
+            color: #444;
+        }
+
+        .legal-content ul {
+            margin: 15px 0 25px 25px;
+        }
+
+        .legal-content ul li {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .legal-content ul li strong {
+            color: #1a472a;
+        }
+
+        .legal-content .highlight-box {
+            background: #f0f7f0;
+            border-left: 4px solid #2d6b3a;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .legal-content .highlight-box p {
+            margin-bottom: 5px;
+        }
+
+        .legal-content .date {
+            color: #888;
+            font-size: 0.95rem;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e8e8;
+            text-align: right;
+        }
+
+        /* ===== BOTÓN VOLVER ===== */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #1a472a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .back-button:hover {
+            background: #2d6b3a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(45, 107, 58, 0.3);
+            color: white;
+        }
+
+        .back-button::before {
+            content: '←';
+            font-size: 1.2rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .legal-footer {
+            background: #1a1a1a;
+            color: #aaa;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .legal-footer a {
+            color: #7cb88a;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .legal-footer a:hover {
+            color: white;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .legal-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .legal-content {
+                padding: 30px 25px;
+            }
+
+            .legal-content h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .legal-header {
+                padding: 40px 15px 30px;
+            }
+
+            .legal-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .legal-content {
+                padding: 20px 18px;
+            }
+
+            .legal-content ul {
+                margin-left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="legal-header">
+        <h1>📄 Aviso Legal</h1>
+        <p class="subtitle">Información legal y condiciones de uso de Turia Jardín</p>
+        <div class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span class="separator">›</span>
+            <span>Aviso Legal</span>
+        </div>
+    </header>
+
+    <!-- ===== CONTENIDO ===== -->
+    <div class="legal-container">
+        <div class="legal-content">
+
+            <h2>1. Identificación del Titular</h2>
+            <p>En cumplimiento con lo establecido en la <strong>Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE)</strong>, se informa a los usuarios que el titular de este sitio web es:</p>
+
+            <div class="highlight-box">
+                <p><strong>Nombre:</strong> Daniel Turia Jardín</p>
+                <p><strong>NIF:</strong> 12345678-Z</p>
+                <p><strong>Domicilio:</strong> Valencia, España</p>
+                <p><strong>Email:</strong> <a href="mailto:danielturiajardin@gmail.com">danielturiajardin@gmail.com</a></p>
+                <p><strong>Teléfono:</strong> <a href="tel:+34652824652">+34 652 82 46 52</a></p>
+            </div>
+
+            <h2>2. Condiciones de Uso</h2>
+            <p>El acceso y uso de este sitio web atribuye la condición de <strong>usuario</strong> e implica la aceptación plena y sin reservas de todas las condiciones incluidas en este Aviso Legal.</p>
+
+            <h3>2.1. Obligaciones del Usuario</h3>
+            <ul>
+                <li>Utilizar el sitio web de forma <strong>lícita</strong>, conforme a la ley, la moral y el orden público.</li>
+                <li>No realizar actividades que puedan <strong>dañar, inutilizar o sobrecargar</strong> el sitio web.</li>
+                <li>No utilizar el sitio web para <strong>transmitir virus</strong> o cualquier otro código malicioso.</li>
+                <li>No <strong>suplantar la identidad</strong> de otras personas o entidades.</li>
+            </ul>
+
+            <h2>3. Propiedad Intelectual e Industrial</h2>
+            <p>Todos los contenidos de este sitio web (textos, imágenes, diseños, logotipos, etc.) son <strong>propiedad de Turia Jardín</strong> o de terceros que han autorizado su uso, y están protegidos por la normativa de propiedad intelectual e industrial.</p>
+
+            <ul>
+                <li>Queda <strong>prohibida</strong> la reproducción, distribución o modificación de los contenidos sin autorización expresa.</li>
+                <li>El usuario puede visualizar y descargar los contenidos para <strong>uso personal y no comercial</strong>.</li>
+                <li>Cualquier <strong>infracción</strong> será perseguida por los medios legales correspondientes.</li>
+            </ul>
+
+            <h2>4. Enlaces o Hipervínculos</h2>
+            <p>Este sitio web puede contener enlaces a otros sitios web de interés. Turia Jardín <strong>no se hace responsable</strong> del contenido, disponibilidad o política de privacidad de dichos sitios externos.</p>
+            <p>La inclusión de estos enlaces no implica <strong>ningún tipo de asociación</strong> con los titulares de dichos sitios.</p>
+
+            <h2>5. Protección de Datos</h2>
+            <p>En Turia Jardín nos comprometemos a proteger la privacidad de nuestros usuarios. Para más información, consulta nuestra <a href="/politica-privacidad"><strong>Política de Privacidad</strong></a>.</p>
+
+            <h2>6. Exclusión de Garantías y Responsabilidad</h2>
+            <p>Turia Jardín <strong>no garantiza</strong> la disponibilidad, continuidad o ausencia de errores en el sitio web. El acceso puede ser <strong>interrumpido o suspendido</strong> temporalmente por causas técnicas.</p>
+            <p>En la medida permitida por la ley, Turia Jardín <strong>no asume responsabilidad</strong> por:</p>
+            <ul>
+                <li>Daños derivados del <strong>uso o imposibilidad de uso</strong> del sitio web.</li>
+                <li>Daños causados por <strong>virus o ataques informáticos</strong>.</li>
+                <li>Errores u omisiones en los contenidos.</li>
+            </ul>
+
+            <h2>7. Legislación Aplicable y Jurisdicción</h2>
+            <p>El presente Aviso Legal se rige por la <strong>legislación española</strong>. Cualquier controversia será sometida a los <strong>Juzgados y Tribunales de Valencia</strong>, con renuncia expresa a cualquier otro fuero que pudiera corresponder.</p>
+
+            <div class="date">
+                <p><strong>Última actualización:</strong> 23 de julio de 2026</p>
+            </div>
+
+            <!-- Botón volver -->
+            <a href="/" class="back-button">Volver a Turia Jardín</a>
+
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="legal-footer">
+        <p>
+            © 2026 Turia Jardín - Todos los derechos reservados
+        </p>
+        <p style="margin-top: 10px;">
+            <a href="/aviso-legal">Aviso Legal</a> |
+            <a href="/politica-privacidad">Política de Privacidad</a> |
+            <a href="/#contact">Contacto</a>
+        </p>
+    </footer>
+
+</body>
+</html>

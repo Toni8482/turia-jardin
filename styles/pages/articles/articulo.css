@@ -6,7 +6,7 @@
 .article-container {
     max-width: 850px;
     margin: 0 auto;
-    padding: 3rem 1.5rem 4rem;
+    padding: 5rem 0.5rem 6rem;;
     background: var(--bg-primary);
     position: relative;
 }
@@ -33,7 +33,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.8rem;
     font-weight: 700;
-    color: #1a3d2e;
+    color: var(--text-primary);
     line-height: 1.2;
     margin-bottom: 1rem;
 }
@@ -71,7 +71,7 @@
 .article-container p {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: #444;
+    color:var(--text-secundary);
     margin-bottom: 1.5rem;
 }
 
@@ -79,7 +79,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 2rem;
     font-weight: 700;
-    color: #1a3d2e;
+  color: var(--text-primary);
     margin-top: 2.5rem;
     margin-bottom: 1rem;
     padding-bottom: 0.3rem;
@@ -94,7 +94,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     font-weight: 600;
-    color: #1a3d2e;
+   color: var(--text-primary);
     margin-top: 2rem;
     margin-bottom: 0.8rem;
 }
@@ -103,7 +103,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #1a3d2e;
+   color: var(--text-primary);
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -123,7 +123,7 @@
     padding: 0.4rem 0 0.4rem 1.8rem;
     font-size: 1rem;
     line-height: 1.7;
-    color: #444;
+    color: var(--text-secundary);
 }
 
 .article-container ul li::before {

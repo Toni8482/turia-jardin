@@ -156,6 +156,25 @@
             <input type="text" placeholder="Asunto (ej: Poda de palmeras)" id="subject" />
           </div>
           <textarea rows="4" placeholder="Cuéntanos tu proyecto..." id="message"></textarea>
+
+
+          <!-- Añadir en tu formulario, antes del botón de enviar -->
+<div class="form-group privacy-group">
+    <label class="privacy-checkbox">
+        <input type="checkbox" id="privacyCheck" required>
+        <span class="checkmark"></span>
+        <span class="privacy-text">
+            He leído y acepto la 
+            <a href="./politica-privacidad.html" target="_blank" class="privacy-link">
+                Política de Privacidad
+            </a>
+            y el 
+            <a href="./aviso-legal.html" target="_blank" class="privacy-link">
+                Aviso Legal
+            </a>
+        </span>
+    </label>
+</div>
           <button type="submit" class="btn">
             ✉️ Enviar mensaje
           </button>
@@ -188,7 +207,7 @@
   </div>
 
 
-  <!-- Nuestro main.js como módulo -->
+  
   <script type="module" src="./js/main.js"></script>
   <script>
 

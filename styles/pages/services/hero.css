@@ -1,0 +1,252 @@
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.section-header {
+    text-align: center;
+   
+  
+  
+}
+
+.section-header-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.decoration-line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent));
+    position: relative;
+}
+
+.decoration-line:last-child {
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.decoration-line::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.decoration-line:first-child::after {
+    right: -4px;
+}
+
+.decoration-line:last-child::after {
+    left: -4px;
+}
+
+.decoration-icon {
+    font-size: 1.8rem;
+    opacity: 0.8;
+    animation: pulse-leaf 3s ease-in-out infinite;
+}
+
+
+
+
+@keyframes pulse-leaf {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+.section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    color: #1a3d2e;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.section-header-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.subtitle-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(26, 61, 46, 0.15));
+    max-width: 80px;
+}
+
+.subtitle-line:last-child {
+    background: linear-gradient(90deg, rgba(26, 61, 46, 0.15), transparent);
+}
+
+.section-header-subtitle p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    white-space: nowrap;
+    margin: 0;
+}
+
+
+
+/* =========================
+   HERO SERVICIOS
+========================= */
+
+
+
+.hero-services {
+
+    position: relative;
+    overflow: hidden;
+
+    background: #10180f;
+
+    max-height: 300px;
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+
+/* Contenedor */
+
+.hero-content {
+
+    width: 100%;
+   
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+text-align: center;
+    padding: 30px 35px;
+
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.hero-text {
+
+    width: 45%;
+    z-index: 2;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.hero-label {
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+}
+
+.hero-text h1 {
+
+    margin: 8px 0;
+
+    
+    color: var(--text-primary);
+   font-size: 38px;
+    line-height: 1.05;
+}
+
+
+.hero-text h1 span {
+
+    color:#8baa5e;
+
+}
+
+.hero-text p {
+
+    margin: 8px 0;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+
+    
+ color: var(--text-secondary);
+}
+
+
+
+/* =========================
+   IMAGEN DERECHA
+========================= */
+
+.hero-image {
+
+    width:55%;
+
+    height:300px;
+
+    position:absolute;
+
+    right:0;
+
+    top:0;
+
+}
+
+
+.hero-image img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+
+    /* difuminado con el fondo */
+
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            black 65%
+        );
+
+
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            black 65%
+        );
+
+}
+
+.section-header{
+
+margin-bottom: 0rem;
+
+}

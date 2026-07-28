@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidad de Turia Jardín - Cómo protegemos y tratamos tus datos personales">
+    <title>Política de Privacidad | Turia Jardín</title>
+    
+    <link rel="preload" as="image" href="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg">
+    
+    <style>
+        /* ===== MISMO ESTILO QUE AVISO LEGAL ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #2d2d2d;
+            line-height: 1.7;
+            padding: 0;
+        }
+
+        .legal-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d6b3a 100%);
+            color: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-header::after {
+            content: '🔒';
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+            font-size: 200px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+
+        .legal-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .legal-header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .legal-header .breadcrumb {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .legal-header .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .legal-header .breadcrumb a:hover {
+            color: white;
+        }
+
+        .legal-header .breadcrumb .separator {
+            margin: 0 8px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .legal-container {
+            max-width: 900px;
+            margin: -30px auto 60px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .legal-content {
+            background: white;
+            padding: 50px 60px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .legal-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #1a472a;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e8f0e8;
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-size: 1.2rem;
+            color: #2d6b3a;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .legal-content p {
+            margin-bottom: 18px;
+            color: #444;
+        }
+
+        .legal-content ul {
+            margin: 15px 0 25px 25px;
+        }
+
+        .legal-content ul li {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .legal-content ul li strong {
+            color: #1a472a;
+        }
+
+        .legal-content .highlight-box {
+            background: #f0f7f0;
+            border-left: 4px solid #2d6b3a;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .legal-content .highlight-box p {
+            margin-bottom: 5px;
+        }
+
+        .legal-content .date {
+            color: #888;
+            font-size: 0.95rem;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e8e8;
+            text-align: right;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #1a472a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .back-button:hover {
+            background: #2d6b3a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(45, 107, 58, 0.3);
+            color: white;
+        }
+
+        .back-button::before {
+            content: '←';
+            font-size: 1.2rem;
+        }
+
+        .legal-footer {
+            background: #1a1a1a;
+            color: #aaa;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .legal-footer a {
+            color: #7cb88a;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .legal-footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .legal-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .legal-content {
+                padding: 30px 25px;
+            }
+
+            .legal-content h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .legal-header {
+                padding: 40px 15px 30px;
+            }
+
+            .legal-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .legal-content {
+                padding: 20px 18px;
+            }
+
+            .legal-content ul {
+                margin-left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="legal-header">
+        <h1>🔒 Política de Privacidad</h1>
+        <p class="subtitle">Cómo protegemos y tratamos tus datos personales en Turia Jardín</p>
+        <div class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span class="separator">›</span>
+            <span>Política de Privacidad</span>
+        </div>
+    </header>
+
+    <!-- ===== CONTENIDO ===== -->
+    <div class="legal-container">
+        <div class="legal-content">
+
+            <div class="highlight-box">
+                <p><strong>📌 Resumen:</strong> En Turia Jardín nos tomamos muy en serio tu privacidad. Esta política explica qué datos recopilamos, cómo los usamos y tus derechos. Siempre cumplimos con el <strong>Reglamento (UE) 2016/679 (RGPD)</strong> y la <strong>Ley Orgánica 3/2018 (LOPDGDD)</strong>.</p>
+            </div>
+
+            <h2>1. Responsable del Tratamiento</h2>
+            <p>De acuerdo con la normativa de protección de datos, te informamos que el responsable del tratamiento de tus datos personales es:</p>
+
+            <div class="highlight-box">
+                <p><strong>Nombre:</strong> Daniel Turia Jardín</p>
+                <p><strong>NIF:</strong> 12345678-Z</p>
+                <p><strong>Domicilio:</strong> Valencia, España</p>
+                <p><strong>Email:</strong> <a href="mailto:danielturiajardin@gmail.com">danielturiajardin@gmail.com</a></p>
+                <p><strong>Teléfono:</strong> <a href="tel:+34652824652">+34 652 82 46 52</a></p>
+            </div>
+
+            <h2>2. ¿Qué Datos Recopilamos?</h2>
+            <p>En Turia Jardín recopilamos únicamente los datos necesarios para gestionar tu consulta o solicitud:</p>
+
+            <ul>
+                <li><strong>Datos identificativos:</strong> Nombre y apellidos.</li>
+                <li><strong>Datos de contacto:</strong> Correo electrónico y teléfono.</li>
+                <li><strong>Contenido de tu mensaje:</strong> La consulta que nos realizas.</li>
+                <li><strong>Datos técnicos:</strong> Dirección IP, tipo de navegador y dispositivo (de forma anonimizada).</li>
+            </ul>
+
+            <h2>3. Finalidad del Tratamiento</h2>
+            <p>Tus datos personales serán utilizados para las siguientes finalidades:</p>
+
+            <ul>
+                <li><strong>Gestionar tu consulta:</strong> Responder a tus preguntas, solicitudes de presupuesto o cualquier comunicación que nos envíes.</li>
+                <li><strong>Envío de información:</strong> Si has aceptado expresamente, enviarte información sobre nuestros servicios, promociones o novedades.</li>
+                <li><strong>Mejora del servicio:</strong> Analizar de forma anónima el uso de nuestra web para mejorar la experiencia de usuario.</li>
+            </ul>
+
+            <h2>4. Legitimación para el Tratamiento</h2>
+            <p>La base legal para tratar tus datos es:</p>
+
+            <ul>
+                <li><strong>Consentimiento explícito:</strong> Al marcar el checkbox en nuestro formulario de contacto, nos das tu consentimiento para tratar tus datos.</li>
+                <li><strong>Interés legítimo:</strong> Para responder a tus consultas y mantener una comunicación profesional.</li>
+            </ul>
+
+            <h2>5. Plazo de Conservación</h2>
+            <p>Conservaremos tus datos durante el tiempo necesario para cumplir con la finalidad para la que se recopilaron:</p>
+
+            <ul>
+                <li>Si realizas una consulta, tus datos se conservarán durante <strong>2 años</strong> desde la última interacción.</li>
+                <li>Si aceptas recibir comunicaciones comerciales, tus datos se conservarán hasta que <strong>solicites tu baja</strong>.</li>
+                <li>Datos técnicos anonimizados se conservarán por <strong>12 meses</strong> para análisis estadísticos.</li>
+            </ul>
+
+            <h2>6. Cesión de Datos a Terceros</h2>
+            <p>Tus datos personales <strong>no serán cedidos a terceros</strong> salvo obligación legal. Solo compartiremos tus datos con:</p>
+
+            <ul>
+                <li><strong>Proveedores de servicios:</strong> Como servicios de hosting o email (siempre con acuerdos de confidencialidad).</li>
+                <li><strong>Autoridades competentes:</strong> Cuando sea requerido por ley.</li>
+            </ul>
+
+            <h2>7. Transferencias Internacionales</h2>
+            <p>No realizamos transferencias internacionales de tus datos personales. Todos los datos se almacenan en servidores ubicados en la <strong>Unión Europea</strong>.</p>
+
+            <h2>8. Derechos del Usuario</h2>
+            <p>Como usuario, tienes derechos reconocidos por el RGPD que puedes ejercer de forma gratuita:</p>
+
+            <ul>
+                <li><strong>Acceso:</strong> Saber qué datos tenemos sobre ti.</li>
+                <li><strong>Rectificación:</strong> Corregir datos incorrectos o incompletos.</li>
+                <li><strong>Cancelación:</strong> Solicitar la eliminación de tus datos.</li>
+                <li><strong>Oposición:</strong> Oponerte al tratamiento de tus datos.</li>
+                <li><strong>Portabilidad:</strong> Recibir tus datos en un formato estructurado.</li>
+                <li><strong>Retirar el consentimiento:</strong> En cualquier momento.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>📧 Para ejercer tus derechos:</strong> Envía un email a <a href="mailto:danielturiajardin@gmail.com">danielturiajardin@gmail.com</a> indicando tu petición y adjuntando una copia de tu DNI.</p>
+            </div>
+
+            <h2>9. Derecho a Reclamación</h2>
+            <p>Si consideras que no hemos tratado tus datos correctamente, puedes presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>.</p>
+
+            <ul>
+                <li><strong>Web:</strong> <a href="https://www.aepd.es" target="_blank">www.aepd.es</a></li>
+                <li><strong>Teléfono:</strong> 900 293 183</li>
+                <li><strong>Dirección:</strong> Calle Jorge Juan, 6, 28001, Madrid</li>
+            </ul>
+
+            <h2>10. Seguridad de los Datos</h2>
+            <p>En Turia Jardín implementamos las <strong>medidas técnicas y organizativas adecuadas</strong> para garantizar la seguridad de tus datos:</p>
+
+            <ul>
+                <li>✅ Uso de <strong>protocolos HTTPS</strong> para la transmisión de datos.</li>
+                <li>✅ Acceso restringido a los datos personal.</li>
+                <li>✅ Copias de seguridad cifradas.</li>
+                <li>✅ Formación continua en protección de datos.</li>
+            </ul>
+
+            <h2>11. Cookies</h2>
+            <p>Este sitio web utiliza <strong>cookies técnicas y analíticas</strong>. Puedes obtener más información en nuestra <a href="/politica-cookies">Política de Cookies</a>.</p>
+
+            <h2>12. Menores de Edad</h2>
+            <p>Nuestros servicios no están dirigidos a menores de 14 años. Si eres menor, <strong>no nos envíes tus datos</strong> sin el consentimiento de tus padres o tutores.</p>
+
+            <h2>13. Modificaciones de la Política</h2>
+            <p>Podemos actualizar esta política para adaptarnos a cambios normativos. Te recomendamos revisarla periódicamente. La fecha de la última actualización siempre aparece al final.</p>
+
+            <div class="date">
+                <p><strong>Última actualización:</strong> 23 de julio de 2026</p>
+            </div>
+
+            <!-- Botón volver -->
+            <a href="/" class="back-button">Volver a Turia Jardín</a>
+
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="legal-footer">
+        <p>
+            © 2026 Turia Jardín - Todos los derechos reservados
+        </p>
+        <p style="margin-top: 10px;">
+            <a href="/aviso-legal">Aviso Legal</a> |
+            <a href="/politica-privacidad">Política de Privacidad</a> |
+            <a href="/#contact">Contacto</a>
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -14,49 +14,108 @@
   <link rel="stylesheet" type="text/css" href="../styles/responsive.css" />
   <link rel="stylesheet" type="text/css" href="../styles/servicios/sections.css" />
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/sections.css">
-    <link rel="stylesheet" type="text/css" href="../styles/components/header.css">
-    <link rel="stylesheet" type="text/css" href="../styles/components/footer.css">
- <link rel="stylesheet" type="text/css" href="../styles/components/btnWhatsApp.css">
-    <link rel="stylesheet" type="text/css" href="../styles/components/btnScroll.css">
-    <link rel="stylesheet" type="text/css" href="../styles/components/btn.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/header.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/footer.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/btnWhatsApp.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/btnScroll.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/btn.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/features.css">
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/hero.css">
+
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/steps.css">
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/ventajas.css">
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/microCta.css">
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/description.css">
+
 </head>
 
 <body data-base="..">
+  <div class="background">
 
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+    <div class="glow glow3"></div>
+
+    <svg class="topography" viewBox="0 0 1920 1080">
+
+      <g>
+
+        <path d="M1400 80 C1700 140 1760 320 1580 420 C1380 520 1260 650 1480 760 C1730 890 1820 980 1600 1040" />
+
+        <path d="M1360 60 C1660 120 1710 300 1540 400 C1340 500 1220 630 1440 740 C1690 870 1780 960 1560 1020" />
+
+        <path d="M1320 40 C1620 100 1670 280 1500 380 C1300 480 1180 610 1400 720 C1650 850 1740 940 1520 1000" />
+
+        <path d="M1280 20 C1580 80 1630 260 1460 360 C1260 460 1140 590 1360 700 C1610 830 1700 920 1480 980" />
+
+        <path d="M1240 0 C1540 60 1590 240 1420 340 C1220 440 1100 570 1320 680 C1570 810 1660 900 1440 960" />
+
+      </g>
+
+    </svg>
+
+  </div>
   <div id="header-container"></div>
 
   <main>
 
+
+
     <!-- HERO -->
-    <section class="hero-services-aav" style="background-image: url(./../assets/imagenes/poda_arboles.jpg);">
-      <div class="titulo">
-        <!--<h1>Poda de árboles</h1> -->
-      </div>
+    <div class="hero-services">
 
-      <div class="subtitulo">
-        <div class="subtitulo-img">
+      <div class="hero-content">
 
-           <!--
-        <img src="./../assets/imagenes/poda_arboles.jpg" loading="lazy" alt="Poda de árboles" />
-          
-          -->
-          
-        </div>
-        <div class="subtitulo-text">
-          <h2>Especialistas en poda de árboles en Valencia</h2>
+        <div class="hero-text">
+
+          <span class="hero-label">
+            ESPECIALISTAS EN VALENCIA
+          </span>
+
+          <h1>
+            Especialistas en
+            <span>poda de árboles</span>
+          </h1>
+
           <p>
             Realizamos trabajos profesionales de poda y mantenimiento de árboles para particulares,
             comunidades de vecinos, empresas y administraciones.
           </p>
-          <button class="btn">Contacta ahora</button>
+
+          <button class="btn magnetic">
+            Contacta ahora
+          </button>
+
         </div>
+
+
+        <div class="hero-image">
+
+          <img src="./../assets/imagenes/services/arboles/arboles6.webp" loading="lazy"
+            alt="Poda profesional de arboles">
+
+        </div>
+
       </div>
-    </section>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- DESCRIPCIÓN -->
     <section class="descripcion">
-           <!-- ===== HEADER ===== -->
-    <div class="section-header reveal-fade">
+      <!-- ===== HEADER =====  <div class="section-header reveal-fade">
         <div class="section-header-decoration">
             <span class="decoration-line"></span>
             <span class="decoration-icon">🌿</span>
@@ -68,10 +127,23 @@
             <p> En Turia Jardín somos especialistas en la poda y mantenimiento de todo tipo de árboles.</p>
             <span class="subtitle-line"></span>
         </div>
-    </div>
-    
+    </div> -->
+
+
 
       <div class="trabajamos">
+
+        <div class="trabajamos-img">
+
+
+          <img class="" src="./../assets/imagenes/services/arboles/unnamed (2).png"
+            alt="Trabajo de poda de árboles" />
+          <img class="" src="./../assets/imagenes/services/arboles/arboles14.webp"
+            alt="Corte de poda sanado" />
+
+
+
+        </div>
         <div class="trabajamos-text">
           <h2>¿Por qué es importante podar un árbol?</h2>
           <p>
@@ -81,7 +153,9 @@
             favorece el crecimiento saludable, mejora la estructura del árbol y previene la aparición
             de plagas y enfermedades que suelen alojarse en la madera muerta o dañada.
           </p>
-          <p>
+          <!--
+          
+           <p>
             En Turia Jardín conocemos a fondo las especies arbóreas más comunes en el entorno Mediterráneo
             (como el <strong>Pino carrasco (Pinus halepensis)</strong>,Pino piñonero (Pinus pinea), Ficus, <strong>Olmo</strong>, <strong>Morera</strong>,
             Eucaliptus, etc ... ) y aplicamos técnicas de poda
@@ -89,14 +163,7 @@
             árboles luzcan espléndidos durante todo el año, sin riesgos para las personas ni para
             las propias plantas.
           </p>
-          <p>
-            Además, una poda profesional realizada en el momento adecuado ayuda a que el árbol
-            concentre sus nutrientes en las partes sanas, lo que se traduce en un desarrollo más
-            vigoroso, una mayor floración y una resistencia superior frente a condiciones climáticas
-            adversas, como el viento o las tormentas.
-          </p>
-
-          <h2>¿Cómo trabajamos?</h2>
+          -->
           <ul>
             <li>Inspección previa del ejemplar y valoración de riesgos.</li>
             <li>Eliminación de ramas secas, dañadas o enfermas.</li>
@@ -104,17 +171,23 @@
             <li>Eliminación de chupones y ramas desorientadas.</li>
             <li>Limpieza completa de la zona y retirada de restos.</li>
           </ul>
+          <p>
+            Además, una poda profesional realizada en el momento adecuado ayuda a que el árbol
+            concentre sus nutrientes en las partes sanas, lo que se traduce en un desarrollo más
+            vigoroso, una mayor floración y una resistencia superior frente a condiciones climáticas
+            adversas, como el viento o las tormentas.
+          </p>
+          <!--
+          <h2>¿Cómo trabajamos?</h2>
+          -->
         </div>
 
-        <div class="trabajamos-img">
-          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Trabajo de poda de árboles" />
-        </div>
+
       </div>
 
-     
 
-       <!-- ===== VENTAJAS ===== -->
-      <div class="ventajas-grid">
+
+      <!-- ===== VENTAJAS =====  <div class="ventajas-grid">
         <div class="ventaja-card reveal-fade">
           <div class="ventaja-icon">🎨</div>
          <h3>Seguridad</h3>
@@ -135,19 +208,64 @@
           <h3>Presupuesto</h3>
           <p>Presupuesto sin compromiso y asesoramiento profesional.</p>
         </div>
-      </div>
-    </section>
+      </div>-->
 
+    </section>
+    <section class="descripcion2">
+      <!-- ===== HEADER =====  <div class="section-header reveal-fade">
+        <div class="section-header-decoration">
+            <span class="decoration-line"></span>
+            <span class="decoration-icon">🌿</span>
+            <span class="decoration-line"></span>
+        </div>
+        <h2>Servicio profesional de <span style="color:var(--accent);">poda de árboles</span></h2>
+        <div class="section-header-subtitle">
+            <span class="subtitle-line"></span>
+            <p> En Turia Jardín somos especialistas en la poda y mantenimiento de todo tipo de árboles.</p>
+            <span class="subtitle-line"></span>
+        </div>
+    </div> -->
+
+
+
+      <div class=" trabajamos ">
+
+
+        <div class="trabajamos-text">
+
+
+          <p>
+            En Turia Jardín conocemos a fondo las especies arbóreas más comunes en el entorno Mediterráneo
+            (como el <strong>Pino carrasco (Pinus halepensis)</strong>,Pino piñonero (Pinus pinea), Ficus,
+            <strong>Olmo</strong>, <strong>Morera</strong>,
+            Eucaliptus, etc ... ) y aplicamos técnicas de poda
+            respetuosas con el crecimiento natural de cada variedad. Nuestro objetivo es que tus
+            árboles luzcan espléndidos durante todo el año, sin riesgos para las personas ni para
+            las propias plantas.
+          </p>
+
+
+        </div>
+
+        <div class="trabajamos-img">
+
+
+
+          <img class="" src="./../assets/imagenes/services/arboles/arboles5.webp"
+            alt="Brote nuevo tras la poda" />
+
+        </div>
+      </div>
+
+
+
+    </section>
     <!-- PROCESO FOTOS -->
     <section class="proceso-fotos">
-      
- <div class="section-header reveal-fade">
-        <div class="section-header-decoration">
-          <span class="decoration-line"></span>
-          <span class="decoration-icon">📋</span>
-          <span class="decoration-line"></span>
-        </div>
-        <h2>Así realizamos nuestros<span style="color:var(--accent);"> trabajos</span> </h2>
+
+      <div class="section-header reveal-fade">
+
+
         <div class="section-header-subtitle">
           <span class="subtitle-line"></span>
           <p>De la idea a la realidad, paso a paso</p>
@@ -157,42 +275,82 @@
 
       <div class="proceso-grid">
         <article class="proceso-card">
-          <div class="proceso-card-image">
-            <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Inspección del árbol"
-              loading="lazy" />
-            <span class="proceso-step">01</span>
+          <div class="proceso-icon-wrap">
+            <!-- icon666.com - MILLIONS OF FREE VECTOR ICONS --><svg class="proceso-icon" id="svg2"
+              viewBox="0 0 32 32.000001" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+              xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+              xmlns:svg="http://www.w3.org/2000/svg">
+              <pattern id="EMFhbasepattern" height="6" patternUnits="userSpaceOnUse" width="6" />
+              <g id="layer1" transform="translate(0 -1020.362)">
+                <path id="path33681"
+                  d="m12.2071 1021.5693a11 11 0 0 0 -11 11 11 11 0 0 0 11 11 11 11 0 0 0 7.3164-2.8008l3.4766 3.4766-.793.7949 5.8223 5.8223a1 1 0 0 0 1.414 0l1.0567-1.0567a1 1 0 0 0 0-1.414l-5.8242-5.8223-.7911.793-3.4785-3.4785a11 11 0 0 0 2.8008-7.3145 11 11 0 0 0 -11-11zm0 2.75a8.25 8.25 0 0 1 8.25 8.25 8.25 8.25 0 0 1 -8.25 8.25 8.25 8.25 0 0 1 -8.25-8.25 8.25 8.25 0 0 1 8.25-8.25z"
+                  fill="#3b3c3d" fill-rule="evenodd" text-indent="0" text-align="start" text-decoration-line="none"
+                  text-decoration-style="solid" text-decoration-color="#000000" text-transform="none"
+                  white-space="normal" isolation="auto" mix-blend-mode="normal" solid-color="#000000"
+                  solid-opacity="1" />
+              </g>
+            </svg> <span class="proceso-step">01</span>
           </div>
-        
+
           <h3>Inspección</h3>
           <p>Analizamos el estado del árbol y planificamos la intervención.</p>
         </article>
         <article class="proceso-card">
-          <div class="proceso-card-image">
-            <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Inspección del árbol"
-              loading="lazy" />
-            <span class="proceso-step">01</span>
+          <div class="proceso-icon-wrap">
+            <svg class="proceso-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m26.94177 31.51432a3.00021 3.00021 0 0 0 4.24223 4.24316 3.00021 3.00021 0 0 0 -4.24223-4.24316zm2.82813 2.82715a.99973.99973 0 0 1 -1.414-1.41315.99973.99973 0 0 1 1.414 1.41315z" />
+              <path
+                d="m50.24158 26.5651 6.99316-2.00684a13.7806 13.7806 0 0 1 -3.335 8.6709.99973.99973 0 0 0 1.50976 1.31049 15.77566 15.77566 0 0 0 3.8252-9.92572 2.01421 2.01421 0 0 0 -2.55566-1.98047l-6.99024 2.00976a1 1 0 0 0 .55278 1.92188z" />
+              <path
+                d="m61.03845 47.01432c-1.46948-2.91779-4.57379-4.02289-6.11981-4.404-1.09839-8.22614-6.71448-20.61689-18.18024-25.0434l3.32642-11.54186a2.00946 2.00946 0 0 0 -.33692-1.78418 2.06063 2.06063 0 0 0 -1.63672-.77637c-7.78985.14179-14.53637 6.23149-15.01452 13.88324a28.00561 28.00561 0 0 0 -11.67 7.442 1.00041 1.00041 0 0 0 1.47663 1.34955 26.52692 26.52692 0 0 1 10.19262-6.69184 15.6227 15.6227 0 0 0 2.84748 7.93488 6.98794 6.98794 0 0 0 -3.77344 5.19794l-4.05395 1.16933a4.97478 4.97478 0 0 0 -4.3974-.83783l-7.9375 2.28613a5.00085 5.00085 0 0 0 2.76954 9.61029l7.93554-2.28705a4.97571 4.97571 0 0 0 3.25482-2.99694l4.16-1.19495a3.97807 3.97807 0 0 0 .49133.49011l-1.1961 4.15576a4.87449 4.87449 0 0 0 -2.99915 3.257l-2.28608 7.93551a5.00022 5.00022 0 0 0 9.60937 2.76849l2.28614-7.93646a4.88956 4.88956 0 0 0 -.837-4.396l1.17078-4.05883a7.00463 7.00463 0 0 0 5.18982-3.75721 15.26486 15.26486 0 0 0 13.88264 2.03137c.7782-.219 1.78894-.71766 1.34369-1.68757a.99541.99541 0 0 0 -1.33393-.46868 13.22883 13.22883 0 0 1 -13.23938-1.88593 6.92875 6.92875 0 0 0 -.49084-3.95074l8.5603-2.471a1.00027 1.00027 0 0 0 -.55475-1.92188l-9.12091 2.63282a5.64206 5.64206 0 0 0 -.724-.72406l2.5506-8.84974c9.44568 3.76441 14.02136 13.02778 15.91858 19.28608a21.92424 21.92424 0 0 0 -7.89252 4.83056c-6.6615-1.83014-12.86078 4.6615-9.08032 12.13208.64117.86115 2.03046.73676 2.98041.832a8.23764 8.23764 0 0 0 7.4862-11.5241 19.92714 19.92714 0 0 1 6.97718-4.31586q.23795 1.15668.37909 2.25909a9.55791 9.55791 0 0 0 2.19285 17.4725c5.47646-2.41363 8.132-9.14904 5.89345-13.45025zm-45.126-6.415-7.93552 2.28707a3.00089 3.00089 0 0 1 -1.66205-5.76666l7.93646-2.28608a3.00026 3.00026 0 0 1 1.66113 5.76563zm4.15493-3.25532a4.95549 4.95549 0 0 0 -.54565-1.92383l2.62414-.757a6.91917 6.91917 0 0 0 .57269 1.91925zm7.79724 11.10291-2.28613 7.93554a3.00008 3.00008 0 1 1 -5.76563-1.66113l2.28614-7.93649a3.0004 3.0004 0 0 1 5.76562 1.66211zm-.58471-5.27247a5.022 5.022 0 0 0 -1.924-.54229l.764-2.65424a6.98157 6.98157 0 0 0 1.91724.57147zm-1.7522-6.00293c-4.51532-4.84643 2.24811-11.58953 7.07037-7.07122 4.53021 4.8099-2.24823 11.59756-7.07037 7.07125zm6.34509-9.94531a6.92646 6.92646 0 0 0 -3.94275-.49237 13.09759 13.09759 0 0 1 10.21387-21.26736c-1.54041 5.34478-4.75037 16.48297-6.27112 21.75976zm11.06311 25.03909a6.20755 6.20755 0 0 1 -6.23828 2.14747c-2.23645-4.63965 1.04059-9.65168 5.82239-9.04743-.56629.80078-2.10059 1.978-.95624 2.91266 1.19751.76575 1.78613-.96631 2.48938-1.62769a6.243 6.243 0 0 1 -1.11725 5.61499zm12.09863 6.09671a7.60119 7.60119 0 0 1 -1.87024-13.12075 32.75544 32.75544 0 0 1 -.01745 4.1549 1.00038 1.00038 0 1 0 1.99609.13672 34.67022 34.67022 0 0 0 -.00445-4.77929c6.23944 1.69903 6.28088 9.53119-.10395 13.60842z" />
+            </svg>
+            <span class="proceso-step">02</span>
           </div>
-         
+
           <h3>Poda</h3>
           <p>Realizamos la poda con técnicas profesionales y seguras.</p>
         </article>
         <article class="proceso-card">
-          <div class="proceso-card-image">
-            <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Inspección del árbol"
-              loading="lazy" />
-            <span class="proceso-step">01</span>
+          <div class="proceso-icon-wrap">
+            <svg class="proceso-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M5 7.5H19L18 21H6L5 7.5Z" stroke-linejoin="round"></path>
+                <path d="M15.5 9.5L15 19" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M12 9.5V19" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M8.5 9.5L9 19" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16 5H19C20.1046 5 21 5.89543 21 7V7.5H3V7C3 5.89543 3.89543 5 5 5H8M16 5L15 3H9L8 5M16 5H8"
+                  stroke-linejoin="round"></path>
+              </g>
+            </svg>
+            <span class="proceso-step">03</span>
           </div>
-         
+
           <h3>Retirada</h3>
           <p>Eliminamos ramas y restos de la poda.</p>
         </article>
         <article class="proceso-card">
-          <div class="proceso-card-image">
-            <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Inspección del árbol"
-              loading="lazy" />
-            <span class="proceso-step">01</span>
+          <div class="proceso-icon-wrap">
+            <svg class="proceso-icon" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"
+                  transform="translate(2 2)">
+                  <path
+                    d="m12.8571123 1.79063546c-3.70547974-2.40636667-8.66011018-1.35322746-11.06647684 2.35225226-2.40636667 3.70547972-1.35322746 8.66011018 2.35225226 11.06647678 1.40713892.9138067 2.9944136 1.3287299 4.55387082 1.2889715 2.54712886-.0649393 5.02004606-1.3428829 6.51260596-3.6412237 1.5774991-2.4291355 1.6682799-5.39509184.4997393-7.82805117">
+                  </path>
+                  <path d="m4.5 7.5 3 3 8-8"></path>
+                </g>
+              </g>
+            </svg>
+            <span class="proceso-step">04</span>
           </div>
-          
+
           <h3>Final</h3>
           <p>Árbol sano, estético y seguro.</p>
         </article>
@@ -203,7 +361,7 @@
     <div class="trabajos">
       <h1>Algunos de nuestros trabajos</h1>
 -->
-      <!-- SLIDER 1 
+    <!-- SLIDER 1 
       <section class="stack-slider">
         <button class="nav prev" aria-label="Anterior">‹</button>
 
@@ -235,69 +393,21 @@
     </div>
 -->
     <!-- CTA -->
-   <!-- ============================================================
-     CTA PERSONALIZADO - ADECUACIÓN DE ÁREAS VERDES
-     ============================================================ -->
-<section class="section-cta">
-    <div style="
-        background: radial-gradient(circle at 30% 20%, #2c3822, #0a0f07);
-        border-radius: 2rem; 
-        padding: 3rem 2rem; 
-        text-align: center; 
-        max-width: 800px; 
-        margin: 0 auto;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-    ">
-        <h2 style="
-            font-size: 1.8rem; 
-            font-family: 'Cormorant Garamond', serif; 
-            color: #ecead8;
-            margin-bottom: 0.5rem;
-        ">
-            ¿Quieres transformar tu <span style="color: #b1cc74;">espacio verde</span>?
-        </h2>
-        <p style="
-            margin: 0.5rem 0 1.5rem;
-            color: rgba(255,255,255,0.7);
-            font-size: 1.05rem;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        ">
-            Creamos jardines funcionales y sostenibles. Solicita una visita técnica sin compromiso.
+
+    <section class="micro-cta-section">
+      <div class="micro-cta-container">
+        <h2 class="micro-cta-title"> ¿Necesitas ayuda con tus árboles? </h2>
+        <p class="micro-cta-text">
+          Presupuesto gratuito para particulares y empresas.
         </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="tel:+34600987654" class="btn" style="
-                background: #b1cc74;
-                color: #1a3d2e;
-                padding: 0.8rem 2rem;
-                border-radius: 50px;
-                font-weight: 600;
-                text-decoration: none;
-                display: inline-block;
-                transition: all 0.3s ease;
-                border: none;
-                cursor: pointer;
-            ">
-                📞 Llamar ahora
-            </a>
-            <a href="#contacto" class="btn" style="
-                background: transparent;
-                color: #ecead8;
-                padding: 0.8rem 2rem;
-                border-radius: 50px;
-                font-weight: 600;
-                text-decoration: none;
-                display: inline-block;
-                transition: all 0.3s ease;
-                border: 2px solid rgba(255,255,255,0.2);
-                cursor: pointer;
-            ">
-                ✉️ Solicitar presupuesto
-            </a>
+        <div class="micro-cta-actions">
+          <a href="mailto:danielturiajardin@gmail.com" class="btn-primary">Solicitar presupuesto</a>
+          <a href="tel:+34652824652" class="btn-secondary">
+            <span class="phone-icon">📞</span> Llamar ahora
+          </a>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
   </main>
 
@@ -308,36 +418,7 @@
   <div id="footer-container"></div>
 
   <!-- JS DEL SLIDER -->
-  <script>
-    document.querySelectorAll('.stack-slider').forEach(slider => {
-      const cards = slider.querySelectorAll('.stack-card');
-      const nextBtn = slider.querySelector('.next');
-      const prevBtn = slider.querySelector('.prev');
 
-      if (!cards.length || !nextBtn || !prevBtn) return;
-
-      let index = 0;
-
-      function show(i) {
-        cards.forEach((card, idx) => {
-          card.classList.remove('active');
-          if (idx === i) card.classList.add('active');
-        });
-      }
-
-      nextBtn.addEventListener('click', () => {
-        index = (index + 1) % cards.length;
-        show(index);
-      });
-
-      prevBtn.addEventListener('click', () => {
-        index = (index - 1 + cards.length) % cards.length;
-        show(index);
-      });
-
-      show(index);
-    });
-  </script>
 
   <!-- main.js como módulo -->
   <script type="module" src="./../js/main.js"></script>

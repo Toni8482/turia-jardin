@@ -27,7 +27,9 @@
 
   --bg-hero-primary:#b9c29e;
 
-
+--bg-gradient-body:radial-gradient(ellipse 800px 400px at 20% 10%, rgba(157,194,106,0.05), transparent 60%),
+  radial-gradient(ellipse 600px 300px at 80% 60%, rgba(201,162,39,0.04), transparent 60%),
+  linear-gradient(180deg, #14210F 0%, #0A120A 100%);
  /* Gradientes de secciones - Modo oscuro */
     --bg-gradient-primary: linear-gradient(180deg, #141910 0%, #171d12 100%);
     --bg-gradient-secondary: linear-gradient(180deg, #1a2016 0%, #1e2418 100%);
@@ -89,7 +91,9 @@ body.light {
     --bg-quaternary: #e8ecd9;   /* Contacto, footer */
     --bg-soft: #fafaf0;         /* Cambio muy sutil (casi imperceptible) */
 
-
+--bg-gradient-body: radial-gradient(ellipse 800px 400px at 20% 10%, rgba(90,122,58,0.06), transparent 60%),
+  radial-gradient(ellipse 600px 300px at 80% 60%, rgba(180,138,20,0.05), transparent 60%),
+  linear-gradient(180deg, #F7F4EC 0%, #EDE7D8 100%);
 
 
      --bg-gradient-primary: linear-gradient(180deg, #fefef5 0%, #fafaf0 100%);

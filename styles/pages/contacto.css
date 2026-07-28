@@ -104,7 +104,7 @@
     text-align: center;
     margin: 0 auto;
     font-size: 1rem;
-    color: #666;
+   color:var(--text-secondary);
     line-height: 1.7;
 }
 
@@ -140,7 +140,7 @@
 }
 
 .contact-info .info-subtitle {
-    color: #666;
+    color:var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
@@ -216,7 +216,7 @@
     align-items: center;
     gap: 0.8rem;
     font-size: 0.9rem;
-    color: #555;
+    color:var(--text-secondary);
 }
 
 .contact-hours .hours-icon {
@@ -493,4 +493,102 @@
     .contact-method .method-info .value {
         font-size: 0.75rem;
     }
+}
+
+
+
+
+
+
+
+
+/* Grupo de privacidad */
+.privacy-group {
+    margin: 20px 0;
+}
+
+/* Checkbox personalizado */
+.privacy-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-color, #333);
+}
+
+.privacy-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Checkbox personalizado */
+.checkmark {
+    min-width: 22px;
+    height: 22px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    margin-top: 2px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.privacy-checkbox input:checked + .checkmark {
+    background: #2d6b3a;
+    border-color: #2d6b3a;
+}
+
+.privacy-checkbox input:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.privacy-checkbox input:focus + .checkmark {
+    box-shadow: 0 0 0 3px rgba(45, 107, 58, 0.3);
+}
+
+.privacy-checkbox:hover .checkmark {
+    border-color: #2d6b3a;
+}
+
+/* Enlace de privacidad */
+.privacy-link {
+    color: #2d6b3a;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+    color: #1e4a2a;
+}
+
+.privacy-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Mensaje de error */
+.privacy-error {
+    display: none;
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    padding-left: 34px;
+}
+
+.privacy-error.show {
+    display: block;
 }
