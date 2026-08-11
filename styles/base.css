@@ -5,9 +5,22 @@
 }
 
 /* ESTILOS GLOBALES DEL SITIO */
+
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
 body {
   font-family: "Source Sans Pro", sans-serif; /* tipografía principal */
-  background-color: var(--bg-primary); /* color de fondo general */
+ /* color de fondo general   background-color: var(--bg-primary);*/
+background: #003d4d;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #141910, #081108);  /* Chrome 10-25, Safari 5.1-6 */
+background:var(--bg-gradient-primary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  
   color: var(--text-primary); /* color del texto principal */
   overflow-x: hidden; /* evita scroll horizontal accidental */
   transition: background-color 0.3s ease, color 0.3s ease; /* animación suave al cambiar tema */
@@ -69,3 +82,4 @@ margin-top: 65px;
   background: var(--accent); /* color del indicador de scroll */
   border-radius: 10px; /* bordes redondeados */
 }
+

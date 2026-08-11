@@ -7,33 +7,20 @@
     gap: 0.9rem;
 }
 
-/* icono minimal */
-.feature .icon {
-    width: 52px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    color: #9bd27d;
-}
 
-.feature .icon svg {
-    width: 34px;
-    height: 34px;
-}
 
 /* texto */
 .feature h4 {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
 }
 
 .feature p {
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color:var(--text-secondary);
 }
 /* separador fino vertical */
@@ -71,7 +58,7 @@ padding: 0rem 6rem 0rem;
     gap: 1rem;
 
     color: #cfe3c6;
-  
+  margin-bottom: 6rem;
 }
 
 
@@ -95,16 +82,11 @@ padding: 0rem 6rem 0rem;
 }
 
 .feature .icon svg {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
 }
 
 
-.feature p {
-    margin: 0;
-   
-    color:var(--text-secondary);
-}
 /* separador fino vertical */
 .divider {
     width: 1px;

@@ -3,7 +3,8 @@
 
 
 .ba-slider {
-    background: #1a1a1a;
+    /*   background: #1a1a1a;*/ 
+  
     border-radius: 16px;
     overflow: hidden;
    
@@ -155,22 +156,22 @@
 .beforeafter-wrapper {
     position: relative;
  
-    margin: 0 auto;
+   
 }
 
 /* ===== SWIPER ===== */
 .beforeafter-swiper {
     overflow: hidden; /* clave: evita que se vea el siguiente slide */
     border-radius: 18px;
-      width: clamp(320px, 65vw, 1100px);
+      width: clamp(320px, 55vw, 1100px);
      margin: 0 auto;
 }
 
 /* ===== FLECHAS BASE ===== */
 .beforeafter-wrapper .swiper-button-prev,
 .beforeafter-wrapper .swiper-button-next {
-    width: 52px;
-    height: 52px;
+    width: 42px;
+    height: 42px;
     background: rgba(26, 61, 46, 0.85);
     backdrop-filter: blur(8px);
     border-radius: 50%;
@@ -278,7 +279,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%; /* ← Se actualiza con JS */
+   width: 100%;
     height: 100%;
     overflow: hidden;
     will-change: width; /* Optimización */
@@ -410,7 +411,7 @@
 .success-header {
     text-align: center;
     margin-bottom: 3.5rem;
-    padding: 0 1rem;
+    padding:0;
     position: relative;
   
 }
@@ -445,7 +446,7 @@
 /* ===== TÍTULO PRINCIPAL ===== */
 .success-header h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     color:  var(--text-primary);
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
@@ -458,17 +459,7 @@
     position: relative;
 }
 
-/* Efecto de subrayado ondulado en "reales" */
-.success-header h2 span::after {
-    content: '';
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6'%3E%3Cpath d='M0,3 Q25,0 50,3 T100,3' stroke='%23b1cc74' stroke-width='2.5' fill='none' opacity='0.4'/%3E%3C/svg%3E") repeat-x;
-    background-size: 100px 6px;
-}
+
 
 /* ===== SEPARADOR DECORATIVO ===== */
 .success-header .success-divider {
@@ -506,11 +497,12 @@
     max-width: 650px;
     text-align: center;
     margin: 0 auto 1rem;
-    font-size: 1.05rem;
+    font-size: 1.7rem;
     color: var(--text-sub);
-    line-height: 1.7;
-    font-weight: 400;
+    line-height: 1.6;
+    font-weight: bold;
     letter-spacing: 0.2px;
+    padding: 3rem;
 }
 
 .success-header p strong {
@@ -755,6 +747,379 @@
 
 .success-section{
   padding-bottom: 4.5rem;
-  background-color: var(--bg-soft);
-   background-image: var(--bg-texture);
+  display: flex;
+  flex-direction: row-reverse;
+ margin-bottom: 3rem;
+  /*   background-color: var(--bg-soft);
+   background-image: var(--bg-texture); */
+ 
+}
+
+
+
+
+
+
+
+
+/* ===== VERSIÓN CON CLIP-PATH (RECOMENDADA) ===== */
+.ba-slider-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #1a1a1a;
+    border-radius: 12px 12px 0 0;
+}
+
+.ba-image-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🔑 Sin wrapper, clip-path directo en la imagen */
+.ba-image-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* El clip-path lo controla JavaScript */
+    clip-path: inset(0 50% 0 0);
+    -webkit-clip-path: inset(0 50% 0 0);
+}
+
+
+
+
+
+
+
+
+/* ============================================================
+   RESPONSIVE BEFORE / AFTER - CASOS DE ÉXITO
+   ============================================================ */
+
+
+/* TABLET */
+@media(max-width:992px){
+
+
+    .success-section{
+
+        flex-direction:column;
+
+        padding-bottom:3rem;
+
+    }
+
+
+
+    .success-header{
+
+        padding:0;
+
+        margin-bottom:2.5rem;
+
+    }
+
+
+
+    .success-header p{
+
+        padding:1rem;
+
+        font-size:1.3rem;
+
+    }
+
+
+
+    .beforeafter-swiper{
+
+        width:90%;
+
+    }
+
+
+
+    .beforeafter-wrapper .swiper-button-prev{
+
+        left:-20px;
+
+    }
+
+
+    .beforeafter-wrapper .swiper-button-next{
+
+        right:-20px;
+
+    }
+
+
+}
+
+
+
+
+
+/* MÓVIL */
+@media(max-width:768px){
+
+
+    .success-section{
+
+        display:block;
+
+        padding-bottom:2.5rem;
+
+        margin-bottom:2rem;
+
+    }
+
+
+
+    .success-header{
+
+        padding:0;
+
+        text-align:center;
+
+        margin-bottom:2rem;
+
+    }
+
+
+
+    .success-header h2{
+
+        font-size:2rem;
+
+    }
+
+
+
+    .success-header p{
+
+        font-size:1.1rem;
+
+        padding:0 .5rem;
+
+        line-height:1.5;
+
+    }
+
+
+
+    .beforeafter-wrapper{
+
+        width:100%;
+
+    }
+
+
+
+    .beforeafter-swiper{
+
+        width:100%;
+
+        border-radius:14px;
+
+    }
+
+
+
+    .ba-slider-wrapper{
+
+        aspect-ratio:4 / 3;
+
+    }
+
+
+
+    /* Flechas dentro del slider */
+    .beforeafter-wrapper .swiper-button-prev,
+    .beforeafter-wrapper .swiper-button-next{
+
+
+        width:36px;
+
+        height:36px;
+        display: none;
+
+    }
+
+
+
+    .beforeafter-wrapper .swiper-button-prev{
+
+        left:10px;
+
+    }
+
+
+
+    .beforeafter-wrapper .swiper-button-next{
+
+        right:10px;
+
+    }
+
+
+
+    .beforeafter-wrapper .swiper-button-prev::after,
+    .beforeafter-wrapper .swiper-button-next::after{
+
+        font-size:13px;
+
+    }
+
+
+
+    /* Etiquetas arriba */
+    .ba-slider-tags{
+
+        top:10px;
+
+        padding:0 10px;
+
+    }
+
+
+
+    .ba-tag{
+
+        font-size:.5rem;
+
+        padding:.25rem .6rem;
+
+    }
+
+
+
+    /* Botón central */
+    .ba-slider-handle{
+
+        width:44px;
+
+        height:44px;
+
+        font-size:1rem;
+
+    }
+
+
+
+    .ba-desc{
+
+        font-size:.85rem;
+
+        padding:1rem;
+
+    }
+
+
+}
+
+
+
+
+
+/* MÓVIL PEQUEÑO */
+@media(max-width:480px){
+
+
+    .success-header h2{
+
+        font-size:1.7rem;
+
+    }
+
+
+
+    .success-header p{
+
+        font-size:.95rem;
+
+    }
+
+
+
+    .ba-slider-wrapper{
+
+        aspect-ratio:1 / 1;
+
+    }
+
+
+
+    .ba-slider-handle{
+
+        width:38px;
+
+        height:38px;
+
+    }
+
+
+
+    .ba-tag{
+
+        letter-spacing:1px;
+
+    }
+
+
+
+    .ba-label{
+
+        font-size:.55rem;
+
+        padding:.15rem .5rem;
+
+    }
+
+
+
+}
+
+
+
+/* MÓVILES MUY PEQUEÑOS */
+@media(max-width:360px){
+
+
+    .success-header h2{
+
+        font-size:1.5rem;
+
+    }
+
+
+
+    .beforeafter-wrapper .swiper-button-prev,
+    .beforeafter-wrapper .swiper-button-next{
+
+        width:30px;
+
+        height:30px;
+
+    }
+
+
+
+    .ba-slider-handle{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+
 }

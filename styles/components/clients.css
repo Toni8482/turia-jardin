@@ -8,32 +8,23 @@
 
 
 .clients-section {
-  
-    background: 
-       var(--bg-primary);
+  /*  background: 
+       var(--bg-primary);*/ 
+   
     position: relative;
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 
-/* Línea decorativa superior */
-.clients-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background:  var(--bg-secondary);
-    opacity: 0.15;
-}
 
 /* ============================================================
    HEADER DE CLIENTES
    ============================================================ */
 
 .clients-header {
-    text-align: center;
-    margin-bottom: 1rem;
+    text-align:left;
+    margin-bottom: 10rem;
+    
    
 }
 
@@ -53,7 +44,7 @@
 
 .clients-header h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
      color: var(--text-primary);
     margin-bottom: 0.3rem;
     letter-spacing: 1px;
@@ -64,16 +55,7 @@
     position: relative;
 }
 
-.clients-header h2 span::after {
-    content: '';
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6'%3E%3Cpath d='M0,3 Q25,0 50,3 T100,3' stroke='%23b1cc74' stroke-width='2.5' fill='none' opacity='0.4'/%3E%3C/svg%3E") repeat-x;
-    background-size: 100px 6px;
-}
+
 
 .clients-header .clients-divider {
     display: flex;
@@ -104,9 +86,9 @@
 
 .clients-header p {
     max-width: 600px;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 1rem;
+    text-align: left;
+   font-weight: bold;
+    font-size: 2.5rem;
    color: var(--text-sub);
     line-height: 1.7;
 }
@@ -148,14 +130,21 @@
 
 /* ===== LOGOS ===== */
 .clients-swiper .swiper-slide img {
-    max-width: 140px;
-    max-height: 60px;
-    object-fit: contain;
+    
+    max-height: 120px;
+   
    
  
   
-    width: auto;
-    height: auto;
+   
+
+        width:100%;
+
+    max-width:200px;
+
+    height:auto;
+
+    object-fit:contain;
 }
 
 .clients-swiper .swiper-slide:hover img {
@@ -192,147 +181,256 @@
      opacity: 1;
     transform: scale(1.2);
 }
-
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE CLIENTS SECTION
    ============================================================ */
 
-@media (max-width: 768px) {
-    .clients-section {
-        padding: 3rem 0;
+
+/* Tablet grande */
+@media (max-width:1200px){
+
+    .clients-header{
+        margin-bottom:6rem;
     }
 
-    .clients-header h2 {
-        font-size: 2.2rem;
+
+    .clients-header p{
+
+        font-size:2rem;
+
     }
 
-    .clients-header h2 span::after {
-        height: 3px;
-        background-size: 70px 4px;
+
+    .clients-swiper{
+
+        max-width:900px;
+
     }
 
-    .clients-header .clients-divider {
-        max-width: 150px;
-        gap: 0.8rem;
+
+    .clients-swiper .swiper-slide img{
+
+        max-width:160px;
+        max-height:90px;
+
     }
 
-    .clients-header .clients-divider .icon {
-        font-size: 1rem;
-    }
-
-    .clients-header p {
-        font-size: 0.9rem;
-    }
-
-    .clients-swiper .swiper-slide {
-        height: 100px;
-        min-height: 80px;
-        padding: 1rem;
-        border-radius: 12px;
-    }
-
-    .clients-swiper .swiper-slide img {
-        max-width: 100px;
-        max-height: 45px;
-    }
-
-    .clients-swiper .clients-pagination .swiper-pagination-bullet {
-        width: 8px;
-        height: 8px;
-    }
-
-    .clients-swiper .clients-pagination .swiper-pagination-bullet-active {
-        width: 20px;
-    }
-
-    .clients-header .section-badge {
-        font-size: 0.6rem;
-        padding: 0.2rem 1.2rem;
-        letter-spacing: 2px;
-    }
 }
 
-@media (max-width: 480px) {
-    .clients-section {
-        padding: 2.5rem 0;
+
+
+/* Tablet */
+@media(max-width:992px){
+
+
+    .clients-header{
+
+        margin-bottom:4rem;
+
     }
 
-    .clients-header h2 {
-        font-size: 1.8rem;
+
+    .clients-header p{
+
+        font-size:1.8rem;
+
+        max-width:90%;
+
     }
 
-    .clients-header h2 span::after {
-        height: 3px;
-        background-size: 50px 3px;
+
+
+    .clients-swiper{
+
+        padding:1rem 0 2.5rem;
+
     }
 
-    .clients-header .clients-divider {
-        max-width: 120px;
-        gap: 0.5rem;
-        margin: 0.3rem auto 0.8rem;
+
+
+    .clients-swiper .swiper-slide{
+
+        height:110px;
+
+        padding:1rem;
+
     }
 
-    .clients-header .clients-divider .icon {
-        font-size: 0.9rem;
+
+
+    .clients-swiper .swiper-slide img{
+
+        max-width:140px;
+
+        max-height:80px;
+
     }
 
-    .clients-header p {
-        font-size: 0.85rem;
-    }
-
-    .clients-header .section-badge {
-        font-size: 0.55rem;
-        padding: 0.15rem 1rem;
-        letter-spacing: 1.5px;
-    }
-
-    .clients-swiper {
-        padding: 0.5rem 0 2.5rem;
-    }
-
-    .clients-swiper .swiper-slide {
-        height: 80px;
-        min-height: 70px;
-        padding: 0.8rem;
-        border-radius: 10px;
-    }
-
-    .clients-swiper .swiper-slide img {
-        max-width: 80px;
-        max-height: 35px;
-    }
-
-    .clients-swiper .clients-pagination .swiper-pagination-bullet {
-        width: 6px;
-        height: 6px;
-        margin: 0 4px;
-    }
-
-    .clients-swiper .clients-pagination .swiper-pagination-bullet-active {
-        width: 16px;
-    }
 }
+
+
+
+
+/* Móvil */
+@media(max-width:768px){
+
+
+    .clients-section{
+
+        padding:2.5rem 1rem;
+
+    }
+
+
+
+    .clients-header{
+
+        text-align:center;
+
+        margin-bottom:3rem;
+
+    }
+
+
+
+    .clients-header p{
+
+        text-align:center;
+
+        font-size:1.4rem;
+
+        line-height:1.4;
+
+        max-width:100%;
+
+        margin:auto;
+
+    }
+
+
+
+    .clients-swiper{
+
+        width:100%;
+
+        padding:
+        .5rem 0 2.5rem;
+
+    }
+
+
+
+    .clients-swiper .swiper-slide{
+
+        height:90px;
+
+        min-height:90px;
+
+        padding:.8rem;
+
+    }
+
+
+
+    .clients-swiper .swiper-slide img{
+
+        max-width:110px;
+
+        max-height:55px;
+
+    }
+
+
+
+    .clients-swiper .clients-pagination{
+
+        margin-top:1rem;
+
+    }
+
+
+}
+
+
+
+
+/* Móvil pequeño */
+@media(max-width:480px){
+
+
+    .clients-section{
+
+        padding:2rem .8rem;
+
+    }
+
+
+
+    .clients-header p{
+
+        font-size:1.15rem;
+
+    }
+
+
+
+    .clients-swiper .swiper-slide{
+
+        height:75px;
+
+        min-height:75px;
+
+        padding:.5rem;
+
+    }
+
+
+
+    .clients-swiper .swiper-slide img{
+
+        max-width:90px;
+
+        max-height:45px;
+
+    }
+
+
+
+    .clients-swiper .clients-pagination .swiper-pagination-bullet{
+
+        width:6px;
+
+        height:6px;
+
+    }
+
+
+    .clients-swiper .clients-pagination .swiper-pagination-bullet-active{
+
+        width:18px;
+
+    }
+
+}
+
+
 
 /* Móviles muy pequeños */
-@media (max-width: 360px) {
-    .clients-header h2 {
-        font-size: 1.5rem;
+@media(max-width:360px){
+
+
+    .clients-header p{
+
+        font-size:1rem;
+
     }
 
-    .clients-header .clients-divider {
-        max-width: 80px;
-        gap: 0.3rem;
+
+    .clients-swiper .swiper-slide img{
+
+        max-width:75px;
+
     }
 
-    .clients-swiper .swiper-slide {
-        height: 70px;
-        min-height: 60px;
-        padding: 0.5rem;
-    }
 
-    .clients-swiper .swiper-slide img {
-        max-width: 65px;
-        max-height: 30px;
-    }
 }
-

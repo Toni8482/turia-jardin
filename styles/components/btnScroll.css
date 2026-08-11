@@ -1,69 +1,64 @@
-
 /* =========================
    🔝 BOTÓN SCROLL ARRIBA
    ========================= */
 
 .scroll-top {
-  position: fixed; /* siempre visible en pantalla */
-  bottom: 80px;
-  right: 20px;
-  width: 44px;
-  height: 44px;
-  background: var(--accent);
-  border-radius: 50%; /* círculo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
 
-  opacity: 0; /* oculto por defecto */
-  visibility: hidden;
-  transition: all 0.3s;
+    width: 42px;
+    height: 42px;
 
-  z-index: 1050;
-  box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--accent);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 1050;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        opacity .3s ease,
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
 }
 
-/* cuando JS lo activa */
+/* Visible */
 .scroll-top.visible {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Hover */
 .scroll-top:hover {
-    background: linear-gradient(
-        180deg,
-        #88aa67 0%,
-        #739457 100%
-    );
-
-    transform: translateY(-4px) scale(1.05);
-
-    box-shadow:
-        0 14px 30px rgba(0, 0, 0, 0.22),
-        0 6px 12px rgba(0, 0, 0, 0.14);
+    filter: brightness(1.08);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,.18);
 }
 
 /* Click */
 .scroll-top:active {
-    transform: scale(0.95);
+    transform: translateY(0) scale(.95);
 }
 
-
 /* Icono */
-.scroll-top i,
-.scroll-top svg {
+.scroll-top i {
     color: #fff;
-    font-size: 22px;
-    width: 22px;
-    height: 22px;
-
+    font-size: 18px;
     transition: transform .25s ease;
 }
 
-/* Pequeña animación del icono */
-.scroll-top:hover i,
-.scroll-top:hover svg {
+/* Animación del icono */
+.scroll-top:hover i {
     transform: translateY(-2px);
 }

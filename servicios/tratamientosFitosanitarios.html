@@ -26,6 +26,7 @@
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/ventajas.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/microCta.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/description.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body data-base="..">
@@ -79,7 +80,7 @@
 
 
       <div class="trabajamos">
-          <div class="trabajamos-img">
+          <div class="trabajamos-img" >
        
             <img class="" src="./../assets/imagenes/services/fitosanitarios/importancia-tratamiento-fitosanitario.webp"
               alt="Trabajo de poda de árboles" />
@@ -88,7 +89,7 @@
 
         
         </div>
-        <div class="trabajamos-text">
+        <div class="trabajamos-text" data-aos="fade-left" data-aos-delay="400">
           <h2>¿Por qué son importantes los tratamientos fitosanitarios?</h2>
           <p>
             Los tratamientos fitosanitarios son esenciales para mantener la salud de nuestras plantas
@@ -154,7 +155,7 @@
       <div class="trabajamos ">
 
 
-        <div class="trabajamos-text">
+        <div class="trabajamos-text" data-aos="fade-right" data-aos-delay="100">
 
 
          <p>
@@ -170,7 +171,7 @@
 
         </div>
 
-        <div class="trabajamos-img">
+        <div class="trabajamos-img" >
 
 
 
@@ -319,6 +320,14 @@
 
   <!-- main.js como módulo -->
   <script type="module" src="./../js/main.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1500, // Duración de la animación en milisegundos (1 segundo)
+    once: true      // Solo anima una vez, aunque subas y bajes el scroll
+  });
+</script>
 </body>
 
 </html>

@@ -186,7 +186,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 1px;
     background: linear-gradient(90deg, 
         transparent 0%, 
         #b1cc74 20%, 
@@ -247,14 +247,14 @@
    
 }
 
-.footer-column--logo .logo-text span {
-    font-size: 0.75rem;
-    font-weight: 400;
-    color:var(--text-secondary);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-family: 'Source Sans Pro', sans-serif;
+
+
+.footer-column--logo .logo-img img {
+  width: 100%;
+  display: block;
 }
+
+
 
 .footer-column--logo .logo-subtitle {
     font-size: 0.95rem;
@@ -263,6 +263,8 @@
     letter-spacing: 0.5px;
     max-width: 280px;
     line-height: 1.5;
+    text-align: center;
+    margin: 1rem;
 }
 
 /* ============================================================
@@ -271,7 +273,7 @@
 
 .footer-column h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-secondary);
     margin-bottom: 1.2rem;
@@ -279,16 +281,6 @@
     padding-bottom: 0.6rem;
 }
 
-.footer-column h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background: #b1cc74;
-    border-radius: 2px;
-}
 
 .footer-column ul {
     list-style: none;
@@ -377,7 +369,7 @@
    ============================================================ */
 .footer-social {
     display:flex;
-    gap:1rem;
+    gap:2rem;
     align-items:center;
 }
 
@@ -396,8 +388,8 @@
 }
 
 .footer-social svg {
-    width:20px;
-    height:20px;
+    width:30px;
+    height:30px;
     fill:#8fa96d;
 }
 

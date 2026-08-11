@@ -16,23 +16,18 @@
   width: 100%;
 }
 
-
-
-/* estado inicial (oculto) */
 .reveal-fade {
   opacity: 0;
-  transform: translateY(28px); /* empieza abajo */
-  transition: opacity 0.4s ease, transform 0.5s ease;
- 
+  transform: translateY(20px);
+  transition:
+    opacity 1.8s ease-out,
+    transform 2.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* cuando aparece en pantalla */
 .reveal-fade.revealed {
   opacity: 1;
   transform: translateY(0);
 }
-
-
 /* =========================
    📊 BARRA DE PROGRESO SCROLL
    ========================= */
@@ -47,3 +42,63 @@
   z-index: 1150;
 }
 
+/* =========================
+   📱 TABLET
+   ========================= */
+
+@media (max-width: 1024px) {
+
+  .section {
+    padding: 3rem 3rem 4rem;
+  }
+
+  .reveal-fade {
+    transform: translateY(15px);
+    transition:
+      opacity 1.4s ease-out,
+      transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .progress-bar {
+    height: 3px;
+  }
+
+}
+
+
+/* =========================
+   📱 MÓVIL
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .section {
+    padding: 2.5rem 1.25rem 3.5rem;
+    justify-content: flex-start;
+  }
+
+  .reveal-fade {
+    transform: translateY(12px);
+    transition:
+      opacity 1s ease-out,
+      transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .progress-bar {
+    height: 2px;
+  }
+
+}
+
+
+/* =========================
+   📱 MÓVILES PEQUEÑOS
+   ========================= */
+
+@media (max-width: 380px) {
+
+  .section {
+    padding: 2rem 1rem 3rem;
+  }
+
+}

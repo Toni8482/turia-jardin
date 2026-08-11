@@ -1,5 +1,5 @@
 // ============================================================
-// BEFORE/AFTER SLIDER - VERSIÓN PARA SWIPER
+// BEFORE/AFTER SLIDER - VERSIÓN CON CLIP-PATH
 // Soporte táctil, escritorio y sincronización con Swiper
 // ============================================================
 
@@ -12,17 +12,17 @@ export function initBeforeAfterSliders() {
         return;
     }
     
-    console.log(`✅ Inicializando ${sliders.length} before/after sliders`);
+    console.log(`✅ Inicializando ${sliders.length} before/after sliders con clip-path`);
     
     sliders.forEach((wrapper, index) => {
         // ===== OBTENER ELEMENTOS =====
         const input = wrapper.querySelector('.ba-slider-input');
-        const beforeWrapper = wrapper.querySelector('.ba-image-before-wrapper');
+        const beforeImage = wrapper.querySelector('.ba-image-before'); // 🔑 Cambio: imagen directa
         const line = wrapper.querySelector('.ba-slider-line');
         const handle = wrapper.querySelector('.ba-slider-handle');
         
         // ===== VALIDAR ELEMENTOS =====
-        if (!input || !beforeWrapper || !line || !handle) {
+        if (!input || !beforeImage || !line || !handle) {
             console.warn(`⚠️ Slider ${index}: faltan elementos necesarios`);
             return;
         }
@@ -30,12 +30,18 @@ export function initBeforeAfterSliders() {
         let isDragging = false;
         let touchId = null;
         
-        // ===== FUNCIÓN DE ACTUALIZACIÓN =====
+        // ===== FUNCIÓN DE ACTUALIZACIÓN CON CLIP-PATH =====
         function updateSlider(value) {
-            const percent = Math.min(100, Math.max(0, parseFloat(value))) + '%';
-            beforeWrapper.style.width = percent;
-            line.style.left = percent;
-            handle.style.left = percent;
+            const percent = Math.min(100, Math.max(0, parseFloat(value)));
+            const clipValue = 100 - percent;
+            
+            // 🔑 Actualizar clip-path en lugar de width
+            beforeImage.style.clipPath = `inset(0 ${clipValue}% 0 0)`;
+            beforeImage.style.webkitClipPath = `inset(0 ${clipValue}% 0 0)`;
+            
+            // Mover línea y mango
+            line.style.left = percent + '%';
+            handle.style.left = percent + '%';
         }
         
         // ===== OBTENER PORCENTAJE DESDE COORDENADA =====
@@ -175,11 +181,9 @@ export function initBeforeAfterWithSwiper() {
     initBeforeAfterSliders();
     
     // Cuando Swiper cambia de slide, re-inicializar los sliders
-    // (por si los sliders no se renderizaron correctamente)
     const swiperInstance = swiperEl.swiper;
     if (swiperInstance) {
         swiperInstance.on('slideChange', function() {
-            // Pequeño delay para que el DOM se actualice
             setTimeout(() => {
                 initBeforeAfterSliders();
             }, 100);
@@ -205,7 +209,6 @@ export function initBeforeAfterLazy() {
             if (entry.isIntersecting && !isInitialized) {
                 isInitialized = true;
                 
-                // Esperar a que Swiper esté listo
                 setTimeout(() => {
                     initBeforeAfterWithSwiper();
                 }, 300);
@@ -220,7 +223,6 @@ export function initBeforeAfterLazy() {
     
     observer.observe(section);
     
-    // Si la sección ya está visible, inicializar inmediatamente
     if (section.getBoundingClientRect().top < window.innerHeight) {
         setTimeout(() => {
             if (!isInitialized) {
@@ -235,7 +237,7 @@ export function initBeforeAfterLazy() {
 }
 
 // ============================================================
-// REINICIO EN RESIZE
+// REINICIO EN RESIZE (CORREGIDO PARA CLIP-PATH)
 // ============================================================
 let resizeTimeout;
 
@@ -243,17 +245,22 @@ export function initBeforeAfterResize() {
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            // Recalcular posiciones
+            // Recalcular posiciones con clip-path
             document.querySelectorAll('#beforeafter .ba-slider-wrapper').forEach(wrapper => {
                 const input = wrapper.querySelector('.ba-slider-input');
-                const beforeWrapper = wrapper.querySelector('.ba-image-before-wrapper');
+                const beforeImage = wrapper.querySelector('.ba-image-before'); // 🔑 Cambio
                 const line = wrapper.querySelector('.ba-slider-line');
                 const handle = wrapper.querySelector('.ba-slider-handle');
                 
-                if (input && beforeWrapper && line && handle) {
+                if (input && beforeImage && line && handle) {
                     const value = parseFloat(input.value) || 50;
+                    const clipValue = 100 - value;
+                    
+                    // 🔑 Actualizar clip-path en lugar de width
+                    beforeImage.style.clipPath = `inset(0 ${clipValue}% 0 0)`;
+                    beforeImage.style.webkitClipPath = `inset(0 ${clipValue}% 0 0)`;
+                    
                     const percent = value + '%';
-                    beforeWrapper.style.width = percent;
                     line.style.left = percent;
                     handle.style.left = percent;
                 }
@@ -275,7 +282,7 @@ const beforeAfter = {
 export default beforeAfter;
 
 // ============================================================
-// AUTO-INICIALIZACIÓN (si se usa como script normal)
+// AUTO-INICIALIZACIÓN
 // ============================================================
 if (typeof window !== 'undefined' && !window._beforeAfterInited) {
     window._beforeAfterInited = true;
