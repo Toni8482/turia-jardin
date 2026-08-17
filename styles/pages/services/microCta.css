@@ -1,0 +1,231 @@
+
+
+
+/* Contenedor Principal del CTA */
+.micro-cta-section {
+ 
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Usa la fuente de tu web */
+}
+
+.micro-cta-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Textos */
+.micro-cta-title {
+  color:var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.micro-cta-text {
+  color:var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Botones */
+.micro-cta-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap; /* Hace que se apilen en pantallas móviles pequeñas */
+}
+
+/* Botón Principal (Presupuesto) */
+.btn-primary {
+  background-color: #a4c483; /* Verde oliva claro (similar al de tus capturas) */
+  color: #111a14;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #b5d494; /* Color ligeramente más claro al pasar el ratón */
+  transform: translateY(-2px);
+}
+
+/* Botón Secundario (Llamar ahora - Outline) */
+.btn-secondary {
+  background-color: transparent;
+  color: #4a4d45;
+  border: 2px solid #e5edd9;
+  padding: 10px 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #e5edd9;
+  color: #111a14;
+  transform: translateY(-2px);
+}
+
+.phone-icon {
+  font-size: 0.9rem;
+}
+
+
+
+
+/* ============================================================
+   RESPONSIVE TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+
+    .micro-cta-section {
+        padding: 50px 25px;
+    }
+
+
+    .micro-cta-container {
+        max-width: 550px;
+    }
+
+
+    .micro-cta-title {
+        font-size: 1.65rem;
+    }
+
+
+    .micro-cta-text {
+        font-size: 1rem;
+    }
+
+
+    .btn-primary,
+    .btn-secondary {
+
+        padding: 11px 24px;
+        font-size: .95rem;
+
+    }
+
+}
+
+
+
+
+
+/* ============================================================
+   RESPONSIVE MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+
+    .micro-cta-section {
+
+        padding: 40px 20px;
+
+    }
+
+
+    .micro-cta-container {
+
+        width:100%;
+
+    }
+
+
+
+    .micro-cta-title {
+
+        font-size:1.45rem;
+        line-height:1.25;
+        margin-bottom:10px;
+
+    }
+
+
+
+    .micro-cta-text {
+
+        font-size:.95rem;
+        line-height:1.45;
+        margin-bottom:25px;
+
+    }
+
+
+
+    .micro-cta-actions {
+
+        flex-direction:column;
+        gap:12px;
+
+        width:100%;
+
+    }
+
+
+
+    .btn-primary,
+    .btn-secondary {
+
+        width:100%;
+        justify-content:center;
+
+        padding:13px 20px;
+
+        font-size:.95rem;
+
+    }
+
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media(max-width:480px){
+
+
+    .micro-cta-section {
+
+        padding:35px 15px;
+
+    }
+
+
+    .micro-cta-title {
+
+        font-size:1.3rem;
+
+    }
+
+
+    .micro-cta-text {
+
+        font-size:.9rem;
+
+    }
+
+
+    .btn-primary,
+    .btn-secondary {
+
+        border-radius:25px;
+
+    }
+
+
+}

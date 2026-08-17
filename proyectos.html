@@ -1,133 +1,949 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>En construcción - Turia Jardín</title>
-   <link rel="stylesheet" type="text/css" href="./styles/variables.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description"
+    content="Especialistas en poda de palmeras, poda de árboles, tratamientos fitosanitarios, endoterapia y adecuación de áreas verdes en Valencia. Profesionales con años de experiencia.">
+  <meta name="keywords"
+    content="poda de palmeras Valencia, poda de árboles, tratamientos fitosanitarios, endoterapia, adecuación de áreas verdes, jardinería Valencia">
+  <meta name="author" content="Turia Jardín">
+  <title>Turia Jardín | Expertos en poda de palmeras y jardinería en Valencia</title>
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles/variables.css">
   <link rel="stylesheet" type="text/css" href="./styles/base.css">
   <link rel="stylesheet" type="text/css" href="./styles/layout.css">
   <link rel="stylesheet" type="text/css" href="./styles/sections.css">
   <link rel="stylesheet" type="text/css" href="./styles/components.css">
-  <link rel="stylesheet" type="text/css" href="./styles/responsive.css">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0c0f0a;
-      color: #ecead8;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-    .container {
-      text-align: center;
-      max-width: 700px;
-      background: rgba(28, 33, 23, 0.75);
-      backdrop-filter: blur(8px);
-      border-radius: 2rem;
-      padding: 2.5rem;
-      border: 1px solid rgba(157, 184, 94, 0.4);
-      box-shadow: 0 20px 35px -12px black;
-    }
-    .icon {
-      width: 180px;
-      margin: 0 auto 1.5rem;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #e7f0c3, #b1cc74);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.5;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 1.5rem;
-      background: #7d9662;
-      color: #0e130b;
-      text-decoration: none;
-      padding: 0.8rem 1.8rem;
-      border-radius: 60px;
-      font-weight: 600;
-      transition: 0.2s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .btn:hover {
-      background: #9bbf72;
-      transform: translateY(-3px);
-    }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #9aa883;
-    }
-    @media (max-width: 550px) {
-      .container { padding: 1.5rem; }
-      .icon { width: 130px; }
-      h1 { font-size: 1.6rem; }
-    }
-  </style>
+
+  <link rel="stylesheet" type="text/css" href="./styles/pages/proyectos.css">
+ <link rel="stylesheet" type="text/css" href="./styles/components/header.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/footer.css">
+     <link rel="stylesheet" type="text/css" href="./styles/components/btnWhatsApp.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/btnScroll.css">
+    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
-<body data-base="..">
-   <div id="header-container"></div>
-<div class="container">
-  <!-- SVG DIBUJO: Palmera obrera con casco y pala -->
-  <div class="icon">
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Fondo redondo suave -->
-      <circle cx="100" cy="100" r="95" fill="#1e2a1a" stroke="#a4c06a" stroke-width="2" stroke-dasharray="4 4"/>
-      <!-- Palmera (tronco) -->
-      <path d="M95 140 L92 60 L108 60 L105 140 Z" fill="#8B5A2B" stroke="#5C3A1A" stroke-width="1.5"/>
-      <!-- Hojas de palmera -->
-      <path d="M100 55 Q70 35 45 50 Q70 48 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q130 30 155 45 Q130 44 100 55Z" fill="#4c8c2f" stroke="#2c5a1a"/>
-      <path d="M100 55 Q85 20 100 10 Q115 20 100 55Z" fill="#2f6a1f" stroke="#1e4a12"/>
-      <path d="M100 55 Q115 25 130 35 Q115 40 100 55Z" fill="#5a9e3a" stroke="#2c5a1a"/>
-      <path d="M100 55 Q70 25 55 40 Q70 46 100 55Z" fill="#3e7d2a" stroke="#2c5a1a"/>
-      <!-- Frutos (dátiles) -->
-      <circle cx="98" cy="62" r="3" fill="#F4A300"/>
-      <circle cx="105" cy="64" r="2.5" fill="#F4A300"/>
-      <!-- Casco de obra encima del tronco (personificado) -->
-      <path d="M88 45 Q90 38 100 37 Q110 38 112 45 L115 47 L85 47 L88 45Z" fill="#FFD966" stroke="#b97f10" stroke-width="1.2"/>
-      <rect x="82" y="46" width="36" height="4" rx="2" fill="#FFD966" stroke="#b97f10" stroke-width="0.8"/>
-      <!-- Ojos divertidos -->
-      <circle cx="94" cy="70" r="2.2" fill="white"/>
-      <circle cx="106" cy="70" r="2.2" fill="white"/>
-      <circle cx="94.8" cy="70" r="1" fill="#1a1a1a"/>
-      <circle cx="106.8" cy="70" r="1" fill="#1a1a1a"/>
-      <!-- Sonrisa -->
-      <path d="M95 76 Q100 82 105 76" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- Pala apoyada en la palmera -->
-      <line x1="125" y1="120" x2="140" y2="155" stroke="#a0a0a0" stroke-width="3" stroke-linecap="round"/>
-      <path d="M133 145 L140 155 L148 148 L140 138 Z" fill="#C0C0C0" stroke="#888" stroke-width="1"/>
-      <!-- Letrero "En obras" pequeño -->
-      <rect x="68" y="115" width="64" height="18" rx="4" fill="#B33A3A" stroke="#fff" stroke-width="1"/>
-      <text x="100" y="128" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">EN OBRAS</text>
-    </svg>
-  </div>
-  <h1>Estamos construyendo esta sección</h1>
-  <p>🌿 Muy pronto podrás disfrutar de todos nuestros servicios detallados.<br>
-  Mientras tanto, puedes consultarnos directamente o volver a la página principal.</p>
-  <a href="index.html" class="btn">← Volver al inicio</a>
-  <a href="https://wa.me/34600987654" target="_blank" class="btn" style="background:#25D366; margin-left:0.8rem;">📱 Contactar por WhatsApp</a>
-<div id="btn-whatsapp"></div>
- <div id="btn-scroll-top"></div>
- 
-  <!-- FOOTER -->
+
+<body data-base=".">
+  <div id="header-container"></div>
+  
+  <main>
+
+    <!-- ============================================================
+         SECCIÓN: PROYECTOS
+         ============================================================  <span class="section-badge">🏆 Proyectos</span> -->
+    <section class="proyectos">
+
+      <!-- ===== HEADER ===== -->
+      <div class="proyectos-header">
+      
+        <h2>Nuestros <span>trabajos</span></h2>
+        <p>Proyectos reales realizados en Valencia y alrededores.</p>
+      </div>
+
+      <!-- ============================================================
+           GRUPO 1: Poda de palmeras
+           ============================================================ -->
+      <div class="proyecto-grupo">
+
+        <!--
+          <div class="grupo-header">
+          <h3>🌴 Poda de palmeras</h3>
+          <span class="grupo-line"></span>
+          <span class="grupo-badge">6 proyectos</span>
+        </div>
+        
+        -->
+      
+
+        <div class="cards-proyectos">
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles1.webp" alt="Poda de palmera en Valencia" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+           
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de palmera datilera</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles2.webp" alt="Poda de palmera canaria" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de palmera canaria</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles3.webp" alt="Poda de palmera washingtonia" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de washingtonia</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles4.webp" alt="Poda de palmera en urbanización" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en urbanización</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles5.webp" alt="Poda de palmera en jardín privado" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en jardín privado</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles6.webp" alt="Poda de palmera en parque" loading="lazy" />
+           <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles7.webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles8.webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+        
+         
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles11.webp" alt="Poda de palmera en parque" loading="lazy" />
+              <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles12.jpg" alt="Poda de palmera en parque" loading="lazy" />
+           <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles13.jpg" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles14.jpg" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/arboles/arboles15.webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+         
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (1).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+         
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (2).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (3).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (4).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (5).webp" alt="Poda de palmera en parque" loading="lazy" />
+           <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (6).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (7).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (8).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (9).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (10).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (11).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (12).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (13).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (14).jpg" alt="Poda de palmera en parque" loading="lazy" />
+           <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/areasVerdes/verdes (15).jpg" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+         
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/endoterapia/endoterapia1.webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/endoterapia/endoterapia2.webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/endoterapia/endoterapia3.webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/fitosanitarios/e31ace2a15a7c70645ad83df9ecd43b0_XL.jpg" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/fitosanitarios/importancia-tratamiento-fitosanitario.webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/fitosanitarios/jerarquía-procesional-de-la-oruga-del-pino-12845725.webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/fitosanitarios/tratamiento-fitosanitario-planta.webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/fitosanitarios/Usuario-profesional-de-productos-fitosanitarios.webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (1).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (2).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (3).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (4).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (5).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (6).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (7).webp" alt="Poda de palmera en parque" loading="lazy" />
+           <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (8).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (9).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (10).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (11).webp" alt="Poda de palmera en parque" loading="lazy" />
+             <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (12).webp" alt="Poda de palmera en parque" loading="lazy" />
+           <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (13).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (14).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto reveal-fade">
+            <img src="./assets/imagenes/services/palmeras/palmera (15).webp" alt="Poda de palmera en parque" loading="lazy" />
+            <!--
+             <span class="project-badge">Poda</span>
+            -->
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda en parque municipal</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SEPARADOR ===== 
+      <div class="proyectos-separator">
+        <span class="separator-icon">✦</span>
+      </div>
+-->
+      <!-- ============================================================
+           GRUPO 2: Poda de árboles
+           ============================================================ 
+      <div class="proyecto-grupo">
+        <div class="grupo-header">
+          <h3>🌳 Poda de árboles</h3>
+          <span class="grupo-line"></span>
+          <span class="grupo-badge">6 proyectos</span>
+        </div>
+
+        <div class="cards-proyectos">
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Albal" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Albal</h4>
+              <p class="overlay-location">📍 Albal</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Valencia" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Valencia</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Albal" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Albal</h4>
+              <p class="overlay-location">📍 Albal</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Valencia" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Valencia</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Albal" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Albal</h4>
+              <p class="overlay-location">📍 Albal</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Poda de árbol en Valencia" loading="lazy" />
+            <span class="project-badge">Poda</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Poda de árboles en Valencia</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+-->
+      <!-- ===== SEPARADOR ===== 
+      <div class="proyectos-separator">
+        <span class="separator-icon">✦</span>
+      </div>
+-->
+      <!-- ============================================================
+           GRUPO 3: Endoterapia
+           ============================================================ 
+      <div class="proyecto-grupo">
+        <div class="grupo-header">
+          <h3>💉 Endoterapia</h3>
+          <span class="grupo-line"></span>
+          <span class="grupo-badge">6 proyectos</span>
+        </div>
+
+        <div class="cards-proyectos">
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en chalet" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en chalet</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en palmera" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en palmera</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en chalet" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en chalet</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en palmera" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en palmera</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en chalet" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en chalet</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Endoterapia en palmera" loading="lazy" />
+            <span class="project-badge">Endoterapia</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Endoterapia en palmera</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+-->
+      <!-- ===== SEPARADOR ===== 
+      <div class="proyectos-separator">
+        <span class="separator-icon">✦</span>
+      </div>
+-->
+      <!-- ============================================================
+           GRUPO 4: Adecuación de áreas verdes
+           ============================================================ 
+      <div class="proyecto-grupo">
+        <div class="grupo-header">
+          <h3>🏞️ Adecuación de áreas verdes</h3>
+          <span class="grupo-line"></span>
+          <span class="grupo-badge">6 proyectos</span>
+        </div>
+
+        <div class="cards-proyectos">
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en Bayer" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación en Bayer</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en área verde" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación de área verde</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en Bayer" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación en Bayer</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en área verde" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación de área verde</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en Bayer" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación en Bayer</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+          <div class="card-proyecto">
+            <img src="./assets/imagenes/endoterapia.jpg" alt="Adecuación en área verde" loading="lazy" />
+            <span class="project-badge">Adecuación</span>
+            <div class="card-overlay">
+              <h4 class="overlay-title">Adecuación de área verde</h4>
+              <p class="overlay-location">📍 Valencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+-->
+    </section>
+
+   
+
+  </main>
+
   <div id="footer-container"></div>
+  
+  <!-- BOTONES FLOTANTES -->
+  <div id="btn-whatsapp"></div>
+  <div id="btn-scroll-top"></div>
+
+  <!-- main.js como módulo -->
+  <script type="module" src="./js/gallery.js" defer></script>
+
+<script>
+
+// ============================================================
+// MODAL GALERÍA (Lightbox con navegación)
+// ============================================================
+
+// Esperamos a que el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+
+  // --- Elementos del modal ---
+  const modal = document.getElementById('modal-galeria');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitulo = document.getElementById('modal-titulo');
+ // const modalUbicacion = document.getElementById('modal-ubicacion');
+  const modalIndice = document.getElementById('modal-indice');
+  const modalTotal = document.getElementById('modal-total');
+  const cerrar = document.querySelector('.modal-cerrar');
+  const prevBtn = document.querySelector('.modal-prev');
+  const nextBtn = document.querySelector('.modal-next');
+
+  // --- Estado ---
+  let imagenes = [];           // Array con los datos de todas las imágenes
+  let indiceActual = 0;        // Índice de la imagen actual
+
+  // --- Función: recopilar todas las imágenes de la galería ---
+  function recopilarImagenes() {
+    const cards = document.querySelectorAll('.card-proyecto');
+    imagenes = [];
+
+    cards.forEach((card) => {
+      const img = card.querySelector('img');
+      const overlay = card.querySelector('.card-overlay');
+      const titulo = overlay ? overlay.querySelector('.overlay-title') : null;
+     // const ubicacion = overlay ? overlay.querySelector('.overlay-location') : null;
+
+      if (img) {
+        imagenes.push({
+          src: img.src,
+          alt: img.alt || 'Imagen del proyecto',
+          titulo: titulo ? titulo.textContent.trim() : 'Proyecto',
+        //  ubicacion: ubicacion ? ubicacion.textContent.trim() : '📍 Valencia'
+        });
+      }
+    });
+
+    modalTotal.textContent = imagenes.length;
+  }
+
+  // --- Función: abrir modal en un índice específico ---
+  function abrirModal(indice) {
+    if (imagenes.length === 0) return;
+
+    indiceActual = (indice + imagenes.length) % imagenes.length;
+    const data = imagenes[indiceActual];
+
+    modalImg.src = data.src;
+    modalImg.alt = data.alt;
+    modalTitulo.textContent = data.titulo;
+   // modalUbicacion.textContent = data.ubicacion;
+    modalIndice.textContent = indiceActual + 1;
+    modalTotal.textContent = imagenes.length;
+
+    modal.classList.add('abierto');
+    document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+  }
+
+  // --- Función: cerrar modal ---
+  function cerrarModal() {
+    modal.classList.remove('abierto');
+    document.body.style.overflow = ''; // Restaura scroll
+  }
+
+  // --- Función: navegar ---
+  function navegar(direccion) {
+    const nuevoIndice = indiceActual + direccion;
+    abrirModal(nuevoIndice);
+  }
+
+  // --- Evento: click en cualquier card-proyecto ---
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.card-proyecto');
+    if (card) {
+      const todasLasCards = document.querySelectorAll('.card-proyecto');
+      const index = Array.from(todasLasCards).indexOf(card);
+      if (index !== -1) {
+        // Asegurar que tenemos las imágenes recopiladas
+        if (imagenes.length === 0) recopilarImagenes();
+        abrirModal(index);
+      }
+    }
+  });
+
+  // --- Eventos del modal ---
+  cerrar.addEventListener('click', cerrarModal);
+  prevBtn.addEventListener('click', () => navegar(-1));
+  nextBtn.addEventListener('click', () => navegar(1));
+
+  // --- Cerrar con tecla ESC ---
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') cerrarModal();
+    if (e.key === 'ArrowLeft' && modal.classList.contains('abierto')) navegar(-1);
+    if (e.key === 'ArrowRight' && modal.classList.contains('abierto')) navegar(1);
+  });
+
+  // --- Cerrar al hacer clic fuera de la imagen ---
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) cerrarModal();
+  });
+
+  // --- Recopilar imágenes al cargar la página ---
+  recopilarImagenes();
+
+  // --- Si el DOM cambia dinámicamente (ej: se añaden más cards), puedes volver a recopilar ---
+  // (Opcional) Si cargas contenido con JS después, llama a recopilarImagenes() nuevamente
+});
+
+
+
+</script>
+
+
+  <!-- ============================================================
+     MODAL GALERÍA (Lightbox)
+     ============================================================ -->
+<div id="modal-galeria" class="modal-galeria">
+  <span class="modal-cerrar">&times;</span>
+  <span class="modal-nav modal-prev">&#10094;</span>
+  <span class="modal-nav modal-next">&#10095;</span>
+  <div class="modal-contenido">
+    <img id="modal-img" src="" alt="Imagen del proyecto" />
+    <div class="modal-info">
+      <h4 id="modal-titulo"></h4>
+
+      <!--   <p id="modal-ubicacion"></p>  -->
+    
+    </div>
+  </div>
+  <div class="modal-contador">
+    <span id="modal-indice">1</span> / <span id="modal-total">0</span>
+  </div>
 </div>
-  <!-- Nuestro main.js como módulo -->
-  <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>

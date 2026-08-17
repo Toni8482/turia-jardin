@@ -1,0 +1,97 @@
+
+
+/* cada bloque */
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+
+
+
+/* texto */
+.feature h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.feature p {
+    margin: 0;
+    font-size: 1rem;
+    color:var(--text-secondary);
+}
+/* separador fino vertical */
+.divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .features-line {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .divider {
+        display: none;
+    }
+}
+
+
+
+
+.features-line {
+  
+    margin: 0 auto;
+   
+padding: 0rem 6rem 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    color: #cfe3c6;
+  margin-bottom: 6rem;
+}
+
+
+
+/* cada bloque */
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* icono minimal */
+.feature .icon {
+    width: 42px;
+    height:42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #9bd27d;
+}
+
+.feature .icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* separador fino vertical */
+.divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+

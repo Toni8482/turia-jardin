@@ -2,44 +2,78 @@ export function initMobileMenu() {
   const menuIcon = document.getElementById('menuIcon');
   const navLinks = document.getElementById('navLinks');
 
+  const themeButton = document.getElementById('themeToggleMobile');
+  const themeSwitch = document.getElementById('themeSwitch');
+  const themeIcon = themeButton?.querySelector('i');
+
+  // Actualizar icono según el tema
+  function updateThemeIcon() {
+    if (!themeIcon || !themeSwitch) return;
+
+    themeIcon.className = themeSwitch.checked
+      ? 'fa-solid fa-sun'
+      : 'fa-solid fa-moon';
+  }
+
+  // Botón de tema móvil
+  if (themeButton && themeSwitch) {
+    themeButton.addEventListener('click', () => {
+      themeSwitch.click();
+    });
+
+    themeSwitch.addEventListener('change', updateThemeIcon);
+    updateThemeIcon();
+  }
+
   if (!menuIcon || !navLinks) return;
 
-  // Abrir/cerrar hamburguesa
-  menuIcon.onclick = () => {
+  // Abrir/cerrar menú hamburguesa
+  menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 
-    // cerrar submenus si se cierra el menú
+    // Cerrar submenús al cerrar el menú principal
     if (!navLinks.classList.contains('active')) {
-      document.querySelectorAll('.has-submenu').forEach(parent => parent.classList.remove('open'));
+      document.querySelectorAll('.has-submenu').forEach(parent => {
+        parent.classList.remove('open');
+      });
     }
-  };
+  });
 
-  // Submenu clic en móvil
-  const submenuParents = document.querySelectorAll('.has-submenu > a');
-  submenuParents.forEach(link => {
+  // Submenú en móvil
+  document.querySelectorAll('.has-submenu > a').forEach(link => {
     link.addEventListener('click', e => {
-      if (window.innerWidth <= 1024) {
+      if (window.innerWidth <= 750) {
         e.preventDefault();
         link.parentElement.classList.toggle('open');
       }
     });
   });
 
-  // Cerrar menú al hacer click fuera
-  document.addEventListener('click', (e) => {
-    const isClickInside = navLinks.contains(e.target) || menuIcon.contains(e.target);
+  // Cerrar menú al hacer clic fuera
+  document.addEventListener('click', e => {
+    const isClickInside =
+      navLinks.contains(e.target) ||
+      menuIcon.contains(e.target);
+
     if (!isClickInside) {
       navLinks.classList.remove('active');
-      document.querySelectorAll('.has-submenu').forEach(parent => parent.classList.remove('open'));
+
+      document.querySelectorAll('.has-submenu').forEach(parent => {
+        parent.classList.remove('open');
+      });
     }
   });
 
-  // Cerrar menú al tocar enlaces que no son submenu
-  document.querySelectorAll('.nav-links > li > a:not(.has-submenu > a)').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      document.querySelectorAll('.has-submenu').forEach(parent => parent.classList.remove('open'));
-    });
-  });
-}
+  // Cerrar menú al pulsar enlaces normales
+  document
+    .querySelectorAll('.nav-links > li:not(.has-submenu) > a')
+    .forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
 
+        document.querySelectorAll('.has-submenu').forEach(parent => {
+          parent.classList.remove('open');
+        });
+      });
+    });
+}

@@ -1,0 +1,64 @@
+/* =========================
+   🔝 BOTÓN SCROLL ARRIBA
+   ========================= */
+
+.scroll-top {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--accent);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 1050;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        opacity .3s ease,
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+}
+
+/* Visible */
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hover */
+.scroll-top:hover {
+    filter: brightness(1.08);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,.18);
+}
+
+/* Click */
+.scroll-top:active {
+    transform: translateY(0) scale(.95);
+}
+
+/* Icono */
+.scroll-top i {
+    color: #fff;
+    font-size: 18px;
+    transition: transform .25s ease;
+}
+
+/* Animación del icono */
+.scroll-top:hover i {
+    transform: translateY(-2px);
+}

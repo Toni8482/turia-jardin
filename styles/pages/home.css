@@ -1,0 +1,683 @@
+/* =========================
+   🌄 HERO (PRIMERA PANTALLA)
+   ========================= */
+/*
+
+@font-face {
+    font-family: MyCustomFontName;
+    src: url("../fonts/CaviarDreams.ttf");
+}
+
+
+*/
+
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  /*  font-family: MyCustomFontName;*/
+      overflow: hidden;  
+}
+
+/* imagen de fondo del hero */
+.hero-bg {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    object-position: center 15%;
+    z-index: -1;
+    will-change: transform;
+    pointer-events: none;
+     background-attachment: fixed;
+}
+
+/* caja del contenido del hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    padding: 30px;
+    border-radius: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* subtítulo pequeño del hero */
+.hero-subtitle {
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+/* título principal dinámico */
+.dynamic-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2rem, 7vw, 4.8rem);
+    font-weight: 700;
+    margin: 1rem 0;
+    min-height: 4rem;
+}
+
+/* =========================
+   🎨 FIJAR COLORES DEL HERO
+   ========================= */
+
+.hero-subtitle,
+.hero-content p {
+    color: #ecead8 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.wave-divider {
+    z-index: 2;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.wave-divider svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+}
+
+/* mantener colores en modo claro */
+body.light .hero-subtitle,
+body.light .hero-content p {
+    color: #ecead8 !important;
+}
+
+body.light #typewriter {
+    color: transparent !important;
+}
+
+
+
+
+
+
+
+
+
+.cta-final {
+    padding: 90px 20px;
+    /* background: #10180f;*/
+   
+}
+
+
+.cta-container {
+
+    max-width: 1100px;
+    margin:auto;
+background: linear-gradient(135deg, rgb(120 150 90 / 8%), rgb(32 41 32 / 11%));
+   
+
+    border:1px solid rgba(150,180,100,.15);
+
+    border-radius:35px;
+
+    padding:55px 70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+
+
+.cta-content {
+    max-width:620px;
+}
+
+
+
+.cta-tag {
+
+    font-size:.75rem;
+    letter-spacing:4px;
+
+    color:#91a96b;
+
+    display:block;
+
+    margin-bottom:20px;
+}
+
+
+
+.cta-content h2 {
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    color:var(--text-primary);
+
+    margin:0 0 20px;
+
+}
+
+
+
+.cta-content p {
+
+     color:var(--text-secondary);
+
+    font-size:1.1rem;
+
+    line-height:1.7;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.cta-button {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#8da76c;
+
+    color:#10180f;
+
+    padding:16px 32px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.cta-button:hover {
+
+    transform:translateY(-3px);
+
+    background:#a4bd80;
+
+}
+
+
+
+
+.cta-decoration {
+
+    width:220px;
+    height:220px;
+
+   
+   
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+   
+
+    gap:15px;
+
+    font-size:.9rem;
+
+}
+
+
+.cta-decoration img{
+    z-index: -1;
+}
+
+
+
+@media(max-width:768px){
+
+    .cta-container{
+
+        flex-direction:column;
+
+        padding:40px 25px;
+
+        text-align:center;
+
+        gap:40px;
+
+    }
+
+
+    .cta-content h2{
+
+        font-size:2.2rem;
+
+    }
+
+
+}
+
+
+.watercolor-frame{
+
+      position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    display: block;
+}
+
+
+.planta-frame{
+  position: absolute;
+    top: 0px; /* Súbelo un poco para que se vea la parte bonita */
+    right: -50px; /* Ponlo a la derecha */
+    width: 400px; /* Tamaño controlado */
+    height: auto;
+    opacity: 0.07; /* Muy transparente para que sea un fondo sutil */
+    z-index: 0; /* Detrás de todo */
+    pointer-events: none;
+  
+ 
+
+}
+
+
+.flor-frame{
+    position:absolute;
+    top:180px;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:260px;      /* ajusta el tamaño */
+    height:auto;
+    z-index:-1;
+    opacity: 0.07;        /* puedes bajar a 0.2-0.4 si quieres que sea más sutil */
+    pointer-events:none;
+}
+
+.flor-frame path:first-child {
+    fill: #D9C2B4;
+}
+
+.flor-frame path:not(:first-child) {
+    fill: #4E4B46;
+}
+
+
+
+
+
+.highlight {
+    position: relative;
+    display: inline-block;
+    color: var(--accent);
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent), transparent);
+    opacity: 0.35;
+    border-radius: 2px;
+    transform-origin: center;
+    animation: lineAppear 15.2s ease forwards;
+}
+
+@keyframes lineAppear {
+    0% { transform: scaleX(0); opacity: 0; }
+    100% { transform: scaleX(1); opacity: 0.35; }
+}
+
+
+
+
+
+
+
+
+/* ============================================================
+   SEPARADOR DE SECCIONES
+   ============================================================ */
+
+.section-separator {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-line-separator);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.section-separator-second {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-line-separator-second);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================================================
+   📱 RESPONSIVE HERO + CTA + DECORACIONES
+   ============================================================ */
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .hero {
+        min-height: 90vh;
+        padding: 2rem;
+    }
+
+    .hero-bg {
+        top: 0;
+       
+        object-position: center;
+        background-attachment: scroll;
+    }
+
+
+    .hero-content {
+        padding: 25px;
+        width: min(90%, 700px);
+    }
+
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+
+
+    .dynamic-title {
+        font-size: clamp(2rem, 8vw, 3.8rem);
+    }
+
+
+    .wave-divider svg {
+        height: 80px;
+    }
+
+
+    .cta-final {
+        padding: 60px 20px;
+    }
+
+
+    .cta-container {
+        padding: 45px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 2.6rem;
+    }
+
+
+    .planta-frame {
+        width: 300px;
+        right: -80px;
+    }
+
+
+    .flor-frame {
+        width: 220px;
+    }
+
+}
+
+
+
+/* MÓVIL */
+@media (max-width: 768px) {
+
+
+    .hero {
+        min-height: 100svh;
+        padding: 1rem;
+    }
+
+
+    .hero-bg {
+        top: 0;
+        height: 100%;
+        object-position: center;
+        transform: none !important;
+        background-attachment: scroll;
+    }
+
+
+    .hero-content {
+
+        width: calc(100% - 2rem);
+        padding: 22px 18px;
+
+        border-radius: 1.4rem;
+
+        backdrop-filter: blur(3px);
+    }
+
+
+    .hero-subtitle {
+
+        font-size: .9rem;
+        letter-spacing: 1.8px;
+
+    }
+
+
+    .dynamic-title {
+
+        font-size: clamp(2rem, 11vw, 3rem);
+        min-height: 3rem;
+        margin: .8rem 0;
+
+    }
+
+
+    .wave-divider svg {
+
+        height: 55px;
+
+    }
+
+
+
+    /* CTA */
+
+    .cta-final {
+
+        padding: 50px 15px;
+
+    }
+
+
+    .cta-container {
+
+        padding: 35px 20px;
+        border-radius: 25px;
+        gap: 30px;
+
+    }
+
+
+    .cta-content {
+
+        max-width:100%;
+
+    }
+
+
+    .cta-tag {
+
+        font-size:.7rem;
+        letter-spacing:3px;
+
+    }
+
+
+    .cta-content h2 {
+
+        font-size:2rem;
+        line-height:1.1;
+
+    }
+
+
+    .cta-content p {
+
+        font-size:1rem;
+
+    }
+
+
+    .cta-button {
+
+        padding:14px 26px;
+        font-size:.95rem;
+
+    }
+
+
+    .cta-decoration {
+
+        width:160px;
+        height:160px;
+
+    }
+
+
+
+    /* DECORACIONES */
+
+    .planta-frame {
+
+        width:220px;
+        right:-100px;
+        opacity:.05;
+
+    }
+
+
+    .flor-frame {
+
+        width:150px;
+        top:120px;
+
+    }
+
+
+    .watercolor-frame {
+
+        opacity:.7;
+
+    }
+
+
+
+    /* SEPARADORES */
+
+    .section-separator,
+    .section-separator-second {
+
+        height:50px;
+
+    }
+
+}
+
+
+
+/* MÓVILES PEQUEÑOS */
+@media (max-width: 400px) {
+
+
+    .hero-content {
+
+        padding:18px 14px;
+
+    }
+
+
+    .hero-subtitle {
+
+        font-size:.8rem;
+
+    }
+
+
+    .dynamic-title {
+
+        font-size:1.9rem;
+
+    }
+
+
+    .cta-content h2 {
+
+        font-size:1.8rem;
+
+    }
+
+
+    .cta-container {
+
+        padding:30px 15px;
+
+    }
+
+
+    .planta-frame {
+
+        width:170px;
+
+    }
+
+
+    .flor-frame {
+
+        width:120px;
+
+    }
+
+}

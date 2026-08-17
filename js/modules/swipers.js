@@ -19,22 +19,36 @@ export function initSwipers() {
     new Swiper('.clients-swiper', {
       loop: true,
       autoplay: {
-        delay: 2500,
+        delay:0,
         disableOnInteraction: false,
         pauseOnMouseEnter: true
       },
-      speed: 800,
+      speed:8000,
+      // IMPORTANTE: Esto evita saltos bruscos cuando las fotos entran a pantalla
+   
       slidesPerView: 2,
       spaceBetween: 20,
+        slidesPerGroup: 2,
       pagination: {
         el: '.clients-pagination',
         clickable: true
       },
-      breakpoints: {
-        480: { slidesPerView: 2 },
-        768: { slidesPerView: 3 },
-        1024: { slidesPerView: 3 }
-      }
+     breakpoints: {
+    480: {
+        slidesPerView: 2,
+        slidesPerGroup:2
+    },
+
+    768: {
+        slidesPerView: 3,
+        slidesPerGroup: 2
+    },
+
+    1024: {
+        slidesPerView: 4,
+        slidesPerGroup:2
+    }
+}
     });
   }
 }

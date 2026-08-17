@@ -1,0 +1,274 @@
+
+.counter-section {
+     background: var(--bg-gradient-dark);
+    color: white;
+    padding: 4rem 0;
+    
+}
+
+.counter-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.counter-header h2 {
+    color: white !important;
+    font-size: 2.5rem;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.counter-item {
+    text-align: center;
+}
+
+.counter-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.counter-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: 'Cormorant Garamond', serif;
+    color: #b1cc74;
+}
+
+.counter-item p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.counter-label {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    display: block;
+}
+
+
+/* ============================================================
+   HEADER DE CONTADORES - ESTILO PREMIUM
+   ============================================================ */
+
+.counter-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    padding: 0 1rem;
+    position: relative;
+}
+
+/* ===== BADGE ===== */
+.counter-header .section-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(4px);
+    padding: 0.3rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 0.75rem;
+}
+
+.counter-header .section-badge:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+.counter-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Efecto de subrayado decorativo */
+.counter-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #b1cc74, transparent);
+    border-radius: 4px;
+    opacity: 0.4;
+}
+
+/* ===== SEPARADOR DECORATIVO CON ICONO ===== */
+.counter-header .counter-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 1.2rem auto 0.5rem;
+    max-width: 240px;
+}
+
+.counter-header .counter-divider .line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(177, 204, 116, 0.3));
+    border-radius: 2px;
+}
+
+.counter-header .counter-divider .line:last-child {
+    background: linear-gradient(90deg, rgba(177, 204, 116, 0.3), transparent);
+}
+
+.counter-header .counter-divider .icon {
+    font-size: 1.3rem;
+    opacity: 0.6;
+    animation: counterPulse 3s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== SUBTÍTULO / DESCRIPCIÓN ===== */
+.counter-header .counter-subtitle {
+    max-width: 550px;
+    text-align: center;
+    margin: 0.8rem auto 0;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.counter-header .counter-subtitle strong {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+}
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes counterPulse {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg); 
+        opacity: 0.6; 
+    }
+    50% { 
+        transform: scale(1.15) rotate(5deg); 
+        opacity: 0.9; 
+    }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .counter-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .counter-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .counter-header h2::after {
+        width: 50%;
+        height: 2.5px;
+        bottom: -6px;
+    }
+
+    .counter-header .section-badge {
+        font-size: 0.6rem;
+        padding: 0.2rem 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .counter-header .counter-divider {
+        max-width: 180px;
+        gap: 0.8rem;
+        margin: 1rem auto 0.3rem;
+    }
+
+    .counter-header .counter-divider .icon {
+        font-size: 1.1rem;
+    }
+
+    .counter-header .counter-subtitle {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-header {
+        margin-bottom: 2rem;
+    }
+
+    .counter-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .counter-header h2::after {
+        width: 40%;
+        height: 2px;
+        bottom: -4px;
+    }
+
+    .counter-header .section-badge {
+        font-size: 0.55rem;
+        padding: 0.15rem 1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .counter-header .counter-divider {
+        max-width: 140px;
+        gap: 0.5rem;
+        margin: 0.8rem auto 0.2rem;
+    }
+
+    .counter-header .counter-divider .icon {
+        font-size: 0.9rem;
+    }
+
+    .counter-header .counter-subtitle {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+    .counter-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .counter-header .counter-divider {
+        max-width: 100px;
+        gap: 0.3rem;
+    }
+
+    .counter-header .counter-divider .icon {
+        font-size: 0.7rem;
+    }
+
+    .counter-header .counter-subtitle {
+        font-size: 0.7rem;
+    }
+}

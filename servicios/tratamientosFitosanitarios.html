@@ -5,14 +5,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tratamientos fitosanitarios - Turia Jardín</title>
-
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../styles/variables.css" />
   <link rel="stylesheet" type="text/css" href="../styles/base.css" />
   <link rel="stylesheet" type="text/css" href="../styles/layout.css" />
   <link rel="stylesheet" type="text/css" href="../styles/sections.css" />
   <link rel="stylesheet" type="text/css" href="../styles/components.css" />
-  <link rel="stylesheet" type="text/css" href="../styles/responsive.css" />
-  <link rel="stylesheet" type="text/css" href="../styles/servicios/sections.css" />
+
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/sections.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/header.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/footer.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/btnWhatsApp.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/btnScroll.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/btn.css">
+  <link rel="stylesheet" type="text/css" href="../styles/components/features.css">
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/hero.css">
+
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/steps.css">
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/ventajas.css">
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/microCta.css">
+  <link rel="stylesheet" type="text/css" href="../styles/pages/services/description.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body data-base="..">
@@ -21,37 +34,71 @@
 
   <main>
 
+
+
     <!-- HERO -->
-    <section class="hero-services">
-      <div class="titulo">
-        <!--<h1>Tratamientos fitosanitarios</h1> -->
+    <div class="hero-services">
+
+      <div class="hero-content">
+
+        <div class="hero-text">
+
+          <span class="hero-label">
+            ESPECIALISTAS EN VALENCIA
+          </span>
+
+          <h1>
+            Especialistas en
+            <span>tratamientos fitosanitarios</span>
+          </h1>
+
+
+
+          <button class="btn magnetic">
+            Contacta ahora
+          </button>
+
+        </div>
+
+
+        <div class="hero-image">
+
+          <img src="./../assets/imagenes/services/fitosanitarios/Usuario-profesional-de-productos-fitosanitarios.webp"
+            loading="lazy" alt="Poda profesional de arboles">
+
+        </div>
+
       </div>
 
-      <div class="subtitulo">
-        <div class="subtitulo-img">
-          <img src="./../assets/imagenes/tratamiento_fito.jfif" loading="lazy" alt="Tratamientos fitosanitarios" />
-        </div>
-        <div class="subtitulo-text">
-          <h2>Especialistas en tratamientos fitosanitarios en Valencia</h2>
-          <p>
-            Protegemos la salud de tus plantas y árboles con tratamientos profesionales,
-            eficaces y respetuosos con el medio ambiente.
-          </p>
-          <button class="btn">Contacta ahora</button>
-        </div>
+    </div>
+
+    <section class="head">
+      <div>
+        <h2>
+          Protegemos la salud de tus plantas y árboles con tratamientos profesionales,
+          eficaces y respetuosos con el medio ambiente.
+
+        </h2>
       </div>
+
+
     </section>
-
     <!-- DESCRIPCIÓN -->
     <section class="descripcion">
-      <h2>Servicio profesional de tratamientos fitosanitarios</h2>
-      <p>
-        En Turia Jardín somos especialistas en el diagnóstico y tratamiento de plagas y enfermedades
-        que afectan a plantas, árboles y palmeras.
-      </p>
+
+
 
       <div class="trabajamos">
-        <div class="trabajamos-text">
+        <div class="trabajamos-img">
+
+          <img class="" src="./../assets/imagenes/services/fitosanitarios/importancia-tratamiento-fitosanitario.webp"
+            alt="Trabajo de poda de árboles" />
+          <img class="" src="./../assets/imagenes/services/fitosanitarios/tratamiento-fitosanitario-planta.webp"
+            alt="Brote nuevo tras la poda" />
+
+
+        </div>
+        <div class="trabajamos-text" data-aos="fade-left" data-aos-delay="400">
           <h2>¿Por qué son importantes los tratamientos fitosanitarios?</h2>
           <p>
             Los tratamientos fitosanitarios son esenciales para mantener la salud de nuestras plantas
@@ -60,15 +107,7 @@
             productos fitosanitarios permiten controlar eficazmente estos problemas y preservar el
             valor ornamental, ambiental y económico de nuestras zonas verdes.
           </p>
-          <p>
-            En Turia Jardín conocemos a fondo las plagas y enfermedades más comunes en Valencia,
-            como el <strong>picudo rojo</strong>, la <strong>cochinilla</strong>, la
-            <strong>oruga procesionaria</strong>, los <strong>pulgones</strong>, la
-            <strong>araña roja</strong>, el <strong>hongo de la yesca</strong> o el
-            <strong>oidio</strong>. Aplicamos tratamientos específicos para cada caso,
-            utilizando productos de última generación y aplicando las técnicas más avanzadas
-            para garantizar la máxima eficacia.
-          </p>
+
           <p>
             Además, en Turia Jardín apostamos por la lucha integrada y el uso responsable de
             productos fitosanitarios, priorizando siempre aquellos que minimizan el impacto
@@ -87,79 +126,146 @@
           </ul>
         </div>
 
-        <div class="trabajamos-img">
-          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Aplicación de tratamiento fitosanitario" />
-        </div>
+
       </div>
 
-      <!-- CARDS DE VENTAJAS -->
-      <div class="ventajas">
-        <div class="service-card">
+
+
+
+      <!-- ===== VENTAJAS =====  <div class="ventajas-grid">
+        <div class="ventaja-card reveal-fade">
+          <div class="ventaja-icon">🎨</div>
           <h3>Diagnóstico preciso</h3>
           <p>Identificamos la plaga o enfermedad para aplicar el tratamiento adecuado.</p>
         </div>
-        <div class="service-card">
+        <div class="ventaja-card reveal-fade">
+          <div class="ventaja-icon">🌱</div>
           <h3>Productos eficaces</h3>
           <p>Utilizamos fitosanitarios de última generación y alta eficacia.</p>
         </div>
-        <div class="service-card">
+        <div class="ventaja-card reveal-fade">
+          <div class="ventaja-icon">👷</div>
           <h3>Respeto ambiental</h3>
           <p>Apostamos por la lucha integrada y productos respetuosos.</p>
         </div>
-        <div class="service-card">
+        <div class="ventaja-card reveal-fade">
+          <div class="ventaja-icon">🔄</div>
           <h3>Seguimiento</h3>
           <p>Controlamos la evolución y garantizamos los resultados.</p>
         </div>
-      </div>
+      </div> -->
 
-      <!-- PROCESO EN PASOS -->
-      <h2>Nuestro proceso de trabajo</h2>
-      <div class="proceso-pasos">
-        <div class="paso">1. Inspección</div>
-        <div class="paso-flecha">→</div>
-        <div class="paso">2. Diagnóstico</div>
-        <div class="paso-flecha">→</div>
-        <div class="paso">3. Tratamiento</div>
-        <div class="paso-flecha">→</div>
-        <div class="paso">4. Seguimiento</div>
-        <div class="paso-flecha">→</div>
-        <div class="paso">5. Prevención</div>
-      </div>
     </section>
+    <section class="descripcion2">
 
+
+
+
+      <div class="trabajamos ">
+
+
+        <div class="trabajamos-text" data-aos="fade-right" data-aos-delay="100">
+
+
+          <p>
+            En Turia Jardín conocemos a fondo las plagas y enfermedades más comunes en la cuenca Mediterránea,
+            como el <strong>picudo rojo</strong>, la <strong>cochinilla</strong>, la
+            <strong>oruga procesionaria</strong>, los <strong>pulgones</strong>, la
+            <strong>araña roja</strong>, la <strong>seca del Ciprés (Phytophthora)</strong> o el
+            <strong>oidio</strong>. Aplicamos tratamientos específicos para cada caso,
+            utilizando productos de última generación y aplicando las técnicas más avanzadas
+            para garantizar la máxima eficacia.
+          </p>
+
+
+        </div>
+
+        <div class="trabajamos-img">
+
+
+
+          <img class="" src="./../assets/imagenes/services/fitosanitarios/picudo-rojo.jpg"
+            alt="Brote nuevo tras la poda" />
+
+        </div>
+      </div>
+
+
+
+    </section>
     <!-- PROCESO FOTOS -->
     <section class="proceso-fotos">
-      <h2>Así aplicamos nuestros tratamientos</h2>
+      <div class="section-header reveal-fade">
+        <h2>Así aplicamos nuestros<span style="color:var(--accent);"> tratamientos</span> </h2>
+        <div class="section-header-subtitle">
+          <span class="subtitle-line"></span>
+          <p>De la idea a la realidad, paso a paso</p>
+          <span class="subtitle-line"></span>
+        </div>
+      </div>
 
       <div class="proceso-grid">
         <article class="proceso-card">
-          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Inspección fitosanitaria" />
+          <div class="proceso-icon-wrap">
+            <svg class="proceso-icon" viewBox="0 0 24 24">
+              <circle cx="10" cy="10" r="6.5" />
+              <line x1="15" y1="15" x2="21" y2="21" stroke-linecap="round" />
+            </svg>
+            <span class="proceso-step">01</span>
+          </div>
+
           <h3>Inspección</h3>
           <p>Examinamos la planta para detectar plagas o enfermedades.</p>
         </article>
         <article class="proceso-card">
-          <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Preparación del producto" />
+          <div class="proceso-icon-wrap">
+            <svg class="proceso-icon" viewBox="0 0 24 24">
+              <path d="M9 2h6" stroke-linecap="round" />
+              <path d="M10 2v6l-5.5 9.5A2 2 0 0 0 6.2 20.5h11.6a2 2 0 0 0 1.7-3L14 8V2" stroke-linejoin="round" />
+              <line x1="7.5" y1="15" x2="16.5" y2="15" />
+            </svg>
+            <span class="proceso-step">02</span>
+          </div>
+
           <h3>Preparación</h3>
           <p>Seleccionamos y preparamos el producto adecuado para cada caso.</p>
         </article>
         <article class="proceso-card">
-          <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Aplicación del tratamiento" />
+          <div class="proceso-icon-wrap">
+            <svg class="proceso-icon" viewBox="0 0 24 24">
+              <path d="M5 21V9a3 3 0 0 1 3-3h2V4a1 1 0 0 1 1-1h2" stroke-linecap="round" stroke-linejoin="round" />
+              <rect x="4" y="9" width="7" height="12" rx="1.5" />
+              <line x1="14" y1="5" x2="19" y2="3" stroke-linecap="round" />
+              <line x1="15" y1="8" x2="20.5" y2="7" stroke-linecap="round" />
+              <line x1="14.5" y1="11.5" x2="20" y2="11.5" stroke-linecap="round" />
+            </svg>
+            <span class="proceso-step">03</span>
+          </div>
+
           <h3>Aplicación</h3>
           <p>Realizamos la aplicación con equipos profesionales y seguros.</p>
         </article>
         <article class="proceso-card">
-          <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Seguimiento del tratamiento" />
+          <div class="proceso-icon-wrap">
+            <svg class="proceso-icon" viewBox="0 0 24 24">
+              <path d="M4 19V5" stroke-linecap="round" />
+              <path d="M4 19h16" stroke-linecap="round" />
+              <path d="M7 15l3.5-4 3 3L19 7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="proceso-step">04</span>
+          </div>
+
           <h3>Seguimiento</h3>
           <p>Monitorizamos la evolución y aseguramos la eficacia del tratamiento.</p>
         </article>
       </div>
     </section>
 
-    <!-- STACK SLIDERS -->
+    <!-- STACK SLIDERS 
     <div class="trabajos">
       <h1>Algunos de nuestros trabajos</h1>
-
-      <!-- SLIDER 1 -->
+-->
+    <!-- SLIDER 1
       <section class="stack-slider">
         <button class="nav prev" aria-label="Anterior">‹</button>
 
@@ -189,9 +295,24 @@
 
       <a href="../proyectos.html" class="btn">Ver todos nuestros proyectos</a>
     </div>
-
+ -->
     <!-- CTA -->
-    <div id="cta-container"></div>
+
+    <section class="micro-cta-section">
+      <div class="micro-cta-container">
+        <h2 class="micro-cta-title">¿Tus plantas muestran signos de plagas o enfermedades?</h2>
+        <p class="micro-cta-text">
+          Protege tus árboles, arbustos y jardines con tratamientos fitosanitarios profesionales. Presupuesto gratuito y
+          sin compromiso.
+        </p>
+        <div class="micro-cta-actions">
+          <a href="mailto:danielturiajardin@gmail.com" class="btn-primary">Solicitar presupuesto</a>
+          <a href="tel:+34652824652" class="btn-secondary">
+            <span class="phone-icon">📞</span> Llamar ahora
+          </a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -201,40 +322,18 @@
   <!-- FOOTER -->
   <div id="footer-container"></div>
 
-  <!-- JS DEL SLIDER -->
-  <script>
-    document.querySelectorAll('.stack-slider').forEach(slider => {
-      const cards = slider.querySelectorAll('.stack-card');
-      const nextBtn = slider.querySelector('.next');
-      const prevBtn = slider.querySelector('.prev');
 
-      if (!cards.length || !nextBtn || !prevBtn) return;
-
-      let index = 0;
-
-      function show(i) {
-        cards.forEach((card, idx) => {
-          card.classList.remove('active');
-          if (idx === i) card.classList.add('active');
-        });
-      }
-
-      nextBtn.addEventListener('click', () => {
-        index = (index + 1) % cards.length;
-        show(index);
-      });
-
-      prevBtn.addEventListener('click', () => {
-        index = (index - 1 + cards.length) % cards.length;
-        show(index);
-      });
-
-      show(index);
-    });
-  </script>
 
   <!-- main.js como módulo -->
-  <script type="module" src="./../js/main.js"></script>
+  <script type="module" src="./../js/services.js" defer></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1500, // Duración de la animación en milisegundos (1 segundo)
+      once: true      // Solo anima una vez, aunque subas y bajes el scroll
+    });
+  </script>
 </body>
 
 </html>

@@ -11,14 +11,18 @@ import { initCTAs } from './modules/ctas.js';
 import { initTheme } from './modules/theme.js';
 import { initMagneticButtons } from './modules/magneticButtons.js';
 import { initGsapAnimations } from './modules/gsapAnimations.js';
-import { initParallaxHero } from './modules/parallaxHero.js';
-import { initBeforeAfterSplit } from './modules/beforeAfterSplit.js';
+import { initParallaxHero,// initParallaxServicesAAV
+   } from './modules/parallaxHero.js';
+import { initBeforeAfterLazy, initBeforeAfterResize
+   } from './modules/beforeAfterSplit.js';
 import { initSwipers } from './modules/swipers.js';
 import { initScrollTop } from './modules/scrollTop.js';
 import { initContactForm } from './modules/contactForm.js';
 import { initFaq } from './modules/faq.js';
 import { loadComponent } from './modules/loadComponents.js';
 import { safeInit } from './modules/safeInit.js';
+import { initTextRotator } from './modules/textRotator.js';
+import { initReviewsGoogle } from './modules/reviewsGoogle..js';
 
 // Registrar ScrollTrigger si existe
 if (
@@ -59,7 +63,9 @@ async function initApp() {
 
    safeInit(initPreloader, 'preloader');
 safeInit(initProgressBar, 'progressBar');
-safeInit(initTypewriter, 'typewriter');
+safeInit(initTextRotator, 'textRotator');
+//safeInit(initTypewriter, 'typewriter');
+safeInit(initReviewsGoogle, 'reviewsGoogle');
 safeInit(initReveal, 'reveal');
 safeInit(initCounters, 'counters');
 safeInit(initLightbox, 'lightbox');
@@ -72,16 +78,19 @@ safeInit(initModal, 'modal');
 safeInit(initCTAs, 'ctas');
 safeInit(initMagneticButtons, 'magneticButtons');
 
-safeInit(initGsapAnimations, 'gsapAnimations');
+//safeInit(initGsapAnimations, 'gsapAnimations');
 safeInit(initParallaxHero, 'parallaxHero');
+//safeInit(initParallaxServicesAAV, 'parallaxServicesAAV');
 
-safeInit(initBeforeAfterSplit, 'beforeAfterSplit');
+safeInit(initBeforeAfterLazy, 'beforeAfterLazy');
+safeInit(initBeforeAfterResize, 'beforeAfterResize');
 safeInit(initSwipers, 'swipers');
 
 safeInit(initScrollTop, 'scrollTop');
 
 safeInit(initContactForm, 'contactForm');
 safeInit(initFaq, 'faq');
+
 
   } catch (error) {
     console.error('Error inicializando la aplicación:', error);
@@ -91,6 +100,8 @@ safeInit(initFaq, 'faq');
 document.addEventListener('DOMContentLoaded', initApp);
 
 // Refrescar ScrollTrigger cuando todo esté cargado
+
+/** */
 window.addEventListener('load', () => {
   if (typeof ScrollTrigger !== 'undefined') {
     ScrollTrigger.refresh();

@@ -1,0 +1,437 @@
+
+/* ============================================================
+   SECCIÓN DE CLIENTES - ESTILO PREMIUM
+   ============================================================ */
+/* ===== CLIENTES (Fondo blanco puro) ===== */
+
+
+
+
+.clients-section {
+  /*  background: 
+       var(--bg-primary);*/ 
+   
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+
+/* ============================================================
+   HEADER DE CLIENTES
+   ============================================================ */
+
+.clients-header {
+    text-align:left;
+    margin-bottom: 10rem;
+    
+   
+}
+
+.clients-header .section-badge {
+    display: inline-block;
+    background: rgba(26, 61, 46, 0.08);
+   
+    border-radius: 50px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 600;
+    border: 1px solid rgba(26, 61, 46, 0.08);
+    margin-bottom: 0.75rem;
+}
+
+.clients-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+     color: var(--text-primary);
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.clients-header h2 span {
+    color: var(--accent);
+    position: relative;
+}
+
+
+
+.clients-header .clients-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.5rem auto 1.2rem;
+    max-width: 200px;
+}
+
+.clients-header .clients-divider .line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent));
+    opacity: 0.3;
+    border-radius: 2px;
+}
+
+.clients-header .clients-divider .line:last-child {
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.clients-header .clients-divider .icon {
+    font-size: 1.2rem;
+    opacity: 0.5;
+    animation: pulse-leaf 3s ease-in-out infinite;
+}
+
+.clients-header p {
+    max-width: 600px;
+    text-align: left;
+   font-weight: bold;
+    font-size: 2.5rem;
+   color: var(--text-sub);
+    line-height: 1.7;
+}
+
+/* ============================================================
+   SWIPER DE CLIENTES
+   ============================================================ */
+
+.clients-swiper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0 3rem;
+    position: relative;
+}
+
+/* ============================================================
+   SLIDES DE LOGOS
+   ============================================================ */
+
+.clients-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background:transparent;
+   
+   
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 120px;
+    min-height: 100px;
+}
+
+.clients-swiper .swiper-slide:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border-color: rgba(26, 61, 46, 0.08);
+}
+
+/* ===== LOGOS ===== */
+.clients-swiper .swiper-slide img {
+    
+    max-height: 120px;
+   
+   
+ 
+  
+   
+
+        width:100%;
+
+    max-width:200px;
+
+    height:auto;
+
+    object-fit:contain;
+}
+
+.clients-swiper .swiper-slide:hover img {
+    filter: grayscale(0) brightness(1);
+   
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   PAGINACIÓN DE CLIENTES
+   ============================================================ */
+
+.clients-swiper .clients-pagination {
+    bottom: 0 !important;
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.clients-swiper .clients-pagination .swiper-pagination-bullet {
+      width: 6px;
+    height: 6px;
+    opacity: 0.3;
+    background: #d1d9d4;
+   
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.clients-swiper .clients-pagination .swiper-pagination-bullet-active {
+    background: var(--accent);
+    width: 28px;
+    border-radius: 5px;
+     opacity: 1;
+    transform: scale(1.2);
+}
+/* ============================================================
+   RESPONSIVE CLIENTS SECTION
+   ============================================================ */
+
+
+/* Tablet grande */
+@media (max-width:1200px){
+
+    .clients-header{
+        margin-bottom:6rem;
+    }
+
+
+    .clients-header p{
+
+        font-size:2rem;
+
+    }
+
+
+    .clients-swiper{
+
+        max-width:900px;
+
+    }
+
+
+    .clients-swiper .swiper-slide img{
+
+        max-width:160px;
+        max-height:90px;
+
+    }
+
+}
+
+
+
+/* Tablet */
+@media(max-width:992px){
+
+
+    .clients-header{
+
+        margin-bottom:4rem;
+
+    }
+
+
+    .clients-header p{
+
+        font-size:1.8rem;
+
+        max-width:90%;
+
+    }
+
+
+
+    .clients-swiper{
+
+        padding:1rem 0 2.5rem;
+
+    }
+
+
+
+    .clients-swiper .swiper-slide{
+
+        height:110px;
+
+        padding:1rem;
+
+    }
+
+
+
+    .clients-swiper .swiper-slide img{
+
+        max-width:140px;
+
+        max-height:80px;
+
+    }
+
+}
+
+
+
+
+/* Móvil */
+@media(max-width:768px){
+
+
+    .clients-section{
+
+        padding:2.5rem 1rem;
+
+    }
+
+
+
+    .clients-header{
+
+        text-align:center;
+
+        margin-bottom:3rem;
+
+    }
+
+
+
+    .clients-header p{
+
+        text-align:center;
+
+        font-size:1.4rem;
+
+        line-height:1.4;
+
+        max-width:100%;
+
+        margin:auto;
+
+    }
+
+
+
+    .clients-swiper{
+
+        width:100%;
+
+        padding:
+        .5rem 0 2.5rem;
+
+    }
+
+
+
+    .clients-swiper .swiper-slide{
+
+        height:90px;
+
+        min-height:90px;
+
+        padding:.8rem;
+
+    }
+
+
+
+    .clients-swiper .swiper-slide img{
+
+        max-width:110px;
+
+        max-height:55px;
+
+    }
+
+
+
+    .clients-swiper .clients-pagination{
+
+        margin-top:1rem;
+
+    }
+
+
+}
+
+
+
+
+/* Móvil pequeño */
+@media(max-width:480px){
+
+
+    .clients-section{
+
+        padding:2rem .8rem;
+
+    }
+
+
+
+    .clients-header p{
+
+        font-size:1.15rem;
+
+    }
+
+
+
+    .clients-swiper .swiper-slide{
+
+        height:75px;
+
+        min-height:75px;
+
+        padding:.5rem;
+
+    }
+
+
+
+    .clients-swiper .swiper-slide img{
+
+        max-width:90px;
+
+        max-height:45px;
+
+    }
+
+
+
+    .clients-swiper .clients-pagination .swiper-pagination-bullet{
+
+        width:6px;
+
+        height:6px;
+
+    }
+
+
+    .clients-swiper .clients-pagination .swiper-pagination-bullet-active{
+
+        width:18px;
+
+    }
+
+}
+
+
+
+/* Móviles muy pequeños */
+@media(max-width:360px){
+
+
+    .clients-header p{
+
+        font-size:1rem;
+
+    }
+
+
+    .clients-swiper .swiper-slide img{
+
+        max-width:75px;
+
+    }
+
+
+}
+

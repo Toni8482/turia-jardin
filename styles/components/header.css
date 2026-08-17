@@ -1,0 +1,756 @@
+
+/* barra superior fija siempre visible */
+.header {
+  position: fixed; /* se queda pegado arriba al hacer scroll */
+  top: 0;
+  width: 100%; /* ocupa todo el ancho */
+  
+  display: flex; /* layout flexible */
+  justify-content: space-between; /* logo izquierda, menú derecha */
+  align-items: center; /* centra verticalmente */
+
+  padding: 1rem 3rem; /* espacio interno */
+  
+  backdrop-filter: blur(14px); /* efecto cristal */
+  background: var(--header-bg); /* color semitransparente */
+
+  border-bottom: 1px solid var(--border-color); /* línea inferior sutil */
+
+  z-index: 1100; /* se pone por encima de todo */
+
+  transition: padding 0.3s ease; /* animación cuando cambia tamaño */
+}
+
+/* estado cuando haces scroll (JS añade esta clase) */
+.header.scrolled {
+  padding: 0.6rem 3rem; /* header más pequeño al bajar */
+}
+.header.scrolled .logo img{
+width:175px;
+}
+
+/* =========================
+   🪪 LOGO
+   ========================= */
+
+.logo {
+  font-family: "Cormorant Garamond", serif; /* estilo elegante */
+  font-size: 1.7rem;
+  font-weight: 700;
+
+  /* texto con degradado */
+  background: var(--gradient-title);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* necesario para que se vea el gradiente */
+  padding-left: 2rem;
+}
+.logo img{
+    width:200px;
+    height:auto;
+    display:block;
+    transition:  0.3s ease; /* animación cuando cambia tamaño */
+}
+/* =========================
+   🔗 MENÚ DE NAVEGACIÓN
+   ========================= */
+
+.div-nav{
+display: flex;
+}
+
+
+.nav-links {
+  display: flex; /* enlaces en fila */
+  gap: 4rem; /* separación entre links */
+  align-items: center;
+}
+
+/* enlaces individuales */
+.nav-links a {
+  text-decoration: none; /* quita subrayado */
+  color: var(--text-secondary);
+  font-weight: 600;
+font-size: larger;
+  transition: color 0.2s; /* hover suave */
+
+  position: relative; /* necesario para la línea animada */
+  font-family: "Source Sans Pro", sans-serif;
+}
+.nav-links li {
+ 
+  list-style:none;
+
+ position: relative;
+}
+
+.submenu {
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: var(--header-bg);
+  min-width: 190px;
+  padding: 9px 0;
+  list-style: none;
+
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+   opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0s linear 0.3s;
+}
+
+
+.has-submenu > a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.has-submenu > a i {
+    font-size: 12px;
+    transition: transform .25s ease;
+     position: relative;
+    top: 2px; /* Baja la flecha */
+}
+
+.has-submenu:hover > a i {
+    transform: rotate(180deg);
+}
+
+
+
+.submenu li a {
+  display: block;
+  width: 100%;
+
+  padding: 12px 18px;
+
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size:medium;
+}
+/* Mostrar submenu */
+.has-submenu:hover .submenu {
+  
+  
+opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+
+  transition-delay: 0s;
+
+
+}
+.submenu li a:hover {
+  background: var(--submenu-hover-bg)!important;
+}
+
+/* línea animada debajo del enlace */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+
+  width: 0; /* empieza invisible */
+  height: 2px;
+
+  background: var(--accent-light);
+
+  transition: width 0.3s ease; /* animación de expansión */
+}
+
+/* al pasar el ratón aparece la línea */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+   🌙 BOTÓN TEMA (LIGHT/DARK)
+   ========================= */
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  color: var(--text-primary);
+}
+
+
+/* =========================
+   🍔 MENÚ MÓVIL (ICONO HAMBURGUESA)
+   ========================= */
+
+.menu-icon {
+  display: none; /* oculto en desktop */
+  font-size: 1.8rem;
+  cursor: pointer;
+
+  background: none;
+  border: none;
+  color: var(--text-primary);
+}
+
+
+/* ============================================================
+   ACCIONES DEL HEADER (Teléfono + Tema)
+   ============================================================ */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-shrink: 0;
+}
+
+/* 📞 Teléfono */
+.header-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    background: var(--bg-secondary);
+}
+
+.header-phone:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(125, 150, 98, 0.3);
+}
+
+.header-phone .phone-icon {
+    flex-shrink: 0;
+}
+
+
+.theme-toggle svg{
+    width:22px;
+    height:22px;
+    display:block;
+
+}
+
+
+
+
+
+
+.theme-switch__label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    width: 58px;
+    height: 25px;
+    border-radius: 50px;
+    text-align: center;
+    background: linear-gradient(to left, var(--accent), var(--clr-40));
+    box-shadow: inset -4px 4px 15px rgba(0, 0, 0, .4);
+}
+
+/* Ocultar el checkbox */
+.theme-switch__input {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+/* Icono de la luna (modo oscuro) */
+.theme-switch__label::before {
+    content: "☼";
+    position: absolute;
+    right: 100%;
+    margin-right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    font-size: 20px;
+
+    
+}
+
+/* Icono del sol (modo claro) */
+.theme-switch__label::after {
+    content: "☾";
+    position: absolute;
+    left: 100%;
+    margin-left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    font-size: 20px;
+}
+
+/* Contenedor del botón deslizante */
+.theme-switch__label span {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+}
+
+/* Botón deslizante (el círculo) */
+.theme-switch__label span::after {
+    position: absolute;
+    top: calc(100% + 11px);
+    left: 4px;
+    width: 22px;
+    height: 22px;
+    content: "";
+    border-radius: 50%;
+    background-color: #fdf6e3;
+    transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+    box-shadow: -3px 3px 8px rgba(0, 0, 0, .4);
+}
+
+/* Estado: Modo oscuro activado */
+.theme-switch__input:checked ~ .theme-switch__label span::after {
+    transform: translate3d(27px, 0, 0);
+}
+
+/* Efecto hover para mejor UX */
+.theme-switch__label:hover {
+    opacity: .85;
+}
+
+/* Enfoque para accesibilidad */
+.theme-switch__input:focus-visible + .theme-switch__label {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 50px;
+}
+
+/* Modo oscuro - cambiar colores del botón */
+.theme-switch__input:checked ~ .theme-switch__label {
+    background: linear-gradient(to right, var(--accent), var(--clr-40));
+}
+
+/* Animación suave para el fondo */
+.theme-switch__label,
+.theme-switch__label span::after {
+    transition: all .2s ease-in-out;
+}
+
+
+
+.theme-mobile-item {
+    display: none;
+}
+
+
+
+
+
+
+
+/* =========================
+   TABLET 1200px
+   ========================= */
+
+
+@media(max-width:1200px){
+
+
+.header {
+
+    padding:.9rem 2rem;
+
+}
+
+
+.header.scrolled {
+
+    padding:.6rem 2rem;
+
+}
+
+
+.logo img {
+
+    width:160px;
+
+}
+
+
+.nav-links {
+
+    gap:2rem;
+
+}
+
+
+.nav-links a {
+
+    font-size:1rem;
+
+}
+
+
+.header-actions {
+
+    gap:2.5rem;
+
+}
+
+
+}
+
+
+
+/* =========================
+   TABLET 992px
+   ========================= */
+
+
+@media(max-width:992px){
+
+
+.logo img {
+
+    width:145px;
+
+}
+
+
+
+.nav-links {
+
+    gap:1.2rem;
+
+}
+
+
+.nav-links a {
+
+    font-size:.95rem;
+
+}
+
+
+
+.header-phone span {
+
+    display:none;
+
+}
+
+
+
+.header-phone {
+
+    width:42px;
+
+    height:42px;
+
+    justify-content:center;
+
+    padding:0;
+
+}
+
+
+}
+
+
+
+/* =========================
+   MOVIL 768px
+   ========================= */
+
+
+@media(max-width:768px){
+
+
+.header {
+
+    padding:.8rem 1rem;
+
+}
+
+
+
+.logo img {
+
+    width:130px;
+
+}
+
+
+
+.menu-icon {
+
+    display:flex;
+
+}
+
+
+
+.header-actions {
+
+    display:none;
+
+}
+
+
+
+/* MENU */
+
+.nav-links {
+
+
+    position:absolute;
+
+
+    top:100%;
+
+    left:0;
+
+
+    width:100%;
+
+
+    flex-direction:column;
+
+
+    gap:0;
+
+
+    background:var(--header-bg);
+
+
+    border-top:1px solid var(--border-color);
+
+
+
+    max-height:0;
+
+    overflow:hidden;
+
+
+    opacity:0;
+
+    transform:translateY(-10px);
+
+
+    transition:
+
+        max-height .35s ease,
+
+        opacity .25s ease,
+
+        transform .25s ease;
+
+}
+
+
+
+.nav-links.active {
+
+
+    max-height:calc(100vh - 80px);
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+}
+
+
+
+.nav-links li {
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+
+.nav-links li:not(:last-child){
+
+    border-bottom:1px solid var(--border-color);
+
+}
+
+
+
+.nav-links a {
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    padding:0.4rem;
+
+
+    font-size:1rem;
+
+}
+
+
+
+/* SUBMENU MOVIL */
+
+
+.submenu {
+
+
+    position:relative;
+
+
+    top:0;
+
+    left:0;
+
+
+    width:100%;
+
+
+    max-height:0;
+
+
+    overflow:hidden;
+
+
+    box-shadow:none;
+
+    border-radius:0;
+
+
+  
+
+
+    opacity:1;
+
+    visibility:visible;
+
+
+    transform:none;
+
+
+    transition:max-height .3s ease;
+
+}
+
+
+
+.has-submenu.open .submenu {
+
+    max-height:500px;
+
+}
+
+
+
+.submenu li a {
+
+
+    padding-left:2.5rem;
+
+
+    font-size:.95rem;
+
+}
+
+
+
+/* ocultar switch desktop */
+
+.div-light {
+
+    display:none;
+
+}
+
+
+
+/* tema movil */
+
+.theme-mobile-item {
+
+
+    display:block;
+
+
+    border-top:1px solid var(--border-color);
+
+
+}
+
+
+
+.theme-mobile-btn {
+
+
+    width:100%;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    gap:.8rem;
+
+
+    padding:1rem;
+
+
+    background:none;
+
+    border:none;
+
+
+    color:var(--text-primary);
+
+
+    font-size:1rem;
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+}
+
+
+
+.theme-mobile-btn i {
+
+    color:var(--accent);
+
+}
+
+
+}

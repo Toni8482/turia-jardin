@@ -1,0 +1,321 @@
+
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+/* ---------- 1024px ---------- */
+@media (max-width: 1024px) {
+
+    .trabajamos{
+        padding:35px;
+        gap:35px;
+    }
+
+    .ventajas-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .proceso-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:1.5rem;
+    }
+
+}
+
+
+/* ---------- 992px ---------- */
+@media (max-width:992px){
+
+    .descripcion-grid{
+        grid-template-columns:1fr;
+        gap:2rem;
+    }
+
+    .descripcion-img img{
+        height:300px;
+    }
+
+    .descripcion-badge{
+        bottom:-15px;
+        right:20px;
+        padding:1rem 1.5rem;
+    }
+
+    .descripcion-badge .badge-number{
+        font-size:1.6rem;
+    }
+
+}
+
+
+/* ---------- 850px ---------- */
+@media (max-width:850px){
+
+    .trabajamos{
+        grid-template-columns:1fr;
+        padding:30px;
+        gap:30px;
+    }
+
+    .trabajamos-text ul{
+        grid-template-columns:1fr;
+    }
+
+    .trabajamos-img{
+        aspect-ratio:4/3;
+        order:-1;
+    }
+
+    .ventajas{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .proceso-pasos{
+        padding:20px 16px;
+        gap:.4rem;
+        border-radius:30px;
+    }
+
+    .paso-flecha{
+        display:none;
+    }
+
+}
+
+
+/* ---------- 768px ---------- */
+@media (max-width:768px){
+
+    .hero-services{
+        padding:40px 20px;
+    }
+
+    .titulo h1{
+        font-size:2.2rem;
+    }
+
+    .subtitulo,
+    .trabajamos{
+        flex-direction:column;
+        gap:2rem;
+    }
+
+    .descripcion,
+    .proceso-fotos,
+    .trabajos,
+    .cta,
+    .descripcion-servicio{
+        padding:3rem 20px;
+    }
+
+    .section-header h2,
+    .proceso-fotos .section-header h2{
+        font-size:2.2rem;
+    }
+
+    .section-header-subtitle p{
+        font-size:.9rem;
+        white-space:normal;
+    }
+
+    .ventajas,
+    .ventajas-grid,
+    .proceso-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:1rem;
+    }
+
+    .ventaja-card{
+        padding:1.5rem 1rem;
+    }
+
+    .descripcion-text h3{
+        font-size:1.5rem;
+    }
+
+    .subtitulo-img img{
+        height:350px;
+    }
+
+    .stack{
+        height:450px;
+    }
+
+    .stack-card img{
+        height:250px;
+    }
+
+    .proceso-card{
+        border-radius:12px;
+    }
+
+    .proceso-card h3{
+        font-size:1rem;
+    }
+
+    .proceso-card p{
+        font-size:.8rem;
+    }
+
+    .proceso-step{
+        font-size:.6rem;
+    }
+
+}
+
+
+/* ---------- 480px ---------- */
+@media (max-width:480px){
+
+    .descripcion{
+        padding:40px 16px;
+    }
+
+    .trabajamos{
+        padding:20px 16px;
+        border-radius:16px;
+    }
+
+    .trabajamos-text h2{
+        font-size:1.3rem;
+    }
+
+    .trabajamos-text li{
+        font-size:.9rem;
+    }
+
+    .trabajamos-img{
+        aspect-ratio:4/3;
+    }
+
+    .ventajas,
+    .ventajas-grid{
+        grid-template-columns:1fr;
+        max-width:320px;
+        margin:auto;
+    }
+
+    .service-card{
+        padding:24px 18px;
+    }
+
+    .ventaja-card{
+        padding:1.2rem;
+    }
+
+    .ventaja-icon{
+        font-size:2rem;
+    }
+
+    .ventaja-card h3{
+        font-size:1.1rem;
+    }
+
+    .descripcion-grid{
+        gap:1.5rem;
+    }
+
+    .descripcion-text p{
+        font-size:.9rem;
+    }
+
+    .descripcion-lista{
+        padding:1rem 1.2rem;
+    }
+
+    .descripcion-lista li{
+        font-size:.85rem;
+    }
+
+    .descripcion-img img{
+        height:220px;
+    }
+
+    .descripcion-badge{
+        bottom:-10px;
+        right:10px;
+        padding:.8rem 1.2rem;
+    }
+
+    .descripcion-badge .badge-number{
+        font-size:1.3rem;
+    }
+
+    .descripcion-badge .badge-label{
+        font-size:.6rem;
+    }
+
+    .proceso-pasos{
+        padding:16px 12px;
+        border-radius:20px;
+    }
+
+    .paso{
+        font-size:.75rem;
+        padding:8px 14px;
+    }
+
+    .proceso-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:.8rem;
+    }
+
+    .proceso-card{
+        border-radius:10px;
+    }
+
+    .proceso-card h3{
+        font-size:.85rem;
+    }
+
+    .proceso-card p{
+        font-size:.7rem;
+    }
+
+    .proceso-step{
+        font-size:.5rem;
+    }
+
+}
+
+
+/* ---------- 360px ---------- */
+@media (max-width:360px){
+
+    .proceso-grid{
+        gap:.6rem;
+    }
+
+    .proceso-card h3{
+        font-size:.75rem;
+    }
+
+    .proceso-card p{
+        font-size:.65rem;
+    }
+
+    .proceso-step{
+        font-size:.45rem;
+    }
+
+}
+
+
+/* ---------- Accesibilidad ---------- */
+
+@media (prefers-reduced-motion:reduce){
+
+    .trabajamos-img img,
+    .service-card,
+    .paso{
+        transition:none;
+    }
+
+    .trabajamos-img:hover img,
+    .service-card:hover{
+        transform:none;
+    }
+
+}
