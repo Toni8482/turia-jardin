@@ -25,7 +25,9 @@
 .header.scrolled {
   padding: 0.6rem 3rem; /* header más pequeño al bajar */
 }
-
+.header.scrolled .logo img{
+width:175px;
+}
 
 /* =========================
    🪪 LOGO
@@ -44,9 +46,10 @@
   padding-left: 2rem;
 }
 .logo img{
-    width:180px;
+    width:200px;
     height:auto;
     display:block;
+    transition:  0.3s ease; /* animación cuando cambia tamaño */
 }
 /* =========================
    🔗 MENÚ DE NAVEGACIÓN

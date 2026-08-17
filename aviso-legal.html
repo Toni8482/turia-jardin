@@ -7,7 +7,30 @@
     <title>Aviso Legal | Turia Jardín</title>
     
     <link rel="preload" as="image" href="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg">
+      <link rel="stylesheet" type="text/css" href="./styles/variables.css">
+    <link rel="stylesheet" type="text/css" href="./styles/base.css">
+    <link rel="stylesheet" type="text/css" href="./styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="./styles/pages/home.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/header.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/footer.css">
+    <link rel="stylesheet" type="text/css" href="./styles/sections.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components.css">
     
+    <link rel="stylesheet" type="text/css" href="./styles/components/about.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/beforeAfter.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/btn.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/clients.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/counter.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/dividerLine.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/faq.css">
+
+    <link rel="stylesheet" type="text/css" href="./styles/components/serviceCard.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/testimonials.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/gallery.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/btnWhatsApp.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/btnScroll.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/modal.css">
+    <link rel="stylesheet" type="text/css" href="./styles/components/features.css">
     <style>
         /* ===== RESET Y BASE ===== */
         * {
@@ -18,7 +41,7 @@
 
         body {
             font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
+          
             color: #2d2d2d;
             line-height: 1.7;
             padding: 0;
@@ -34,15 +57,7 @@
             overflow: hidden;
         }
 
-        .legal-header::after {
-            content: '🌿';
-            position: absolute;
-            right: -50px;
-            bottom: -50px;
-            font-size: 200px;
-            opacity: 0.1;
-            transform: rotate(-15deg);
-        }
+      
 
         .legal-header h1 {
             font-family: 'Cormorant Garamond', serif;
@@ -236,16 +251,12 @@
     </style>
 </head>
 <body>
-
+ <div id="header-container"></div>
     <!-- ===== HEADER ===== -->
     <header class="legal-header">
         <h1>📄 Aviso Legal</h1>
         <p class="subtitle">Información legal y condiciones de uso de Turia Jardín</p>
-        <div class="breadcrumb">
-            <a href="/">Inicio</a>
-            <span class="separator">›</span>
-            <span>Aviso Legal</span>
-        </div>
+       
     </header>
 
     <!-- ===== CONTENIDO ===== -->
@@ -313,16 +324,10 @@
     </div>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="legal-footer">
-        <p>
-            © 2026 Turia Jardín - Todos los derechos reservados
-        </p>
-        <p style="margin-top: 10px;">
-            <a href="/aviso-legal">Aviso Legal</a> |
-            <a href="/politica-privacidad">Política de Privacidad</a> |
-            <a href="/#contact">Contacto</a>
-        </p>
-    </footer>
+   
+    <div id="footer-container"></div>
+  <!-- Nuestro main.js como módulo -->
+    <script type="module" src="./js/main.js"></script>
 
 </body>
 </html>
