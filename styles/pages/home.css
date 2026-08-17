@@ -1,18 +1,23 @@
 /* =========================
    🌄 HERO (PRIMERA PANTALLA)
    ========================= */
+/*
 
 @font-face {
     font-family: MyCustomFontName;
     src: url("../fonts/CaviarDreams.ttf");
 }
 
+
+*/
+
+
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: MyCustomFontName;
+  /*  font-family: MyCustomFontName;*/
       overflow: hidden;  
 }
 

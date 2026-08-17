@@ -583,10 +583,60 @@
     }
 }
 
+
+
+
+
 /* ======================================================
-   RESPONSIVE
+   UTILIDADES
 ====================================================== */
+#reviews-summary:empty {
+    display: none;
+}
+
+.reviews-section {
+    scroll-margin-top: 2rem;
+}
+
+.testimonial-card:focus-visible {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+}
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* ---------- TABLET / PANTALLAS MEDIANAS ---------- */
 @media (max-width: 1024px) {
+
+    .reviews-section {
+        gap: 2rem;
+        padding: 0 1.25rem;
+    }
+
+    .testimonials-header {
+        margin-bottom: 3.5rem;
+        padding: 0;
+    }
+
+    .testimonials-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .testimonials-header p {
+        max-width: 100%;
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+
+    #reviews-summary {
+        min-width: 240px;
+    }
+
+    .rating h2 {
+        font-size: 4rem;
+    }
+
     .reviews-prev {
         left: -12px;
     }
@@ -594,42 +644,192 @@
     .reviews-next {
         right: -12px;
     }
+
+    .testimonial-card {
+        padding: 1.5rem;
+        min-height: 250px;
+    }
 }
 
+
+/* ---------- TABLET VERTICAL / MÓVIL ---------- */
 @media (max-width: 900px) {
+
+    .reviews-section {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2.5rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    /* Header */
+    .testimonials-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding: 0;
+    }
+
+    .testimonials-header h2 {
+        font-size: 2rem;
+        line-height: 1.15;
+        margin-bottom: 0.5rem;
+    }
+
+    .testimonials-header p {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+
+    .testimonials-header .testimonials-divider {
+        margin: 0.75rem auto 1rem;
+    }
+
+    /* Resumen Google */
+    #reviews-summary {
+        width: 100%;
+        min-width: 0;
+        justify-content: center;
+    }
+
+    .rating {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .rating h2 {
+        font-size: 3.8rem;
+    }
+
+    .rating-stars {
+        font-size: 1.4rem;
+        letter-spacing: 3px;
+    }
+
+    /* Carrusel */
+    .reviews-swiper {
+        width: 100%;
+        min-width: 0;
+        padding: 0.5rem 0;
+    }
+
+    /* Ocultar flechas */
     .reviews-prev,
     .reviews-next {
         display: none;
     }
 
+    /* Tarjetas */
     .testimonial-card {
         min-height: 240px;
         padding: 1.5rem;
+        border-radius: 18px;
     }
 
     .testimonial-card:hover {
         transform: translateY(-4px);
     }
 
+    .testimonial-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
     .read-more-btn {
-        font-size: 0.85rem;
-        padding: 0.4rem 0;
+        font-size: 0.85rem !important;
+        padding: 0.4rem 0 !important;
     }
 }
 
-@media (max-width: 480px) {
+
+/* ---------- MÓVIL ---------- */
+@media (max-width: 600px) {
+
+    .reviews-section {
+        gap: 2rem;
+        padding: 0 0.75rem;
+    }
+
+    /* Header */
+    .testimonials-header {
+        margin-bottom: 2rem;
+    }
+
+    .testimonials-header .section-badge {
+        padding: 0.3rem 1rem;
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    .testimonials-header h2 {
+        font-size: 1.75rem;
+        line-height: 1.15;
+        letter-spacing: 0.5px;
+    }
+
+    .testimonials-header p {
+        font-size: 1.15rem;
+        line-height: 1.45;
+    }
+
+    .testimonials-header .testimonials-divider {
+        max-width: 150px;
+        gap: 0.6rem;
+    }
+
+    .testimonials-header .testimonials-divider .icon {
+        font-size: 1rem;
+    }
+
+    /* Google */
+    .rating {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
     .rating h2 {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
 
     .rating-stars {
         font-size: 1.2rem;
+        letter-spacing: 2px;
     }
 
+    .rating-count {
+        font-size: 0.85rem;
+    }
+
+    .google-button img {
+        width: 120px;
+    }
+
+    /* Carrusel */
+    .reviews-swiper {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    /* Tarjetas */
     .testimonial-card {
-        min-height: 200px;
+        min-height: 0;
         padding: 1.25rem;
         border-radius: 16px;
+    }
+
+    .stars {
+        margin-bottom: 0.5rem;
+    }
+
+    .star {
+        font-size: 1rem;
     }
 
     .testimonial-text {
@@ -648,11 +848,14 @@
         height: 40px;
     }
 
-    .google-button {
-        padding: 0.7rem 1.5rem;
+    .testimonial-author h4 {
         font-size: 0.85rem;
     }
-    
+
+    .testimonial-date {
+        font-size: 0.75rem;
+    }
+
     .logo-google-img {
         width: 20px;
         height: 20px;
@@ -660,19 +863,70 @@
 }
 
 
+/* ---------- MÓVIL PEQUEÑO ---------- */
+@media (max-width: 400px) {
 
-/* ======================================================
-   UTILIDADES
-====================================================== */
-#reviews-summary:empty {
-    display: none;
+    .reviews-section {
+        padding: 0 0.5rem;
+    }
+
+    .testimonials-header h2 {
+        font-size: 1.55rem;
+    }
+
+    .testimonials-header p {
+        font-size: 1rem;
+    }
+
+    .testimonial-card {
+        padding: 1rem;
+    }
+
+    .rating h2 {
+        font-size: 2.8rem;
+    }
+
+    .rating-stars {
+        font-size: 1.05rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.85rem;
+    }
 }
 
-.reviews-section {
-    scroll-margin-top: 2rem;
+
+/* ---------- ACCESIBILIDAD / TOUCH ---------- */
+@media (hover: none) {
+
+    .testimonial-card:hover {
+        transform: none;
+    }
+
+    .testimonial-card:hover .star {
+        animation: none;
+    }
+
+    .google-button:hover img {
+        transform: none;
+    }
+
+    .reviews-prev:hover,
+    .reviews-next:hover {
+        transform: translateY(-50%);
+    }
 }
 
-.testimonial-card:focus-visible {
-    outline: 2px solid #1a73e8;
-    outline-offset: 2px;
+
+/* ---------- REDUCIR ANIMACIONES ---------- */
+@media (prefers-reduced-motion: reduce) {
+
+    .testimonial-card,
+    .star,
+    .google-button img,
+    .reviews-prev,
+    .reviews-next {
+        animation: none !important;
+        transition: none !important;
+    }
 }
