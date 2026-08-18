@@ -21,7 +21,7 @@ export async function initReviewsGoogle() {
 
 async function getReviews() {
     try {
-        const response = await fetch("http://localhost:8787/api/reviews");
+        const response = await fetch("https://my-first-worker.turia-jardin.workers.dev/api/reviews");
 
         if (!response.ok) {
             throw new Error(`Error ${response.status}`);
