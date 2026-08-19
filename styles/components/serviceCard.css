@@ -13,16 +13,31 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+   /* max-width: 1200px;*/
+   /* margin: 0 auto;*/
     padding: 0 1rem;
 }
 
+.section-header-subtitle {
+     display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 900px;
+ padding-right: 5rem;
+}
 
+.section-header-subtitle h2{
+     font-size: 3rem;
+  color: var(--text-sub);
+  font-weight: bold;
+ text-align: right;
+  margin: 0;
+}
 /* ============================================================
    CARDS CON BORDE DE GRADIENTE
    ============================================================ */
-
+/*
 .service-card {
     position: relative;
     background: var(--card-bg);
@@ -33,11 +48,7 @@
     display: flex;
     flex-direction: column;
 }
-/* Sombra premium al hover */
-.service-card:hover {
-    transform: translateY(-12px) scale(1.01);
-   
-}
+*/
 
 
 
@@ -46,21 +57,13 @@
 
 
 
-/* Cards destacadas - borde más visible */
-.service-card.highlight::before {
-    opacity: 0.5;
-}
-
-.service-card.highlight:hover::before {
-    opacity: 1;
-}
 
 
 
 /* ============================================================
    CUERPO DE LA CARD
    ============================================================ */
-
+/*
 .service-body {
    
     flex-grow: 1;
@@ -110,10 +113,11 @@
     box-shadow: 0 4px 15px rgba(26, 61, 46, 0.25);
 }
 
-
+*/
 /* ============================================================
    IMAGEN DE LA CARD
    ============================================================ */
+   /*
 .service-image{
     aspect-ratio: 16/10;
     padding:5px;
@@ -135,7 +139,7 @@
   
 
 }
-
+*/
 
 /* ============================================================
    ICONO SVG
@@ -143,6 +147,8 @@
 
 
 /* Icono SVG dentro del contenedor */
+
+/*
 .service-icon svg {
     width: 28px;
     height: 28px;
@@ -154,15 +160,17 @@
 
 .service-header{
     display:flex;
-    align-items:center;
-    gap:0.9rem;
-    margin-bottom:0.2rem;
+   
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .service-header h3{
-    margin:0;
+
     font-size:1.7rem;
-    line-height:1.2;
+   
+    text-align: center;
 }
 
 .service-icon{
@@ -178,7 +186,7 @@
    
 }
 
-
+*/
 
 @media(max-width:992px){
 
@@ -198,3 +206,281 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   SERVICE CARDS — DISEÑO PREMIUM
+   ============================================================ */
+
+.service-card {
+    position: relative;
+    height: 620px;
+    overflow: hidden;
+
+    border-radius: 26px;
+
+    background: #071b0a;
+
+    border: 1px solid rgba(145, 166, 78, 0.18);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.18);
+
+    isolation: isolate;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease,
+        border-color 0.5s ease;
+}
+
+
+/* ============================================================
+   IMAGEN
+   ============================================================ */
+
+.service-card .service-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: -3;
+}
+
+
+.service-card .service-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ============================================================
+   DEGRADADO SOBRE LA IMAGEN
+   ============================================================ */
+
+.service-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: -2;
+
+    pointer-events: none;
+
+ background:
+    linear-gradient(
+        to bottom,
+        rgba(2, 15, 6, 0.05) 10%,
+        rgba(2, 15, 6, 0.10) 30%,
+        rgba(2, 15, 6, 0.25) 45%,
+        rgba(2, 15, 6, 0.75) 50%,
+        rgba(2, 15, 6, 0.80) 55%,
+        rgba(2, 15, 6, 0.97) 65%,
+        rgba(2, 15, 6, 0.97) 75%,
+        rgba(2, 15, 6, 0.97) 80%,
+        #071b0a 100%
+    );
+    transition:
+        background 5.5s ease;
+}
+
+
+/* ============================================================
+   BODY
+   ============================================================ */
+
+.service-card .service-body {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 38px 38px 34px;
+
+    z-index: 2;
+}
+
+
+/* ============================================================
+   ICONO + TITULO
+   ============================================================ */
+
+.service-card .service-header {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+.service-card .service-icon {
+    flex: 0 0 auto;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #9eaf5b;
+
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.service-card .service-icon svg {
+    width: 34px;
+    height: 34px;
+
+    display: block;
+}
+
+
+.service-card .service-header h3 {
+    margin: 0;
+
+    color: #f3f0e6;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(1.8rem, 2.4vw, 2.35rem);
+
+    font-weight: 400;
+
+    line-height: 1.08;
+}
+
+
+
+/* ============================================================
+   DESCRIPCIÓN
+   ============================================================ */
+
+.service-card .service-body > p {
+    margin: 28px 0 25px;
+
+    max-width: 580px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 0.98rem;
+
+    line-height: 1.65;
+}
+
+
+/* ============================================================
+   BOTÓN
+   ============================================================ */
+
+.service-card .service-body .btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 170px;
+
+    padding: 12px 22px;
+
+    border: 1px solid #8fa052;
+    border-radius: 50px;
+
+    color: #a8b967;
+
+    background: rgba(3, 20, 8, 0.25);
+
+    text-decoration: none;
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(158, 178, 87, 0.55);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.38);
+}
+
+
+.service-card:hover .service-image img {
+    transform: scale(1.06);
+}
+
+
+.service-card:hover::after {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(2, 15, 6, 0.03) 10%,
+            rgba(2, 15, 6, 0.10) 30%,
+            rgba(2, 15, 6, 0.22) 48%,
+            rgba(2, 15, 6, 0.34) 67%,
+            rgba(2, 15, 6, 0.48) 84%,
+            #071b0a 100%
+        );
+}
+
+
+.service-card:hover .service-icon {
+    transform: translateY(-3px);
+
+    color: #b3c86b;
+}
+
+
+.service-card:hover .service-body .btn {
+    color: #d1df91;
+
+    background: rgba(143, 160, 82, 0.14);
+
+    border-color: #aabd65;
+
+    transform: translateX(4px);
+}
+
+

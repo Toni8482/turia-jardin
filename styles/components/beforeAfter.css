@@ -1123,3 +1123,395 @@
 
 
 }
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   CASOS DE ÉXITO — DISEÑO PREMIUM
+   ============================================================ */
+
+.success-section {
+   
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(90, 120, 55, 0.08),
+            transparent 40%
+        );
+
+    overflow: hidden;
+}
+
+
+
+
+
+/* ============================================================
+   LIGERO OSCURECIMIENTO
+   ============================================================ */
+
+.ba-slider-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(2, 15, 6, 0.02),
+            rgba(2, 15, 6, 0.12) 60%,
+            rgba(2, 15, 6, 0.35)
+        );
+
+    z-index: 3;
+}
+
+
+/* ============================================================
+   CONTROL CENTRAL
+   ============================================================ */
+
+.ba-slider-handle {
+   
+
+    width: 74px;
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    border-radius: 50%;
+
+    background: #071b0a;
+
+    border: 1px solid rgba(158, 178, 87, 0.45);
+
+    color: #aabd65;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35);
+
+    z-index: 10;
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.ba-slider-wrapper:hover .ba-slider-handle {
+    transform: translate(-50%, -50%) scale(1.08);
+
+    background: #102514;
+
+    border-color: #aabd65;
+}
+
+
+.ba-slider-handle span {
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   INPUT
+   ============================================================ */
+
+.ba-slider-input {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+
+    opacity: 0;
+
+    cursor: ew-resize;
+
+    z-index: 20;
+}
+
+
+/* ============================================================
+   ETIQUETAS ANTES / DESPUÉS
+   ============================================================ */
+
+.ba-label {
+    position: absolute;
+
+    bottom: 22px;
+
+    z-index: 15;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    background: rgba(7, 27, 10, 0.88);
+
+    border: 1px solid rgba(158, 178, 87, 0.4);
+
+    color: #b3c86b;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    backdrop-filter: blur(8px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.ba-label-before {
+    left:22px;
+    bottom:22px;
+}
+
+.ba-label-after {
+    right:22px;
+    bottom:22px;
+}
+
+
+.ba-label-before.hidden {
+    opacity:0;
+    transform:translateX(-20px);
+}
+.ba-label-after.hidden {
+    opacity:0;
+    transform:translateX(20px);
+}
+/* ============================================================
+   CABECERA DERECHA
+   ============================================================ */
+
+
+
+.success-header h2 {
+    margin: 0;
+
+    color: #f3f0e6;
+
+    font-family:"Playfair Display",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(2.2rem, 3.4vw, 3.6rem);
+
+    font-weight: 400;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.02em;
+}
+
+
+
+
+
+
+/* ============================================================
+   DESCRIPCIÓN
+   ============================================================ */
+
+.success-header p {
+    max-width: 410px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.68);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+.success-header p strong {
+    color: #c7d18f;
+
+    font-weight: 500;
+}
+
+
+/* ============================================================
+   FLECHAS
+   ============================================================ */
+
+.beforeafter-wrapper .swiper-button-prev,
+.beforeafter-wrapper .swiper-button-next {
+    width: 54px;
+    height: 54px;
+
+    margin-top: 0;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: rgba(25, 58, 35, 0.9);
+
+    border: 1px solid rgba(158,178,87,0.18);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.beforeafter-wrapper .swiper-button-prev {
+    left: -5px;
+}
+
+
+.beforeafter-wrapper .swiper-button-next {
+    right: -5px;
+}
+
+
+.beforeafter-wrapper .swiper-button-prev:hover,
+.beforeafter-wrapper .swiper-button-next:hover {
+    background: #284d31;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+
+.beforeafter-wrapper .swiper-button-prev::after,
+.beforeafter-wrapper .swiper-button-next::after {
+    font-size: 20px;
+
+    color: #f3f0e6;
+}
+
+
+/* ============================================================
+   PAGINACIÓN
+   ============================================================ */
+
+.beforeafter-swiper .swiper-pagination {
+    bottom: 88px;
+}
+
+
+.beforeafter-swiper .swiper-pagination-bullet {
+    background: #9eaf5b;
+
+    opacity: 0.35;
+}
+
+
+.beforeafter-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+
+    transform: scale(1.2);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+    .success-header {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        width: min(700px, 90%);
+
+        margin: 70px auto 30px;
+
+        text-align: center;
+    }
+
+    .success-header p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .success-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .beforeafter-wrapper {
+        max-width: 850px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .success-section {
+        padding: 70px 15px 30px;
+    }
+
+    .beforeafter-wrapper {
+        padding: 0 10px;
+    }
+
+    .ba-slider-wrapper {
+        height: 430px;
+    }
+
+    .success-header h2 {
+        font-size: 2.1rem;
+    }
+
+    .beforeafter-wrapper .swiper-button-prev,
+    .beforeafter-wrapper .swiper-button-next {
+        width: 44px;
+        height: 44px;
+    }
+
+    .beforeafter-wrapper .swiper-button-prev {
+        left: -3px;
+    }
+
+    .beforeafter-wrapper .swiper-button-next {
+        right: -3px;
+    }
+
+    .ba-slider-handle {
+        width: 62px;
+        height: 62px;
+    }
+}

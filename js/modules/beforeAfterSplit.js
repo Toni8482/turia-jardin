@@ -30,19 +30,54 @@ export function initBeforeAfterSliders() {
         let isDragging = false;
         let touchId = null;
         
-        // ===== FUNCIÓN DE ACTUALIZACIÓN CON CLIP-PATH =====
-        function updateSlider(value) {
-            const percent = Math.min(100, Math.max(0, parseFloat(value)));
-            const clipValue = 100 - percent;
-            
-            // 🔑 Actualizar clip-path en lugar de width
-            beforeImage.style.clipPath = `inset(0 ${clipValue}% 0 0)`;
-            beforeImage.style.webkitClipPath = `inset(0 ${clipValue}% 0 0)`;
-            
-            // Mover línea y mango
-            line.style.left = percent + '%';
-            handle.style.left = percent + '%';
+      function updateSlider(value) {
+
+    const percent = Math.min(100, Math.max(0, parseFloat(value)));
+
+    const clipValue = 100 - percent;
+
+
+    // imagen antes
+    beforeImage.style.clipPath =
+        `inset(0 ${clipValue}% 0 0)`;
+
+    beforeImage.style.webkitClipPath =
+        `inset(0 ${clipValue}% 0 0)`;
+
+
+    // movimiento del control
+    line.style.left = percent + '%';
+    handle.style.left = percent + '%';
+
+
+
+    // etiqueta ANTES
+    const beforeLabel = wrapper.querySelector('.ba-label-before');
+
+    if(beforeLabel){
+
+        if(percent < 15){
+            beforeLabel.classList.add('hidden');
         }
+        else{
+            beforeLabel.classList.remove('hidden');
+        }
+
+    }
+// etiqueta DESPUÉS
+const afterLabel = wrapper.querySelector('.ba-label-after');
+
+if(afterLabel){
+
+    if(percent > 85){
+        afterLabel.classList.add('hidden');
+    }
+    else{
+        afterLabel.classList.remove('hidden');
+    }
+
+}
+}
         
         // ===== OBTENER PORCENTAJE DESDE COORDENADA =====
         function getPercent(clientX, rect) {

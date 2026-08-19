@@ -68,7 +68,7 @@
     border: 1px solid rgba(170, 195, 135, .18);
 
     background: #101710;
-
+  height: 100%;
    
 }
 
@@ -79,6 +79,7 @@
     aspect-ratio:4/3;
 
     object-fit:cover;
+    height: 100%;
 
 }
 
@@ -139,7 +140,7 @@ font-family:'Cormorant Garamond', serif;
 
     .about-image img{
 
-        height:420px;
+       
 
     }
 
