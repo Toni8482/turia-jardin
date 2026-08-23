@@ -294,18 +294,24 @@
         to bottom,
         rgba(2, 15, 6, 0.05) 10%,
         rgba(2, 15, 6, 0.10) 30%,
-        rgba(2, 15, 6, 0.25) 45%,
-        rgba(2, 15, 6, 0.75) 50%,
-        rgba(2, 15, 6, 0.80) 55%,
+        rgba(2, 15, 6, 0.75) 45%,
+        rgba(2, 15, 6, 0.80) 50%,
+        rgba(2, 15, 6, 0.85) 55%,
         rgba(2, 15, 6, 0.97) 65%,
         rgba(2, 15, 6, 0.97) 75%,
         rgba(2, 15, 6, 0.97) 80%,
         #071b0a 100%
     );
-    transition:
-        background 5.5s ease;
+   
+}
+.service-card::after {
+    opacity: 1;
+    transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.service-card:hover::after {
+    opacity: 0.35;
+}
 
 /* ============================================================
    BODY
@@ -321,6 +327,9 @@
     padding: 38px 38px 34px;
 
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -333,8 +342,9 @@
     align-items: center;
 
     gap: 18px;
-
+text-align: center;
     margin-bottom: 18px;
+    justify-content: center;
 }
 
 
@@ -388,7 +398,7 @@
    ============================================================ */
 
 .service-card .service-body > p {
-    margin: 28px 0 25px;
+    margin: 10px 0 25px;
 
     max-width: 580px;
 
@@ -397,6 +407,7 @@
     font-size: 0.98rem;
 
     line-height: 1.65;
+  
 }
 
 
@@ -451,7 +462,7 @@
     transform: scale(1.06);
 }
 
-
+/*
 .service-card:hover::after {
     background:
         linear-gradient(
@@ -464,7 +475,7 @@
             #071b0a 100%
         );
 }
-
+*/
 
 .service-card:hover .service-icon {
     transform: translateY(-3px);

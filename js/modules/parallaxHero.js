@@ -9,7 +9,7 @@ export function initParallaxHero() {
       scrub: 1.2
     }
   });
-
+/*
   gsap.to('.hero-content', {
     yPercent: 8,
     ease: 'none',
@@ -21,7 +21,7 @@ export function initParallaxHero() {
     }
   });
 
-
+*/
 
 
 
