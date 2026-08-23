@@ -1,18 +1,4 @@
 
-/* ============================================================
-   SECCIÓN DE FAQ - ESTILO PREMIUM
-   ============================================================ */
-
-.faq-section {
-    padding: 4rem 0;
-    /* background: 
-       var(--bg-secondary);*/
-   
-    position: relative;
-    overflow: hidden;
-}
-
-
 
 /* ============================================================
    HEADER DE FAQ
@@ -20,7 +6,7 @@
 
 .faq-header {
     text-align: center;
-    margin-bottom: 3.5rem;
+ 
     padding: 0 1rem;
 }
 
@@ -80,14 +66,15 @@
 }
 
 .faq-header p {
-    max-width: 600px;
+    max-width: 700px;
     text-align: left;
     margin: 0 auto;
-    font-size: 2.2rem;
+    font-size: 2.7rem;
    color: var(--text-sub);
-    line-height: 1.7;
+    line-height: 1.5;
     font-weight: bold;
-    padding: 3rem;
+    padding: 1rem;
+     font-family:  "Fraunces", serif;
 }
 
 /* ============================================================
@@ -95,7 +82,7 @@
    ============================================================ */
 
 .faq-grid {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -105,7 +92,7 @@
    ============================================================ */
 
 .faq-item {
-    background: white;
+    background:rgba(243, 240, 230, 0.96);
     border-radius: 16px;
     margin-bottom: 1rem;
     border: 1px solid rgba(26, 61, 46, 0.06);
@@ -136,7 +123,7 @@
     border: none;
     font-family: "Cormorant Garamond", serif;
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.50rem;
     cursor: pointer;
     display: flex;
     justify-content: space-between;

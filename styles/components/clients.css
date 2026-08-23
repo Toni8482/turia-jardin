@@ -53,18 +53,7 @@
     margin-bottom: 0.75rem;
 }
 
-.clients-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.4rem;
-     color: var(--text-primary);
-    margin-bottom: 0.3rem;
-    letter-spacing: 1px;
-}
 
-.clients-header h2 span {
-    color: var(--accent);
-    position: relative;
-}
 
 
 
@@ -101,7 +90,7 @@
    font-weight: bold;
     font-size: 2.5rem;
    color: var(--text-sub);
-    line-height: 1.7;
+    line-height: 1;
     font-family:  "Fraunces", serif;
 }
 
@@ -153,8 +142,7 @@
 
 .clients-swiper .swiper-slide:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-    border-color: rgba(26, 61, 46, 0.08);
+   
 }
 
 /* ===== LOGOS ===== */
