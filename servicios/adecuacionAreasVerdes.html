@@ -27,6 +27,7 @@
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/ventajas.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/microCta.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/description.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body data-base="..">
@@ -99,32 +100,39 @@
 -->
    
       <div class="trabajamos">
-        <div class="trabajamos-img">
+        <div class="trabajamos-img" >
          
-            <img class="" src="./../assets/imagenes/services/areasVerdes/unnamed (1).png"
+            <img class="" data-aos="slide-in-left" src="./../assets/imagenes/services/areasVerdes/unnamed (1).png"
               alt="Trabajo de poda de árboles" />
            
- <img class="" src="./../assets/imagenes/services/areasVerdes/verdes (15).jpg"
+ <img class="" data-aos="slide-in-left" src="./../assets/imagenes/services/areasVerdes/verdes (15).jpg"
               alt="Trabajo de poda de árboles" />
            
 
          
         </div>
-        <div class="trabajamos-text">
-           <h3>¿Por qué es importante adecuar un área verde?</h3>
+        <div class="trabajamos-text" >
+           <h2>¿Por qué es importante adecuar un área verde?</h2>
             <p>
                 Un espacio verde bien planificado no solo mejora la estética del entorno, sino que también
                 aporta <strong>bienestar</strong>, calidad ambiental y valor a la propiedad. La adecuación integral incluye
                 desde el diseño del terreno hasta la selección de especies vegetales autóctonas, pasando por
                 la implantación de sistemas de riego eficientes y la creación de zonas de estancia.
             </p>
-           
+           <br>
             <p>
                 Además, una adecuación profesional aumenta la <strong>biodiversidad</strong>, favorece la absorción de CO₂,
                 reduce el efecto isla de calor y crea entornos más saludables para las personas y la fauna
                 local. Apostamos por el <strong>diseño sostenible</strong> y la eficiencia hídrica en cada proyecto.
             </p>
-          <h2>¿Cómo trabajamos?</h2>
+         
+        </div>
+
+        
+      </div>
+<!--
+      
+ <h2>¿Cómo trabajamos?</h2>
           <ul>
             <li>Estudio previo del terreno y sus características.</li>
             <li>Diseño de zonas verdes y elección de especies.</li>
@@ -132,11 +140,8 @@
             <li>Instalación de riego y sistemas de drenaje.</li>
             <li>Colocación de elementos decorativos y mobiliario.</li>
           </ul>
-        </div>
 
-        
-      </div>
-
+-->
       <!-- CARDS DE VENTAJAS -->
       
 
@@ -172,7 +177,7 @@
       <div class="trabajamos ">
 
 
-        <div class="trabajamos-text">
+        <div class="trabajamos-text" >
 
 
           <p>
@@ -185,7 +190,7 @@
 
         </div>
 
-        <div class="trabajamos-img">
+        <div class="trabajamos-img" data-aos="slide-in-right">
 
 
 
@@ -339,6 +344,13 @@
 
 
   <script type="module" src="./../js/services.js" defer></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1500, // Duración de la animación en milisegundos (1 segundo)
+      once: true      // Solo anima una vez, aunque subas y bajes el scroll
+    });
+  </script>
 </body>
 
 </html>

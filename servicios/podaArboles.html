@@ -25,7 +25,7 @@
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/ventajas.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/microCta.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/description.css">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body data-base="..">
@@ -138,18 +138,18 @@
 
       <div class="trabajamos">
 
-        <div class="trabajamos-img">
+        <div class="trabajamos-img" >
 
 
-          <img class="" src="./../assets/imagenes/services/arboles/unnamed (2).png"
+          <img class="" data-aos="slide-in-left" src="./../assets/imagenes/services/arboles/unnamed (2).png"
             alt="Trabajo de poda de árboles" />
-          <img class="" src="./../assets/imagenes/services/arboles/arboles11.webp"
+          <img class="" data-aos="slide-in-left" src="./../assets/imagenes/services/arboles/arboles11.webp"
             alt="Corte de poda sanado" />
 
 
 
         </div>
-        <div class="trabajamos-text">
+        <div class="trabajamos-text" >
           <h2>¿Por qué es importante podar un árbol?</h2>
           <p>
             La poda adecuada es fundamental para la salud, la estética y la seguridad de los árboles.
@@ -169,13 +169,7 @@
             las propias plantas.
           </p>
           -->
-          <ul>
-            <li>Inspección previa del ejemplar y valoración de riesgos.</li>
-            <li>Eliminación de ramas secas, dañadas o enfermas.</li>
-            <li>Poda de formación, mantenimiento o reducción de copa.</li>
-            <li>Eliminación de chupones y ramas desorientadas.</li>
-            <li>Limpieza completa de la zona y retirada de restos.</li>
-          </ul>
+         <br>
           <p>
             Además, una poda profesional realizada en el momento adecuado ayuda a que el árbol
             concentre sus nutrientes en las partes sanas, lo que se traduce en un desarrollo más
@@ -189,7 +183,17 @@
 
 
       </div>
+<!--
+      
+ <ul>
+            <li>Inspección previa del ejemplar y valoración de riesgos.</li>
+            <li>Eliminación de ramas secas, dañadas o enfermas.</li>
+            <li>Poda de formación, mantenimiento o reducción de copa.</li>
+            <li>Eliminación de chupones y ramas desorientadas.</li>
+            <li>Limpieza completa de la zona y retirada de restos.</li>
+          </ul>
 
+-->
 
 
       <!-- ===== VENTAJAS =====  <div class="ventajas-grid">
@@ -236,14 +240,14 @@
       <div class=" trabajamos ">
 
 
-        <div class="trabajamos-text">
+        <div class="trabajamos-text" >
 
 
           <p>
             En Turia Jardín conocemos a fondo las especies arbóreas más comunes en el entorno Mediterráneo
-            (como el <strong>Pino carrasco (Pinus halepensis)</strong>,Pino piñonero (Pinus pinea), Ficus,
+           como el <strong>Pino carrasco (Pinus halepensis)</strong>,<strong>Pino piñonero (Pinus pinea)</strong>, <strong>Ficus</strong>,
             <strong>Olmo</strong>, <strong>Morera</strong>,
-            Eucaliptus, etc ... ) y aplicamos técnicas de poda
+            <strong>Eucaliptus</strong>, etc... y aplicamos técnicas de poda
             respetuosas con el crecimiento natural de cada variedad. Nuestro objetivo es que tus
             árboles luzcan espléndidos durante todo el año, sin riesgos para las personas ni para
             las propias plantas.
@@ -252,7 +256,7 @@
 
         </div>
 
-        <div class="trabajamos-img">
+        <div class="trabajamos-img" data-aos="slide-in-right">
 
 
 
@@ -426,6 +430,13 @@
 
 
   <script type="module" src="./../js/services.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1500, // Duración de la animación en milisegundos (1 segundo)
+      once: true      // Solo anima una vez, aunque subas y bajes el scroll
+    });
+  </script>
 </body>
 
 </html>

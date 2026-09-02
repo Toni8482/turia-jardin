@@ -65,7 +65,7 @@
     animation: pulse-leaf 3s ease-in-out infinite;
 }
 
-.faq-header p {
+.faq-header h2 {
     max-width: 700px;
     text-align: left;
     margin: 0 auto;
