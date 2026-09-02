@@ -1,16 +1,3 @@
-import { initPreloader } from './modules/preloader.js';
-import { initProgressBar } from './modules/progressBar.js';
-
-import { initReveal } from './modules/reveal.js';
-
-import { initLightbox } from './modules/lightbox.js';
-import { initHeaderShrink } from './modules/headerShrink.js';
-import { initMobileMenu } from './modules/mobileMenu.js';
-
-import { initCTAs } from './modules/ctas.js';
-import { initTheme } from './modules/theme.js';
-
-import { initScrollTop } from './modules/scrollTop.js';
 
 import { loadComponent } from './modules/loadComponents.js';
 import { safeInit } from './modules/safeInit.js';
@@ -53,18 +40,6 @@ async function initApp() {
       `${base}/components/cta.html`
     );
 
-   safeInit(initPreloader, 'preloader');
-safeInit(initProgressBar, 'progressBar');
-
-safeInit(initReveal, 'reveal');
-
-safeInit(initLightbox, 'lightbox');
-
-safeInit(initHeaderShrink, 'headerShrink');
-safeInit(initMobileMenu, 'mobileMenu');
-safeInit(initTheme, 'theme');
-
-safeInit(initScrollTop, 'scrollTop');
 
   } catch (error) {
     console.error('Error inicializando la aplicación:', error);
@@ -75,7 +50,7 @@ document.addEventListener('DOMContentLoaded', initApp);
 
 // Refrescar ScrollTrigger cuando todo esté cargado
 
-/** */
+
 window.addEventListener('load', () => {
   if (typeof ScrollTrigger !== 'undefined') {
     ScrollTrigger.refresh();

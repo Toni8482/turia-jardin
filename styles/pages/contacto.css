@@ -8,22 +8,7 @@
     position: relative;
 }
 
-/* Línea decorativa superior */
-.contact-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        var(--accent) 20%, 
-        var(--accent) 80%, 
-        transparent 100%
-    );
-    opacity: 0.15;
-}
+
 
 /* ============================================================
    HEADER DE CONTACTO
@@ -52,7 +37,7 @@
 .contact-header h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.8rem;
-    color: #1a3d2e;
+    color:var(--text-primary);
     margin-bottom: 0.3rem;
 }
 

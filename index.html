@@ -82,7 +82,7 @@
     <link rel="stylesheet" type="text/css" href="./styles/components/header.css">
     <link rel="stylesheet" type="text/css" href="./styles/components/footer.css">
     <link rel="stylesheet" type="text/css" href="./styles/sections.css">
-    <link rel="stylesheet" type="text/css" href="./styles/components.css">
+   
 
     <link rel="stylesheet" type="text/css" href="./styles/components/about.css">
     <link rel="stylesheet" type="text/css" href="./styles/components/beforeAfter.css">
@@ -1404,6 +1404,8 @@
 
 
     <!-- Nuestro main.js como módulo -->
+
+    <script type="module" src="./js/base.js" defer></script>
     <script type="module" src="./js/main.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -1414,23 +1416,7 @@
         });
 
 
-        const lenis = new Lenis({
-    duration: 1.1,       // suavidad de frenada
-    smoothWheel: true,   // rueda del ratón suave
-    wheelMultiplier: 1,  // velocidad
-    touchMultiplier: 1.5
-});
-
-
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
-
-
+     
 
 
 const heroContent = document.querySelector("#heroContent");

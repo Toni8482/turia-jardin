@@ -26,9 +26,14 @@ background:var(--bg-gradient-primary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome
   transition: background-color 0.3s ease, color 0.3s ease; /* animación suave al cambiar tema */
   scroll-behavior: smooth; /* scroll suave al navegar por anclas */
 margin-top: 65px;
+  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-
+main {
+    flex: 1;
+}
 
 
 /* PRELOADER (pantalla de carga inicial) */

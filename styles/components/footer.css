@@ -5,15 +5,7 @@
 /* ============================================================
    2. FILA DE COLUMNAS (Logo, Servicios, Contacto)
    ============================================================ */
-.footer-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem 1.5rem;
-    padding-bottom: 1.8rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+
 
 /* Estilo base para todas las columnas */
 .footer-column {
@@ -214,6 +206,10 @@
    ============================================================ */
 
 .footer-columns {
+     justify-content: space-between;
+    align-items: flex-start;
+   
+    padding-bottom: 1.8rem;
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 5rem;

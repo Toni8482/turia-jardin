@@ -1,16 +1,19 @@
+import { initPreloader } from './modules/preloader.js';
+import { initReveal } from './modules/reveal.js';
 
-import { initModal } from './modules/modal.js';
-import { initCTAs } from './modules/ctas.js';
-import { initParallaxHero,// initParallaxServicesAAV
-   } from './modules/parallaxHero.js';
-import { initBeforeAfterLazy, initBeforeAfterResize
-   } from './modules/beforeAfterSplit.js';
-import { initSwipers } from './modules/swipers.js';
-import { initFaq } from './modules/faq.js';
+import { initLightbox } from './modules/lightbox.js';
+
+import { initMobileMenu } from './modules/mobileMenu.js';
+
+import { initTheme } from './modules/theme.js';
+import { initMagneticButtons } from './modules/magneticButtons.js';
+
+import { initHeaderShrink } from './modules/headerShrink.js';
+import { initScrollTop } from './modules/scrollTop.js';
+
 import { safeInit } from './modules/safeInit.js';
-import { initTextRotator } from './modules/textRotator.js';
-import { initReviewsGoogle } from './modules/reviewsGoogle..js';
 import { loadComponent } from './modules/loadComponents.js';
+import { initProgressBar } from './modules/progressBar.js';
 // Registrar ScrollTrigger si existe
 if (
   typeof gsap !== 'undefined' &&
@@ -48,16 +51,23 @@ async function initApp() {
       `${base}/components/cta.html`
     );
 
-   
-safeInit(initTextRotator, 'textRotator');
-safeInit(initReviewsGoogle, 'reviewsGoogle');
-safeInit(initModal, 'modal');
-safeInit(initCTAs, 'ctas');
-safeInit(initParallaxHero, 'parallaxHero');
-safeInit(initBeforeAfterLazy, 'beforeAfterLazy');
-safeInit(initBeforeAfterResize, 'beforeAfterResize');
-safeInit(initSwipers, 'swipers');
-safeInit(initFaq, 'faq');
+   safeInit(initPreloader, 'preloader');
+safeInit(initReveal, 'reveal');
+
+safeInit(initLightbox, 'lightbox');
+
+
+safeInit(initMobileMenu, 'mobileMenu');
+safeInit(initTheme, 'theme');
+
+safeInit(initHeaderShrink, 'headerShrink');
+safeInit(initMagneticButtons, 'magneticButtons');
+
+
+safeInit(initScrollTop, 'scrollTop');
+safeInit(initProgressBar, 'progressBar');
+
+
 
   } catch (error) {
     console.error('Error inicializando la aplicación:', error);
@@ -68,8 +78,26 @@ document.addEventListener('DOMContentLoaded', initApp);
 
 // Refrescar ScrollTrigger cuando todo esté cargado
 
+/** */
 window.addEventListener('load', () => {
   if (typeof ScrollTrigger !== 'undefined') {
     ScrollTrigger.refresh();
   }
 });
+
+
+
+  const lenis = new Lenis({
+    duration: 1.1,       // suavidad de frenada
+    smoothWheel: true,   // rueda del ratón suave
+    wheelMultiplier: 1,  // velocidad
+    touchMultiplier: 1.5
+});
+
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
