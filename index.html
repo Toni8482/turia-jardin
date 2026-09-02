@@ -12,7 +12,17 @@
     <meta name="author" content="Turia Jardín">
     <title>Turia Jardín | Expertos en poda de palmeras y jardinería en Valencia</title>
 
+ <script>
+    const theme = localStorage.getItem('theme');
 
+    if (theme) {
+        document.documentElement.dataset.theme = theme;
+    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.dataset.theme = 'light';
+    } else {
+        document.documentElement.dataset.theme = 'dark';
+    }
+</script>
     <!-- ===== FUENTES DESCARGABLES (WOFF2) ===== -->
     <!-- Si quieres alojar los archivos localmente, descarga las fuentes desde Google Fonts y ajusta las rutas -->
     <style>
@@ -93,6 +103,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   
 </head>
 
 <body data-base=".">
@@ -1135,7 +1146,8 @@
               
 
 
-                <p>Respuestas a las preguntas más comunes sobre nuestros servicios.</p>
+                <h2>Respuestas a las preguntas más comunes sobre nuestros servicios.</h2>
+                <p>Resolvemos las dudas más habituales sobre poda, tratamientos y cobertura de nuestros servicios. Si necesitas más información, estaremos encantados de ayudarte.</p>
             </div>
 
             <!-- ===== GRID DE FAQ ===== -->

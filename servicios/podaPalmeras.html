@@ -24,7 +24,7 @@
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/ventajas.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/microCta.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/description.css">
-
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
 </head>
 
@@ -103,16 +103,16 @@
 
  <div class="trabajamos-img">
           
-            <img class="" src="./../assets/imagenes/services/palmeras/IMG-20221229-WA0014.jpg"
+            <img class="" data-aos="slide-in-left" src="./../assets/imagenes/services/palmeras/IMG-20221229-WA0014.jpg"
               alt="Trabajo de poda de árboles" />
-            <img class="" src="./../assets/imagenes/services/palmeras/palmera (31).webp"
+            <img class="" data-aos="slide-in-left" src="./../assets/imagenes/services/palmeras/palmera (31).webp"
               alt="Corte de poda sanado" />
 
 
         
         </div>
 
-        <div class="trabajamos-text">
+        <div class="trabajamos-text" >
           <h2>¿Por qué es importante <span style="color:var(--accent);">podar una palmera?</span></h2>
 
           <p>
@@ -123,7 +123,7 @@
             que suelen alojarse en el follaje seco.
           </p>
 
-        
+        <br>
 
           <p>
             Además, una poda profesional realizada en el momento adecuado ayuda a que la palmera
@@ -160,6 +160,12 @@
 
       <!-- ===== VENTAJAS =====  -->
 
+
+
+      <!--
+      
+      
+      
 <section class=" features-line">
 
         <div class="feature">
@@ -263,7 +269,8 @@
         </div>
 
       </section>
-
+      
+      -->
  <section class="descripcion2">
      
 
@@ -272,7 +279,7 @@
       <div class="trabajamos ">
 
 
-        <div class="trabajamos-text">
+        <div class="trabajamos-text " >
 
 
            <p>
@@ -286,11 +293,11 @@
 
         </div>
 
-        <div class="trabajamos-img">
+        <div class="trabajamos-img " data-aos="slide-in-right" >
 
 
 
-          <img class="collage__brote" src="./../assets/imagenes/services/palmeras/palmera (6).webp"
+          <img class="" src="./../assets/imagenes/services/palmeras/palmera (6).webp"
             alt="Brote nuevo tras la poda" />
 
         </div>
@@ -612,6 +619,13 @@
     });
   </script>
    <script type="module" src="./../js/services.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2000, // Duración de la animación en milisegundos (1 segundo)
+      once: true      // Solo anima una vez, aunque subas y bajes el scroll
+    });
+  </script>
 </body>
 
 </html>

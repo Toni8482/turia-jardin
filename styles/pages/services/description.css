@@ -16,15 +16,6 @@
     margin-bottom: 16px;
 }
 
-.descripcion > h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: var(--accent);
-    border-radius: 4px;
-    margin: 12px auto 0;
-}
 
 .descripcion > p {
     max-width: 700px;
@@ -52,11 +43,7 @@
     margin: 12px auto 0;
 }
 
-/* ==========================================================
-   SECCIÓN DESCRIPCIÓN SERVICIO (variante con grid de 2 columnas)
-   Nota: no detecté estas clases en tu HTML actual — revisa si
-   se usan en otra página antes de eliminarlas.
-   ========================================================== */
+
 
 .descripcion-servicio {
     padding: 4rem 0;
@@ -254,9 +241,11 @@ body::before {
     border-radius: 30px;
     padding: clamp(2rem, 7vw, 5rem);
     /* deja espacio para que la imagen sobresalga encima de la tarjeta */
-    padding-left: clamp(8rem, 10vw, 14rem);
+    padding-left: clamp(6rem, 10vw, 14rem);
     width: 100%;
     box-sizing: border-box;
+    z-index: 0;
+     transform: translateX(-100px);
 }
 
 .trabajamos-text h2 {
@@ -271,15 +260,7 @@ body::before {
     margin-top: 10px;
 }
 
-.trabajamos-text h2::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 3px;
-    background: var(--accent);
-    border-radius: 3px;
-    margin-top: 8px;
-}
+
 
 .trabajamos-text p {
     font-size: 1.2rem;
@@ -287,9 +268,10 @@ body::before {
     color: var(--text-secondary);
     margin: 0;
     text-align: justify;
+    
 }
 
-.trabajamos-text ul {
+.tags  {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -300,7 +282,7 @@ body::before {
     margin-bottom: 3rem;
 }
 
-.trabajamos-text li {
+.tags li {
     position: relative;
     padding: 8px 0 8px 32px;
     line-height: 1.6;
@@ -309,7 +291,7 @@ body::before {
     border-bottom: 1px solid var(--border-color);
 }
 
-.trabajamos-text li::before {
+.tags li::before {
     content: '✓';
     position: absolute;
     left: 0;
@@ -327,7 +309,7 @@ body::before {
     width: 100%;
     z-index: 2;
     /* la imagen sobresale de la tarjeta creando efecto editorial */
-    transform: translateX(80px);
+   
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -340,7 +322,8 @@ body::before {
      aspect-ratio: 3 / 2;
     object-fit:cover;
      display: block;   
-     height: clamp(280px, 28vw, 450px);
+     height: clamp(280px, 40vw, 380px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     
 }
 
@@ -391,10 +374,13 @@ body::before {
 .descripcion2 .trabajamos-text {
     padding-left: clamp(2rem, 4vw, 5rem);
     padding-right: clamp(8rem, 10vw, 14rem);
+    z-index: 0;
+     transform: translateX(100px);
 }
 
 .descripcion2 .trabajamos-img {
-    transform: translateX(-60px);
+   
+    z-index: 2;
 }
 
 .btn {
@@ -403,43 +389,37 @@ body::before {
 }
 
 .head{
-    display: flex;
+   
     width: 100%;
-    color: var(--text-primary);
-    padding:7rem 3rem 7rem 15rem;
-    align-items: flex-start;
-  background: rgba(22, 104, 102, .05);
+   
   position: relative;
+ margin: 0 auto;
 }
 
-/* Línea decorativa inferior */
-.head::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 0.4px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #b1cc74 20%, 
-        #b1cc74 80%, 
-        transparent 100%
-    );
-    opacity: 0.2;
-}
+
 .head div {
-
-
+ display: flex;
+ max-width: 1400px;
     width: 70%;
+     color: var(--text-primary);
+    padding:3rem 15rem 1rem 3rem;
+  
+    margin: auto;
+  
 }
 
 .head div h2{
 
-    font-size: 45px;
-    font-weight: bold;
-    line-height: 4rem;
+    font-size: 35px;
+   
     font-family:"Rhymes Text Light", "Rhymes Text Light Placeholder", sans-serif;
+
+
+     max-width: 950px;
+  
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 /* ==========================================================
@@ -541,7 +521,113 @@ body::before {
 
 
 
+ .tags-bugs {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+
+
+.tags-bugs li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #3b6d11;
+    font-weight: 500;
+  }
+  .tags-bugs li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #639922;
+    flex-shrink: 0;
+  }
 
 
 
 
+
+  .como-trabajamos {
+  background:  rgba(22, 104, 102, .1);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  width: 60%;
+  margin: auto;
+}
+
+.como-trabajamos h2 {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+  margin-bottom: 1.5rem;
+}
+
+.tags {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 32px;
+}
+
+.tags li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary, #444);
+}
+
+.tags li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center / 60%;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center / 60%;
+}
+
+@media (max-width: 640px) {
+  .tags {
+    grid-template-columns: 1fr;
+  }
+  .como-trabajamos {
+    padding: 1.75rem;
+  }
+}
+
+
+
+[data-aos] {
+    opacity: 1 !important;
+}
+
+
+
+[data-aos="slide-in-left"] {
+    transform: translateX(-100vw);
+}
+
+[data-aos="slide-in-right"] {
+    transform: translateX(100vw);
+}
+
+[data-aos="slide-in-up"] {
+    transform: translateY(100vh);
+}
+
+[data-aos="slide-in-down"] {
+    transform: translateY(-100vh);
+}
+
+[data-aos].aos-animate {
+    transform: translate(0, 0);
+}

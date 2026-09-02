@@ -25,6 +25,7 @@
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/ventajas.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/microCta.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/description.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body data-base="..">
@@ -86,9 +87,9 @@
 
 
       <div class="trabajamos">
-         <div class="trabajamos-img">
+         <div class="trabajamos-img" >
           
-            <img class="" src="./../assets/imagenes/services/endoterapia/endoterapia1.webp"
+            <img class="" data-aos="slide-in-left" src="./../assets/imagenes/services/endoterapia/endoterapia1.webp"
               alt="Trabajo de poda de árboles" />
             
 
@@ -104,14 +105,21 @@
             interior del árbol, donde circula a través del xilema y el floema, llegando a todas las
             partes de la planta de manera uniforme y eficaz.
           </p>
-        
+        <br>
           <p>
             Además, al tratarse de una aplicación localizada, no se generan derivas ni contaminación
             del suelo o del agua, lo que la convierte en la opción más sostenible para el cuidado de
             nuestro arbolado y jardines particulares.
           </p>
 
-          <h2>¿Cómo trabajamos?</h2>
+         
+        </div>
+
+       
+      </div>
+
+<!--
+       <h2>¿Cómo trabajamos?</h2>
           <ul>
             <li>Diagnóstico preciso del estado fitosanitario del árbol.</li>
             <li>Selección del producto y dosis adecuada para cada caso.</li>
@@ -119,12 +127,8 @@
             <li>Seguimiento y control de la evolución del tratamiento.</li>
             <li>Asesoramiento sobre cuidados posteriores.</li>
           </ul>
-        </div>
 
-       
-      </div>
-
-
+-->
       <!-- CARDS DE VENTAJAS -->
 
 
@@ -160,7 +164,7 @@
       <div class="trabajamos ">
 
 
-        <div class="trabajamos-text">
+        <div class="trabajamos-text" >
 
 
           <p>
@@ -173,7 +177,7 @@
 
         </div>
 
-        <div class="trabajamos-img">
+        <div class="trabajamos-img" data-aos="slide-in-right">
 
 
 
@@ -325,6 +329,13 @@
  
 
   <script type="module" src="./../js/services.js" defer></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1500, // Duración de la animación en milisegundos (1 segundo)
+      once: true      // Solo anima una vez, aunque subas y bajes el scroll
+    });
+  </script>
 </body>
 
 </html>
