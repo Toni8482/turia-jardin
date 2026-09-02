@@ -68,8 +68,8 @@
   <link rel="stylesheet" type="text/css" href="./styles/base.css">
   <link rel="stylesheet" type="text/css" href="./styles/layout.css">
   <link rel="stylesheet" type="text/css" href="./styles/sections.css">
- 
- 
+
+
   <link rel="stylesheet" type="text/css" href="./styles/pages/contacto.css">
   <link rel="stylesheet" type="text/css" href="./styles/components/header.css">
   <link rel="stylesheet" type="text/css" href="./styles/components/footer.css">
@@ -92,11 +92,11 @@
 
       <!-- ===== HEADER ===== -->
       <div class="contact-header reveal-fade">
-       
+
 
         <h2>Solicita presupuesto sin compromiso</h2>
 
-      
+
 
         <p>Rellena el formulario y te responderemos en menos de 24 horas.</p>
       </div>
@@ -143,8 +143,8 @@
         <!-- ===== COLUMNA DERECHA: FORMULARIO ===== -->
         <form class="contact-form reveal-fade" id="contactForm">
           <div class="form-row">
-            <input type="text" placeholder="Nombre completo" id="name" required />
-            <input type="email" placeholder="Correo electrónico" id="email" required />
+            <input type="text" placeholder="Nombre completo" id="name" />
+            <input type="email" placeholder="Correo electrónico" id="email" />
           </div>
           <div class="form-row">
             <input type="tel" placeholder="Teléfono" id="phone" />
@@ -154,22 +154,22 @@
 
 
           <!-- Añadir en tu formulario, antes del botón de enviar -->
-<div class="form-group privacy-group">
-    <label class="privacy-checkbox">
-        <input type="checkbox" id="privacyCheck" required>
-        <span class="checkmark"></span>
-        <span class="privacy-text">
-            He leído y acepto la 
-            <a href="./politica-privacidad.html"  class="privacy-link">
-                Política de Privacidad
-            </a>
-            y el 
-            <a href="./aviso-legal.html"  class="privacy-link">
-                Aviso Legal
-            </a>
-        </span>
-    </label>
-</div>
+          <div class="form-group privacy-group">
+            <label class="privacy-checkbox">
+              <input type="checkbox" id="privacyCheck">
+              <span class="checkmark"></span>
+              <span class="privacy-text">
+                He leído y acepto la
+                <a href="./politica-privacidad.html" class="privacy-link">
+                  Política de Privacidad
+                </a>
+                y el
+                <a href="./aviso-legal.html" class="privacy-link">
+                  Aviso Legal
+                </a>
+              </span>
+            </label>
+          </div>
           <button type="submit" class="btn">
             ✉️ Enviar mensaje
           </button>
@@ -191,52 +191,12 @@
 
   <div id="btn-scroll-top"></div>
 
-  
+
 
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
   <script type="module" src="./js/base.js" defer></script>
   <script type="module" src="./js/contact.js" defer></script>
-  <script>
-
-    const form = document.getElementById('contactForm');
-
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
-
-      const data = {
-        name,
-        email,
-        subject,
-        message
-      };
-
-      try {
-        const res = await fetch("https://my-first-worker.turia-jardin.workers.dev/api/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(data)
-        });
-
-        const result = await res.text();
-        console.log(result);
-
-        alert("Mensaje enviado ✔");
-
-        form.reset();
-
-      } catch (error) {
-        console.error("Error:", error);
-        alert("Error al enviar ❌");
-      }
-    });
-  </script>
+  
 </body>
 
 </html>
