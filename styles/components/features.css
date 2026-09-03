@@ -1,388 +1,220 @@
-
-
 /* cada bloque */
 .feature {
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-
-
-
 
 /* texto */
 .feature h4 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-primary);
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 .feature p {
-    margin: 0;
-    font-size: 1rem;
-    color:var(--text-secondary);
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
 }
+
 /* separador fino vertical */
 .divider {
-    width: 1px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.08);
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.08);
 }
-
-/* responsive */
-@media (max-width: 900px) {
-    .features-line {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    .divider {
-        display: none;
-    }
-}
-
-
-
 
 .features-line {
-  
-    margin: 0 auto;
-   
-padding: 0rem 6rem 0rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+  margin: 0 auto;
 
-    color: #cfe3c6;
+  padding: 0rem 6rem 0rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  color: #cfe3c6;
   margin-bottom: 6rem;
-}
-
-
-
-/* cada bloque */
-.feature {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
 }
 
 /* icono minimal */
 .feature .icon {
-    width: 42px;
-    height:42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    color: #9bd27d;
+  color: #9bd27d;
 }
 
 .feature .icon svg {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
-
-
-/* separador fino vertical */
-.divider {
-    width: 1px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.08);
-}
-
 
 /* ============================================================
    IDENTIDAD DE MARCA
 ============================================================ */
 
-
 .identity-section {
+  padding: 120px 6%;
 
-    padding:120px 6%;
-/*
-    background:
-    linear-gradient(
-        135deg,
-        #031507,
-        #071b0a
-    );
-*/
-    overflow:hidden;
-
+  overflow: hidden;
 }
 
-
-
 .identity-container {
+  max-width: 1400px;
 
-    max-width:1400px;
+  margin: auto;
 
-    margin:auto;
+  display: grid;
 
-    display:grid;
-
-    grid-template-columns:
+  grid-template-columns:
     1.1fr
     0.9fr;
 
-    gap:80px;
+  gap: 80px;
 
-    align-items:center;
-
+  align-items: center;
 }
-
-
 
 /* TEXTO */
 
 .identity-label {
+  display: block;
 
-    display:block;
+  color: #9eaf5b;
 
-    color:#9eaf5b;
+  letter-spacing: 5px;
 
-    letter-spacing:5px;
+  font-size: 0.75rem;
 
-    font-size:.75rem;
-
-    margin-bottom:25px;
-
+  margin-bottom: 25px;
 }
-
-
 
 .identity-content h2 {
+  max-width: 700px;
 
-    max-width:700px;
+  color: var(--text-primary);
 
-    color:var(--text-primary);
+  font-family: Georgia, serif;
 
-    font-family:
-    Georgia,
-    serif;
+  font-size: 3rem;
 
-    font-size:
-    clamp(2.3rem,4vw,4rem);
+  font-weight: 400;
 
-    font-weight:400;
+  line-height: 1.15;
 
-    line-height:1.15;
-
-    margin:0;
-    margin-bottom: 3rem;
-
+  margin: 0;
+  margin-bottom: 3rem;
 }
-
-
 
 .identity-line {
+  width: 70px;
 
-    width:70px;
+  height: 2px;
 
-    height:2px;
+  background: #9caf5c;
 
-    background:#9caf5c;
-
-    margin:40px 0;
-
+  margin: 40px 0;
 }
-
-
 
 /* ITEMS */
 
 .identity-item {
+  display: flex;
 
-    display:flex;
+  gap: 25px;
 
-    gap:25px;
+  margin-bottom: 35px;
 
-    margin-bottom:35px;
+  padding-bottom: 25px;
 
-    padding-bottom:25px;
-
-    border-bottom:
-    1px solid
-    rgba(150,170,90,.12);
-
+  border-bottom: 1px solid rgba(150, 170, 90, 0.12);
 }
-
-
 
 .identity-icon {
+  width: 55px;
 
-    width:55px;
+  height: 55px;
 
-    height:55px;
+  flex: none;
 
-    flex:none;
+  display: flex;
 
-    display:flex;
+  justify-content: center;
 
-    justify-content:center;
+  align-items: center;
 
-    align-items:center;
+  color: #a8bd62;
 
-
-    color:#a8bd62;
-
-    font-size:1.5rem;
-
-
-  
-
+  font-size: 1.5rem;
 }
-
-
 
 .identity-item h3 {
+  margin: 0 0 10px;
 
-    margin:0 0 10px;
+  color: var(--text-muted);
 
+  font-family: Georgia, serif;
 
-    color:#d9d1b8;
+  font-size: 1.25rem;
 
+  font-weight: 400;
 
-    font-family:
-    Georgia,
-    serif;
-
-
-    font-size:1.25rem;
-
-    font-weight:400;
-
-    letter-spacing:1px;
-
+  letter-spacing: 1px;
 }
-
-
 
 .identity-item p {
+  margin: 0;
 
-    margin:0;
+  color: var(--text-secondary);
 
+  line-height: 1.7;
 
-    color:var(--text-secondary);
-
-
-    line-height:1.7;
-
-    max-width:500px;
-
+  max-width: 500px;
 }
-
-
 
 /* IMAGEN */
 
-
 .identity-image {
-
-    position:relative;
-
+  position: relative;
+   
+   
 }
-
-
-
-.identity-image::before {
-
-    content:"";
-
-    position:absolute;
-
-    inset:-20px;
-
-
-    border:
-
-    1px solid
-    rgba(150,170,90,.2);
-
-
-    border-radius:40px;
-
-}
-
-
 
 .identity-image img {
+  width: 100%;
 
-    width:100%;
+  height: 700px;
 
-    height:700px;
+  object-fit: cover;
 
-    object-fit:cover;
+  border-radius: 35px;
 
+  position: relative;
 
-    border-radius:35px;
+  z-index: 2;
 
-
-    position:relative;
-
-    z-index:2;
-
-
-    filter:
-    saturate(.85);
-
+  filter: saturate(0.85);
+  border: 1px solid rgba(150, 170, 90, 0.3);
 }
-
-
-
-/* DECORACIÓN */
-
-.identity-container::after {
-
-    content:"";
-
-    position:absolute;
-
-    width:300px;
-
-    height:300px;
-
-
-    background:
-    radial-gradient(
-        circle,
-        rgba(150,180,90,.12),
-        transparent 70%
-    );
-
-
-    right:10%;
-
-}
-
-
-
 
 
 /* RESPONSIVE */
 
+@media (max-width: 900px) {
+  .identity-container {
+    grid-template-columns: 1fr;
 
-@media(max-width:900px){
+    gap: 50px;
+  }
 
-
-.identity-container {
-
-    grid-template-columns:1fr;
-
-    gap:50px;
-
-}
-
-
-.identity-image img {
-
-    height:450px;
-
-}
-
-
+  .identity-image img {
+    height: 450px;
+  }
 }

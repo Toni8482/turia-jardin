@@ -6,72 +6,31 @@
 
 /* ESTILOS GLOBALES DEL SITIO */
 
-
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
 }
 
-
 body {
   font-family: "Source Sans Pro", sans-serif; /* tipografía principal */
- /* color de fondo general   background-color: var(--bg-primary);*/
-background: #003d4d;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #141910, #081108);  /* Chrome 10-25, Safari 5.1-6 */
-background:var(--bg-gradient-primary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  
+  background: var(
+    --bg-gradient-primary
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: var(--text-primary); /* color del texto principal */
   overflow-x: hidden; /* evita scroll horizontal accidental */
-  transition: background-color 0.3s ease, color 0.3s ease; /* animación suave al cambiar tema */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* animación suave al cambiar tema */
   scroll-behavior: smooth; /* scroll suave al navegar por anclas */
-margin-top: 65px;
+  margin-top: 65px;
   min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    flex: 1;
-}
-
-
-/* PRELOADER (pantalla de carga inicial) */
-.preloader {
-  position: fixed; /* lo fija en toda la pantalla */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-primary); /* mismo fondo que la web */
-  display: flex; /* centra contenido */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* lo pone por encima de todo */
-  transition: opacity 0.5s ease, visibility 0.5s; /* animación al desaparecer */
-}
-
-/* cuando el preloader se oculta */
-.preloader.hidden {
-  opacity: 0; /* lo hace transparente */
-  visibility: hidden; /* lo elimina visualmente */
-}
-
-/* spinner de carga */
-.preloader-spinner {
-  width: 50px;
-  height: 50px;
-  border: 3px solid var(--border-color); /* borde exterior */
-  border-top-color: var(--accent-light); /* parte coloreada para efecto giro */
-  border-radius: 50%; /* lo convierte en círculo */
-  animation: spin 1s infinite linear; /* animación de giro constante */
-}
-
-/* animación del spinner */
-@keyframes spin {
-  to {
-    transform: rotate(360deg); /* rota completamente */
-  }
+  flex: 1;
 }
 
 /* PERSONALIZACIÓN DEL SCROLL (solo Chrome/Edge/Safari) */
@@ -88,3 +47,116 @@ main {
   border-radius: 10px; /* bordes redondeados */
 }
 
+
+
+
+
+
+
+
+
+/* ==========================================================
+   FONDO GENERAL DE LA PÁGINA
+   ========================================================== */
+
+body {
+  margin: 0;
+  margin-top: 50px;
+
+  
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  filter: blur(120px);
+  border-radius: 50%;
+  animation: move 25s ease-in-out infinite alternate;
+}
+
+.glow1 {
+  width: 700px;
+  height: 700px;
+  left: -250px;
+  top: -150px;
+  background: radial-gradient(
+    circle,
+    rgba(143, 185, 82, 0.18),
+    transparent 70%
+  );
+}
+
+.glow2 {
+  width: 600px;
+  height: 600px;
+  right: -150px;
+  top: 350px;
+  background: radial-gradient(
+    circle,
+    rgba(108, 160, 75, 0.14),
+    transparent 70%
+  );
+}
+
+.glow3 {
+  width: 900px;
+  height: 900px;
+  left: 20%;
+  bottom: -500px;
+  background: radial-gradient(circle, rgba(65, 95, 40, 0.16), transparent 70%);
+}
+
+.topography {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.topography path {
+  fill: none;
+  stroke: #7b9c55;
+  stroke-width: 1.2;
+  opacity: 0.06;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 45%,
+    rgba(0, 0, 0, 0.35)
+  );
+}
+
+@keyframes move {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(40px, -30px) scale(1.08);
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(255, 255, 255, 0.03) 4px
+  );
+}

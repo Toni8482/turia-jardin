@@ -5,79 +5,65 @@
    Aquí defines el "tema oscuro" principal
 */
 :root {
-
-
-
- --hunter-green-50: #d3fdba;
+  --hunter-green-50: #d3fdba;
   --hunter-green-100: #71ae3d;
   --hunter-green-300: #4d7928;
   --hunter-green-500: #1e340c;
   --hunter-green-700: #0b1703;
 
-
-
-
-
-
-
-
-
-
-
-
   /* 🖼️ Fondos principales */
- 
-   /* Fondos de cards - Modo oscuro */
-    --card-bg: #0e1b0c;
-    --card-bg-hover: #222a1c;
-    --card-border: rgba(125, 150, 98, 0.15);
-    --card-shadow: rgba(0, 0, 0, 0.3);
-    
-    /* Cards alternativas (más claras) */
-    --card-bg-light: #222a1c;
-    --card-bg-highlight: #262e20;
- --bg-line-separator: rgba(11, 23, 3, 0.40);    /* Antes #0b17039b */
-    --bg-line-separator-second: rgba(0, 11, 0, 0.40); /* Antes #000b00b5 */
-   /*--bg-primary: #141910;    */  /* Fondo base */
---bg-primary: #0b1703;
---bg-svg: #050a01;
 
-    --bg-secondary: #1a2016;    /* Secciones alternas (un poco más claro) */
-    --bg-tertiary: #1f261a;     /* Secciones destacadas */
-    --bg-quaternary: #1f2818;   /* Contacto, footer */
-    --bg-soft: #171d12;         /* Cambio muy sutil */
+  /* Fondos de cards - Modo oscuro */
+  --card-bg: #0e1b0c;
+  --card-bg-hover: #222a1c;
+  --card-border: rgba(125, 150, 98, 0.15);
+  --card-shadow: rgba(0, 0, 0, 0.3);
 
-  --bg-hero-primary:#b9c29e;
+  /* Cards alternativas (más claras) */
+  --card-bg-light: #222a1c;
+  --card-bg-highlight: #262e20;
+  --bg-line-separator: rgba(11, 23, 3, 0.4); /* Antes #0b17039b */
+  --bg-line-separator-second: rgba(0, 11, 0, 0.4); /* Antes #000b00b5 */
+  /*--bg-primary: #141910;    */ /* Fondo base */
+  --bg-primary: #0b1703;
+  --bg-svg: #050a01;
 
---bg-gradient-body:radial-gradient(ellipse 800px 400px at 20% 10%, rgba(157,194,106,0.05), transparent 60%),
-  radial-gradient(ellipse 600px 300px at 80% 60%, rgba(201,162,39,0.04), transparent 60%),
-  linear-gradient(180deg, #14210F 0%, #0A120A 100%);
- /* Gradientes de secciones - Modo oscuro */
-    --bg-gradient-primary: linear-gradient(to right, #021900, #000b00);
-    --bg-gradient-secondary: linear-gradient(180deg, #1a2016 0%, #1e2418 100%);
-    --bg-gradient-tertiary: linear-gradient(180deg, #1f261a 0%, #232a1e 100%);
-    --bg-gradient-quaternary: linear-gradient(180deg, #252c1e 0%, #2a3224 100%);
-    --bg-gradient-soft: linear-gradient(180deg, #171d12 0%, #1a2016 100%);
+  --bg-secondary: #1a2016; /* Secciones alternas (un poco más claro) */
+  --bg-tertiary: #1f261a; /* Secciones destacadas */
+  --bg-quaternary: #1f2818; /* Contacto, footer */
+  --bg-soft: #171d12; /* Cambio muy sutil */
 
+  --bg-hero-primary: #b9c29e;
 
+  --bg-gradient-body:
+    radial-gradient(
+      ellipse 800px 400px at 20% 10%,
+      rgba(157, 194, 106, 0.05),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 600px 300px at 80% 60%,
+      rgba(201, 162, 39, 0.04),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #14210f 0%, #0a120a 100%);
+  /* Gradientes de secciones - Modo oscuro */
+  --bg-gradient-primary: linear-gradient(to right, #021900, #000b00);
+  --bg-gradient-secondary: linear-gradient(180deg, #1a2016 0%, #1e2418 100%);
+  --bg-gradient-tertiary: linear-gradient(180deg, #1f261a 0%, #232a1e 100%);
+  --bg-gradient-quaternary: linear-gradient(180deg, #252c1e 0%, #2a3224 100%);
+  --bg-gradient-soft: linear-gradient(180deg, #171d12 0%, #1a2016 100%);
 
- /* 🌿 Texto */
---text-primary:   #E7E3D7;   /* títulos principales */
---text-secondary: #C9CDC2;   /* párrafos */
---text-muted:     #97A18B;   /* texto secundario */
---text-accent:    #B8CF86;   /* verde para destacar */
-
-
-
-
-
-
-
+  /* 🌿 Texto */
+  --text-primary: #e7e3d7; /* títulos principales */
+  --text-secondary: #c9cdc2; /* párrafos */
+  --text-muted: #97a18b; /* texto secundario */
+  --text-accent: #b8cf86; /* verde para destacar */
 
   /* 🌿 Color principal (verde branding) */
-  --accent: #7d9662;         /* color principal */
-  --accent-hover: #9bbf72;   /* cuando pasas el ratón */
-  --accent-light: #b1cc74;   /* versión más clara (detalles, highlights) */
+  --accent: #7d9662; /* color principal */
+  --accent-hover: #9bbf72; /* cuando pasas el ratón */
+  --accent-light: #b1cc74; /* versión más clara (detalles, highlights) */
 
   /* 🧱 Bordes y separaciones */
   --border-color: rgba(157, 184, 94, 0.3);
@@ -95,9 +81,8 @@
   /* 🧭 Fondo del header */
   --header-bg: rgba(12, 15, 10, 0.85);
 
-  --submenu-hover-bg:  rgb(12, 15, 10);
+  --submenu-hover-bg: rgb(12, 15, 10);
 }
-
 
 /* =========================
    🌞 MODO CLARO (LIGHT MODE)
@@ -106,9 +91,7 @@
    se sobrescriben las variables de arriba
 */
 body.light {
-
-
- --sugar-cane-50: #f4fcf0;
+  --sugar-cane-50: #f4fcf0;
   --sugar-cane-100: #ebfae3;
   --sugar-cane-200: #cef4b7;
   --sugar-cane-300: #bbe6a1;
@@ -129,51 +112,66 @@ body.light {
   --sugar-cane-1800: #151c10;
   --sugar-cane-1900: #0d1309;
 
+  --bg-line-separator: rgba(254, 254, 245, 0.4);
+  --bg-line-separator-second: rgba(231, 244, 228, 0.4);
+  --bg-primary: #fefef5; /* Fondo base */
+  --bg-secondary: #f5f3e8; /* Secciones alternas */
+  --bg-tertiary: #eef0e3; /* Secciones destacadas */
+  --bg-quaternary: #e8ecd9; /* Contacto, footer */
+  --bg-soft: #fafaf0; /* Cambio muy sutil (casi imperceptible) */
 
+  --bg-gradient-body:
+    radial-gradient(
+      ellipse 800px 400px at 20% 10%,
+      rgba(90, 122, 58, 0.06),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 600px 300px at 80% 60%,
+      rgba(180, 138, 20, 0.05),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #f7f4ec 0%, #ede7d8 100%);
 
- --bg-line-separator: rgba(254, 254, 245, 0.40);
-    --bg-line-separator-second: rgba(231, 244, 228, 0.40);
-     --bg-primary: #fefef5;      /* Fondo base */
-    --bg-secondary: #f5f3e8;    /* Secciones alternas */
-    --bg-tertiary: #eef0e3;     /* Secciones destacadas */
-    --bg-quaternary: #e8ecd9;   /* Contacto, footer */
-    --bg-soft: #fafaf0;         /* Cambio muy sutil (casi imperceptible) */
+  --bg-gradient-primary: linear-gradient(to right, #fefef5, #e7f4e4);
 
---bg-gradient-body: radial-gradient(ellipse 800px 400px at 20% 10%, rgba(90,122,58,0.06), transparent 60%),
-  radial-gradient(ellipse 600px 300px at 80% 60%, rgba(180,138,20,0.05), transparent 60%),
-  linear-gradient(180deg, #F7F4EC 0%, #EDE7D8 100%);
-
-  --bg-gradient-primary: linear-gradient(to right, #fefef5,#e7f4e4);
-   
-    --bg-gradient-secondary: linear-gradient(180deg, #f5f3e8 0%, #f0eee3 100%);
-    --bg-gradient-tertiary: linear-gradient(180deg, #eef0e3 0%, #e8ecd9 100%);
-    --bg-gradient-quaternary: linear-gradient(180deg, #e8ecd9 0%, #e2e6d3 100%);
-    --bg-gradient-soft: linear-gradient(180deg, #fafaf0 0%, #f5f3e8 100%);
- /* ===== COLORES DE FONDO ===== */
+  --bg-gradient-secondary: linear-gradient(180deg, #f5f3e8 0%, #f0eee3 100%);
+  --bg-gradient-tertiary: linear-gradient(180deg, #eef0e3 0%, #e8ecd9 100%);
+  --bg-gradient-quaternary: linear-gradient(180deg, #e8ecd9 0%, #e2e6d3 100%);
+  --bg-gradient-soft: linear-gradient(180deg, #fafaf0 0%, #f5f3e8 100%);
+  /* ===== COLORES DE FONDO ===== */
 
   --bg-white: #ffffff;
   --bg-dark: #1a3d2e;
   --bg-dark-soft: #2d5a44;
-  
+
   /* ===== GRADIENTES ===== */
   --bg-gradient-light: linear-gradient(180deg, #fefef5 0%, #e8ecd9 100%);
   --bg-gradient-warm: linear-gradient(180deg, #fefef5 0%, #f5f3e8 100%);
   --bg-gradient-dark: linear-gradient(180deg, #1a3d2e 0%, #2d5a44 100%);
-  
+
   /* ===== TEXTURA SUTIL ===== */
-  --bg-texture: 
-    radial-gradient(ellipse at 20% 0%, rgba(26, 61, 46, 0.02) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 0%, rgba(26, 61, 46, 0.02) 0%, transparent 60%);
+  --bg-texture:
+    radial-gradient(
+      ellipse at 20% 0%,
+      rgba(26, 61, 46, 0.02) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 80% 0%,
+      rgba(26, 61, 46, 0.02) 0%,
+      transparent 60%
+    );
   /* 🖼️ Fondos más claros 
   --bg-primary: #fefef5;
   --bg-secondary: #e8ecd9;*/
-    --card-bg: #ffffff;
-    --card-bg-hover: #fafaf0;
-    --card-border: rgba(107, 140, 72, 0.12);
-    --card-shadow: rgba(0, 0, 0, 0.06);
-    
-    --card-bg-light: #fafaf0;
-    --card-bg-highlight: #f5f7ea;
+  --card-bg: #f4fcf0;
+  --card-bg-hover: #fafaf0;
+  --card-border: rgba(107, 140, 72, 0.12);
+  --card-shadow: rgba(0, 0, 0, 0.06);
+
+  --card-bg-light: #fafaf0;
+  --card-bg-highlight: #f5f7ea;
 
   --bg-hero-primary: #e8ecd9;
 
@@ -199,5 +197,5 @@ body.light {
   /* 🧭 header más claro */
   --header-bg: rgba(245, 242, 225, 0.85);
 
-   --submenu-hover-bg:   rgb(245, 242, 225);
+  --submenu-hover-bg: rgb(245, 242, 225);
 }

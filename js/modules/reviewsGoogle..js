@@ -71,7 +71,7 @@ function createReviewCards(reviews) {
         const testimonialsFooter = document.createElement('div');
         const testimonialsAvatar = document.createElement('div');
         const testimonialsAuthor = document.createElement('div');
-        const testimonialsAuthorText = document.createElement('h4');
+        const testimonialsAuthorText = document.createElement('h3');
         const avatar = document.createElement('img');
         const logoGoogle = document.createElement('img');
 

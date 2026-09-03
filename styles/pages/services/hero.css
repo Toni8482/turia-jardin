@@ -1,522 +1,373 @@
-
-
 /* ============================================================
    HEADER
    ============================================================ */
 
 .section-header {
-    text-align: center;
-   
-  
-  
+  text-align: center;
 }
 
 .section-header-decoration {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .decoration-line {
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent));
-    position: relative;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent));
+  position: relative;
 }
 
 .decoration-line:last-child {
-    background: linear-gradient(90deg, var(--accent), transparent);
+  background: linear-gradient(90deg, var(--accent), transparent);
 }
 
 .decoration-line::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    width: 8px;
-    height: 8px;
-    background: var(--accent);
-    border-radius: 50%;
-    opacity: 0.3;
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.3;
 }
 
 .decoration-line:first-child::after {
-    right: -4px;
+  right: -4px;
 }
 
 .decoration-line:last-child::after {
-    left: -4px;
+  left: -4px;
 }
 
 .decoration-icon {
-    font-size: 1.8rem;
-    opacity: 0.8;
-    animation: pulse-leaf 3s ease-in-out infinite;
+  font-size: 1.8rem;
+  opacity: 0.8;
+  animation: pulse-leaf 3s ease-in-out infinite;
 }
 
-
-
-
 @keyframes pulse-leaf {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.6;
-    }
-    50% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
 }
 
 .section-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem;
-    color: #1a3d2e;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.8rem;
+  color: #1a3d2e;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
 }
 
 .section-header-subtitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    max-width: 600px;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .subtitle-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(26, 61, 46, 0.15));
-    max-width: 80px;
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(26, 61, 46, 0.15));
+  max-width: 80px;
 }
 
 .subtitle-line:last-child {
-    background: linear-gradient(90deg, rgba(26, 61, 46, 0.15), transparent);
+  background: linear-gradient(90deg, rgba(26, 61, 46, 0.15), transparent);
 }
 
 .section-header-subtitle p {
-    font-size: 1.05rem;
-    color: var(--text-secondary);
-    font-weight: 400;
-    white-space: nowrap;
-    margin: 0;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  white-space: nowrap;
+  margin: 0;
 }
-
-
 
 /* =========================
    HERO SERVICIOS
 ========================= */
 
-
-
 .hero-services {
+  position: relative;
+  overflow: hidden;
 
-    position: relative;
-    overflow: hidden;
+  max-height: 300px;
+  min-height: 300px;
 
-   
-
-    max-height: 300px;
-    min-height: 300px;
-
-    display: flex;
-    align-items: center;
-   
-
+  display: flex;
+  align-items: center;
 }
-
 
 /* Contenedor */
 
 .hero-content {
+  width: 100%;
 
-    width: 100%;
-   
-    margin: auto;
+  margin: auto;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    padding: 30px 35px;
-
+  padding: 30px 35px;
 }
-
 
 /* =========================
    TEXTO
 ========================= */
 
 .hero-text {
-
-    width: 40%;
-    z-index: 2;
-display: flex;
-flex-direction: column;
-gap: 10px;
-padding-left: 4rem;
+  width: 40%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 4rem;
 }
 
 .hero-label {
+  font-size: 11px;
 
-    font-size:11px;
-
-    letter-spacing:2px;
-
+  letter-spacing: 2px;
 }
 
 .hero-text h1 {
+  margin: 8px 0;
 
-    margin: 8px 0;
-
-    
-    color: var(--text-primary);
-   font-size: 38px;
-    line-height: 1.05;
+  color: var(--text-primary);
+  font-size: 38px;
+  line-height: 1.05;
 }
 
-
 .hero-text h1 span {
-
-    color:#8baa5e;
-
+  color: #8baa5e;
 }
 
 .hero-text p {
+  margin: 8px 0;
 
-    margin: 8px 0;
+  font-size: 14px;
 
-    font-size: 14px;
+  line-height: 1.35;
 
-    line-height: 1.35;
-
-    
- color: var(--text-secondary);
+  color: var(--text-secondary);
 }
-
-
 
 /* =========================
    IMAGEN DERECHA
 ========================= */
 
 .hero-image {
+  width: 60%;
 
-    width:60%;
+  height: 300px;
 
-    height:300px;
+  position: absolute;
 
-    position:absolute;
+  right: 0;
 
-    right:0;
-
-    top:0;
-
+  top: 0;
 }
-
 
 .hero-image img {
+  width: 100%;
 
-    width:100%;
+  height: 100%;
 
-    height:100%;
+  object-fit: cover;
 
-    object-fit:cover;
+  /* difuminado con el fondo */
 
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%);
 
-    /* difuminado con el fondo */
-
-    -webkit-mask-image:
-        linear-gradient(
-            to right,
-            transparent 0%,
-            black 25%
-        );
-
-
-    mask-image:
-        linear-gradient(
-            to right,
-            transparent 0%,
-            black 25%
-        );
-
+  mask-image: linear-gradient(to right, transparent 0%, black 25%);
 }
 
-.section-header{
-
-margin-bottom: 0rem;
-
+.section-header {
+  margin-bottom: 0rem;
 }
-
-
 
 /* ============================================================
    RESPONSIVE TABLET
    ============================================================ */
 
 @media (max-width: 1024px) {
+  .section-header h2 {
+    font-size: 2.3rem;
+  }
 
-    .section-header h2 {
-        font-size: 2.3rem;
-    }
+  .section-header-subtitle {
+    gap: 1rem;
+    padding: 0 20px;
+  }
 
-    .section-header-subtitle {
-        gap: 1rem;
-        padding: 0 20px;
-    }
+  .section-header-subtitle p {
+    font-size: 0.95rem;
+  }
 
-    .section-header-subtitle p {
-        font-size: 0.95rem;
-    }
+  /* HERO */
 
+  .hero-services {
+    min-height: 360px;
+    max-height: none;
+  }
 
-    /* HERO */
+  .hero-content {
+    padding: 35px 30px;
+  }
 
-    .hero-services {
-        min-height: 360px;
-        max-height: none;
-    }
+  .hero-text {
+    width: 55%;
+  }
 
+  .hero-text h1 {
+    font-size: 32px;
+  }
 
-    .hero-content {
-        padding: 35px 30px;
-    }
+  .hero-text p {
+    font-size: 13px;
+  }
 
-
-    .hero-text {
-        width: 55%;
-    }
-
-
-    .hero-text h1 {
-        font-size: 32px;
-    }
-
-
-    .hero-text p {
-        font-size: 13px;
-    }
-
-
-    .hero-image {
-        width: 55%;
-        height: 360px;
-    }
-
+  .hero-image {
+    width: 55%;
+    height: 360px;
+  }
 }
-
-
 
 /* ============================================================
    RESPONSIVE MOBILE
    ============================================================ */
 
 @media (max-width: 768px) {
+  /* HEADER */
 
+  .section-header {
+    padding: 0 20px;
+  }
 
-    /* HEADER */
+  .section-header-decoration {
+    gap: 0.6rem;
+  }
 
-    .section-header {
-        padding: 0 20px;
-    }
+  .decoration-line {
+    width: 35px;
+  }
 
+  .decoration-icon {
+    font-size: 1.4rem;
+  }
 
-    .section-header-decoration {
-        gap: .6rem;
-    }
+  .section-header h2 {
+    font-size: 1.9rem;
+    letter-spacing: 0.5px;
+  }
 
+  .section-header-subtitle {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
 
-    .decoration-line {
-        width: 35px;
-    }
+  .section-header-subtitle p {
+    white-space: normal;
+    text-align: center;
+    font-size: 0.9rem;
+  }
 
+  .subtitle-line {
+    display: none;
+  }
 
-    .decoration-icon {
-        font-size: 1.4rem;
-    }
-
-
-    .section-header h2 {
-        font-size: 1.9rem;
-        letter-spacing: .5px;
-    }
-
-
-    .section-header-subtitle {
-        flex-direction: column;
-        gap: .7rem;
-    }
-
-
-    .section-header-subtitle p {
-        white-space: normal;
-        text-align:center;
-        font-size: .9rem;
-    }
-
-
-    .subtitle-line {
-        display:none;
-    }
-
-
-
-    /* =========================
+  /* =========================
        HERO MOBILE
     ========================= */
 
+  .hero-services {
+    min-height: auto;
+    height: auto;
+    overflow: hidden;
+  }
 
-    .hero-services {
+  .hero-content {
+    flex-direction: column;
+    padding: 30px 20px 0;
+  }
 
-        min-height: auto;
-        height:auto;
-        overflow:hidden;
+  .hero-text {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
 
-    }
+  .hero-label {
+    font-size: 10px;
+  }
 
+  .hero-text h1 {
+    font-size: 28px;
+    line-height: 1.15;
+    margin: 10px 0;
+  }
 
-    .hero-content {
+  .hero-text p {
+    font-size: 14px;
+    max-width: 320px;
+  }
 
-        flex-direction:column;
-        padding:30px 20px 0;
+  .hero-image {
+    position: relative;
 
-    }
+    width: 100%;
+    height: 230px;
 
+    right: auto;
+    top: auto;
 
+    margin-top: 25px;
+  }
 
-    .hero-text {
+  .hero-image img {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
 
-        width:100%;
-        text-align:center;
-        align-items:center;
-
-    }
-
-
-
-    .hero-label {
-
-        font-size:10px;
-
-    }
-
-
-
-    .hero-text h1 {
-
-        font-size:28px;
-        line-height:1.15;
-        margin:10px 0;
-
-    }
-
-
-
-    .hero-text p {
-
-        font-size:14px;
-        max-width:320px;
-
-    }
-
-
-
-    .hero-image {
-
-        position:relative;
-
-        width:100%;
-        height:230px;
-
-        right:auto;
-        top:auto;
-
-        margin-top:25px;
-
-    }
-
-
-
-    .hero-image img {
-
-
-        mask-image:
-        linear-gradient(
-            to bottom,
-            transparent 0%,
-            black 25%
-        );
-
-
-        -webkit-mask-image:
-        linear-gradient(
-            to bottom,
-            transparent 0%,
-            black 25%
-        );
-
-
-    }
-
-
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%);
+  }
 }
-
-
 
 /* ============================================================
    SMALL MOBILE
    ============================================================ */
 
-@media (max-width:480px){
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
 
+  .hero-content {
+    padding: 25px 15px 0;
+  }
 
-    .section-header h2 {
+  .hero-text h1 {
+    font-size: 24px;
+  }
 
-        font-size:1.6rem;
+  .hero-text p {
+    font-size: 13px;
+  }
 
-    }
-
-
-    .hero-content {
-
-        padding:25px 15px 0;
-
-    }
-
-
-    .hero-text h1 {
-
-        font-size:24px;
-
-    }
-
-
-    .hero-text p {
-
-        font-size:13px;
-
-    }
-
-
-    .hero-image {
-
-        height:190px;
-
-    }
-
-
+  .hero-image {
+    height: 190px;
+  }
 }
-
-
-
-
-
-
-
-
-
-

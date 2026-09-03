@@ -1,16 +1,11 @@
 import { initPreloader } from './modules/preloader.js';
 import { initReveal } from './modules/reveal.js';
-
 import { initLightbox } from './modules/lightbox.js';
-
 import { initMobileMenu } from './modules/mobileMenu.js';
-
 import { initTheme } from './modules/theme.js';
 import { initMagneticButtons } from './modules/magneticButtons.js';
-
 import { initHeaderShrink } from './modules/headerShrink.js';
 import { initScrollTop } from './modules/scrollTop.js';
-
 import { safeInit } from './modules/safeInit.js';
 import { loadComponent } from './modules/loadComponents.js';
 import { initProgressBar } from './modules/progressBar.js';
@@ -37,37 +32,29 @@ async function initApp() {
       `${base}/components/footer.html`
     );
 
-     await loadComponent(
+    await loadComponent(
       '#btn-whatsapp',
       `${base}/components/btnWhatsApp.html`
     );
-     await loadComponent(
+    await loadComponent(
       '#btn-scroll-top',
       `${base}/components/btnScrollTop.html`
     );
 
-      await loadComponent(
-      '#cta-container',
-      `${base}/components/cta.html`
+    await loadComponent(
+      '#background-component',
+      `${base}/components/background.html`
     );
 
-   safeInit(initPreloader, 'preloader');
-safeInit(initReveal, 'reveal');
-
-safeInit(initLightbox, 'lightbox');
-
-
-safeInit(initMobileMenu, 'mobileMenu');
-safeInit(initTheme, 'theme');
-
-safeInit(initHeaderShrink, 'headerShrink');
-safeInit(initMagneticButtons, 'magneticButtons');
-
-
-safeInit(initScrollTop, 'scrollTop');
-safeInit(initProgressBar, 'progressBar');
-
-
+    safeInit(initPreloader, 'preloader');
+    safeInit(initReveal, 'reveal');
+    safeInit(initLightbox, 'lightbox');
+    safeInit(initMobileMenu, 'mobileMenu');
+    safeInit(initTheme, 'theme');
+    safeInit(initHeaderShrink, 'headerShrink');
+    safeInit(initMagneticButtons, 'magneticButtons');
+    safeInit(initScrollTop, 'scrollTop');
+    safeInit(initProgressBar, 'progressBar');
 
   } catch (error) {
     console.error('Error inicializando la aplicación:', error);
@@ -85,19 +72,17 @@ window.addEventListener('load', () => {
   }
 });
 
-
-
-  const lenis = new Lenis({
-    duration: 1.1,       // suavidad de frenada
-    smoothWheel: true,   // rueda del ratón suave
-    wheelMultiplier: 1,  // velocidad
-    touchMultiplier: 1.5
+const lenis = new Lenis({
+  duration: 1.1,       // suavidad de frenada
+  smoothWheel: true,   // rueda del ratón suave
+  wheelMultiplier: 1,  // velocidad
+  touchMultiplier: 1.5
 });
 
 
 function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+  lenis.raf(time);
+  requestAnimationFrame(raf);
 }
 
 requestAnimationFrame(raf);
