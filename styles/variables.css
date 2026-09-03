@@ -90,7 +90,7 @@
    Cuando el body tiene class="light",
    se sobrescriben las variables de arriba
 */
-body.light {
+html.light {
   --sugar-cane-50: #f4fcf0;
   --sugar-cane-100: #ebfae3;
   --sugar-cane-200: #cef4b7;

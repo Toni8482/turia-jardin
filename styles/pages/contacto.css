@@ -119,7 +119,7 @@
 .contact-info .info-title {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.4rem;
-  color: #1a3d2e;
+  color: var( --text-secondary);
   margin-bottom: 0.5rem;
 }
 

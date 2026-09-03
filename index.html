@@ -12,17 +12,21 @@
     <meta name="author" content="Turia Jardín">
     <title>Turia Jardín | Expertos en poda de palmeras y jardinería en Valencia</title>
 
-    <script>
-        const theme = localStorage.getItem('theme');
+  <script>
+(function () {
+    const theme = localStorage.getItem('theme');
 
-        if (theme) {
-            document.documentElement.dataset.theme = theme;
-        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-            document.documentElement.dataset.theme = 'light';
-        } else {
-            document.documentElement.dataset.theme = 'dark';
-        }
-    </script>
+    if (
+        theme === 'light' ||
+        (
+            !theme &&
+            window.matchMedia('(prefers-color-scheme: light)').matches
+        )
+    ) {
+        document.documentElement.classList.add('light');
+    }
+})();
+</script>
     <!-- ===== FUENTES DESCARGABLES (WOFF2) ===== -->
   
     <style>
