@@ -1,5 +1,5 @@
 .footer {
-  background: var(--bg-quaternary);
+  background: var(--header-bg);
   color: var(--text-secondary);
   padding: 3rem 0 1.5rem;
   position: relative;
@@ -48,7 +48,7 @@
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 5rem;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+ 
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -229,16 +229,14 @@
    ============================================================ */
 
 .footer-copyright {
+ 
   text-align: center;
   font-size: 0.8rem;
   color: var(--text-secondary);
   letter-spacing: 0.5px;
+ 
 }
 
-.footer-copyright span {
-  color: rgba(255, 255, 255, 0.15);
-  margin: 0 0.5rem;
-}
 
 /* ============================================================
    RESPONSIVE
@@ -334,6 +332,7 @@
   .footer-social {
     gap: 1rem;
     padding: 1rem 0;
+    justify-content: center;
   }
 
   .footer-social a {

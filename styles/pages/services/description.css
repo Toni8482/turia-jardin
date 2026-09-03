@@ -166,6 +166,7 @@
   color: var(--text-primary);
   margin: 0;
   margin-bottom: 3rem;
+  font-family: "Cormorant Garamond", serif;;
 }
 
 .trabajamos-text h2:not(:first-of-type) {
@@ -292,6 +293,7 @@
 .btn {
   align-self: flex-start;
   margin: auto;
+  text-decoration: none;
 }
 
 .head {
@@ -299,6 +301,7 @@
 
   position: relative;
   margin: 0 auto;
+ 
 }
 
 .head div {
@@ -306,7 +309,7 @@
   max-width: 1400px;
   width: 70%;
   color: var(--text-primary);
-  padding: 3rem 15rem 1rem 3rem;
+  padding: 10rem 15rem 8rem 3rem;
 
   margin: auto;
 }
@@ -314,7 +317,7 @@
 .head div h2 {
   font-size: 35px;
 
-  font-family: "Rhymes Text Light", "Rhymes Text Light Placeholder", sans-serif;
+  font-family: "Cormorant Garamond", serif;
 
   max-width: 950px;
 
@@ -323,84 +326,6 @@
   letter-spacing: -0.02em;
 }
 
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
-@media (max-width: 1024px) {
-  .descripcion-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .trabajamos,
-  .descripcion2 .trabajamos,
-  .trabajamos--reverse {
-    grid-template-columns: 1fr;
-    width: 90%;
-    margin: 3rem auto;
-  }
-
-  .trabajamos-img,
-  .descripcion2 .trabajamos-img,
-  .trabajamos--reverse .trabajamos-img {
-    transform: none;
-    order: -1;
-  }
-}
-
-@media (max-width: 768px) {
-  .trabajamos-text,
-  .descripcion2 .trabajamos-text,
-  .trabajamos--reverse .trabajamos-text {
-    padding: 2rem;
-    border-radius: 20px;
-  }
-
-  .trabajamos-text h2 {
-    font-size: 1.8rem;
-  }
-
-  .trabajamos-text ul {
-    grid-template-columns: 1fr;
-  }
-
-  .collage {
-    flex-direction: column;
-  }
-
-  .collage__macro {
-    position: relative;
-    width: 100%;
-    bottom: auto;
-    right: auto;
-  }
-
-  .head {
-    padding: 1rem 0rem 1rem 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    margin-top: 20px;
-  }
-
-  .descripcion > p {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  .trabajamos {
-    width: 95%;
-  }
-
-  .descripcion-badge {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    margin-top: 20px;
-  }
-}
 
 .tags-bugs {
   list-style: none;
@@ -472,14 +397,6 @@
     no-repeat center / 60%;
 }
 
-@media (max-width: 640px) {
-  .tags {
-    grid-template-columns: 1fr;
-  }
-  .como-trabajamos {
-    padding: 1.75rem;
-  }
-}
 
 [data-aos] {
   opacity: 1 !important;
@@ -503,4 +420,653 @@
 
 [data-aos].aos-animate {
   transform: translate(0, 0);
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+/* ============================================================
+   TABLET GRANDE
+============================================================ */
+
+@media (max-width: 1200px) {
+
+    /* DESCRIPCIÓN */
+
+    .descripcion-grid {
+        max-width: 1000px;
+        gap: 2.5rem;
+        padding: 0 2rem;
+    }
+
+    .descripcion > h2 {
+        font-size: 2.5rem;
+    }
+
+    .descripcion > p {
+        max-width: 650px;
+        font-size: 1.1rem;
+    }
+
+
+    /* TRABAJAMOS */
+
+    .trabajamos {
+        grid-template-columns: minmax(400px, 42%) 1fr;
+        width: 92%;
+    }
+
+    .trabajamos-text {
+        padding: 3rem;
+        padding-left: clamp(4rem, 7vw, 8rem);
+        transform: translateX(-60px);
+    }
+
+    .trabajamos-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .trabajamos-text p {
+        font-size: 1.05rem;
+    }
+
+    .trabajamos--reverse .trabajamos-text {
+        padding-left: 3rem;
+        padding-right: clamp(4rem, 7vw, 8rem);
+    }
+
+    .descripcion2 .trabajamos-text {
+        padding-left: 3rem;
+        padding-right: clamp(4rem, 7vw, 8rem);
+    }
+
+
+    /* IMÁGENES */
+
+    .trabajamos-img {
+        gap: 2rem;
+    }
+
+    .trabajamos-img img {
+        height: 340px;
+    }
+
+
+    /* HEAD */
+
+    .head div {
+        width: 85%;
+        padding: 7rem 6rem 6rem 2rem;
+    }
+
+    .head div h2 {
+        font-size: 32px;
+    }
+
+
+    /* CÓMO TRABAJAMOS */
+
+    .como-trabajamos {
+        width: 75%;
+        padding: 2.5rem;
+    }
+
+    .como-trabajamos h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1024px) {
+
+    /* DESCRIPCIÓN */
+
+    .descripcion-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 800px;
+    }
+
+    .descripcion-text h3 {
+        font-size: 1.7rem;
+    }
+
+
+    /* TRABAJAMOS */
+
+    .trabajamos,
+    .descripcion2 .trabajamos,
+    .trabajamos--reverse {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 4rem auto;
+        gap: 2rem;
+    }
+
+    .trabajamos-img,
+    .descripcion2 .trabajamos-img,
+    .trabajamos--reverse .trabajamos-img {
+        transform: none;
+        order: -1;
+    }
+
+    .trabajamos-text,
+    .descripcion2 .trabajamos-text,
+    .trabajamos--reverse .trabajamos-text {
+        transform: none;
+        padding: 3rem;
+        border-radius: 25px;
+    }
+
+    .trabajamos-text h2 {
+        font-size: 2.4rem;
+    }
+
+    .trabajamos-text p {
+        font-size: 1.05rem;
+        text-align: left;
+    }
+
+
+    /* IMÁGENES */
+
+    .trabajamos-img img {
+        height: 420px;
+    }
+
+    .collage {
+        gap: 15px;
+    }
+
+    .collage__macro {
+        width: 30%;
+    }
+
+
+    /* DESCRIPCIÓN 2 */
+
+    .descripcion2 .trabajamos {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* HEAD */
+
+    .head {
+        padding: 0;
+    }
+
+    .head div {
+        width: 90%;
+        padding: 6rem 2rem;
+    }
+
+    .head div h2 {
+        font-size: 30px;
+    }
+
+
+    /* CÓMO TRABAJAMOS */
+
+    .como-trabajamos {
+        width: 85%;
+    }
+
+    .tags {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ============================================================
+   MÓVIL
+============================================================ */
+
+@media (max-width: 768px) {
+
+    /* DESCRIPCIÓN */
+
+    .descripcion {
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .descripcion > h2 {
+        font-size: 2rem;
+        line-height: 1.15;
+        margin-bottom: 12px;
+    }
+
+    .descripcion > p {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 35px;
+        padding: 0;
+    }
+
+    .descripcion > h2:last-of-type {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+
+    .descripcion-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .descripcion-text h3 {
+        font-size: 1.55rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .descripcion-text p {
+        font-size: 0.93rem;
+        line-height: 1.7;
+    }
+
+
+    /* LISTA */
+
+    .descripcion-lista {
+        padding: 1.25rem 1.4rem;
+        border-radius: 14px;
+    }
+
+    .descripcion-lista h4 {
+        font-size: 1.1rem;
+    }
+
+    .descripcion-lista li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+
+    /* BADGE */
+
+    .descripcion-badge {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 20px auto 0;
+        width: fit-content;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .descripcion-badge .badge-number {
+        font-size: 1.8rem;
+    }
+
+
+    /* TRABAJAMOS */
+
+    .trabajamos,
+    .descripcion2 .trabajamos,
+    .trabajamos--reverse {
+        width: 94%;
+        margin: 3rem auto;
+        gap: 1.5rem;
+    }
+
+    .trabajamos-text,
+    .descripcion2 .trabajamos-text,
+    .trabajamos--reverse .trabajamos-text {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .trabajamos-text h2 {
+        font-size: 2rem;
+        line-height: 1.15;
+        margin-bottom: 2rem;
+    }
+
+    .trabajamos-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+
+    /* TAGS */
+
+    .tags {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .tags li {
+        font-size: 0.9rem;
+        padding: 8px 0 8px 28px;
+    }
+
+
+    /* IMÁGENES */
+
+    .trabajamos-img {
+        gap: 1.5rem;
+    }
+
+    .trabajamos-img img {
+        height: 350px;
+        border-radius: 22px;
+    }
+
+    .collage {
+        gap: 10px;
+    }
+
+    .collage__main,
+    .collage__brote {
+        border-radius: 22px;
+    }
+
+    .collage__macro {
+        position: relative;
+        width: 100%;
+        right: auto;
+        bottom: auto;
+        border-radius: 18px;
+    }
+
+
+    /* HEAD */
+
+    .head {
+        padding: 1rem;
+    }
+
+    .head div {
+        width: 100%;
+        padding: 4rem 1rem;
+        box-sizing: border-box;
+    }
+
+    .head div h2 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+
+    /* TAGS BUGS */
+
+    .tags-bugs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .tags-bugs li {
+        font-size: 13px;
+    }
+
+
+    /* CÓMO TRABAJAMOS */
+
+    .como-trabajamos {
+        width: 90%;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .como-trabajamos h2 {
+        font-size: 27px;
+        line-height: 1.2;
+    }
+}
+
+
+/* ============================================================
+   MÓVIL PEQUEÑO
+============================================================ */
+
+@media (max-width: 480px) {
+
+    /* DESCRIPCIÓN */
+
+    .descripcion {
+        padding: 0 0.8rem;
+    }
+
+    .descripcion > h2 {
+        font-size: 1.75rem;
+    }
+
+    .descripcion > p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        padding: 0 0.5rem;
+    }
+
+    .descripcion > h2:last-of-type {
+        font-size: 1.6rem;
+    }
+
+
+    /* GRID */
+
+    .descripcion-grid {
+        gap: 1.5rem;
+    }
+
+    .descripcion-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .descripcion-text p {
+        font-size: 0.9rem;
+    }
+
+
+    /* LISTA */
+
+    .descripcion-lista {
+        padding: 1rem 1.1rem;
+    }
+
+    .descripcion-lista h4 {
+        font-size: 1rem;
+    }
+
+    .descripcion-lista li {
+        font-size: 0.85rem;
+    }
+
+
+    /* BADGE */
+
+    .descripcion-badge {
+        padding: 1rem 1.3rem;
+    }
+
+    .descripcion-badge .badge-number {
+        font-size: 1.6rem;
+    }
+
+
+    /* TRABAJAMOS */
+
+    .trabajamos,
+    .descripcion2 .trabajamos,
+    .trabajamos--reverse {
+        width: 96%;
+        margin: 2.5rem auto;
+    }
+
+    .trabajamos-text,
+    .descripcion2 .trabajamos-text,
+    .trabajamos--reverse .trabajamos-text {
+        padding: 1.5rem;
+        border-radius: 18px;
+    }
+
+    .trabajamos-text h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .trabajamos-text p {
+        font-size: 0.92rem;
+        line-height: 1.65;
+    }
+
+
+    /* TAGS */
+
+    .tags {
+        gap: 6px;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tags li {
+        font-size: 0.85rem;
+        padding-left: 26px;
+    }
+
+    .tags li::before {
+        font-size: 1rem;
+    }
+
+
+    /* IMÁGENES */
+
+    .trabajamos-img img {
+        height: 280px;
+        border-radius: 18px;
+    }
+
+    .collage__main,
+    .collage__brote {
+        border-radius: 18px;
+    }
+
+    .collage__macro {
+        border-radius: 15px;
+    }
+
+
+    /* HEAD */
+
+    .head {
+        padding: 0.5rem;
+    }
+
+    .head div {
+        padding: 3rem 1rem;
+    }
+
+    .head div h2 {
+        font-size: 23px;
+    }
+
+
+    /* TAGS BUGS */
+
+    .tags-bugs {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .tags-bugs li {
+        font-size: 12px;
+    }
+
+
+    /* CÓMO TRABAJAMOS */
+
+    .como-trabajamos {
+        width: 94%;
+        padding: 1.5rem;
+        border-radius: 14px;
+    }
+
+    .como-trabajamos h2 {
+        font-size: 23px;
+    }
+}
+
+
+/* ============================================================
+   MÓVILES MUY PEQUEÑOS
+============================================================ */
+
+@media (max-width: 360px) {
+
+    .descripcion > h2 {
+        font-size: 1.6rem;
+    }
+
+    .descripcion > p {
+        font-size: 0.9rem;
+    }
+
+    .descripcion > h2:last-of-type {
+        font-size: 1.45rem;
+    }
+
+    .descripcion-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .descripcion-text p {
+        font-size: 0.85rem;
+    }
+
+
+    /* TRABAJAMOS */
+
+    .trabajamos-text,
+    .descripcion2 .trabajamos-text,
+    .trabajamos--reverse .trabajamos-text {
+        padding: 1.25rem;
+    }
+
+    .trabajamos-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .trabajamos-text p {
+        font-size: 0.88rem;
+    }
+
+
+    /* IMÁGENES */
+
+    .trabajamos-img img {
+        height: 240px;
+    }
+
+
+    /* HEAD */
+
+    .head div {
+        padding: 2.5rem 0.8rem;
+    }
+
+    .head div h2 {
+        font-size: 21px;
+    }
+
+
+    /* CÓMO TRABAJAMOS */
+
+    .como-trabajamos {
+        padding: 1.25rem;
+    }
+
+    .como-trabajamos h2 {
+        font-size: 21px;
+    }
 }

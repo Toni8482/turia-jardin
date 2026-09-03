@@ -111,6 +111,7 @@
 
   display: flex;
   align-items: center;
+  border-bottom: solid 1px var(--border-color);
 }
 
 /* Contenedor */
