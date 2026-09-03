@@ -5,13 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Poda de árboles - Turia Jardín</title>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../styles/variables.css" />
   <link rel="stylesheet" type="text/css" href="../styles/base.css" />
   <link rel="stylesheet" type="text/css" href="../styles/layout.css" />
   <link rel="stylesheet" type="text/css" href="../styles/sections.css" />
-  <link rel="stylesheet" type="text/css" href="../styles/components.css" />
-  
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/sections.css">
   <link rel="stylesheet" type="text/css" href="../styles/components/header.css">
   <link rel="stylesheet" type="text/css" href="../styles/components/footer.css">
@@ -20,7 +18,6 @@
   <link rel="stylesheet" type="text/css" href="../styles/components/btn.css">
   <link rel="stylesheet" type="text/css" href="../styles/components/features.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/hero.css">
-
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/steps.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/ventajas.css">
   <link rel="stylesheet" type="text/css" href="../styles/pages/services/microCta.css">
@@ -29,36 +26,11 @@
 </head>
 
 <body data-base="..">
-  <div class="background">
-
-    <div class="glow glow1"></div>
-    <div class="glow glow2"></div>
-    <div class="glow glow3"></div>
-
-    <svg class="topography" viewBox="0 0 1920 1080">
-
-      <g>
-
-        <path d="M1400 80 C1700 140 1760 320 1580 420 C1380 520 1260 650 1480 760 C1730 890 1820 980 1600 1040" />
-
-        <path d="M1360 60 C1660 120 1710 300 1540 400 C1340 500 1220 630 1440 740 C1690 870 1780 960 1560 1020" />
-
-        <path d="M1320 40 C1620 100 1670 280 1500 380 C1300 480 1180 610 1400 720 C1650 850 1740 940 1520 1000" />
-
-        <path d="M1280 20 C1580 80 1630 260 1460 360 C1260 460 1140 590 1360 700 C1610 830 1700 920 1480 980" />
-
-        <path d="M1240 0 C1540 60 1590 240 1420 340 C1220 440 1100 570 1320 680 C1570 810 1660 900 1440 960" />
-
-      </g>
-
-    </svg>
-
-  </div>
+ 
+    <div id="background-component"></div>
   <div id="header-container"></div>
 
   <main>
-
-
 
     <!-- HERO -->
     <div class="hero-services">
@@ -76,14 +48,11 @@
             <span>poda de árboles</span>
           </h1>
 
-       
-
-          <button class="btn magnetic">
+          <a href="../contacto.html" class="btn magnetic">
             Contacta ahora
-          </button>
+          </a>
 
         </div>
-
 
         <div class="hero-image">
 
@@ -97,59 +66,32 @@
     </div>
 
 
+    <section class="head">
+      <div>
+        <h2 class="reveal-fade">
+          Realizamos trabajos profesionales de poda y mantenimiento de árboles para particulares,
+          comunidades de vecinos, empresas y administraciones.
 
-
-
-  <section class="head">
-<div>
-      <h2>
-      Realizamos trabajos profesionales de poda y mantenimiento de árboles para particulares,
-            comunidades de vecinos, empresas y administraciones.
-
-      </h2>
-</div>
+        </h2>
+      </div>
 
     </section>
 
 
-
-
-
-
-
-
     <!-- DESCRIPCIÓN -->
     <section class="descripcion">
-      <!-- ===== HEADER =====  <div class="section-header reveal-fade">
-        <div class="section-header-decoration">
-            <span class="decoration-line"></span>
-            <span class="decoration-icon">🌿</span>
-            <span class="decoration-line"></span>
-        </div>
-        <h2>Servicio profesional de <span style="color:var(--accent);">poda de árboles</span></h2>
-        <div class="section-header-subtitle">
-            <span class="subtitle-line"></span>
-            <p> En Turia Jardín somos especialistas en la poda y mantenimiento de todo tipo de árboles.</p>
-            <span class="subtitle-line"></span>
-        </div>
-    </div> -->
 
+      <div class="trabajamos reveal-fade">
 
-
-      <div class="trabajamos">
-
-        <div class="trabajamos-img" >
-
+        <div class="trabajamos-img">
 
           <img class="" data-aos="slide-in-left" src="./../assets/imagenes/services/arboles/unnamed (2).png"
             alt="Trabajo de poda de árboles" />
           <img class="" data-aos="slide-in-left" src="./../assets/imagenes/services/arboles/arboles11.webp"
             alt="Corte de poda sanado" />
 
-
-
         </div>
-        <div class="trabajamos-text" >
+        <div class="trabajamos-text">
           <h2>¿Por qué es importante podar un árbol?</h2>
           <p>
             La poda adecuada es fundamental para la salud, la estética y la seguridad de los árboles.
@@ -158,94 +100,33 @@
             favorece el crecimiento saludable, mejora la estructura del árbol y previene la aparición
             de plagas y enfermedades que suelen alojarse en la madera muerta o dañada.
           </p>
-          <!--
-          
-           <p>
-            En Turia Jardín conocemos a fondo las especies arbóreas más comunes en el entorno Mediterráneo
-            (como el <strong>Pino carrasco (Pinus halepensis)</strong>,Pino piñonero (Pinus pinea), Ficus, <strong>Olmo</strong>, <strong>Morera</strong>,
-            Eucaliptus, etc ... ) y aplicamos técnicas de poda
-            respetuosas con el crecimiento natural de cada variedad. Nuestro objetivo es que tus
-            árboles luzcan espléndidos durante todo el año, sin riesgos para las personas ni para
-            las propias plantas.
-          </p>
-          -->
-         <br>
+
+          <br>
           <p>
             Además, una poda profesional realizada en el momento adecuado ayuda a que el árbol
             concentre sus nutrientes en las partes sanas, lo que se traduce en un desarrollo más
             vigoroso, una mayor floración y una resistencia superior frente a condiciones climáticas
             adversas, como el viento o las tormentas.
           </p>
-          <!--
-          <h2>¿Cómo trabajamos?</h2>
-          -->
+
         </div>
 
 
       </div>
-<!--
-      
- <ul>
-            <li>Inspección previa del ejemplar y valoración de riesgos.</li>
-            <li>Eliminación de ramas secas, dañadas o enfermas.</li>
-            <li>Poda de formación, mantenimiento o reducción de copa.</li>
-            <li>Eliminación de chupones y ramas desorientadas.</li>
-            <li>Limpieza completa de la zona y retirada de restos.</li>
-          </ul>
 
--->
-
-
-      <!-- ===== VENTAJAS =====  <div class="ventajas-grid">
-        <div class="ventaja-card reveal-fade">
-          <div class="ventaja-icon">🎨</div>
-         <h3>Seguridad</h3>
-          <p>Trabajamos con equipos adecuados y medidas de seguridad.</p>
-        </div>
-        <div class="ventaja-card reveal-fade">
-          <div class="ventaja-icon">🌱</div>
-          <h3>Experiencia</h3>
-          <p>Más de 25 años de experiencia en poda de árboles.</p>
-        </div>
-        <div class="ventaja-card reveal-fade">
-          <div class="ventaja-icon">👷</div>
-           <h3>Limpieza</h3>
-          <p>Retiramos todos los restos y dejamos la zona impecable.</p>
-        </div>
-        <div class="ventaja-card reveal-fade">
-          <div class="ventaja-icon">🔄</div>
-          <h3>Presupuesto</h3>
-          <p>Presupuesto sin compromiso y asesoramiento profesional.</p>
-        </div>
-      </div>-->
 
     </section>
+
     <section class="descripcion2">
-      <!-- ===== HEADER =====  <div class="section-header reveal-fade">
-        <div class="section-header-decoration">
-            <span class="decoration-line"></span>
-            <span class="decoration-icon">🌿</span>
-            <span class="decoration-line"></span>
-        </div>
-        <h2>Servicio profesional de <span style="color:var(--accent);">poda de árboles</span></h2>
-        <div class="section-header-subtitle">
-            <span class="subtitle-line"></span>
-            <p> En Turia Jardín somos especialistas en la poda y mantenimiento de todo tipo de árboles.</p>
-            <span class="subtitle-line"></span>
-        </div>
-    </div> -->
 
+      <div class=" trabajamos  reveal-fade">
 
-
-      <div class=" trabajamos ">
-
-
-        <div class="trabajamos-text" >
-
+        <div class="trabajamos-text">
 
           <p>
             En Turia Jardín conocemos a fondo las especies arbóreas más comunes en el entorno Mediterráneo
-           como el <strong>Pino carrasco (Pinus halepensis)</strong>,<strong>Pino piñonero (Pinus pinea)</strong>, <strong>Ficus</strong>,
+            como el <strong>Pino carrasco (Pinus halepensis)</strong>,<strong>Pino piñonero (Pinus pinea)</strong>,
+            <strong>Ficus</strong>,
             <strong>Olmo</strong>, <strong>Morera</strong>,
             <strong>Eucaliptus</strong>, etc... y aplicamos técnicas de poda
             respetuosas con el crecimiento natural de cada variedad. Nuestro objetivo es que tus
@@ -253,20 +134,14 @@
             las propias plantas.
           </p>
 
-
         </div>
 
         <div class="trabajamos-img" data-aos="slide-in-right">
 
-
-
-          <img class="" src="./../assets/imagenes/services/arboles/arboles5.webp"
-            alt="Brote nuevo tras la poda" />
+          <img class="" src="./../assets/imagenes/services/arboles/arboles5.webp" alt="Brote nuevo tras la poda" />
 
         </div>
       </div>
-
-
 
     </section>
     <!-- PROCESO FOTOS -->
@@ -274,12 +149,11 @@
 
       <div class="section-header reveal-fade">
 
-
-     
-          <span class="subtitle-line"></span>
-          <p>De la idea a la realidad, paso a paso</p>
-          <span class="subtitle-line"></span>
+        <span class="subtitle-line"></span>
+        <!--  <p>De la idea a la realidad, paso a paso</p> -->
        
+        <span class="subtitle-line"></span>
+
       </div>
 
       <div class="proceso-grid">
@@ -366,41 +240,6 @@
       </div>
     </section>
 
-    <!-- STACK SLIDERS 
-    <div class="trabajos">
-      <h1>Algunos de nuestros trabajos</h1>
--->
-    <!-- SLIDER 1 
-      <section class="stack-slider">
-        <button class="nav prev" aria-label="Anterior">‹</button>
-
-        <div class="stack">
-          <article class="stack-card active">
-            <img src="https://i.postimg.cc/8CKdPF1V/IMG-20221229-150727.jpg" alt="Trabajo de poda de árbol 1" />
-            <div class="info">
-              <p>Poda de mantenimiento en ejemplar adulto.</p>
-            </div>
-          </article>
-          <article class="stack-card">
-            <img src="https://i.postimg.cc/L8S3yKyL/IMG-20240407-184334.jpg" alt="Trabajo de poda de árbol 2" />
-            <div class="info">
-              <p>Reducción de copa y eliminación de ramas secas.</p>
-            </div>
-          </article>
-          <article class="stack-card">
-            <img src="https://i.postimg.cc/fknh9TfV/20250626-143239.jpg" alt="Trabajo de poda de árbol 3" />
-            <div class="info">
-              <p>Intervención completa en ejemplar de gran porte.</p>
-            </div>
-          </article>
-        </div>
-
-        <button class="nav next" aria-label="Siguiente">›</button>
-      </section>
-
-      <a href="../proyectos.html" class="btn">Ver todos nuestros proyectos</a>
-    </div>
--->
     <!-- CTA -->
 
     <section class="micro-cta-section">
@@ -410,7 +249,7 @@
           Presupuesto gratuito para particulares y empresas.
         </p>
         <div class="micro-cta-actions">
-          <a href="mailto:danielturiajardin@gmail.com" class="btn-primary">Solicitar presupuesto</a>
+          <a href="../contacto.html" class="btn-primary">Solicitar presupuesto</a>
           <a href="tel:+34652824652" class="btn-secondary">
             <span class="phone-icon">📞</span> Llamar ahora
           </a>
@@ -427,8 +266,8 @@
   <div id="footer-container"></div>
 
   <!-- JS DEL SLIDER -->
-
-
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script type="module" src="./../js/base.js" defer></script>
   <script type="module" src="./../js/services.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

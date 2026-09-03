@@ -1,4 +1,3 @@
-
 /* ============================================
    VENTAJAS (service cards)
    ============================================ */
@@ -23,7 +22,7 @@
 }
 
 .service-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -53,7 +52,7 @@
 }
 
 .service-card h3::before {
-  content: '';
+  content: "";
   display: block;
   width: 48px;
   height: 48px;
@@ -87,418 +86,287 @@
   margin: 0;
 }
 
-
 /* =========================
    VENTAJAS
 ========================= */
 
-.ventajas-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:60px;
+.ventajas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 60px;
 }
 
-.ventaja-card{
+.ventaja-card {
+  background: #182116;
 
-    background:#182116;
+  border: 1px solid rgba(140, 170, 94, 0.15);
 
-    border:1px solid rgba(140,170,94,.15);
+  border-radius: 18px;
 
-    border-radius:18px;
+  padding: 35px 28px;
 
-    padding:35px 28px;
+  transition: all 0.35s ease;
 
-    transition:all .35s ease;
+  position: relative;
 
-    position:relative;
+  overflow: hidden;
 
-    overflow:hidden;
-
-    text-align:left;
-
+  text-align: left;
 }
 
 /* Línea decorativa superior */
 
-.ventaja-card::before{
+.ventaja-card::before {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  top: 0;
+  left: 0;
 
-    top:0;
-    left:0;
+  width: 100%;
+  height: 3px;
 
-    width:100%;
-    height:3px;
+  background: linear-gradient(90deg, #8baa5e, transparent);
 
-    background:linear-gradient(
-        90deg,
-        #8baa5e,
-        transparent
-    );
+  opacity: 0;
 
-    opacity:0;
-
-    transition:.35s;
-
+  transition: 0.35s;
 }
 
 /* Hover */
 
-.ventaja-card:hover{
+.ventaja-card:hover {
+  transform: translateY(-8px);
 
-    transform:translateY(-8px);
+  border-color: #8baa5e;
 
-    border-color:#8baa5e;
-
-    box-shadow:
-        0 20px 45px rgba(0,0,0,.28);
-
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
 }
 
-.ventaja-card:hover::before{
-
-    opacity:1;
-
+.ventaja-card:hover::before {
+  opacity: 1;
 }
-
 
 /* =========================
    ICONO
 ========================= */
 
-.ventaja-icon{
+.ventaja-icon {
+  width: 70px;
+  height: 70px;
 
-    width:70px;
-    height:70px;
+  border-radius: 50%;
 
-    border-radius:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+  background: rgba(139, 170, 94, 0.12);
 
-    background:rgba(139,170,94,.12);
+  color: #8baa5e;
 
-    color:#8baa5e;
+  margin-bottom: 22px;
 
-    margin-bottom:22px;
-
-    transition:.35s;
-
+  transition: 0.35s;
 }
 
-.ventaja-card:hover .ventaja-icon{
+.ventaja-card:hover .ventaja-icon {
+  background: #8baa5e;
 
-    background:#8baa5e;
+  color: #fff;
 
-    color:#fff;
-
-    transform:rotate(-8deg) scale(1.08);
-
+  transform: rotate(-8deg) scale(1.08);
 }
-
 
 /* SVG */
 
-.ventaja-icon svg{
+.ventaja-icon svg {
+  width: 30px;
+  height: 30px;
 
-    width:30px;
-    height:30px;
-
-    fill:currentColor;
-
+  fill: currentColor;
 }
-
 
 /* =========================
    TITULO
 ========================= */
 
-.ventaja-card h3{
+.ventaja-card h3 {
+  color: #fff;
 
-    color:#fff;
+  font-size: 22px;
 
-    font-size:22px;
+  margin-bottom: 12px;
 
-    margin-bottom:12px;
-
-    font-weight:600;
-
+  font-weight: 600;
 }
-
 
 /* =========================
    TEXTO
 ========================= */
 
-.ventaja-card p{
+.ventaja-card p {
+  color: #c8c8c8;
 
-    color:#c8c8c8;
+  line-height: 1.7;
 
-    line-height:1.7;
-
-    font-size:15px;
-
+  font-size: 15px;
 }
 
 /* ============================================================
    RESPONSIVE TABLET
    ============================================================ */
 
-@media (max-width:1024px){
+@media (max-width: 1024px) {
+  /* Sistema claro */
 
+  .ventajas {
+    grid-template-columns: repeat(2, 1fr);
 
-    /* Sistema claro */
+    gap: 20px;
 
-    .ventajas {
+    margin: 50px 0 70px;
+  }
 
-        grid-template-columns:repeat(2,1fr);
+  .service-card {
+    padding: 28px 20px;
+  }
 
-        gap:20px;
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
 
-        margin:50px 0 70px;
+  .service-card p {
+    font-size: 0.9rem;
+  }
 
-    }
+  /* Sistema oscuro */
 
+  .ventajas-grid {
+    grid-template-columns: repeat(2, 1fr);
 
+    gap: 22px;
 
-    .service-card {
+    margin-top: 45px;
+  }
 
-        padding:28px 20px;
-
-    }
-
-
-
-    .service-card h3 {
-
-        font-size:1.1rem;
-
-    }
-
-
-
-    .service-card p {
-
-        font-size:.9rem;
-
-    }
-
-
-
-
-    /* Sistema oscuro */
-
-    .ventajas-grid {
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:22px;
-
-        margin-top:45px;
-
-    }
-
-
-
-    .ventaja-card {
-
-        padding:30px 24px;
-
-    }
-
-
+  .ventaja-card {
+    padding: 30px 24px;
+  }
 }
 
 /* ============================================================
    RESPONSIVE MOBILE
    ============================================================ */
 
-@media(max-width:768px){
-
-
-    /* =========================
+@media (max-width: 768px) {
+  /* =========================
        VENTAJAS CLARAS
     ========================= */
 
+  .ventajas {
+    grid-template-columns: 1fr;
 
-    .ventajas {
+    gap: 18px;
 
-        grid-template-columns:1fr;
+    margin: 40px 0 60px;
+  }
 
-        gap:18px;
+  .service-card {
+    padding: 25px 20px;
 
-        margin:40px 0 60px;
+    border-radius: 16px;
+  }
 
-    }
+  .service-card h3::before {
+    width: 42px;
+    height: 42px;
 
+    margin-bottom: 10px;
+  }
 
+  .service-card h3 {
+    font-size: 1.05rem;
+  }
 
-    .service-card {
+  .service-card p {
+    font-size: 0.9rem;
 
-        padding:25px 20px;
+    line-height: 1.5;
+  }
 
-        border-radius:16px;
-
-    }
-
-
-
-    .service-card h3::before {
-
-        width:42px;
-        height:42px;
-
-        margin-bottom:10px;
-
-    }
-
-
-
-    .service-card h3 {
-
-        font-size:1.05rem;
-
-    }
-
-
-
-    .service-card p {
-
-        font-size:.9rem;
-
-        line-height:1.5;
-
-    }
-
-
-
-
-    /* =========================
+  /* =========================
        VENTAJAS OSCURAS
     ========================= */
 
+  .ventajas-grid {
+    grid-template-columns: 1fr;
 
-    .ventajas-grid {
+    gap: 20px;
 
-        grid-template-columns:1fr;
+    margin-top: 35px;
+  }
 
-        gap:20px;
+  .ventaja-card {
+    padding: 28px 22px;
 
-        margin-top:35px;
+    border-radius: 16px;
 
-    }
+    text-align: center;
+  }
 
+  .ventaja-icon {
+    width: 60px;
+    height: 60px;
 
+    margin: 0 auto 18px;
+  }
 
-    .ventaja-card {
+  .ventaja-icon svg {
+    width: 26px;
+    height: 26px;
+  }
 
-        padding:28px 22px;
+  .ventaja-card h3 {
+    font-size: 20px;
+  }
 
-        border-radius:16px;
+  .ventaja-card p {
+    font-size: 14px;
 
-        text-align:center;
-
-    }
-
-
-
-    .ventaja-icon {
-
-        width:60px;
-        height:60px;
-
-        margin:0 auto 18px;
-
-    }
-
-
-
-    .ventaja-icon svg {
-
-        width:26px;
-        height:26px;
-
-    }
-
-
-
-    .ventaja-card h3 {
-
-        font-size:20px;
-
-    }
-
-
-
-    .ventaja-card p {
-
-        font-size:14px;
-
-        line-height:1.6;
-
-    }
-
-
+    line-height: 1.6;
+  }
 }
-
 
 /* ============================================================
    SMALL MOBILE
    ============================================================ */
 
-@media(max-width:480px){
+@media (max-width: 480px) {
+  .ventajas {
+    margin-top: 30px;
+  }
 
+  .service-card {
+    padding: 22px 18px;
+  }
 
-    .ventajas {
+  .service-card p {
+    font-size: 0.85rem;
+  }
 
-        margin-top:30px;
+  .ventaja-card {
+    padding: 25px 18px;
+  }
 
-    }
+  .ventaja-icon {
+    width: 55px;
+    height: 55px;
+  }
 
-
-
-    .service-card {
-
-        padding:22px 18px;
-
-    }
-
-
-
-    .service-card p {
-
-        font-size:.85rem;
-
-    }
-
-
-
-    .ventaja-card {
-
-        padding:25px 18px;
-
-    }
-
-
-
-    .ventaja-icon {
-
-        width:55px;
-        height:55px;
-
-    }
-
-
-
-    .ventaja-card h3 {
-
-        font-size:18px;
-
-    }
-
-
+  .ventaja-card h3 {
+    font-size: 18px;
+  }
 }

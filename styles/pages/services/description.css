@@ -3,222 +3,134 @@
    ========================================================== */
 
 .descripcion {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .descripcion > h2 {
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 700;
-    text-align: center;
-    color: var(--text-primary);
-    margin-bottom: 16px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 16px;
 }
 
-
 .descripcion > p {
-    max-width: 700px;
-    margin: 0 auto 50px;
-    text-align: center;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
 }
 
 .descripcion > h2:last-of-type {
-    text-align: center;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    margin-top: 40px;
-    margin-bottom: 30px;
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .descripcion > h2:last-of-type::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--accent);
-    border-radius: 4px;
-    margin: 12px auto 0;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 4px;
+  margin: 12px auto 0;
 }
 
-
-
 .descripcion-servicio {
-    padding: 4rem 0;
-    background: var(--bg-primary);
+  padding: 4rem 0;
+  background: var(--bg-primary);
 }
 
 .descripcion-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto 3rem;
-    padding: 0 1rem;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  align-items: start;
 }
 
 .descripcion-text h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    color: #1a3d2e;
-    margin-bottom: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  color: #1a3d2e;
+  margin-bottom: 1rem;
 }
 
 .descripcion-text p {
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    font-size: .95rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
 .descripcion-text p strong {
-    color: #1a3d2e;
+  color: #1a3d2e;
 }
 
 .descripcion-lista {
-    background: var(--bg-secondary);
-    padding: 1.5rem 2rem;
-    border-radius: 16px;
-    margin-top: 1.5rem;
-    border: 1px solid rgba(26, 61, 46, .06);
+  background: var(--bg-secondary);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(26, 61, 46, 0.06);
 }
 
 .descripcion-lista h4 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    color: #1a3d2e;
-    margin-bottom: .8rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  color: #1a3d2e;
+  margin-bottom: 0.8rem;
 }
 
 .descripcion-lista ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .descripcion-lista li {
-    padding: .5rem 0;
-    color: #555;
-    font-size: .95rem;
-    border-bottom: 1px solid rgba(26, 61, 46, .04);
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(26, 61, 46, 0.04);
 }
 
 .descripcion-lista li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .descripcion-badge {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    background: white;
-    border-radius: 16px;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, .12);
-    text-align: center;
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
 }
 
 .descripcion-badge .badge-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--accent);
-    font-family: 'Cormorant Garamond', serif;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: "Cormorant Garamond", serif;
 }
 
 .descripcion-badge .badge-label {
-    font-size: .7rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #888;
-}
-
-/* ==========================================================
-   FONDO GENERAL DE LA PÁGINA
-   ========================================================== */
-
-body {
-    margin: 0;
-    margin-top: 50px;
-   
-    color: white;
-    overflow-x: hidden;
-}
-
-.background {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.glow {
-    position: absolute;
-    filter: blur(120px);
-    border-radius: 50%;
-    animation: move 25s ease-in-out infinite alternate;
-}
-
-.glow1 {
-    width: 700px;
-    height: 700px;
-    left: -250px;
-    top: -150px;
-    background: radial-gradient(circle, rgba(143, 185, 82, .18), transparent 70%);
-}
-
-.glow2 {
-    width: 600px;
-    height: 600px;
-    right: -150px;
-    top: 350px;
-    background: radial-gradient(circle, rgba(108, 160, 75, .14), transparent 70%);
-}
-
-.glow3 {
-    width: 900px;
-    height: 900px;
-    left: 20%;
-    bottom: -500px;
-    background: radial-gradient(circle, rgba(65, 95, 40, .16), transparent 70%);
-}
-
-.topography {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.topography path {
-    fill: none;
-    stroke: #7b9c55;
-    stroke-width: 1.2;
-    opacity: .06;
-}
-
-.background::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, transparent 45%, rgba(0, 0, 0, .35));
-}
-
-@keyframes move {
-    from { transform: translate(0, 0) scale(1); }
-    to { transform: translate(40px, -30px) scale(1.08); }
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: .025;
-    background-image: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255, 255, 255, .03) 4px);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
 }
 
 /* ==========================================================
@@ -226,79 +138,77 @@ body::before {
    ========================================================== */
 
 .trabajamos {
-    position: relative;
-    display: grid;
-     grid-template-columns: minmax(500px, 40%) 1fr;
-    align-items: center;
-    max-width: 1400px;
-    width: min(95%, 1400px);
-    margin: 4rem auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(500px, 40%) 1fr;
+  align-items: center;
+  max-width: 1400px;
+  width: min(95%, 1400px);
+  margin: 4rem auto;
 }
 
 .trabajamos-text {
-    background: rgba(22, 104, 102, .1);
-    border: 1px solid #10230a;
-    border-radius: 30px;
-    padding: clamp(2rem, 7vw, 5rem);
-    /* deja espacio para que la imagen sobresalga encima de la tarjeta */
-    padding-left: clamp(6rem, 10vw, 14rem);
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 0;
-     transform: translateX(-100px);
+  background: rgba(22, 104, 102, 0.1);
+  border: 1px solid #10230a;
+  border-radius: 30px;
+  padding: clamp(2rem, 7vw, 5rem);
+  /* deja espacio para que la imagen sobresalga encima de la tarjeta */
+  padding-left: clamp(6rem, 10vw, 14rem);
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 0;
+  transform: translateX(-100px);
 }
 
 .trabajamos-text h2 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    color: var(--text-primary);
-    margin: 0;
-    margin-bottom: 3rem;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 0;
+  margin-bottom: 3rem;
+  font-family: "Cormorant Garamond", serif;;
 }
 
 .trabajamos-text h2:not(:first-of-type) {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-
-
 
 .trabajamos-text p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    margin: 0;
-    text-align: justify;
-    
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: justify;
 }
 
-.tags  {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 20px;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .tags li {
-    position: relative;
-    padding: 8px 0 8px 32px;
-    line-height: 1.6;
-    color: var(--text-secondary);
-    font-size: .95rem;
-    border-bottom: 1px solid var(--border-color);
+  position: relative;
+  padding: 8px 0 8px 32px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .tags li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    top: 8px;
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 1.1rem;
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 /* ==========================================================
@@ -306,253 +216,143 @@ body::before {
    ========================================================== */
 
 .trabajamos-img {
-    width: 100%;
-    z-index: 2;
-    /* la imagen sobresale de la tarjeta creando efecto editorial */
-   
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-   
+  width: 100%;
+  z-index: 2;
+  /* la imagen sobresale de la tarjeta creando efecto editorial */
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .trabajamos-img img {
-    width: 100%;
-    border-radius: 30px;
-     aspect-ratio: 3 / 2;
-    object-fit:cover;
-     display: block;   
-     height: clamp(280px, 40vw, 380px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    
+  width: 100%;
+  border-radius: 30px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  height: clamp(280px, 40vw, 380px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .collage {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .collage__main,
 .collage__brote {
-    width: 100%;
-    display: block;
-    border-radius: 30px;
-    object-fit: cover;
+  width: 100%;
+  display: block;
+  border-radius: 30px;
+  object-fit: cover;
 }
 
 .collage__macro {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    width: 35%;
-    border-radius: 20px;
-    object-fit: cover;
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 35%;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
 /* Segunda sección con orden invertido */
 .trabajamos--reverse .trabajamos-img {
-    transform: translateX(-60px);
+  transform: translateX(-60px);
 }
 
 .trabajamos--reverse .trabajamos-text {
-    padding-left: clamp(2rem, 4vw, 5rem);
-    padding-right: clamp(8rem, 10vw, 14rem);
+  padding-left: clamp(2rem, 4vw, 5rem);
+  padding-right: clamp(8rem, 10vw, 14rem);
 }
 
 .descripcion2 {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .descripcion2 .trabajamos {
-    grid-template-columns: 62% 38%;
+  grid-template-columns: 62% 38%;
 }
 
 .descripcion2 .trabajamos-text {
-    padding-left: clamp(2rem, 4vw, 5rem);
-    padding-right: clamp(8rem, 10vw, 14rem);
-    z-index: 0;
-     transform: translateX(100px);
+  padding-left: clamp(2rem, 4vw, 5rem);
+  padding-right: clamp(8rem, 10vw, 14rem);
+  z-index: 0;
+  transform: translateX(100px);
 }
 
 .descripcion2 .trabajamos-img {
-   
-    z-index: 2;
+  z-index: 2;
 }
 
 .btn {
-    align-self: flex-start;
-    margin: auto;
+  align-self: flex-start;
+  margin: auto;
+  text-decoration: none;
 }
 
-.head{
-   
-    width: 100%;
-   
+.head {
+  width: 100%;
+
   position: relative;
- margin: 0 auto;
+  margin: 0 auto;
+ 
 }
-
 
 .head div {
- display: flex;
- max-width: 1400px;
-    width: 70%;
-     color: var(--text-primary);
-    padding:3rem 15rem 1rem 3rem;
-  
-    margin: auto;
-  
+  display: flex;
+  max-width: 1400px;
+  width: 70%;
+  color: var(--text-primary);
+  padding: 10rem 15rem 8rem 3rem;
+
+  margin: auto;
 }
 
-.head div h2{
+.head div h2 {
+  font-size: 35px;
 
-    font-size: 35px;
-   
-    font-family:"Rhymes Text Light", "Rhymes Text Light Placeholder", sans-serif;
+  font-family: "Cormorant Garamond", serif;
 
+  max-width: 950px;
 
-     max-width: 950px;
-  
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
-@media (max-width: 1024px) {
-     .descripcion-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
 
-    .trabajamos,
-    .descripcion2 .trabajamos,
-    .trabajamos--reverse {
-        grid-template-columns: 1fr;
-        width: 90%;
-        margin: 3rem auto;
-    }
-
-     .trabajamos-img,
-    .descripcion2 .trabajamos-img,
-    .trabajamos--reverse .trabajamos-img {
-        transform: none;
-        order: -1;
-    }
+.tags-bugs {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
 }
-
-
-
-@media (max-width: 768px) {
-   
-
-   
-
-    .trabajamos-text,
-    .descripcion2 .trabajamos-text,
-    .trabajamos--reverse .trabajamos-text {
-        padding: 2rem;
-        border-radius: 20px;
-    }
-
-    .trabajamos-text h2 {
-        font-size: 1.8rem;
-    }
-
-    .trabajamos-text ul {
-        grid-template-columns: 1fr;
-    }
-
-    .collage {
-        flex-direction: column;
-    }
-
-    .collage__macro {
-        position: relative;
-        width: 100%;
-        bottom: auto;
-        right: auto;
-    }
-
-    .head{
-        padding: 1rem 0rem 1rem 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        margin-top: 20px;
-    }
-
-    .descripcion > p {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-
-    .trabajamos {
-        width: 95%;
-    }
-
-    .descripcion-badge {
-        position: relative;
-        right: auto;
-        bottom: auto;
-        margin-top: 20px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- .tags-bugs {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 10px;
-  }
-
-
 
 .tags-bugs li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    color: #3b6d11;
-    font-weight: 500;
-  }
-  .tags-bugs li::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #639922;
-    flex-shrink: 0;
-  }
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #3b6d11;
+  font-weight: 500;
+}
+.tags-bugs li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #639922;
+  flex-shrink: 0;
+}
 
-
-
-
-
-  .como-trabajamos {
-  background:  rgba(22, 104, 102, .1);
+.como-trabajamos {
+  background: rgba(22, 104, 102, 0.1);
   border-radius: 16px;
   padding: 2.5rem;
   margin-top: 2rem;
@@ -591,43 +391,682 @@ body::before {
   height: 18px;
   border-radius: 50%;
   background: var(--accent);
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center / 60%;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center / 60%;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E")
+    no-repeat center / 60%;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E")
+    no-repeat center / 60%;
 }
-
-@media (max-width: 640px) {
-  .tags {
-    grid-template-columns: 1fr;
-  }
-  .como-trabajamos {
-    padding: 1.75rem;
-  }
-}
-
 
 
 [data-aos] {
-    opacity: 1 !important;
+  opacity: 1 !important;
 }
 
-
-
 [data-aos="slide-in-left"] {
-    transform: translateX(-100vw);
+  transform: translateX(-100vw);
 }
 
 [data-aos="slide-in-right"] {
-    transform: translateX(100vw);
+  transform: translateX(100vw);
 }
 
 [data-aos="slide-in-up"] {
-    transform: translateY(100vh);
+  transform: translateY(100vh);
 }
 
 [data-aos="slide-in-down"] {
-    transform: translateY(-100vh);
+  transform: translateY(-100vh);
 }
 
 [data-aos].aos-animate {
-    transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+/* ============================================================
+   TABLET GRANDE
+============================================================ */
+
+@media (max-width: 1200px) {
+
+    /* DESCRIPCIÓN */
+
+    .descripcion-grid {
+        max-width: 1000px;
+        gap: 2.5rem;
+        padding: 0 2rem;
+    }
+
+    .descripcion > h2 {
+        font-size: 2.5rem;
+    }
+
+    .descripcion > p {
+        max-width: 650px;
+        font-size: 1.1rem;
+    }
+
+
+    /* TRABAJAMOS */
+
+    .trabajamos {
+        grid-template-columns: minmax(400px, 42%) 1fr;
+        width: 92%;
+    }
+
+    .trabajamos-text {
+        padding: 3rem;
+        padding-left: clamp(4rem, 7vw, 8rem);
+        transform: translateX(-60px);
+    }
+
+    .trabajamos-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .trabajamos-text p {
+        font-size: 1.05rem;
+    }
+
+    .trabajamos--reverse .trabajamos-text {
+        padding-left: 3rem;
+        padding-right: clamp(4rem, 7vw, 8rem);
+    }
+
+    .descripcion2 .trabajamos-text {
+        padding-left: 3rem;
+        padding-right: clamp(4rem, 7vw, 8rem);
+    }
+
+
+    /* IMÁGENES */
+
+    .trabajamos-img {
+        gap: 2rem;
+    }
+
+    .trabajamos-img img {
+        height: 340px;
+    }
+
+
+    /* HEAD */
+
+    .head div {
+        width: 85%;
+        padding: 7rem 6rem 6rem 2rem;
+    }
+
+    .head div h2 {
+        font-size: 32px;
+    }
+
+
+    /* CÓMO TRABAJAMOS */
+
+    .como-trabajamos {
+        width: 75%;
+        padding: 2.5rem;
+    }
+
+    .como-trabajamos h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1024px) {
+
+    /* DESCRIPCIÓN */
+
+    .descripcion-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 800px;
+    }
+
+    .descripcion-text h3 {
+        font-size: 1.7rem;
+    }
+
+
+    /* TRABAJAMOS */
+
+    .trabajamos,
+    .descripcion2 .trabajamos,
+    .trabajamos--reverse {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 4rem auto;
+        gap: 2rem;
+    }
+
+    .trabajamos-img,
+    .descripcion2 .trabajamos-img,
+    .trabajamos--reverse .trabajamos-img {
+        transform: none;
+        order: -1;
+    }
+
+    .trabajamos-text,
+    .descripcion2 .trabajamos-text,
+    .trabajamos--reverse .trabajamos-text {
+        transform: none;
+        padding: 3rem;
+        border-radius: 25px;
+    }
+
+    .trabajamos-text h2 {
+        font-size: 2.4rem;
+    }
+
+    .trabajamos-text p {
+        font-size: 1.05rem;
+        text-align: left;
+    }
+
+
+    /* IMÁGENES */
+
+    .trabajamos-img img {
+        height: 420px;
+    }
+
+    .collage {
+        gap: 15px;
+    }
+
+    .collage__macro {
+        width: 30%;
+    }
+
+
+    /* DESCRIPCIÓN 2 */
+
+    .descripcion2 .trabajamos {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* HEAD */
+
+    .head {
+        padding: 0;
+    }
+
+    .head div {
+        width: 90%;
+        padding: 6rem 2rem;
+    }
+
+    .head div h2 {
+        font-size: 30px;
+    }
+
+
+    /* CÓMO TRABAJAMOS */
+
+    .como-trabajamos {
+        width: 85%;
+    }
+
+    .tags {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ============================================================
+   MÓVIL
+============================================================ */
+
+@media (max-width: 768px) {
+
+    /* DESCRIPCIÓN */
+
+    .descripcion {
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .descripcion > h2 {
+        font-size: 2rem;
+        line-height: 1.15;
+        margin-bottom: 12px;
+    }
+
+    .descripcion > p {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 35px;
+        padding: 0;
+    }
+
+    .descripcion > h2:last-of-type {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+
+    .descripcion-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .descripcion-text h3 {
+        font-size: 1.55rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .descripcion-text p {
+        font-size: 0.93rem;
+        line-height: 1.7;
+    }
+
+
+    /* LISTA */
+
+    .descripcion-lista {
+        padding: 1.25rem 1.4rem;
+        border-radius: 14px;
+    }
+
+    .descripcion-lista h4 {
+        font-size: 1.1rem;
+    }
+
+    .descripcion-lista li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+
+    /* BADGE */
+
+    .descripcion-badge {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 20px auto 0;
+        width: fit-content;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .descripcion-badge .badge-number {
+        font-size: 1.8rem;
+    }
+
+
+    /* TRABAJAMOS */
+
+    .trabajamos,
+    .descripcion2 .trabajamos,
+    .trabajamos--reverse {
+        width: 94%;
+        margin: 3rem auto;
+        gap: 1.5rem;
+    }
+
+    .trabajamos-text,
+    .descripcion2 .trabajamos-text,
+    .trabajamos--reverse .trabajamos-text {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .trabajamos-text h2 {
+        font-size: 2rem;
+        line-height: 1.15;
+        margin-bottom: 2rem;
+    }
+
+    .trabajamos-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+
+    /* TAGS */
+
+    .tags {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .tags li {
+        font-size: 0.9rem;
+        padding: 8px 0 8px 28px;
+    }
+
+
+    /* IMÁGENES */
+
+    .trabajamos-img {
+        gap: 1.5rem;
+    }
+
+    .trabajamos-img img {
+        height: 350px;
+        border-radius: 22px;
+    }
+
+    .collage {
+        gap: 10px;
+    }
+
+    .collage__main,
+    .collage__brote {
+        border-radius: 22px;
+    }
+
+    .collage__macro {
+        position: relative;
+        width: 100%;
+        right: auto;
+        bottom: auto;
+        border-radius: 18px;
+    }
+
+
+    /* HEAD */
+
+    .head {
+        padding: 1rem;
+    }
+
+    .head div {
+        width: 100%;
+        padding: 4rem 1rem;
+        box-sizing: border-box;
+    }
+
+    .head div h2 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+
+    /* TAGS BUGS */
+
+    .tags-bugs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .tags-bugs li {
+        font-size: 13px;
+    }
+
+
+    /* CÓMO TRABAJAMOS */
+
+    .como-trabajamos {
+        width: 90%;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .como-trabajamos h2 {
+        font-size: 27px;
+        line-height: 1.2;
+    }
+}
+
+
+/* ============================================================
+   MÓVIL PEQUEÑO
+============================================================ */
+
+@media (max-width: 480px) {
+
+    /* DESCRIPCIÓN */
+
+    .descripcion {
+        padding: 0 0.8rem;
+    }
+
+    .descripcion > h2 {
+        font-size: 1.75rem;
+    }
+
+    .descripcion > p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        padding: 0 0.5rem;
+    }
+
+    .descripcion > h2:last-of-type {
+        font-size: 1.6rem;
+    }
+
+
+    /* GRID */
+
+    .descripcion-grid {
+        gap: 1.5rem;
+    }
+
+    .descripcion-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .descripcion-text p {
+        font-size: 0.9rem;
+    }
+
+
+    /* LISTA */
+
+    .descripcion-lista {
+        padding: 1rem 1.1rem;
+    }
+
+    .descripcion-lista h4 {
+        font-size: 1rem;
+    }
+
+    .descripcion-lista li {
+        font-size: 0.85rem;
+    }
+
+
+    /* BADGE */
+
+    .descripcion-badge {
+        padding: 1rem 1.3rem;
+    }
+
+    .descripcion-badge .badge-number {
+        font-size: 1.6rem;
+    }
+
+
+    /* TRABAJAMOS */
+
+    .trabajamos,
+    .descripcion2 .trabajamos,
+    .trabajamos--reverse {
+        width: 96%;
+        margin: 2.5rem auto;
+    }
+
+    .trabajamos-text,
+    .descripcion2 .trabajamos-text,
+    .trabajamos--reverse .trabajamos-text {
+        padding: 1.5rem;
+        border-radius: 18px;
+    }
+
+    .trabajamos-text h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .trabajamos-text p {
+        font-size: 0.92rem;
+        line-height: 1.65;
+    }
+
+
+    /* TAGS */
+
+    .tags {
+        gap: 6px;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tags li {
+        font-size: 0.85rem;
+        padding-left: 26px;
+    }
+
+    .tags li::before {
+        font-size: 1rem;
+    }
+
+
+    /* IMÁGENES */
+
+    .trabajamos-img img {
+        height: 280px;
+        border-radius: 18px;
+    }
+
+    .collage__main,
+    .collage__brote {
+        border-radius: 18px;
+    }
+
+    .collage__macro {
+        border-radius: 15px;
+    }
+
+
+    /* HEAD */
+
+    .head {
+        padding: 0.5rem;
+    }
+
+    .head div {
+        padding: 3rem 1rem;
+    }
+
+    .head div h2 {
+        font-size: 23px;
+    }
+
+
+    /* TAGS BUGS */
+
+    .tags-bugs {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .tags-bugs li {
+        font-size: 12px;
+    }
+
+
+    /* CÓMO TRABAJAMOS */
+
+    .como-trabajamos {
+        width: 94%;
+        padding: 1.5rem;
+        border-radius: 14px;
+    }
+
+    .como-trabajamos h2 {
+        font-size: 23px;
+    }
+}
+
+
+/* ============================================================
+   MÓVILES MUY PEQUEÑOS
+============================================================ */
+
+@media (max-width: 360px) {
+
+    .descripcion > h2 {
+        font-size: 1.6rem;
+    }
+
+    .descripcion > p {
+        font-size: 0.9rem;
+    }
+
+    .descripcion > h2:last-of-type {
+        font-size: 1.45rem;
+    }
+
+    .descripcion-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .descripcion-text p {
+        font-size: 0.85rem;
+    }
+
+
+    /* TRABAJAMOS */
+
+    .trabajamos-text,
+    .descripcion2 .trabajamos-text,
+    .trabajamos--reverse .trabajamos-text {
+        padding: 1.25rem;
+    }
+
+    .trabajamos-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .trabajamos-text p {
+        font-size: 0.88rem;
+    }
+
+
+    /* IMÁGENES */
+
+    .trabajamos-img img {
+        height: 240px;
+    }
+
+
+    /* HEAD */
+
+    .head div {
+        padding: 2.5rem 0.8rem;
+    }
+
+    .head div h2 {
+        font-size: 21px;
+    }
+
+
+    /* CÓMO TRABAJAMOS */
+
+    .como-trabajamos {
+        padding: 1.25rem;
+    }
+
+    .como-trabajamos h2 {
+        font-size: 21px;
+    }
 }

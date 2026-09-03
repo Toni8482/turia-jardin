@@ -6,26 +6,19 @@
     position: fixed;
     bottom: 80px;
     right: 20px;
-
     width: 42px;
     height: 42px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: var(--accent);
     border: none;
     border-radius: 50%;
     cursor: pointer;
-
     opacity: 0;
     visibility: hidden;
-
     z-index: 1050;
-
     box-shadow: var(--shadow-sm);
-
     transition:
         opacity .3s ease,
         transform .25s ease,

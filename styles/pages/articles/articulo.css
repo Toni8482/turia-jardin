@@ -1,5 +1,5 @@
 /* ============================================================
-   ARTÍCULO DE BLOG - ESTILO PREMIUM
+   ARTÍCULO DE BLOG 
    ============================================================ */
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
@@ -124,14 +124,6 @@
     font-size: 1rem;
     line-height: 1.7;
     color: var(--text-secundary);
-}
-
-.article-container ul li::before {
-    content: '🌿';
-    position: absolute;
-    left: 0;
-    top: 0.4rem;
-    font-size: 1rem;
 }
 
 
